@@ -1,0 +1,25 @@
+
+1. Formule de calcul de la Fréquence (Horloge = 10 MHz)
+
+L'AD7008 possède un accumulateur de phase sur 32 bits. La formule mathématique pour convertir la fréquence désirée (\(f_{OUT}\)) en valeur numérique 32 bits (Δ Phase) avec une horloge (\(f_{CLOCK}\)) de 10 MHz est la suivante :
+\(\Delta Phase=\frac{f_{OUT}\times 2^{32}}{10\,000\,000}\)
+• Exemple pour générer du 7,1 MHz (Bande des 40m) :
+\(\Delta Phase=\frac{7\,100\,000\times 4294967296}{10\,000\,000}=3049426739=\text{0xB5C28F53}\)
+
+2. Séquence logicielle de chargement (Mode 8 bits)
+
+Par défaut, après un Reset matériel, l'AD7008 démarre configuré en bus de données 8 bits.
+Pour charger un registre de 32 bits (comme FREQ0), le document indique qu'il faut effectuer 4 écritures successives de 8 bits dans le registre d'assemblage parallèle, en envoyant l'octet le plus significatif (MSB) en premier.
+Une fois les 4 octets envoyés, on applique l'adresse de destination sur les broches TC3-TC0 puis on lève la ligne LOAD pour transférer la donnée dans le cœur du synthétiseur.
+D'après le tableau II (page 7) de votre document, les adresses de transfert (TC3-TC0) sont :
+• 00XX (ex: 0x00) → Écriture dans le registre de commande (COMMAND REG).
+• 1000 (soit 0x08) → Écriture dans le registre de fréquence 0 (FREQ0 REG).
+
+3. Schéma de raccordement mis à jour (Arduino Mega)
+
+Le raccordement reste identique sur le port parallèle rapide (PORTA) de l'Arduino Mega, mais nous utilisons maintenant explicitement les broches d'adresses TC de la carte :
+• Données (D0 à D7) : Broches Arduino 22 à 29 (Connectées aux pins ISA A9 à A2 correspondants).
+• Contrôle d'Écriture (WR) : Broche Arduino 37 (Connectée à la ligne d'écriture active basse).
+• Sélection du composant (CS) : Broche Arduino 36 (Connectée à la masse GND pour être toujours sélectionné, ou sur une broche Arduino si partagée).
+• Ligne de transfert (LOAD) : Broche Arduino 41.
+• Lignes d'adresses de transfert (TC0 à TC3) : Broches Arduino 32, 33, 34, 35.
