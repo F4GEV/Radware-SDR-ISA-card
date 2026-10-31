@@ -1,0 +1,58 @@
+Pour réaliser un pilotage dynamique depuis votre PC, le protocole le plus universel et le plus simple à interfacer avec les logiciels SDR (comme SDR#, HDSDR, SDR-Console) ou de carnets de trafic est le protocole CAT Kenwood (TS-480 / TS-2000).
+En émulant ce protocole sur l'Arduino, votre carte SDR de 1994 sera reconnue par les logiciels modernes comme un véritable poste radio. Le logiciel PC enverra des commandes textuelles simples (comme FA00007100000; pour caler la radio sur 7,1 MHz) que l'Arduino interceptera pour mettre à jour instantanément l'AD7008.
+
+1. Structure d'une commande CAT Kenwood
+
+Les commandes se terminent toujours par un point-virgule ; :
+• PC → Arduino : FA00007100000; (Demande de caler la fréquence principale sur 7 100 000 Hz)
+• PC → Arduino : FA; (Le PC demande quelle est la fréquence actuelle)
+• Arduino → PC : FA00007100000; (L'Arduino répond au PC pour mettre à jour l'affichage graphique du logiciel)
+
+
+
+# 1. Configuration d'OmniRig sur le PC
+
+1. Téléchargez et installez OmniRig (généralement fourni ou intégré avec les logiciels comme HDSDR).
+2. Connectez votre Arduino Mega en USB et notez son numéro de port (ex: COM4) dans le Gestionnaire de périphériques de Windows.
+3. Ouvrez OmniRig et configurez l'onglet Rig 1 avec les paramètres stricts suivants :
+	• Rig type : TS-480 (Le protocole Kenwood le plus stable pour l'émulation)
+	• Port : COM4 (Sélectionnez votre port réel)
+	• Baud rate : 57600
+	• Data bits : 8
+	• Stop bits : 1
+	• Parity : None
+	• RTS / DTR : Low ou Handshake (Important : si l'Arduino redémarre en boucle lors de la connexion, passez ces deux paramètres sur Low)
+	• Poll int. (ms) : 100 (Fréquence d'interrogation du PC vers l'Arduino)
+	• Timeout (ms) : 400
+
+# 2. Automatisation des Filtres de Pré-sélection (U2 - UCN5815EP)
+
+Pour exploiter pleinement le potentiel "SDR dynamique", l'Arduino ne doit pas seulement changer la fréquence de l'AD7008. En analysant votre schéma SHORT WAVE ON A PC (image_aDLemY.png), on constate que la puce U2 (UCN5815EP) pilote les pré-sélecteurs de bandes F1 à F8.
+Le signal PRE-SEL LATCH (broche 40 de notre câblage Arduino) permet de verrouiller le filtre sélectionné. Voici une table de correspondance logique basée sur les bandes RF indiquées sur votre schéma :
+• F1 (18–30 MHz) : Octet 0x01 (Bit 0)
+• F2 (10.8–18 MHz) : Octet 0x02 (Bit 1)
+• F3 (6.4–10.8 MHz) : Octet 0x04 (Bit 2)
+• F4 (3.88–6.4 MHz) : Octet 0x08 (Bit 3)
+• F5 (2.33–3.88 MHz) : Octet 0x10 (Bit 4)
+• F6 (1.4–2.33 MHz) : Octet 0x20 (Bit 5)
+• F7 (800–1400 KHz) : Octet 0x40 (Bit 6)
+• F8 (500–800 KHz) : Octet 0x80 (Bit 7)
+
+
+# 3. Configuration du logiciel SDR sur le PC
+
+Pour l'exemple avec HDSDR ou SDR# (en utilisant le plugin Aux Radio ou RigControl) :
+1. Connectez l'Arduino Mega au PC via son câble USB.
+2. Repérez le numéro de port COM attribué (ex: COM3).
+3. Dans votre logiciel SDR, ouvrez les paramètres de contrôle de plateforme (Rig Control / CAT Control).
+4. Sélectionnez les paramètres suivants :
+	• Rig / Protocole : Kenwood TS-480 (ou TS-2000)
+	• Port : Votre port COM de l'Arduino
+	• Baudrate : 57600
+	• Data bits : 8
+	• Stop bits : 1
+	• Parity : None
+
+Dès que vous activerez le lien, le logiciel se synchronisera avec la carte. En faisant glisser la souris sur le spectre du logiciel PC, l'AD7008 changera instantanément de fréquence de découpage radio !
+
+
