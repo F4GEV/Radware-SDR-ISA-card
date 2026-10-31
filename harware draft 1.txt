@@ -1,3 +1,34 @@
+En analysant le schéma du décodeur d'adresse (image_vlSrnW.png) et celui de la gestion des bus (image_0N-7XY.png), on constate que la carte se pilote comme un périphérique d'entrée/sortie standard. Elle écoute les lignes de données de l'ISA (D0 à D7) et utilise des signaux de contrôle décodés par des circuits intégrés de la famille 74HC/LS.
+Voici l'architecture complète pour remplacer le bus ISA 16 bits par un Arduino Mega 2560 (choisi pour son nombre important de broches d'E/S).
+
+1. Analyse des signaux requis (D'après vos schémas)
+
+Pour contrôler la carte sans passer par un PC d'époque, vous devez injecter directement les signaux décodés et les données. D'après la page ADDRESS DECODE (image_vlSrnW.png) et DSP1 DIRECT DIGITAL SYNTHESIZER (image_0N-7XY.png), la carte utilise les signaux clés suivants :
+• D0 à D7 : Le bus de données 8 bits (provenant des lignes ISA A9 à A2 sur le connecteur, réassignées en données de contrôle local D0-D7).
+• DDS FREQ (Signal d'activation généré par U22 broche 15) : Permet d'écrire la fréquence dans le synthétiseur AD7008 (image_0N-7XY.png).
+• DDS CONTROL (U22 broche 14) : Permet de verrouiller les registres de contrôle (U17, U18, U16).
+• PRE-SEL LATCH (U22 broche 13) : Permet de verrouiller la sélection des filtres de pré-sélection (U2 - UCN5815EP sur image_aDLemY.png).
+• CLK (14.3 MHz) : Horloge de référence requise pour le synthétiseur numérique AD7008.
+
+2. Schéma de raccordement (Arduino Mega 2560 → Carte SDR)
+
+L'Arduino Mega fonctionne en 5V, ce qui est parfaitement compatible avec les puces TTL/CMOS (74LS, 74HC, MC10131) de votre carte. Vous pouvez vous repérer directement sur les points de test de la carte ou souder des fils derrière le connecteur ISA en utilisant le diagramme fourni (image_jYX6qY.png).
+
+Fonction sur la carte SDR	Broche cible sur la carte (ou composant)	Broche Arduino Mega 2560
+Bus de Données D0	ISA Pin A9 (ou U16 broche 11)	Broche 22 (PORTA 0)
+Bus de Données D1	ISA Pin A8 (ou U16 broche 12)	Broche 23 (PORTA 1)
+Bus de Données D2	ISA Pin A7 (ou U16 broche 13)	Broche 24 (PORTA 2)
+Bus de Données D3	ISA Pin A6 (ou U16 broche 14)	Broche 25 (PORTA 3)
+Bus de Données D4	ISA Pin A5 (ou U16 broche 15)	Broche 26 (PORTA 4)
+Bus de Données D5	ISA Pin A4 (ou U16 broche 16)	Broche 27 (PORTA 5)
+Bus de Données D6	ISA Pin A3 (ou U16 broche 17)	Broche 28 (PORTA 6)
+Bus de Données D7	ISA Pin A2 (ou U16 broche 18)	Broche 29 (PORTA 7)
+DDS FREQ (LATCH)	Sortie U22 (broche 15) ou U1F (broche 13)	Broche 38
+DDS CONTROL (LATCH)	Sortie U22 (broche 14) ou U18 (broche 11)	Broche 39
+PRE-SEL LATCH	Sortie U22 (broche 13) ou U2 (broche 4)	Broche 40
+Masse (GND)	ISA Pin B1 ou B10	GND
+Alimentation +5V	ISA Pin B3 ou B29	5V (Si l'Arduino alimente seul, sinon alim externe commune)
+
 
 1. Formule de calcul de la Fréquence (Horloge = 10 MHz)
 
