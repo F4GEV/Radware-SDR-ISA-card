@@ -1,9 +1,0 @@
-set sdk=d:\adi_dsp\scope
-
-asm21 radware.dsp -Id:\radware\code\dsp -c
-ld21 -i linkfile -a pssos.ach -e alg -user %sdk%\bin\psa\libdebug.a -lib -x -g 
-spl21 radware radware -ld 
-
-set sdk_inc=
-pause DSP File Assembled
-

@@ -1,8 +1,0 @@
-[disks]
-1 = .\, "PSA SDK Device Driver Disk 1 of 1"
-
-[Installable.Drivers]
-psasdk=1:psasdk.drv,"psasdk","PSA SDK Device Driver Release 1.0",,
-
-
-

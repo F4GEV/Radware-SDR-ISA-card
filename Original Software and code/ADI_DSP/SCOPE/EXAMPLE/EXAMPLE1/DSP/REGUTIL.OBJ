@@ -1,8 +1,0 @@
-$m.i,d,rARegUtil 
-$d.v,d,rARegArea ,s0038 
-$d.eRegSave 
-$d.eRegRestore 
-$d.lRegSave ,o0000 
-$d.lRegRestore ,o0028 
-$m.o,l0050 
-$ 

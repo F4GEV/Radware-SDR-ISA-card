@@ -1,1 +1,0 @@
-/* This file is included by all routines that use string.h  */

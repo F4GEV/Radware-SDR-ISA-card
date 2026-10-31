@@ -1,8 +1,0 @@
-NAME            RADWARE
-EXETYPE         WINDOWS
-CODE            FIXED PRELOAD
-DATA            FIXED PRELOAD
-HEAPSIZE        5120
-STACKSIZE       8192
-
-

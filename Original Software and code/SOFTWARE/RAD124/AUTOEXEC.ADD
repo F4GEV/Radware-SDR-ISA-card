@@ -1,5 +1,0 @@
-
-SET BLASTER=A220 I7  D1 T4
-REM Echo DSP Modifications start here
-C:\WINDOWS\LOADECHO C:\WINDOWS\SBALL
-REM Echo DSP Modifications end here

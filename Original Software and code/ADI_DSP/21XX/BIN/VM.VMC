@@ -1,3 +1,0 @@
-    maxmem = 640   use only lower memory
-    virtualsize = 6144  6 MB swap space
-    deleteswap          delete the swap file when done^M

@@ -1,6 +1,0 @@
-$m.i,d,rAFFT 
-$icos_table ,fcos256.dat 
-$iwindow ,fhanning.dat 
-$ilog_coeffs 6F1500 C98700 1FC300 F13500 037D00 
-$m.o,l0110 
-$ 
