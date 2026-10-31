@@ -1,3 +1,4 @@
+// For Uno 2560
 // Broches de contrôle AD7008
 const int pinWR   = 37; 
 const int pinLOAD = 41; 
