@@ -1,0 +1,31 @@
+
+;PLEASE DO NOT MODIFY THIS FILE UNLESS YOU UNDERSTAND THE MODEL STRING OF YOUR
+;SOUND CARD
+
+[Model]
+;Model=SS16V10
+;Model=SS16V20
+Model=SC60V222
+;Model=SC66V20
+;Model=SC70V20
+;Model=SC80V30
+
+[SS16V10]
+SetupInf=drvs\1610
+
+[SS16V20]
+SetupInf=drvs\1620
+
+[SC60V222]
+SetupInf=drvs\60222
+
+[SC66V20]
+SetupInf=drvs\6620
+
+[SC70V20]
+SetupInf=drvs\7020
+
+[SC80V30]
+SetupInf=drvs\8030
+
+

@@ -1,0 +1,210 @@
+
+[App]
+;Model=SC60V222 for DUAL
+;Application global information
+AppName=Sound Card Setup
+DefDir=C:\SOUND
+SpaceNeeded=5500
+DefPMGroup=Sound.GRP, Sound
+ShowSubDirCreateStats=Y
+
+[Disks]
+1=DISK1 Setup Disk
+2=DISK2 Voyetra Software Disk
+
+[SrcDirs]
+1=.
+2=VOYAPI6N
+3=SONGS
+4=SOUNDS
+5=WINAPPS
+6=DRVS
+7=DRVS\16
+8=DRVS\CS
+9=DRVS\60222
+
+
+[DstDirs]
+1=.
+2=VOYETRA
+3=VOYETRA\SONGS
+4=VOYETRA\SOUNDS
+5=VOYETRA\WINAPPS
+
+[Files]
+;Description,           Src(Disk-Dir:Name),     Dst(Dir:Name),  Shared
+;Setup,                  1-1:setup.exe,          1:setup.exe,    N
+;Meter,                  1-1:meter.dll,          1:meter.dll,    N
+Setup Info,             1-9:setup.inf,          1:setup.inf,    N
+Sound Ini,              1-9:sound.ini,          1:sound.ini,    N
+TESTSC.EXE,             1-7:TESTSC.EX_,         1:TESTSC.EXE,   N
+;Utilities------------------------------------------------------------
+CDPLAY.EX_,             1-6:CDPLAY.EX_,         1:CDPLAY.EXE,   N
+CS31BA11.DR_,           1-6:CS31BA11.DR_,       1:CS31BA11.DRV, N
+CS31BA11.DR_,           1-6:CS31BA11.DR_,       1:CS31BA11.DRV, Y
+CONFIG.EX_,             1-6:CONFIG.EX_,         1:CONFIG.EXE,   N
+ALLFM.CF_,              1-6:ALLFM.CF_,          1:ALLFM.CFG,    N
+GMIDI.CF_,              1-6:GMIDI.CF_,          1:GMIDI.CFG,    N
+MIDIMAP.CF_,            1-6:ALLFM.CF_,          1:MIDIMAP.CFG,  N
+MCICDA.DR_,             1-6:MCICDA.DR_,         1:MCICDA.DRV,   N
+MCICDA.DR_,             1-6:MCICDA.DR_,         1:MCICDA.DRV,   Y
+MIX-SET.EX_,            1-6:MIX-SET.EX_,        1:MIX-SET.EXE,  N
+MIXER.EX_,              1-6:MIXER.EX_,          1:MIXER.EXE,    N
+MIXERW.EX_,             1-8:MIXERW.EX_,         1:MIXERW.EXE,   N
+OEMSETUP.IN_,           1-6:OEMSETUP.IN_,       1:OEMSETUP.INF, N
+SOUND.SY_,              1-7:SOUND.SY_,          1:SOUND.SYS,    N
+SAPI!OPL.DR_,           1-6:SAPI!OPL.DR_,       1:SAPI!OPL.DRV, N
+SAPI!OPL.DR_,           1-6:SAPI!OPL.DR_,       1:SAPI!OPL.DRV, Y
+VAPIMPU.DR_,            1-6:VAPIMPU.DR_,        1:VAPIMPU.DRV,  N
+VAPIMPU.DR_,            1-6:VAPIMPU.DR_,        1:VAPIMPU.DRV,  Y
+VCTL.DL_,               1-6:VCTL.DL_,           1:VCTL.DLL,     N
+VCTL.DL_,               1-6:VCTL.DL_,           1:VCTL.DLL,     Y
+VMP_MM.DL_,             1-6:VMP_MM.DL_,         1:VMP_MM.DLL,   N
+VMP_MM.DL_,             1-6:VMP_MM.DL_,         1:VMP_MM.DLL,   Y
+VOY.SC_,                1-6:VOY.SC_,            1:VOY.SCR,      N
+VOY.SC_,                1-6:VOY.SC_,            1:VOY.SCR,      Y
+VSNDSYS.38_,            1-6:VSNDSYS.38_,        1:VSNDSYS.386,  N
+VSNDSYS.38_,            1-6:VSNDSYS.38_,        1:VSNDSYS.386,  Y
+VSS6D.38_,              1-7:VSS6D.38_,          1:VSS6D.386,    N
+VSS6D.38_,              1-7:VSS6D.38_,          1:VSS6D.386,    Y
+;Voyetra Utilities----------------------------------------------------
+DRIVER.BA_,             1-2:DRIVER.BA_,         2:DRIVER.BAT,   N
+TAPIGAL6.CO_,           1-2:TAPIGAL6.CO_,       2:TAPIGAL6.COM, N
+VMP.CO_,                1-2:VMP.CO_,            2:VMP.COM,      N
+;Songs----------------------------------------------------------------
+AMERICA.MI_,            1-3:AMERICA.MI_,        3:AMERICA.MID,  N
+CANNON_D.MI_,           1-3:CANNON_D.MI_,       3:CANNON_D.MID, N
+ENTRTANR.MI_,           1-3:ENTRTANR.MI_,       3:ENTRTANR.MID, N
+HELLOMYB.MI_,           1-3:HELLOMYB.MI_,       3:HELLOMYB.MID, N
+MAPLERAG.MI_,           1-3:MAPLERAG.MI_,       3:MAPLERAG.MID, N
+MINWLTZ.MI_,            1-3:MINWLTZ.MI_,        3:MINWLTZ.MID,  N
+MOOD2.MI_,              1-3:MOOD2.MI_,          3:MOOD2.MID,    N
+PETE&WLF.MI_,           1-3:PETE&WLF.MI_,       3:PETE&WLF.MID, N
+PLAY.EX_,               1-3:PLAY.EX_,           3:PLAY.EXE,     N
+PRELUE#3.MI_,           1-3:PRELUE#3.MI_,       3:PRELUE#3.MID, N
+SAINTSGO.MI_,           1-3:SAINTSGO.MI_,       3:SAINTSGO.MID, N
+STOP.EX_,               1-3:STOP.EX_,           3:STOP.EXE,     N
+;Sounds---------------------------------------------------------------
+ALARM.WA_,              1-4:ALARM.WA_,          4:ALARM.WAV,    N
+CAMRA.WA_,              1-4:CAMRA.WA_,          4:CAMRA.WAV,    N
+DAPLAY.EX_,             1-4:DAPLAY.EX_,         4:DAPLAY.EXV,   N
+DOGBRK.WA_,             1-4:DOGBRK.WA_,         4:DOGBRK.WAV,   N
+DOORBL.WA_,             1-4:DOORBL.WA_,         4:DOORBL.WAV,   N
+GLASBK.WA_,             1-4:GLASBK.WA_,         4:GLASBK.WAV,   N
+SINKDR.WA_,             1-4:SINKDR.WA_,         4:SINKDR.WAV,   N
+SLDWST.WA_,             1-4:SLDWST.WA_,         4:SLDWST.WAV,   N
+SPACE.WA_,              1-4:SPACE.WA_,          4:SPACE.WAV,    N
+STOP.EX_,               1-4:STOP.EX_,           4:STOP.EXE,     N
+TRAINW.WA_,             1-4:TRAINW.WA_,         4:TRAINW.WAV,   N
+WHIP.WA_,               1-4:WHIP.WA_,           4:WHIP.WAV,     N
+;Winapps--------------------------------------------------------------
+ASHELP.HL_,             2-5:ASHELP.HL_,         5:ASHELP.HLP,   N
+AUDIOSTA.EX_,           2-5:AUDIOSTA.EX_,       5:AUDIOSTA.EXE, N
+CAL.EX_,                2-5:CAL.EX_,            5:CAL.EXE,      N
+CAL.IN_,                2-5:CAL.IN_,            5:CAL.INI,      N
+CALHELP.HL_,            2-5:CALHELP.HL_,        5:CALHELP.HLP,  N
+CHKLIST.MS_,            2-5:CHKLIST.MS_,        5:CHKLIST.MS,   N
+CUCKOO.WA_,             2-5:CUCKOO.WA_,         5:CUCKOO.WAV,   N
+GENMIDI.IN_,            2-5:GENMIDI.IN_,        5:GENMIDI.INI,  N
+ORCH.EX_,               2-5:ORCH.EX_,           5:ORCH.EXE,     N
+ORCH.HL_,               2-5:ORCH.HL_,           5:ORCH.HLP,     N
+ORCHENG.DL_,            2-5:ORCHENG.DL_,        5:ORCHENG.DLL,  N
+SAYIT.EX_,              2-5:SAYIT.EX_,          5:SAYIT.EXE,    N
+SAYIT.HL_,              2-5:SAYIT.HL_,          5:SAYIT.HLP,    N
+SNDEVENT.EX_,           2-5:SNDEVENT.EX_,       5:SNDEVENT.EXE, N
+SNDEVENT.HL_,           2-5:SNDEVENT.HL_,       5:SNDEVENT.HLP, N
+TIMECHK.DA_,            2-5:TIMECHK.DA_,        5:TIMECHK.DAT,  N
+VCTL.DL_,               2-5:VCTL.DL_,           5:VCTL.DLL,     N
+VHOOK.DL_,              2-5:VHOOK.DL_,          5:VHOOK.DLL,    N
+VMP_MM.DL_,             2-5:VMP_MM.DL_,         5:VMP_MM.DLL,   N
+VOLHOOK.DL_,            2-5:VOLHOOK.DL_,        5:VOLHOOK.DLL,  N
+VOY.SC_,                2-5:VOY.SC_,            5:VOY.SCR,      N
+VOYHOOK.DL_,            2-5:VOYHOOK.DL_,        5:VOYHOOK.DLL,  N
+WINDAT.EX_,             2-5:WINDAT.EX_,         5:WINDAT.EXE,   N
+WINDAT.HL_,             2-5:WINDAT.HL_,         5:WINDAT.HLP,   N
+
+[PM Info]
+;DstFileName                            AppDesc             (Icon #)
+;-----------                            --------------      --------
+Voyetra\Winapps\Audiosta.exe,           AudioStation
+Voyetra\Winapps\WinDAT.exe,             WinDAT
+Voyetra\Winapps\Orch.exe,               Orchestrator
+Voyetra\Winapps\SayIt.exe,              SayIt!
+Voyetra\Winapps\sndevent.exe,           Sound Events
+Voyetra\Winapps\cal.exe,                Audio Calendar
+mixerw.exe,                             Mixer Control Panel
+config.exe,                             Configuration
+
+[MidiMapper]
+AskMidiMap=0
+DefaultMidiMap=ALLFM
+
+[CopyFileToWindows]
+TotalItems=0
+
+[CopyFileToSystem]
+TotalItems=0
+
+[AddSYSTEM.386Enh]
+TotalItems=2
+1=vss6d.386
+2=vsndsys.386
+
+[ModifySystemIni]
+TotalItems=4
+1=drivers
+2=mci
+3=sndsys.drv
+4=vapimpu.drv
+
+[drivers]
+TotalItems=5
+1=Wave,cs31ba11.drv
+2=Mixer,cs31ba11.drv
+3=Aux,cs31ba11.drv
+4=MIDI,sapi!opl.drv
+5=MIDI1,vapimpu.drv
+
+[mci]
+TotalItems=1
+1=CDAudio,mcicda.drv
+
+[sndsys.drv]
+TotalItems=29
+1=Duplex,Half
+2=SingleModeDMA,1
+3=DMABufferSize,36
+4=OldMSDosGameCompatibility,0
+5=WatchMSDosExec,0
+6=BlasterSupport,SWEmulation
+7=Msft Hardware,1
+8=Msft Support,1
+9=Auto Select,1
+10=Midi Play,0
+11=EnableAutoAcquireOPL3,1
+12=I/O 530,1
+13=I/O 604,0
+14=I/O E80,1
+15=I/O F40,0
+16=Default I/O,530
+17=IRQ 7,1
+18=IRQ 9,1
+19=IRQ 10,1
+20=IRQ 11,1
+21=Default IRQ,7
+22=DMA 0,1
+23=DMA 1,1
+24=DMA 3,1
+25=Default DMA,1
+26=IOAddress,530
+27=DMAADC,1
+28=DMADAC,1
+29=Interrupt,7
+
+[vapimpu.drv]
+TotalItems=2
+1=port,330
+2=int,5
+
+[End]
+

@@ -1,0 +1,12 @@
+[.TIM]
+data type=integer
+data format=binary
+data amplitude=18797.841797
+number of elements=6.000000
+sampling frequency=8000.000000
+frame size=6
+real complex=real
+number of channels=0
+data dimension=0
+initial offset=0
+fft order=8

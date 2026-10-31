@@ -1,0 +1,23 @@
+[.tim]
+data type=integer
+data format=binary
+data amplitude=4096.000000
+number of elements=68.000000
+sampling frequency=8500.000000
+frame size=68
+real complex=real
+number of channels=0
+data dimension=1
+initial offset=20
+
+[.frq]
+data type=integer
+data format=binary
+data amplitude=2864.000000
+number of elements=128.000000
+sampling frequency=8500.000000
+frame size=68
+real complex=real
+number of channels=0
+data dimension=1
+initial offset=20

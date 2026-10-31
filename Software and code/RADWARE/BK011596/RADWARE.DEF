@@ -1,0 +1,30 @@
+NAME            DSP1
+EXETYPE         WINDOWS
+CODE            FIXED PRELOAD
+DATA            FIXED PRELOAD
+HEAPSIZE        5120
+STACKSIZE       8192
+
+IMPORTS    		DSPAPI.DSPGETDATA
+		   		DSPAPI.DSPGETDEVCAPS
+		   		DSPAPI.DSPGETJOBINFO
+		   		DSPAPI.DSPGETMSG
+		   		DSPAPI.DSPGETNUMDEVS
+		   		DSPAPI.DSPGETNUMJOBS
+		   		DSPAPI.DSPLOADALG
+		   		DSPAPI.DSPRESET
+		   		DSPAPI.DSPSENDDATA
+		   		DSPAPI.DSPSENDMSG
+			    	DSPAPI.DSPUNLOADALG
+			    	DSPAPI.DSPGETERRORINFO
+               RADLIB.DSPGetMsg
+               RADLIB.DSPGetNumDevs
+               RADLIB.DSPReset
+               RADLIB.DSPLoadAlg
+               RADLIB.DSPSendData
+               RADLIB.DSPSendMsg
+               RADLIB.DSPUnloadAlg
+               RADLIB.DSPGetData
+               RADLIB.DSPSendDataNull
+
+

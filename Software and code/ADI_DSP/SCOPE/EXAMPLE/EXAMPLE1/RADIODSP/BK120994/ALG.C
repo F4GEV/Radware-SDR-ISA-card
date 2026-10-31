@@ -1,0 +1,697 @@
+#include "dspshell.h"
+#include "dsp1848.h"
+
+#ifndef TRUE
+#define TRUE 1
+#define FALSE 0
+#endif
+
+#define SET_MASTER_COMMAND  0x0010
+#define MASTER_VOLUME_LEFT  0x0000
+#define MASTER_VOLUME_RIGHT 0x0100
+#define MASTER_BASS         0x0200
+#define MASTER_TREBLE       0x0300
+#define MASTER_SWITCH       0x0800
+#define MAX_MORSE 100
+
+#define STR_STARTERROR                "Start Error"
+#define STR_INITCOMPLETE              "initialized"
+#define STR_GETMSGREQUEUEERROR        "requeueing error"
+
+       /* Host to DSP */
+#define msg_SET_NOISE   500
+#define msg_PLOT_TOGGLE 502
+#define msg_TALK_TOGGLE 504
+#define msg_LOG_TOGGLE  505
+#define msg_FREQ_TOGGLE 506
+#define msg_LPF_TOGGLE  507
+#define msg_HANN_TOGGLE 508
+#define msg_PLOT_SEND   509
+
+#define msg_MORSE_CHAR  1501
+#define msg_START_MORSE 1502
+#define msg_STOP_MORSE  1503
+#define msg_RECIEVE     1504
+#define msg_TRANSMIT    1505
+#define msg_MODE        1506
+#define msg_FILTER      1507
+#define msg_IF_GAIN     1508
+#define msg_AGC         1509
+#define msg_VOLUME      1510
+#define msg_PLOT_LSB_S  1511
+#define msg_PLOT_USB_S  1512
+#define msg_PLOT_LSB_T  1513
+#define msg_PLOT_USB_T  1514
+#define msg_MUTE        1515
+#define msg_MORSE_SPEED 1516
+
+       /* DSP to HOST */
+#define msg_PLOT_DATA     500
+#define msg_1848_REG_DUMP 503
+#define MSG_MORSE_NEXT_CHAR 110
+#define MSG_MORSE_END_MORSE 111
+#define msg_FREQ_CAL 112
+#define SIZE_DATAMSG   50
+#define SIZE_PLOTMSG   128
+#define SIZE_IO_BUFFER 256 
+
+typedef struct msg
+{
+  DSPMSGHEADER hdr;
+  int data[SIZE_DATAMSG];
+}MSG_STRUCT;
+
+MSG_STRUCT msg1,msg2;
+
+int plotMsgData[SIZE_PLOTMSG];
+
+DSPIOCONF devConf;
+DSPIOCAPS devCaps;
+
+char Morse[MAX_MORSE]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                        0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+int NewIFGain = -1;
+int NewSampleRate = 1;
+SOUNDPORTREGS Registers_1848,*pSpregs;
+int USB_BUFFER[SIZE_IO_BUFFER];
+int LSB_BUFFER[SIZE_IO_BUFFER];
+int buffer1[SIZE_IO_BUFFER];                  /* Define buffer arrays. */
+int buffer2[SIZE_IO_BUFFER];
+int buffer3[SIZE_IO_BUFFER];
+int buffer4[SIZE_IO_BUFFER];
+/*int buffer_null[256];
+*/int *USB = USB_BUFFER;
+int *LSB = LSB_BUFFER;
+
+int InputDevice = 0;
+int OutputDevice = 1;
+int hAlg;                       /* handle to algorithm... myself! */
+int hApp;                       /* handle to application (on host) */
+int algIoOverrun = 0;
+int PlotOn = FALSE;
+int PlotLSBS = FALSE;
+int PlotUSBS = FALSE;
+int PlotLSBT = FALSE;
+int PlotUSBT = FALSE;
+int FreqOn = TRUE;
+int TalkOn = FALSE;
+int Talk = FALSE;
+int LogOn = FALSE;
+int LpfOn = FALSE;
+int HannOn = FALSE;
+int SendingMorse = FALSE;
+int DitLength = 1000;
+int MorsePosition = 0;
+
+int hilbert,delay;
+int fft_time = 10;
+
+int GetErrCount = 0;
+int GetLastErr = 0;
+int SendErrCount = 0;
+int SendLastErr = 0;
+long SampleRate = 8000;
+
+int mode,SB_DATA = 0;
+
+int *lastInputBuffer = buffer3;
+
+extern int GetError(void);
+extern void ClearError(void);
+extern void ClearOffset(void);
+extern int dofft(void);
+extern int dousbfft(void);
+extern int dolsbfft(void);
+extern int FreqCal(int *);
+extern void initSignal(void);
+extern int genSignal(void);
+extern void initFilter(void);
+extern int sFilter(int);
+extern int UFilter(int);
+extern int LFilter(int);
+extern int delayLine(int);
+extern int MultiplyByVolume(int);
+extern void ChangeVolume(int);
+extern void AGC(int *);
+extern void InitAGC();
+extern void SlowAGC(int *);
+extern int GetVolume(void);
+extern int SelectFilter(int);
+extern int RestoreVolume();
+extern void SetTone(int);
+
+extern int gain1,freq1;
+extern int gain2,freq2;
+extern int gain3,freq3;
+
+void ParseMsg(int wParam1, int wParam2, int wParam3)
+
+{
+  int i;
+  int wTemp;
+  int *pInt;
+  long *pLong;
+  MSG_STRUCT *pMsg;
+
+   pMsg = (MSG_STRUCT *)wParam2;        /* pMsg =  address of the block of */
+				       /* the message that was received. */
+
+   switch (pMsg->hdr.id) {
+
+   case DSPMSGID_AUDIO_SETRATE:
+   case DSPMSGID_AUDIO_SETMODE:
+
+     dspStopIo(hAlg, InputDevice);
+     dspStopIo(hAlg, OutputDevice);
+     wTemp = dspGetIoDevConf(InputDevice, &devConf, sizeof(DSPIOCONF));
+     if (pMsg->hdr.id == DSPMSGID_AUDIO_SETRATE)
+     {
+/* . . prepare the new rate info */
+       wTemp = pMsg->data[0];          /* Swap the words because */
+       pMsg->data[0] = pMsg->data[1];  /*the pc swaps hi word/lo word */
+       pMsg->data[1] = wTemp;
+       pLong = (long *)&pMsg->data[0];
+       SampleRate = *pLong;             /* Save new sample rate for later */
+       devConf.rate = *pLong;
+     }
+
+/* . update the 1848 configuration */
+     devConf.mode = DSPIOMODE_STEREO;
+     dspGetIoDevConf(OutputDevice, &devConf, sizeof(DSPIOCONF));
+     devConf.mode = DSPIOMODE_STEREO;
+     dspSetIoDevConf(OutputDevice, &devConf, sizeof(DSPIOCONF));
+
+/* . initialize and requeue the IO buffers, 2 for transmit and 2 for reception */
+     for (i = 0; i < SIZE_IO_BUFFER; i++)
+     {
+       buffer1[i]=0;
+       buffer2[i]=0;
+       buffer3[i]=0;
+       buffer4[i]=0;
+     }
+     dspSendIo (hAlg, OutputDevice, buffer1, SIZE_IO_BUFFER);
+     dspSendIo (hAlg, OutputDevice, buffer2, SIZE_IO_BUFFER);
+     dspGetIo (hAlg, InputDevice, buffer3, SIZE_IO_BUFFER);
+     dspGetIo (hAlg, InputDevice, buffer4, SIZE_IO_BUFFER);
+
+/* . restart the 1848 */
+     if (((wTemp = dspStartIo(hAlg, OutputDevice)) != DSPERR_SUCCESS) ||
+	   ((wTemp = dspStartIo(hAlg, InputDevice)) != DSPERR_SUCCESS))
+       dspSendMsg (hApp, hAlg, DSPMSGID_STRING_PRINT, sizeof (STR_STARTERROR), STR_STARTERROR);
+     break;
+
+   case msg_MORSE_CHAR: wTemp = strlen(Morse);
+                   		i = 0;
+               			while (wTemp<MAX_MORSE-1 && pMsg->data[i] != 0)
+               			  Morse[wTemp++] = pMsg->data[i++];
+                        Morse[wTemp] == 0;
+               			SendingMorse = 1;
+               			break;
+   case msg_MORSE_SPEED : DitLength = pMsg->data[0];
+               			  break;
+   case msg_START_MORSE : SendingMorse = 1;
+               			  gain1 = 2000;       /* Store gain1 value */
+               			  freq1 = 1000 * (65536.0/SampleRate);       /* Convert to phase increment needed */
+               			  Morse[0] = 0;
+               			  MorsePosition = 0;
+               			  break;
+   case msg_STOP_MORSE : SendingMorse = 0;
+               			 MorsePosition = 0;
+               			 break;
+
+   case msg_MODE: mode = pMsg->data[0];
+                  if (NewSampleRate == -2 && mode > 1)
+                    NewSampleRate += 3;
+                  break;
+
+   case msg_RECIEVE:  ChangeVolume(pMsg->data[1]);
+                      TalkOn = pMsg->data[0];
+                      LpfOn = pMsg->data[2];
+                      NewIFGain = pMsg->data[3];
+                      SetTone(1-TalkOn);
+                      break;
+
+   case msg_TRANSMIT: ChangeVolume(pMsg->data[1]);
+                      TalkOn = pMsg->data[0];
+                      LpfOn = pMsg->data[2];
+                      NewIFGain = pMsg->data[3];
+                      SetTone(0); /*1-TalkOn);*/
+                      break;
+
+   case msg_FILTER: SelectFilter(pMsg->data[0]);
+                    if (pMsg->data[0] == 5)
+                      NewSampleRate == 2;
+                    else
+                      NewSampleRate == 1;
+                    break;
+
+   case msg_IF_GAIN: NewIFGain = pMsg->data[0];
+/*                     dspStopIo(hAlg, InputDevice);
+		     dspStopIo(hAlg, OutputDevice);
+		     pSpregs = &Registers_1848;
+		     dspUtilGet1848(pSpregs);
+		     Registers_1848.wLeftInputControl = 0x4040+wTemp*0x101;
+		     Registers_1848.wRightInputControl = 0x4040+wTemp*0x101;
+		     dspUtilProgram1848(pSpregs);
+		     dspStartIo(hAlg, InputDevice);
+		     dspStartIo(hAlg, OutputDevice);
+*/                     break;
+   case msg_AGC: LpfOn = pMsg->data[0];
+                 InitAGC();
+       		     ChangeVolume(pMsg->data[1]);
+      		     SetTone(1-TalkOn);
+      		     break;
+   case msg_MUTE:/* ChangeVolume(0);
+                 */ SetTone(0);
+                  break;
+   case msg_VOLUME: ChangeVolume(pMsg->data[0]);
+            	     SetTone(1-TalkOn);
+         		     break;
+   case msg_PLOT_LSB_T: PlotLSBT = pMsg->data[0];
+			               break;
+   case msg_PLOT_USB_T: PlotUSBT = pMsg->data[0];
+                			break;
+   case msg_PLOT_LSB_S: PlotLSBS = pMsg->data[0];
+               			break;
+   case msg_PLOT_USB_S: PlotUSBS = pMsg->data[0];
+               			break;
+   case msg_SET_NOISE: switch(pMsg->data[0])
+                       {
+                			 case 0: gain1 = pMsg->data[1];
+                                 freq1 = pMsg->data[2];
+                                 freq1 = freq1 * 65536/SampleRate;       /* Convert to phase increment needed */
+                                 break;                                  /* to generate desired frequency */
+               			 case 1: gain2 = pMsg->data[1];
+                                 freq2 = pMsg->data[2];
+                                 freq2 = freq2 * 65536/SampleRate;
+                                 break;
+               			 case 2: gain3 = pMsg->data[1];
+                                 freq3 = pMsg->data[2];
+                                 freq3 = freq3 * 65536/SampleRate;
+                                 break;
+                			 case 3: /* no chirp allowed anymore */
+                			 case 4: /* no ccitt allowed anymore */
+                			 default:
+                       }
+                       break;
+   case msg_PLOT_TOGGLE: PlotOn = pMsg->data[0];
+                  		 break;
+
+   case msg_PLOT_SEND: if (FreqOn)
+                         pInt = (int *) dofft();
+                       else
+                 			 pInt = lastInputBuffer;
+                       for (wTemp=0; wTemp < SIZE_PLOTMSG; wTemp++)
+                  		 plotMsgData[wTemp] = *pInt++;
+                       dspSendMsg (hApp, hAlg,msg_PLOT_DATA , SIZE_PLOTMSG, plotMsgData);
+                       break;
+
+   case msg_LOG_TOGGLE: LogOn = pMsg->data[0];
+                        break;
+   case msg_FREQ_TOGGLE: FreqOn = pMsg->data[0];
+                         break;
+   case msg_LPF_TOGGLE: LpfOn = pMsg->data[0];
+               			break;
+   case msg_HANN_TOGGLE: HannOn = pMsg->data[0];
+               			 break;
+   }
+}
+
+void dspAlgMain(WORD wCbId, WORD wParam1, WORD wParam2, WORD wParam3)
+
+{
+  int *pBuf;
+  int wTemp;
+  int i,wNumDevs,count;
+  int *pInt;
+
+  switch(wCbId)
+  {
+
+   case DSPCB_INIT:
+     hAlg = wParam1;
+     hApp = wParam2;
+     msg1.hdr.size = SIZE_DATAMSG;
+     msg2.hdr.size = SIZE_DATAMSG;
+
+     dspGetMsg (hAlg, (int *)&msg1, sizeof(MSG_STRUCT));
+     dspGetMsg (hAlg, (int *)&msg2, sizeof(MSG_STRUCT));
+
+     initSignal();
+     initFilter();
+     ChangeVolume(256);
+
+     wNumDevs = dspGetNumIoDevs();
+     for (i = 0; i < wNumDevs; i++)
+     {
+       wTemp = dspGetIoDevCaps (i, &devCaps, sizeof(DSPIOCAPS));
+       if (wTemp == DSPERR_SUCCESS)
+       {
+         if (strcmp (devCaps.szDeviceName,"AD1848") == 0)
+           if (devCaps.dir == DSPIODIR_IN)
+             InputDevice = i;
+           else
+             if (devCaps.dir == DSPIODIR_OUT)
+               OutputDevice = i;
+       }
+     }
+     dspGetIoDevConf(OutputDevice, &devConf, sizeof(DSPIOCONF));
+     devConf.mode = DSPIOMODE_STEREO;
+     dspSetIoDevConf(OutputDevice, &devConf, sizeof(DSPIOCONF));
+     for (wTemp = 0; wTemp < SIZE_IO_BUFFER; wTemp++)
+     {
+       buffer1[wTemp]=0;
+       buffer2[wTemp]=0;
+       buffer3[wTemp]=0;
+       buffer4[wTemp]=0;
+/*       buffer_null[wTemp] = 0;
+*/     }
+     dspSendIo (hAlg, OutputDevice, buffer1, SIZE_IO_BUFFER);
+     dspSendIo (hAlg, OutputDevice, buffer2, SIZE_IO_BUFFER);
+     dspGetIo (hAlg, InputDevice, buffer3, SIZE_IO_BUFFER);
+     dspGetIo (hAlg, InputDevice, buffer4, SIZE_IO_BUFFER);
+     dspStartIo (hAlg, OutputDevice);
+     dspStartIo (hAlg, InputDevice);
+
+     SetTone(1-TalkOn);
+     gain1 = 2000;       /* Store gain1 value */
+     freq1 = 1000;                  /* Store freq1 value */
+     freq1 = freq1 * 65536/SampleRate;       /* Convert to phase increment needed */
+     pSpregs = &Registers_1848;
+     dspUtilGet1848(pSpregs);
+     Registers_1848.wLeftInputControl = 0x4F4F+0x4040*TalkOn;
+     Registers_1848.wRightInputControl = 0x4F4F+0x4040*TalkOn;
+     Registers_1848.wLeftAux1Control = 0x9F9F;
+     Registers_1848.wRightAux1Control = 0x9F9F;
+     Registers_1848.wLeftAux2Control = 0x9F9F;  /*9F9F;*/
+     Registers_1848.wRightAux2Control = 0x9F9F;  /*9F9F;*/
+     Registers_1848.wClockDataFormat = (Registers_1848.wClockDataFormat & 0xFDFD);
+     dspUtilProgram1848(pSpregs);
+
+     dspSendMsg (hApp, hAlg, DSPMSGID_STRING_PRINT, sizeof (STR_INITCOMPLETE), STR_INITCOMPLETE);
+     break;
+
+   case DSPCB_CLOSE:
+     dspStopIo(hAlg, InputDevice);
+     dspStopIo(hAlg, OutputDevice);
+     break;
+
+   case DSPCB_SENDMSG: break;
+
+   case DSPCB_GETIO:
+     switch (wParam3)
+     {
+       case (DSPERR_SUCCESS): lastInputBuffer = (int *)wParam2;
+			      wTemp = dspGetIo(hAlg, InputDevice, (int *)wParam2, SIZE_IO_BUFFER);
+			      if (wTemp != DSPERR_SUCCESS)
+			      {
+                 GetErrCount++;
+                 GetLastErr = wTemp;
+			      }
+			      break;
+       case (DSPERR_NO_BUFFER): algIoOverrun++;
+                                break;
+     }
+     break;
+
+   case DSPCB_SENDIO: switch (wParam3)
+	                   {
+			case (DSPERR_SUCCESS): pBuf = (int *)wParam2;
+                                if (NewIFGain>=0 && NewIFGain<=15)
+					                 {
+                                  pSpregs = &Registers_1848;
+/*                                  dspUtilGet1848(pSpregs);
+*/                                  Registers_1848.wRightInputControl = Registers_1848.wLeftInputControl = (1+TalkOn)*0x4040+NewIFGain*0x101;
+  /*                                Registers_1848.wLeftAux1Control = 0x9F9F;
+                                  Registers_1848.wRightAux1Control = 0x9F9F;
+                                  Registers_1848.wLeftAux2Control = 0x9F9F;
+                                  Registers_1848.wRightAux2Control = 0x9F9F;
+                                  Registers_1848.wDigitalMix = 0xFCFC;
+                                  Registers_1848.wClockDataFormat = (Registers_1848.wClockDataFormat & 0xFDFD);
+*/						                dspUtilProgram1848(pSpregs);
+						                NewIFGain = -1;
+					                 }
+/*                                plotMsgData[wTemp]  = FreqCal(pBuf);
+						              dspSendMsg (hApp, hAlg,msg_FREQ_CAL, SIZE_PLOTMSG, plotMsgData);
+*/					                 if (NewSampleRate>0)
+					                 {
+						                pSpregs = &Registers_1848;
+						                dspUtilGet1848(pSpregs);
+						                if (NewSampleRate == 2)
+						                  Registers_1848.wClockDataFormat = (Registers_1848.wClockDataFormat & 0xFDFD)+0x0202;
+                                  else
+						                  Registers_1848.wClockDataFormat = (Registers_1848.wClockDataFormat & 0xFDFD);
+						                dspUtilProgram1848(pSpregs);
+						                NewSampleRate *= -1;
+					                 }
+					                 if (SendingMorse==1)
+					                 {
+						                for(wTemp=0;wTemp<256;wTemp+=2)
+						                {
+						                  lastInputBuffer[wTemp] = genSignal();
+						                  if (Morse[0]<=10)
+						                    lastInputBuffer[wTemp] = 0;
+						                  lastInputBuffer[wTemp+1] = lastInputBuffer[wTemp];
+                  					   if (++MorsePosition>=DitLength)
+						                  {
+						                    MorsePosition = 0;
+                 						     if (Morse[0]>10)
+					               	       Morse[0]--;
+                                      else
+                                        if (Morse[0]<10 && Morse[0] != 0)
+                                          Morse[0]++;
+                     				     if (Morse[0] == 10)
+					               	       DeleteMorse();
+                                    }
+                                  }
+                                }
+					                 if (SendingMorse==2)
+					                 {
+						                for(wTemp=0;wTemp<256;wTemp+=2)
+						                {
+						                  lastInputBuffer[wTemp] = genSignal();
+						                  lastInputBuffer[wTemp+1] = lastInputBuffer[wTemp];
+                                  }
+                                }
+                                if (TalkOn)
+                                {
+                                  ClearError();
+                                  AGC(lastInputBuffer);
+                                  if (!LpfOn)
+               						   RestoreVolume();
+                                  switch(mode)
+                                  {
+                                    case 0 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+                                               hilbert = lastInputBuffer[wTemp];
+                                               delay = lastInputBuffer[wTemp];
+                                               pBuf[wTemp] = /*MultiplyByVolume*/(/*UFilter*/(hilbert));
+                                               pBuf[wTemp+1] = /*MultiplyByVolume*/(/*LFilter*/(delay));
+                                             }
+                                             break;
+                                    case 1 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+                                               hilbert = lastInputBuffer[wTemp]/2;
+                                               delay = lastInputBuffer[wTemp+1]/2;
+                                               pBuf[wTemp] = MultiplyByVolume(/*UFilter*/(sFilter(hilbert+delay)));
+                                               pBuf[wTemp+1] = MultiplyByVolume(/*LFilter*/(delayLine(hilbert-delay)));
+                                               count++;
+                                             }
+                                             break;
+                                    case 2 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+                                               hilbert = sFilter(lastInputBuffer[wTemp]);
+                                               delay = delayLine(lastInputBuffer[wTemp]);
+                                               pBuf[wTemp] = MultiplyByVolume(/*UFilter*/(hilbert));
+                                               pBuf[wTemp+1] = MultiplyByVolume(/*LFilter*/(delay));
+                                             }
+                                             break;
+                                    case 3 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+/*                                             hilbert = sFilter(lastInputBuffer[wTemp]);
+                                               delay = delayLine(lastInputBuffer[wTemp]);
+                                               pBuf[wTemp] = MultiplyByVolume((delay));
+                                               pBuf[wTemp+1] = MultiplyByVolume((hilbert));
+*/                                               pBuf[wTemp+1] = sFilter(MultiplyByVolume(lastInputBuffer[wTemp]));
+                                               pBuf[wTemp] = delayLine(MultiplyByVolume(lastInputBuffer[wTemp]));
+                                             }
+                                             break;
+                                    case 4 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+                                               hilbert = lastInputBuffer[wTemp]/2;
+                                               delay = lastInputBuffer[wTemp+1]/2;
+                                               pBuf[wTemp] = MultiplyByVolume(/*UFilter*/(sFilter(hilbert+delay)));
+                                               pBuf[wTemp+1] = MultiplyByVolume(/*LFilter*/(delayLine(hilbert-delay)));
+                                               count++;
+                                             }
+                                             break;
+                        			 }
+					                 }
+					                 else
+					                 {
+						                if (PlotLSBT && SB_DATA == 0)
+						                {
+						                  if (fft_time==2)
+						                  {
+						                    pInt = (int *) LSB_BUFFER;
+						                    for (wTemp=0; wTemp < SIZE_PLOTMSG; wTemp++)
+						                      plotMsgData[wTemp]  = *pInt++;
+						                    dspSendMsg (hApp, hAlg,103 , SIZE_PLOTMSG, plotMsgData);
+						                  }
+						                }
+						                ClearError();
+ 						                if (LpfOn==2)
+                                    SlowAGC(lastInputBuffer);
+                                  else
+                                  {
+                                    AGC(lastInputBuffer);
+                                    if (LpfOn == 0)
+                                      RestoreVolume();
+                                    else
+                                      ClearOffset();
+                                  }
+ /*                                 plotMsgData[0]=GetVolume();
+						                plotMsgData[1]=0;
+						                dspSendMsg(hApp,hAlg,105,SIZE_PLOTMSG,plotMsgData);
+ */                               count = SB_DATA;
+						                switch(mode)
+						                {
+						                  case 0 : for(wTemp=0; wTemp<256; wTemp+=2)
+							                        {
+							                          hilbert = lastInputBuffer[wTemp];
+							                          delay =lastInputBuffer[wTemp+1];
+							                          USB_BUFFER[count] = hilbert;
+							                          LSB_BUFFER[count] = delay;
+							                          pBuf[wTemp] = pBuf[wTemp+1] = MultiplyByVolume(UFilter(hilbert));
+							                          count++;
+							                        }
+							                        break;
+                                    case 1 : for(wTemp=0; wTemp<256; wTemp+=2)
+							                        {
+							                          hilbert = lastInputBuffer[wTemp]/2;
+							                          delay = lastInputBuffer[wTemp+1]/2;
+							                          USB_BUFFER[count] = hilbert+delay;
+							                          LSB_BUFFER[count] = hilbert-delay;
+							                          pBuf[wTemp] = MultiplyByVolume(UFilter(hilbert+delay));
+							                          pBuf[wTemp+1] = MultiplyByVolume(LFilter(hilbert-delay));
+							                          count++;
+							                        }
+							                        break;
+                                    case 2 : for(wTemp=0; wTemp<256; wTemp+=2)
+							                        {
+							                          hilbert = sFilter(lastInputBuffer[wTemp])/2;
+							                          delay = delayLine(lastInputBuffer[wTemp+1])/2;
+							                          USB_BUFFER[count] = hilbert+delay;
+							                          LSB_BUFFER[count] = hilbert-delay;
+							                          pBuf[wTemp] = pBuf[wTemp+1] = MultiplyByVolume(UFilter(hilbert-delay));
+							                          count++;
+							                        }
+							                        break;
+                                    case 3 : for(wTemp=0; wTemp<256; wTemp+=2)
+                                             {
+							                          hilbert = sFilter(lastInputBuffer[wTemp])/2;
+							                          delay = delayLine(lastInputBuffer[wTemp+1])/2;
+							                          USB_BUFFER[count] = hilbert+delay;
+							                          LSB_BUFFER[count] = hilbert-delay;
+							                          pBuf[wTemp] = pBuf[wTemp+1] = MultiplyByVolume(UFilter(hilbert+delay));
+							                          count++;
+							                        }
+							                        break;
+                                    case 4 : for(wTemp=0; wTemp<256; wTemp+=2)
+							                        {
+							                          hilbert = sFilter(lastInputBuffer[wTemp])/2;
+							                          delay = delayLine(lastInputBuffer[wTemp+1])/2;
+							                          USB_BUFFER[count] = hilbert+delay;
+							                          LSB_BUFFER[count] = hilbert-delay;
+							                          pBuf[wTemp] = MultiplyByVolume(UFilter(hilbert+delay));
+							                          pBuf[wTemp+1] = MultiplyByVolume(LFilter(hilbert-delay));
+							                          count++;
+							                        }
+							                        break;
+                                  }
+                                  if (SB_DATA == 128)
+                                  {
+                                    if (fft_time==3 && PlotUSBT)
+                                    {
+                                      pInt = (int *) USB_BUFFER;
+                                      for (wTemp=0; wTemp < SIZE_PLOTMSG; wTemp++)
+						                      plotMsgData[wTemp]  = *pInt++;
+						                    dspSendMsg (hApp, hAlg,104 , SIZE_PLOTMSG, plotMsgData);
+						                  }
+						                  if (fft_time == 2 && PlotUSBS)
+						                  {
+						                    pInt = (int *) dousbfft();
+						                    for (wTemp=0; wTemp < SIZE_PLOTMSG; wTemp++)
+						                      plotMsgData[wTemp]  = *pInt++;
+						                    dspSendMsg (hApp, hAlg,101 , SIZE_PLOTMSG, plotMsgData);
+						                  }
+						                  if (--fft_time==0)
+						                  {
+						                    fft_time = 13;
+						                    if (PlotLSBS)
+						                    {
+						                      pInt = (int *) dolsbfft();
+						                      for (wTemp=0; wTemp < SIZE_PLOTMSG; wTemp++)
+                                          plotMsgData[wTemp]  = *pInt++;
+						                      dspSendMsg (hApp, hAlg,102 , SIZE_PLOTMSG, plotMsgData);
+						                    }
+						                  }
+						                }
+						                SB_DATA = 128 - SB_DATA;
+                                }
+/*                    if (GetError()!=0)
+						 wTemp = dspSendIo(hAlg, OutputDevice, buffer_null, SIZE_IO_BUFFER);
+					       else
+*/                      wTemp = dspSendIo(hAlg, OutputDevice, pBuf, SIZE_IO_BUFFER);
+  					       if (wTemp != DSPERR_SUCCESS)
+					       {
+						      SendErrCount++;
+						      SendLastErr = wTemp;
+					       }
+					       break;
+			case (DSPERR_IO_ABORT): break;
+			case (DSPERR_NO_BUFFER): algIoOverrun++;
+						 break;
+		      }
+		      break;
+   case DSPCB_GETMSG:   if (wParam1 == DSPERR_SUCCESS)
+			{
+			  ParseMsg(wParam1, wParam2, wParam3);
+			  if (dspGetMsg (hAlg, (int *)wParam2, sizeof(MSG_STRUCT)) != 0)
+			    dspSendMsg (hApp, hAlg, DSPMSGID_STRING_PRINT, sizeof (STR_GETMSGREQUEUEERROR), STR_GETMSGREQUEUEERROR);
+			}
+			break;
+
+   case DSPCB_GETDATA:
+   case DSPCB_SENDDATA:
+   case DSPCB_TIMER:
+   case DSPCB_IDLE:
+   case DSPCB_ERROR:
+   default:	break;
+   }
+
+/* return */
+}
+
+int dit = 13;
+
+DeleteMorse()
+
+{
+  int count;
+
+  count = 0;
+  for(count=0;count<MAX_MORSE-1;count++)
+    Morse[count] = Morse[count+1];
+  Morse[MAX_MORSE-1] = 0;
+  if (Morse[0]==0)
+  {
+    dspSendMsg (hApp, hAlg, MSG_MORSE_END_MORSE,256,"END MORSE");
+    SendingMorse = 0;
+  }
+  else
+    if (Morse[1]==0)
+      dspSendMsg (hApp, hAlg, MSG_MORSE_NEXT_CHAR,256,"NEXT CHAR");
+}
+
+

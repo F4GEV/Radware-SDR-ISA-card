@@ -1,0 +1,184 @@
+Release 5.01
+Analog Devices Inc. : ADSP-21XX Linker
+Version 2.18 3/30/94
+
+alg (alg.exe) mapped according to echopss (pssos.ach)
+
+     xref for module: main_routine     
+
+     main_routine                    pm  0000 [00B6]   module        
+     PSS_data_reg                    dm  3000 [0001]   port        
+     PSS_control_reg                 dm  3008 [0001]   port        
+     PSS_status_reg                  dm  3009 [0001]   port        
+     PSS_dma_reg                     dm  3010 [0001]   port        
+     ram_bank_reg                    dm  3018 [0001]   port        
+     ext_mem_latch                   dm  3020 [0001]   port        
+     SP_address_reg                  dm  3440 [0001]   port        
+     SP_data_reg                     dm  3448 [0001]   port        
+     SP_status_reg                   dm  3450 [0001]   port        
+     SP_pio_reg                      dm  3458 [0001]   port        
+     SP_dmal_reg                     dm  3060 [0001]   port        
+     SP_dmar_reg                     dm  3068 [0001]   port        
+     SP_enable_reg                   dm  3070 [0001]   port        
+     MUSIC0_reg                      dm  3080 [0001]   port        
+     MUSIC_dacl                      dm  3081 [0001]   port        
+     MUSIC1_reg                      dm  3088 [0001]   port        
+     MUSIC_dacr                      dm  3089 [0001]   port        
+     MUSIC_status_reg                dm  3090 [0001]   port        
+     MUSIC_pc_status_reg             dm  3091 [0001]   port        
+     MUSIC_divisor_reg               dm  3098 [0001]   port        
+     SB_data_reg                     dm  30C0 [0001]   port        
+     SB_status_reg                   dm  30C8 [0001]   port        
+     SB_control_reg                  dm  30C9 [0001]   port        
+     MIDI_data_reg                   dm  3100 [0001]   port        
+     MIDI_command_reg                dm  3108 [0001]   port        
+     MIDI_status_reg                 dm  3110 [0001]   port        
+     MIDI_control_reg                dm  3111 [0001]   port        
+     MIDI_uart                       dm  3118 [0001]   port        
+     UART_data_reg                   dm  3140 [0001]   port        
+     UART_status_reg                 dm  3148 [0001]   port        
+     UART_control_reg                dm  3149 [0001]   port        
+     IRQ_status_reg                  dm  31C0 [0001]   port        
+     IRQ_enable_reg                  dm  31C1 [0001]   port        
+     PIO_reg                         dm  31C8 [0001]   port        
+     PSS_config_reg                  dm  31D0 [0001]   port        
+     WSS_config_reg                  dm  31D8 [0001]   port        
+     SB_config_reg                   dm  31E0 [0001]   port        
+     MIDI_config_reg                 dm  31E8 [0001]   port        
+     CD_config_reg                   dm  31F0 [0001]   port        
+     UART_config_reg                 dm  31F8 [0001]   port        
+     PIO_reg_data                    dm  3800 [0001]   variable        
+     main_                           pm  001C          label        
+     loop_                           pm  003A          label        
+     rwait_dac                       pm  003E          label        
+     put_word_                       pm  0043          label        
+     SP_init                         pm  0049          label        
+     dma_detect_loop                 pm  0050          label        
+     dec_counter                     pm  005B          label        
+     mute_1848                       pm  005D          label        
+     autocal_already_set             pm  0080          label        
+     SP_autocalibrate                pm  009D          label        
+     autocal_w1                      pm  00A0          label        
+     autocal_w2                      pm  00A3          label        
+     SP_ini_wait                     pm  00A7          label        
+     iwxx                            pm  00A8          label        
+     SP_dma_start                    pm  00AC          label        
+     SP_dma_stop                     pm  00B1          label        
+
+
+     210x memory per echopss (pssos.ach)
+
+     0000 - 03FF [  1024.] bm rom code boot_mem                        
+     0000 - 03FF [  1024.] pm ram data/code int_pm                          
+     3800 - 39FF [   512.] dm ram data int_dm                          
+     0800 - 3FFF [ 14336.] pm ram data/code ext_pm                          
+     1000 - 2FFF [  8192.] dm ram data ext_dm                          
+     3000 - 3000 [     1.] dm ram port PSS_data_reg                    
+     3008 - 3008 [     1.] dm ram port PSS_control_reg                 
+     3009 - 3009 [     1.] dm ram port PSS_status_reg                  
+     3010 - 3010 [     1.] dm ram port PSS_dma_reg                     
+     3018 - 3018 [     1.] dm ram port ram_bank_reg                    
+     3020 - 3020 [     1.] dm ram port ext_mem_latch                   
+     3440 - 3440 [     1.] dm ram port SP_address_reg                  
+     3448 - 3448 [     1.] dm ram port SP_data_reg                     
+     3450 - 3450 [     1.] dm ram port SP_status_reg                   
+     3458 - 3458 [     1.] dm ram port SP_pio_reg                      
+     3060 - 3060 [     1.] dm ram port SP_dmal_reg                     
+     3068 - 3068 [     1.] dm ram port SP_dmar_reg                     
+     3070 - 3070 [     1.] dm ram port SP_enable_reg                   
+     3080 - 3080 [     1.] dm ram port MUSIC0_reg                      
+     3081 - 3081 [     1.] dm ram port MUSIC_dacl                      
+     3088 - 3088 [     1.] dm ram port MUSIC1_reg                      
+     3089 - 3089 [     1.] dm ram port MUSIC_dacr                      
+     3090 - 3090 [     1.] dm ram port MUSIC_status_reg                
+     3091 - 3091 [     1.] dm ram port MUSIC_pc_status_reg             
+     3098 - 3098 [     1.] dm ram port MUSIC_divisor_reg               
+     30C0 - 30C0 [     1.] dm ram port SB_data_reg                     
+     30C8 - 30C8 [     1.] dm ram port SB_status_reg                   
+     30C9 - 30C9 [     1.] dm ram port SB_control_reg                  
+     30D0 - 30D0 [     1.] dm ram port SM_divisor_reg                  
+     3100 - 3100 [     1.] dm ram port MIDI_data_reg                   
+     3108 - 3108 [     1.] dm ram port MIDI_command_reg                
+     3110 - 3110 [     1.] dm ram port MIDI_status_reg                 
+     3111 - 3111 [     1.] dm ram port MIDI_control_reg                
+     3118 - 3118 [     1.] dm ram port MIDI_uart                       
+     3140 - 3140 [     1.] dm ram port UART_data_reg                   
+     3148 - 3148 [     1.] dm ram port UART_status_reg                 
+     3149 - 3149 [     1.] dm ram port UART_control_reg                
+     31C0 - 31C0 [     1.] dm ram port IRQ_status_reg                  
+     31C1 - 31C1 [     1.] dm ram port IRQ_enable_reg                  
+     31C8 - 31C8 [     1.] dm ram port PIO_reg                         
+     31D0 - 31D0 [     1.] dm ram port PSS_config_reg                  
+     31D8 - 31D8 [     1.] dm ram port WSS_config_reg                  
+     31E0 - 31E0 [     1.] dm ram port SB_config_reg                   
+     31E8 - 31E8 [     1.] dm ram port MIDI_config_reg                 
+     31F0 - 31F0 [     1.] dm ram port CD_config_reg                   
+     31F8 - 31F8 [     1.] dm ram port UART_config_reg                 
+
+
+
+     boot memory and bootable run time program memory map:
+
+     fixed program memory map:
+
+     0000 - 00B5 [   182.] pm ram      module   main_routine
+
+
+
+     fixed program memory rom:      0.
+     fixed program memory ram:    182.
+
+
+     dynamic data memory map:
+
+     fixed data memory map:
+
+     3000 - 3000 [     1.] dm ram      port     PSS_data_reg of main_routine 
+     3008 - 3008 [     1.] dm ram      port     PSS_control_reg of main_routine 
+     3009 - 3009 [     1.] dm ram      port     PSS_status_reg of main_routine 
+     3010 - 3010 [     1.] dm ram      port     PSS_dma_reg of main_routine 
+     3018 - 3018 [     1.] dm ram      port     ram_bank_reg of main_routine 
+     3020 - 3020 [     1.] dm ram      port     ext_mem_latch of main_routine 
+     3060 - 3060 [     1.] dm ram      port     SP_dmal_reg of main_routine 
+     3068 - 3068 [     1.] dm ram      port     SP_dmar_reg of main_routine 
+     3070 - 3070 [     1.] dm ram      port     SP_enable_reg of main_routine 
+     3080 - 3080 [     1.] dm ram      port     MUSIC0_reg of main_routine 
+     3081 - 3081 [     1.] dm ram      port     MUSIC_dacl of main_routine 
+     3088 - 3088 [     1.] dm ram      port     MUSIC1_reg of main_routine 
+     3089 - 3089 [     1.] dm ram      port     MUSIC_dacr of main_routine 
+     3090 - 3090 [     1.] dm ram      port     MUSIC_status_reg of main_routine 
+     3091 - 3091 [     1.] dm ram      port     MUSIC_pc_status_reg of main_routine 
+     3098 - 3098 [     1.] dm ram      port     MUSIC_divisor_reg of main_routine 
+     30C0 - 30C0 [     1.] dm ram      port     SB_data_reg of main_routine 
+     30C8 - 30C8 [     1.] dm ram      port     SB_status_reg of main_routine 
+     30C9 - 30C9 [     1.] dm ram      port     SB_control_reg of main_routine 
+     3100 - 3100 [     1.] dm ram      port     MIDI_data_reg of main_routine 
+     3108 - 3108 [     1.] dm ram      port     MIDI_command_reg of main_routine 
+     3110 - 3110 [     1.] dm ram      port     MIDI_status_reg of main_routine 
+     3111 - 3111 [     1.] dm ram      port     MIDI_control_reg of main_routine 
+     3118 - 3118 [     1.] dm ram      port     MIDI_uart of main_routine 
+     3140 - 3140 [     1.] dm ram      port     UART_data_reg of main_routine 
+     3148 - 3148 [     1.] dm ram      port     UART_status_reg of main_routine 
+     3149 - 3149 [     1.] dm ram      port     UART_control_reg of main_routine 
+     31C0 - 31C0 [     1.] dm ram      port     IRQ_status_reg of main_routine 
+     31C1 - 31C1 [     1.] dm ram      port     IRQ_enable_reg of main_routine 
+     31C8 - 31C8 [     1.] dm ram      port     PIO_reg of main_routine 
+     31D0 - 31D0 [     1.] dm ram      port     PSS_config_reg of main_routine 
+     31D8 - 31D8 [     1.] dm ram      port     WSS_config_reg of main_routine 
+     31E0 - 31E0 [     1.] dm ram      port     SB_config_reg of main_routine 
+     31E8 - 31E8 [     1.] dm ram      port     MIDI_config_reg of main_routine 
+     31F0 - 31F0 [     1.] dm ram      port     CD_config_reg of main_routine 
+     31F8 - 31F8 [     1.] dm ram      port     UART_config_reg of main_routine 
+     3440 - 3440 [     1.] dm ram      port     SP_address_reg of main_routine 
+     3448 - 3448 [     1.] dm ram      port     SP_data_reg of main_routine 
+     3450 - 3450 [     1.] dm ram      port     SP_status_reg of main_routine 
+     3458 - 3458 [     1.] dm ram      port     SP_pio_reg of main_routine 
+     3800 - 3800 [     1.] dm ram      variable PIO_reg_data of main_routine 
+
+
+
+     fixed data memory rom:      0.
+     fixed data memory ram:     41.
+
+
+

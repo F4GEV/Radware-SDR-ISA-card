@@ -1,0 +1,1224 @@
+Release 5.01
+Analog Devices Inc. : ADSP-21XX Linker
+Version 2.18 3/30/94
+
+radware (radware.exe) mapped according to echopss (pssos.ach)
+
+     xref for module: main_routine     
+
+     main_routine                    pm  0C00 [0275]   module(global)
+     PSS_data_reg                    dm  3000 [0001]   port(global)
+     PSS_control_reg                 dm  3008 [0001]   port(global)
+     PSS_status_reg                  dm  3009 [0001]   port(global)
+     PSS_dma_reg                     dm  3010 [0001]   port(global)
+     ram_bank_reg                    dm  3018 [0001]   port(global)
+     ext_mem_latch                   dm  3020 [0001]   port(global)
+     SP_address_reg                  dm  3440 [0001]   port(global)
+     SP_data_reg                     dm  3448 [0001]   port(global)
+     SP_status_reg                   dm  3450 [0001]   port(global)
+     SP_pio_reg                      dm  3458 [0001]   port(global)
+     SP_dmal_reg                     dm  3060 [0001]   port(global)
+     SP_dmar_reg                     dm  3068 [0001]   port(global)
+     SP_enable_reg                   dm  3070 [0001]   port(global)
+     MUSIC0_reg                      dm  3080 [0001]   port(global)
+     MUSIC_dacl                      dm  3081 [0001]   port(global)
+     MUSIC1_reg                      dm  3088 [0001]   port(global)
+     MUSIC_dacr                      dm  3089 [0001]   port(global)
+     MUSIC_status_reg                dm  3090 [0001]   port(global)
+     MUSIC_pc_status_reg             dm  3091 [0001]   port(global)
+     MUSIC_divisor_reg               dm  3098 [0001]   port(global)
+     SB_data_reg                     dm  30C0 [0001]   port(global)
+     SB_status_reg                   dm  30C8 [0001]   port(global)
+     SB_control_reg                  dm  30C9 [0001]   port(global)
+     MIDI_data_reg                   dm  3100 [0001]   port(global)
+     MIDI_command_reg                dm  3108 [0001]   port(global)
+     MIDI_status_reg                 dm  3110 [0001]   port(global)
+     MIDI_control_reg                dm  3111 [0001]   port(global)
+     MIDI_uart                       dm  3118 [0001]   port(global)
+     UART_data_reg                   dm  3140 [0001]   port(global)
+     UART_status_reg                 dm  3148 [0001]   port(global)
+     UART_control_reg                dm  3149 [0001]   port(global)
+     IRQ_status_reg                  dm  31C0 [0001]   port(global)
+     IRQ_enable_reg                  dm  31C1 [0001]   port(global)
+     PSS_config_reg                  dm  31D0 [0001]   port(global)
+     WSS_config_reg                  dm  31D8 [0001]   port(global)
+     SB_config_reg                   dm  31E0 [0001]   port(global)
+     MIDI_config_reg                 dm  31E8 [0001]   port(global)
+     CD_config_reg                   dm  31F0 [0001]   port(global)
+     UART_config_reg                 dm  31F8 [0001]   port(global)
+     input_data                      dm  1640 [0200]   variable(global)
+     output_data                     dm  1840 [0200]   variable(global)
+     AGC_Up                          dm  1079 [0001]   variable(global)
+     AGC_Down                        dm  107A [0001]   variable(global)
+     sp_input_place                  dm  107B [0001]   variable(global)
+     sp_output_place                 dm  10F9 [0001]   variable(global)
+     data_ready                      dm  10FA [0001]   variable(global)
+     mute                            dm  10FB [0001]   variable(global)
+     USB_BUFFER_                     dm  1A40 [0100]   variable(global)
+     LSB_BUFFER_                     dm  1B40 [0100]   variable(global)
+     reg_1848                        dm  12E8 [0016]   variable        
+     TalkOn_                         dm  1179 [0001]   variable(global)
+     AGC_On_                         dm  117A [0001]   variable(global)
+     AnalogAGC                       dm  117B [0001]   variable(global)
+     CurrentIFGain                   dm  117C [0001]   variable(global)
+     DitLength                       dm  117D [0001]   variable(global)
+     input_mute                      dm  117E [0001]   variable(global)
+     last_data                       dm  117F [0001]   variable        
+     message_number                  dm  11F9 [0001]   variable(global)
+     message_length                  dm  11FA [0001]   variable(global)
+     message                         dm  1C40 [0100]   variable(global)
+     message_pointer                 dm  11FB [0001]   variable(global)
+     mode                            dm  11FC [0001]   variable(global)
+     Monitor                         dm  11FD [0001]   variable        
+     Morse                           dm  1D40 [0064]   variable(global)
+     MorsePosition                   dm  11FE [0001]   variable(global)
+     NewSetTone                      dm  11FF [0001]   variable(global)
+     NewIFGain                       dm  1279 [0001]   variable(global)
+     LogOn_                          dm  127A [0001]   variable(global)
+     HannOn_                         dm  127B [0001]   variable(global)
+     old_i0                          dm  127C [0001]   variable(global)
+     old_i1                          dm  127D [0001]   variable(global)
+     old_m0                          dm  127E [0001]   variable(global)
+     old_l0                          dm  127F [0001]   variable(global)
+     important_message_number        dm  12BA [0001]   variable(global)
+     important_message_length        dm  12BB [0001]   variable(global)
+     important_message               dm  1DA4 [0100]   variable(global)
+     important_message_overflow      dm  12BC [0001]   variable(global)
+     out_message_number              dm  12BD [0001]   variable(global)
+     out_message_length              dm  12BE [0001]   variable(global)
+     out_message                     dm  1EA4 [0100]   variable(global)
+     out_message_overflow            dm  12BF [0001]   variable(global)
+     out_message_pointer             dm  12FE [0001]   variable(global)
+     PlotLSBT                        dm  12FF [0001]   variable(global)
+     PlotUSBT                        dm  1328 [0001]   variable(global)
+     PlotLSBS                        dm  1329 [0001]   variable(global)
+     PlotUSBS                        dm  132A [0001]   variable(global)
+     SendingMorse                    dm  132B [0001]   variable(global)
+     Sample_Rate                     dm  132C [0001]   variable(global)
+     New_Sample_Rate                 dm  132D [0001]   variable(global)
+     smeter_on                       dm  132E [0001]   variable        
+     squelch                         dm  132F [0001]   variable(global)
+     ibm_data_ready                  dm  1330 [0001]   variable(global)
+     data_from_ibm                   dm  1331 [0001]   variable(global)
+     play_voice                      dm  1332 [0001]   variable(global)
+     fft_time                        dm  1333 [0001]   variable(global)
+     Mute_Length                     dm  1334 [0001]   variable(global)
+     winwave                         dm  1335 [0001]   variable(global)
+     send_msg                        pm  0DD2          label(global)
+     send_important_msg              pm  0DBB          label(global)
+     put_word                        pm  0DE6          label(global)
+     main_                           pm  0C00          label(global)
+     clear_morse                     pm  0C48          label        
+     main_loop                       pm  0C60          label        
+     check_for_message               pm  0C66          label        
+     no_data_pending                 pm  0C7C          label        
+     change_number                   pm  0C7D          label        
+     change_length                   pm  0C7F          label        
+     end_of_message                  pm  0C86          label        
+     clear_message                   pm  0C87          label        
+     handle_message                  pm  0C8D          label        
+     agc_message                     pm  0CD8          label        
+     agc_10_db_msg                   pm  0CE1          label        
+     change_i_message                pm  0CE6          label        
+     filter_message                  pm  0CE9          label        
+     clear_out_message               pm  0CEC          label        
+     clear_important_message         pm  0CF2          label        
+     custom_filter_message           pm  0CF6          label        
+     custom_filter_loop              pm  0CFF          label        
+     get_1848_message                pm  0D01          label        
+     get_loop                        pm  0D0E          label        
+     if_gain_message                 pm  0D26          label        
+     mode_message                    pm  0D2A          label        
+     new_sample                      pm  0D33          label        
+     no_new_sample                   pm  0D3E          label        
+     fm_sample_rate                  pm  0D3F          label        
+     morse_char_msg                  pm  0D44          label        
+     find_end_of_morse               pm  0D4A          label        
+     morse_char_loop                 pm  0D57          label        
+     morse_key_message               pm  0D5B          label        
+     set_morse_tones                 pm  0D5D          label        
+     morse_speed_msg                 pm  0D5E          label        
+     mute_message                    pm  0D60          label        
+     end_mute_msg                    pm  0D65          label        
+     plot_lsb_t_msg                  pm  0D68          label        
+     plot_usb_t_msg                  pm  0D6A          label        
+     plot_lsb_s_msg                  pm  0D6C          label        
+     plot_usb_s_msg                  pm  0D6E          label        
+     recieve_msg                     pm  0D70          label        
+     send_winwave_message            pm  0D87          label        
+     smeter_message                  pm  0D8B          label        
+     squelch_message                 pm  0D8D          label        
+     start_morse_msg                 pm  0D8F          label        
+     stop_morse_msg                  pm  0D95          label        
+     transmit_msg                    pm  0D99          label        
+     volume_message                  pm  0DAF          label        
+     end_volume_msg                  pm  0DBA          label        
+     send_imp_loop                   pm  0DCB          label        
+     end_send_imp                    pm  0DCC          label        
+     important_overflow              pm  0DCE          label        
+     do_send_msg                     pm  0DD5          label        
+     send_msg_loop                   pm  0DDF          label        
+     end_send_msg                    pm  0DE0          label        
+     message_overflow                pm  0DE2          label        
+     clear_1848_data                 pm  0DEC          label        
+     clear_1848_loop                 pm  0DF5          label        
+     SP_init                         pm  0DF7          label        
+     dma_detect_loop                 pm  0DFE          label        
+     dec_counter                     pm  0E09          label        
+     mute_1848                       pm  0E0B          label        
+     autocal_already_set             pm  0E2E          label        
+     SP_autocalibrate                pm  0E4C          label        
+     autocal_w1                      pm  0E4F          label        
+     autocal_w2                      pm  0E52          label        
+     SP_ini_wait                     pm  0E56          label        
+     iwxx                            pm  0E57          label        
+     SP_dma_start                    pm  0E5B          label        
+     SP_dma_stop                     pm  0E60          label        
+     get_word                        pm  0E65          label        
+     end_get_word                    pm  0E6A          label        
+     init_sp_data                    pm  0E6B          label        
+     init_data_loop                  pm  0E73          label        
+     Buffer_Position                     1338 [0001]   extern(modes)        
+     RTTY_Data_Count                     133A [0001]   extern(modes)        
+     ChangeVolume_                       15B6 [0000]   extern(VOLUMEMOD)        
+     smeter_time                         1368 [0001]   extern(modes)        
+     I_Volume                            1451 [0001]   extern(VOLUMEMOD)        
+     SelectFilter_                       1345 [0000]   extern(FIR_LPF)        
+     calculate_modes                     0E75 [0000]   extern(modes)        
+     RTTY_Data                           1FA4 [00C8]   extern(modes)        
+     gain1_                              147A [0001]   extern(Sin_Approximation)        
+     RTTY_Data_Pnt                       1339 [0001]   extern(modes)        
+     InitAGC_                            15A0 [0000]   extern(VOLUMEMOD)        
+     freq1_                              1474 [0001]   extern(Sin_Approximation)        
+     Change_I_                           15BC [0000]   extern(VOLUMEMOD)        
+     Noise_Level                         136A [0001]   extern(modes)        
+     GetVolume_                          15C4 [0000]   extern(VOLUMEMOD)        
+     initFilter_                         1198 [0000]   extern(FIR_LPF)        
+     coeff_custom                        0900 [0051]   extern(FIR_LPF)        
+
+     xref for module: modes     
+
+     modes                           pm  0E75 [0283]   module(global)
+     Input_Position                  dm  1336 [0001]   variable(global)
+     Output_Position                 dm  1337 [0001]   variable        
+     Buffer_Position                 dm  1338 [0001]   variable(global)
+     RTTY_Data                       dm  1FA4 [00C8]   variable(global)
+     RTTY_Data_Pnt                   dm  1339 [0001]   variable(global)
+     RTTY_Data_Count                 dm  133A [0001]   variable(global)
+     Calc_Buffer                     dm  206C [0100]   variable        
+     Calc_Buffer2                    dm  216C [0100]   variable        
+     Calc_Buffer3                    dm  226C [0100]   variable        
+     AnalogMessage                   dm  133B [0003]   variable        
+     last_data                       dm  133E [0001]   variable        
+     smeter                          dm  133F [0001]   variable        
+     smeter_time                     dm  1368 [0001]   variable(global)
+     AM_Tune                         dm  1369 [0001]   variable        
+     Noise_Level                     dm  136A [0001]   variable(global)
+     calculate_modes                 pm  0E75          label(global)
+     Check_Tone_Control              pm  0E81          label        
+     no_new_tone                     pm  0E88          label        
+     check_for_Analog_AGC            pm  0E89          label        
+     no_analog_agc                   pm  0E96          label        
+     Turn_Down_AGC                   pm  0E97          label        
+     send_new_gain                   pm  0E9E          label        
+     Turn_Down_10_DB                 pm  0EA7          label        
+     Turn_Up_10_DB                   pm  0EAB          label        
+     Turn_Up_AGC                     pm  0EAF          label        
+     check_for_lsbt                  pm  0EB8          label        
+     check_128_lsb                   pm  0EC1          label        
+     no_lsbt                         pm  0EC9          label        
+     check_for_plots                 pm  0ECA          label        
+     check_128                       pm  0ED3          label        
+     buffer_not_ready                pm  0EDF          label        
+     check_play_voice                pm  0EE0          label        
+     plot_LSB_spectrum               pm  0EE1          label        
+     plot_USB_spectrum               pm  0EEC          label        
+     no_plot                         pm  0EF4          label        
+     plot_USB_time                   pm  0EF5          label        
+     plot_LSB_time                   pm  0EFD          label        
+     check_for_morse                 pm  0F05          label        
+     keep_sine                       pm  0F19          label        
+     inc_morse                       pm  0F27          label        
+     dec_morse                       pm  0F2B          label        
+     dont_delete                     pm  0F2F          label        
+     morse_loop                      pm  0F32          label        
+     no_morse                        pm  0F34          label        
+     Delete_Morse                    pm  0F35          label        
+     delete_loop                     pm  0F3D          label        
+     send_end_morse                  pm  0F47          label        
+     send_next_char                  pm  0F4C          label        
+     morse_all                       pm  0F50          label        
+     find_mode                       pm  0F53          label        
+     SSB_Recieve                     pm  0F68          label        
+     No_SSB_Squelch                  pm  0F7A          label        
+     LSB_Recieve                     pm  0F93          label        
+     USB_Recieve                     pm  0F96          label        
+     ISB_Recieve                     pm  0F98          label        
+     AM_Recieve                      pm  0F9E          label        
+     AM_LSB                          pm  0FBD          label        
+     AM_USB                          pm  0FBF          label        
+     dont_tune                       pm  0FD6          label        
+     FM_Recieve                      pm  0FD7          label        
+     Mute_FM                         pm  0FF6          label        
+     Data_Recieve                    pm  0FFA          label        
+     PSK_Recieve                     pm  1010          label        
+     FSK_Recieve                     pm  1011          label        
+     excess_data                     pm  1023          label        
+     dont_send_rtty                  pm  103A          label        
+     find_xmit_mode                  pm  1041          label        
+     Xmit_AM                         pm  104B          label        
+     Xmit_AM3                        pm  1056          label        
+     Xmit_AM2                        pm  105B          label        
+     AM_Yes_Morse                    pm  105E          label        
+     Xmit_LSB                        pm  1061          label        
+     X_LSB_Loop                      pm  1070          label        
+     Xmit_SSB                        pm  1071          label        
+     Yes_Morse                       pm  1076          label        
+     Xmit_SSB2                       pm  107B          label        
+     Not_FM_Xmit                     pm  1083          label        
+     Xmit_USB                        pm  1089          label        
+     X_USB_Loop                      pm  1098          label        
+     Xmit_ISB                        pm  109A          label        
+     X_ISB_Loop                      pm  10A6          label        
+     which_agc                       pm  10A8          label        
+     not_slow_agc                    pm  10AE          label        
+     not_agc_off                     pm  10B6          label        
+     check_clear                     pm  10BE          label        
+     agc_smeter                      pm  10C2          label        
+     increase_front                  pm  10C3          label        
+     decrease_front                  pm  10C7          label        
+     send_smeter                     pm  10CB          label        
+     end_send_smeter                 pm  10D5          label        
+     Calculate_Input_Position        pm  10D6          label        
+     first_block                     pm  10DD          label        
+     second_block                    pm  10DF          label        
+     update_buffer_pos               pm  10E4          label        
+     inc_by_64                       pm  10F1          label        
+     dont_reset_buf_pos              pm  10F6          label        
+     Highpass_Both_                      1480 [0000]   extern(FIR_LPF)        
+     DitLength                           117D [0001]   extern(main_routine)        
+     out_message_number                  12BD [0001]   extern(main_routine)        
+     Convert_RTTY_To_Bits_               1841 [0000]   extern(VOLUMEMOD)        
+     Morse                               1D40 [0064]   extern(main_routine)        
+     Noise_AGC_                          1204 [0000]   extern(FIR_LPF)        
+     important_message_number            12BA [0001]   extern(main_routine)        
+     MultiplyAllByVolume_                15DE [0000]   extern(VOLUMEMOD)        
+     send_important_msg                  0DBB [0000]   extern(main_routine)        
+     Remove_LSB_                         14AC [0000]   extern(FIR_LPF)        
+     data_ready                          10FA [0001]   extern(main_routine)        
+     FillSin_                            18D8 [0000]   extern(Sin_Approximation)        
+     Remove_USB_                         14B9 [0000]   extern(FIR_LPF)        
+     Make_SSB_FM_                        14CE [0000]   extern(FIR_LPF)        
+     delayLine                           125F [0000]   extern(FIR_LPF)        
+     ChangeVolume_                       15B6 [0000]   extern(VOLUMEMOD)        
+     AnalogAGC                           117B [0001]   extern(main_routine)        
+     Transfer_Data                       1459 [0002]   extern(VOLUMEMOD)        
+     Make_SSB_                           14C2 [0000]   extern(FIR_LPF)        
+     FM2_                                1815 [0000]   extern(VOLUMEMOD)        
+     FM_RTTY_                            151F [0000]   extern(FIR_LPF)        
+     mode                                11FC [0001]   extern(main_routine)        
+     TalkOn_                             1179 [0001]   extern(main_routine)        
+     input_data                          1640 [0200]   extern(main_routine)        
+     output_data                         1840 [0200]   extern(main_routine)        
+     AGC_                                1681 [0000]   extern(VOLUMEMOD)        
+     play_voice                          1332 [0001]   extern(main_routine)        
+     Filter_60_Hz_                       12E3 [0000]   extern(FIR_LPF)        
+     ClearOffset_                        15C6 [0000]   extern(VOLUMEMOD)        
+     Mute_Samples_                       18BB [0000]   extern(VOLUMEMOD)        
+     Emphisize                           1232 [0000]   extern(FIR_LPF)        
+     FreqCal2_                           174D [0000]   extern(VOLUMEMOD)        
+     Filter_Both_                        1472 [0000]   extern(FIR_LPF)        
+     Decimate_And_Filter_                1243 [0000]   extern(FIR_LPF)        
+     HighLow                             129A [0000]   extern(FIR_LPF)        
+     dolsbfft_                           1929 [0000]   extern(FFT)        
+     Convert_RTTY_To_Bits_2              185B [0000]   extern(VOLUMEMOD)        
+     RestoreVolume_                      15BE [0000]   extern(VOLUMEMOD)        
+     Average                             128F [0000]   extern(FIR_LPF)        
+     dousbfft_                           191F [0000]   extern(FFT)        
+     Center_                             17EE [0000]   extern(VOLUMEMOD)        
+     AGC_Down                            107A [0001]   extern(main_routine)        
+     AGC_On_                             117A [0001]   extern(main_routine)        
+     delayLine3                          127B [0000]   extern(FIR_LPF)        
+     PSK_                                182D [0000]   extern(VOLUMEMOD)        
+     SendingMorse                        132B [0001]   extern(main_routine)        
+     fft_time                            1333 [0001]   extern(main_routine)        
+     SlowAGC_                            1656 [0000]   extern(VOLUMEMOD)        
+     Copy_Data_256_                      1587 [0000]   extern(VOLUMEMOD)        
+     send_msg                            0DD2 [0000]   extern(main_routine)        
+     PlotLSBS                            1329 [0001]   extern(main_routine)        
+     PlotLSBT                            12FF [0001]   extern(main_routine)        
+     LSB_BUFFER_                         1B40 [0100]   extern(main_routine)        
+     sFilter                             131B [0000]   extern(FIR_LPF)        
+     MorsePosition                       11FE [0001]   extern(main_routine)        
+     PlotUSBS                            132A [0001]   extern(main_routine)        
+     PlotUSBT                            1328 [0001]   extern(main_routine)        
+     USB_BUFFER_                         1A40 [0100]   extern(main_routine)        
+     MySetTone_                          1764 [0000]   extern(VOLUMEMOD)        
+     Hilbert_And_Delay_                  13DC [0000]   extern(FIR_LPF)        
+     NewSetTone                          11FF [0001]   extern(main_routine)        
+     Costas                              1716 [0000]   extern(VOLUMEMOD)        
+     AGC_Up                              1079 [0001]   extern(main_routine)        
+     CurrentIFGain                       117C [0001]   extern(main_routine)        
+     Adjust_I_                           15CE [0000]   extern(VOLUMEMOD)        
+     put_word                            0DE6 [0000]   extern(main_routine)        
+     squelch                             132F [0001]   extern(main_routine)        
+     GetVolume_                          15C4 [0000]   extern(VOLUMEMOD)        
+     Deemphisize                         1221 [0000]   extern(FIR_LPF)        
+     Hilbert2                            132F [0000]   extern(FIR_LPF)        
+
+     xref for module: RegUtil     
+
+     RegUtil                         pm  10F8 [00A0]   module(global)
+     RegArea                         dm  236C [0038]   variable        
+     RegArea2                        dm  23A4 [0038]   variable        
+     RegSave                         pm  10F8          label(global)
+     RegRestore                      pm  1120          label(global)
+     RegSave2                        pm  1148          label(global)
+     RegRestore2                     pm  1170          label(global)
+
+     xref for module: FIR_LPF     
+
+     FIR_LPF                         pm  1198 [03EC]   module(global)
+     data                            dm  1000 [0079]   variable        
+     usb_data                        dm  1080 [0079]   variable        
+     lsb_data                        dm  1100 [0079]   variable        
+     highpass_usb_data               dm  1180 [0079]   variable        
+     highpass_lsb_data               dm  1200 [0079]   variable        
+     delay_data                      dm  1280 [0028]   variable        
+     delay2_data                     dm  12C0 [0028]   variable        
+     delay3_data                     dm  1300 [0028]   variable        
+     delay4_data                     dm  1340 [0028]   variable        
+     fm_data                         dm  107C [0004]   variable        
+     fm2_data                        dm  10FC [0004]   variable        
+     hz_60_data_usb                  dm  1380 [0051]   variable        
+     hz_60_data_lsb                  dm  1400 [0051]   variable        
+     hilbert_data                    dm  1480 [0051]   variable        
+     hilbert3_data                   dm  1500 [0051]   variable        
+     rtty_data                       dm  13E0 [0015]   variable        
+     cw_data                         dm  1460 [0014]   variable        
+     reg_l0                          dm  136B [0001]   variable        
+     reg_l4                          dm  136C [0001]   variable        
+     reg_i4                          dm  136D [0001]   variable        
+     reg_m4                          dm  136E [0001]   variable        
+     i0_pnt                          dm  136F [0001]   variable        
+     hilbert3_pnt                    dm  1370 [0001]   variable        
+     hilbert_pnt                     dm  1371 [0001]   variable        
+     usb_pnt                         dm  1372 [0001]   variable        
+     lsb_pnt                         dm  1373 [0001]   variable        
+     delay_pnt                       dm  1374 [0001]   variable        
+     delay2_pnt                      dm  1375 [0001]   variable        
+     delay3_pnt                      dm  1376 [0001]   variable        
+     delay4_pnt                      dm  1377 [0001]   variable        
+     highpass_usb_pnt                dm  1378 [0001]   variable        
+     highpass_lsb_pnt                dm  1379 [0001]   variable        
+     fm_pnt                          dm  137A [0001]   variable        
+     fm2_pnt                         dm  137B [0001]   variable        
+     hz_60_pnt_usb                   dm  137C [0001]   variable        
+     hz_60_pnt_lsb                   dm  137D [0001]   variable        
+     rtty_pnt                        dm  137E [0001]   variable        
+     cw_pnt                          dm  137F [0001]   variable        
+     highpass_pnt                    dm  13D1 [0001]   variable        
+     Last_Decimate                   dm  13D2 [0001]   variable        
+     which_filter                    dm  13D3 [0001]   variable        
+     FM_OFF_MAX                      dm  13D4 [0001]   variable        
+     FM3_Last                        dm  13D5 [0001]   variable        
+     FM2_Last                        dm  13D6 [0001]   variable        
+     Delta_Last                      dm  13D7 [0001]   variable        
+     Delta_Last2                     dm  13D8 [0001]   variable        
+     rtty_usb                        dm  13D9 [0001]   variable        
+     rtty_lsb                        dm  13DA [0001]   variable        
+     cw_time                         dm  13DB [0001]   variable        
+     cw_detected                     dm  13DC [0001]   variable        
+     Deemphisize_data                dm  13DD [0001]   variable        
+     Emphisize_data                  dm  13DE [0001]   variable        
+     fir_coeff                       pm  0200 [0051]   variable        
+     coeff_3to30                     pm  0280 [0051]   variable        
+     coeff_9to11                     pm  0300 [0051]   variable        
+     coeff_4to22                     pm  0380 [0051]   variable        
+     coeff_8to12                     pm  0800 [0051]   variable        
+     coeff_9to10                     pm  0880 [0051]   variable        
+     coeff_custom                    pm  0900 [0051]   variable(global)
+     coeff_fm16                      pm  0100 [0051]   variable        
+     coeff_highpass                  pm  0180 [0079]   variable        
+     coeff_fm                        pm  00D8 [0004]   variable        
+     coeff_60_hz                     pm  0980 [0051]   variable        
+     least_noise                     dm  12B0 [000A]   variable        
+     noise_pnt                       dm  13DF [0001]   variable        
+     Deemphisize                     pm  1221          label(global)
+     Emphisize                       pm  1232          label(global)
+     Highpass_Both_                  pm  1480          label(global)
+     initFilter_                     pm  1198          label(global)
+     sFilter_                        pm  1315          label(global)
+     sFilter                         pm  131B          label(global)
+     UFilter_                        pm  1347          label(global)
+     LFilter_                        pm  1356          label(global)
+     Noise_AGC_                      pm  1204          label(global)
+     delayLine_                      pm  1259          label(global)
+     delayLine                       pm  125F          label(global)
+     delayLine3                      pm  127B          label(global)
+     Hilbert2                        pm  132F          label(global)
+     SelectFilter_                   pm  1345          label(global)
+     Average                         pm  128F          label(global)
+     HighLow                         pm  129A          label(global)
+     FM_Filter_                      pm  12A5          label(global)
+     FM_Filter8                      pm  12C9          label(global)
+     FM_Filter9                      pm  12DF          label(global)
+     Filter_60_Hz_                   pm  12E3          label(global)
+     Double_Filter_60_Hz_            pm  12F3          label(global)
+     Decimate_And_Filter_            pm  1243          label(global)
+     FM_RTTY_                        pm  151F          label(global)
+     RTTY_                           pm  155B          label(global)
+     RTTY_Block_                     pm  1533          label(global)
+     Remove_Noise_                   pm  13C0          label(global)
+     Remove_Noise2_                  pm  13A6          label(global)
+     Remove_Noise3_                  pm  1388          label(global)
+     Hilbert_And_Delay_              pm  13DC          label(global)
+     Hilbert_And_Delay2_             pm  1417          label(global)
+     Hilbert_And_Delay3_             pm  1435          label(global)
+     Xmit_LSB_H_And_D_               pm  13F1          label(global)
+     Xmit_USB_H_And_D_               pm  1404          label(global)
+     Make_SSB_                       pm  14C2          label(global)
+     Make_SSB_FM_                    pm  14CE          label(global)
+     Filter_Both_                    pm  1472          label(global)
+     Filter_Both_And_Copy_           pm  1457          label(global)
+     Filter_First_                   pm  149D          label(global)
+     Remove_USB_                     pm  14B9          label(global)
+     Remove_LSB_                     pm  14AC          label(global)
+     CW_Block_                       pm  14DD          label(global)
+     zero                            pm  11AA          label        
+     zero_usb                        pm  11BA          label        
+     zero_delay                      pm  11CC          label        
+     zero_fm                         pm  11D9          label        
+     zero_rtty                       pm  11E1          label        
+     zero_cw                         pm  11E8          label        
+     zero_high                       pm  11F1          label        
+     Noise_Loop                      pm  1210          label        
+     Least_Loop                      pm  121E          label        
+     Deemp_loop                      pm  122F          label        
+     Emp_loop                        pm  1240          label        
+     Decm_1st                        pm  1250          label        
+     Decm_2nd                        pm  1251          label        
+     Decm_loop                       pm  1256          label        
+     delayLinex2                     pm  1269          label        
+     delayLine2                      pm  1271          label        
+     delayLine4                      pm  1285          label        
+     average_loop                    pm  1297          label        
+     highlow_loop                    pm  12A3          label        
+     FM_Filter7                      pm  12B4          label        
+     FM_Filt7_End                    pm  12C6          label        
+     FM_F_High                       pm  12DB          label        
+     FM_Filt_End                     pm  12DC          label        
+     loop_60_hz                      pm  12F0          label        
+     d_loop_60_hz                    pm  12FF          label        
+     Filter_60_Hz_USB                pm  1303          label        
+     Filter_60_Hz_LSB                pm  130C          label        
+     sFilterx2                       pm  1326          label        
+     Hilbert3                        pm  133A          label        
+     no_filter                       pm  1354          label        
+     ChooseFilter                    pm  1365          label        
+     filt8to12                       pm  1374          label        
+     filt4to22                       pm  1378          label        
+     filt9to11                       pm  137C          label        
+     filt9to10                       pm  1380          label        
+     filt_custom                     pm  1384          label        
+     Remove_Loop3                    pm  13A2          label        
+     Remove_Loop2                    pm  13BC          label        
+     Remove_Loop                     pm  13D8          label        
+     T_and_D_loop                    pm  13EE          label        
+     Xmit_LSB_loop                   pm  1400          label        
+     Xmit_USB_loop                   pm  1413          label        
+     T_and_D_loop2                   pm  1431          label        
+     T_and_D_loop3                   pm  1453          label        
+     First_Loop2                     pm  1464          label        
+     Filter_FM                       pm  1468          label        
+     Both_Loop                       pm  147E          label        
+     Highpass_Loop                   pm  149A          label        
+     First_Loop                      pm  14A8          label        
+     Remove_LSB_Loop                 pm  14B7          label        
+     Remove_USB_Loop                 pm  14C0          label        
+     Make_SSB_Loop                   pm  14CC          label        
+     Make_FM_Loop                    pm  14DA          label        
+     CW_Block_USB                    pm  14EA          label        
+     CW_no_tone                      pm  14FC          label        
+     CW_Block_loop                   pm  1504          label        
+     cw_fir                          pm  1512          label        
+     cw_fir_loop                     pm  151C          label        
+     end_cw_fir                      pm  151E          label        
+     RTTY_HIGH                       pm  152C          label        
+     RTTY_LOW                        pm  152D          label        
+     FM_RTTY                         pm  152F          label        
+     Block_USB                       pm  153C          label        
+     Block_LSB                       pm  1542          label        
+     Block_UL                        pm  1555          label        
+     Block_none                      pm  1556          label        
+     Block_loop                      pm  1558          label        
+     rtty_cfir                       pm  1568          label        
+     lsb_rtty                        pm  156B          label        
+     no_rtty                         pm  156D          label        
+     rtty_fir                        pm  156F          label        
+     rtty_loop                       pm  1578          label        
+     rtty_end                        pm  157F          label        
+     max_hi                          pm  1580          label        
+     max_low                         pm  1582          label        
+     RegRestore                          1120 [0000]   extern(RegUtil)        
+     Offset_1_pnt                        1455 [0001]   extern(VOLUMEMOD)        
+     Offset_2_pnt                        1456 [0001]   extern(VOLUMEMOD)        
+     RegSave                             10F8 [0000]   extern(RegUtil)        
+     RegRestore2                         1170 [0000]   extern(RegUtil)        
+     Offset_Array_1                      15C0 [0040]   extern(VOLUMEMOD)        
+     Offset_Array_2                      1600 [0040]   extern(VOLUMEMOD)        
+     RegSave2                            1148 [0000]   extern(RegUtil)        
+     fir_cnt                             00DD [0000]   extern(Signal_Gen)        
+     Filter                              00DC [0000]   extern(Signal_Gen)        
+     fir_df                              00DE [0000]   extern(Signal_Gen)        
+
+     xref for module: VOLUMEMOD     
+
+     VOLUMEMOD                       pm  1584 [0341]   module(global)
+     rtty_samples_left               dm  13F5 [0001]   variable        
+     last_rtty_sample                dm  13F6 [0001]   variable        
+     temp                            dm  13F7 [0001]   variable        
+     true_volume                     dm  13F8 [0001]   variable        
+     volume                          dm  13F9 [0001]   variable        
+     reg_l0                          dm  13FA [0001]   variable        
+     largest                         dm  13FB [0001]   variable        
+     error                           dm  13FC [0001]   variable        
+     PIO_reg_data                    dm  13FD [0001]   variable        
+     OFFSET                          dm  13FE [0001]   variable        
+     wanted_volume                   dm  13FF [0001]   variable        
+     I_Volume                        dm  1451 [0001]   variable(global)
+     slow_agc_values                 dm  1580 [0040]   variable        
+     slow_agc_pnt                    dm  1452 [0001]   variable        
+     arctan_data                     dm  23DC [0100]   variable        
+     High_Pass_0                     dm  1453 [0001]   variable        
+     High_Pass_1                     dm  1454 [0001]   variable        
+     Offset_Array_1                  dm  15C0 [0040]   variable(global)
+     Offset_Array_2                  dm  1600 [0040]   variable(global)
+     Offset_1_pnt                    dm  1455 [0001]   variable(global)
+     Offset_2_pnt                    dm  1456 [0001]   variable(global)
+     PIO_                            dm  31C8 [0001]   variable        
+     save_flags                      dm  1457 [0002]   variable        
+     Transfer_Data                   dm  1459 [0002]   variable(global)
+     CenterAll_                      pm  1608          label(global)
+     ChangeVolume_                   pm  15B6          label(global)
+     Convert_RTTY_To_Bits_           pm  1841          label(global)
+     Convert_RTTY_To_Bits_2          pm  185B          label(global)
+     Costas                          pm  1716          label(global)
+     RestoreVolume_                  pm  15BE          label(global)
+     GetVolume_                      pm  15C4          label(global)
+     GetError_                       pm  15CC          label(global)
+     ClearError_                     pm  15C9          label(global)
+     Change_I_                       pm  15BC          label(global)
+     ClearOffset_                    pm  15C6          label(global)
+     MultiplyByVolume_               pm  1640          label(global)
+     MultiplyAllByVolume_            pm  15DE          label(global)
+     PSK_                            pm  182D          label(global)
+     AGC_                            pm  1681          label(global)
+     Adjust_I_                       pm  15CE          label(global)
+     MySetTone_                      pm  1764          label(global)
+     SlowAGC_                        pm  1656          label(global)
+     InitAGC_                        pm  15A0          label(global)
+     SSBAGC_                         pm  1668          label(global)
+     FreqCal_                        pm  1709          label(global)
+     Multiply_                       pm  1700          label(global)
+     Mute_Samples_                   pm  18BB          label(global)
+     FreqCal2_                       pm  174D          label(global)
+     FreqCal3_                       pm  1737          label(global)
+     FreqCal4_                       pm  1723          label(global)
+     HighPass_                       pm  15F3          label(global)
+     Pythagoras_                     pm  16F1          label(global)
+     Center_                         pm  17EE          label(global)
+     FM_                             pm  188C          label(global)
+     FM2_                            pm  1815          label(global)
+     FM3_                            pm  1884          label(global)
+     CheckAnalog_                    pm  15A9          label(global)
+     Copy_Data_128_                  pm  1589          label(global)
+     Copy_Data_256_                  pm  1587          label(global)
+     Copy_Data_256_to_128_           pm  1584          label(global)
+     Copy_Data_128_to_256_           pm  1594          label(global)
+     Copy_Data                       pm  158A          label        
+     Copy_Data2                      pm  158B          label        
+     Copy_128                        pm  1592          label        
+     Copy_128_256                    pm  159E          label        
+     initialize                      pm  15A6          label        
+     check_end                       pm  15B1          label        
+     check_down                      pm  15B2          label        
+     check_up                        pm  15B4          label        
+     I_Loop                          pm  15DB          label        
+     ModVolumeAll                    pm  15F0          label        
+     MultiplyAllLoop                 pm  15F1          label        
+     HighPass2                       pm  1603          label        
+     CenterAll                       pm  1623          label        
+     Calc_Offset                     pm  1626          label        
+     Calc_Off1                       pm  162D          label        
+     Average_Offset                  pm  1630          label        
+     Average_Loop                    pm  1638          label        
+     MinSineAll                      pm  163A          label        
+     MaxSineAll                      pm  163D          label        
+     mod_volume                      pm  164C          label        
+     end_volume                      pm  164D          label        
+     MinSine                         pm  1650          label        
+     MaxSine                         pm  1653          label        
+     slow_agc                        pm  1663          label        
+     ssb_not_hi                      pm  1677          label        
+     ssb_loop                        pm  167B          label        
+     not_high                        pm  1692          label        
+     AGC_loop                        pm  1696          label        
+     not_high2                       pm  169C          label        
+     AGC_loop2                       pm  16A0          label        
+     AR_BIG                          pm  16AC          label        
+     AF_BIG                          pm  16AF          label        
+     not_hi                          pm  16B9          label        
+     no_squelch                      pm  16BD          label        
+     RX_AGC                          pm  16C6          label        
+     TX_AGC                          pm  16C7          label        
+     restore                         pm  16CC          label        
+     divide                          pm  16CE          label        
+     sdivide                         pm  16E0          label        
+     Pythagoras2                     pm  16FC          label        
+     FreqLoop                        pm  1712          label        
+     Costas_Loop                     pm  1721          label        
+     FreqLoop4                       pm  1732          label        
+     dontmodify4                     pm  1735          label        
+     FreqLoop3                       pm  1742          label        
+     dontmodify                      pm  174B          label        
+     delay_I2C                       pm  1758          label        
+     I2C_delay                       pm  175B          label        
+     delay_us_                       pm  175D          label        
+     dwait                           pm  1761          label        
+     dw2                             pm  1762          label        
+     MyI2CByte                       pm  1773          label        
+     I2CStart                        pm  1780          label        
+     I2CStop                         pm  1790          label        
+     I2CLoadWord                     pm  179A          label        
+     I2CLoadByte                     pm  17A1          label        
+     I2CLoad                         pm  17A2          label        
+     I2CLoop                         pm  17B2          label        
+     sqrt_coeff                      dm  145B [0005]   variable        
+     sqrt                            pm  17B4          label(global)
+     approx                          pm  17C2          label        
+     scale                           pm  17C8          label        
+     compute                         pm  17D0          label        
+     pwr_ok                          pm  17D1          label        
+     frac                            pm  17EB          label        
+     center2_not_hi                  pm  17FE          label        
+     center2_loop                    pm  1801          label        
+     center2_2                       pm  1810          label        
+     FM2_loop                        pm  182A          label        
+     PSK_loop                        pm  183E          label        
+     Convert_RTTY_Loop               pm  1854          label        
+     was_high                        pm  1872          label        
+     Convert_RTTY_Loop2a             pm  1876          label        
+     Convert_RTTY_Loop2              pm  1877          label        
+     FM                              pm  1893          label        
+     tosmalladj                      pm  18A2          label        
+     fm_over                         pm  18AB          label        
+     no_fm_over                      pm  18AC          label        
+     Quad1or3                        pm  18B4          label        
+     Quad1or2                        pm  18B9          label        
+     Mute_Loop                       pm  18C2          label        
+     RegRestore                          1120 [0000]   extern(RegUtil)        
+     Buffer_Position                     1338 [0001]   extern(modes)        
+     FM_Filter8                          12C9 [0000]   extern(FIR_LPF)        
+     FM_Filter9                          12DF [0000]   extern(FIR_LPF)        
+     LFilter_                            1356 [0000]   extern(FIR_LPF)        
+     UFilter_                            1347 [0000]   extern(FIR_LPF)        
+     TalkOn_                             1179 [0001]   extern(main_routine)        
+     RegSave                             10F8 [0000]   extern(RegUtil)        
+     RegRestore2                         1170 [0000]   extern(RegUtil)        
+     FM_Filter_                          12A5 [0000]   extern(FIR_LPF)        
+     RegSave2                            1148 [0000]   extern(RegUtil)        
+     USB_BUFFER_                         1A40 [0100]   extern(main_routine)        
+     put_word                            0DE6 [0000]   extern(main_routine)        
+
+     xref for module: Signal_Gen     
+
+     Signal_Gen                      pm  00DC [0009]   module(global)
+     Filter                          pm  00DC          label(global)
+     fir_df                          pm  00DE          label(global)
+     fir_cnt                         pm  00DD          label(global)
+     conv                            pm  00E0          label        
+
+     xref for module: Sin_Approximation     
+
+     Sin_Approximation               pm  18C5 [0051]   module(global)
+     freq1_                          dm  1474 [0001]   variable(global)
+     freq2_                          dm  1475 [0001]   variable(global)
+     freq3_                          dm  1476 [0001]   variable(global)
+     phi1_                           dm  1477 [0001]   variable(global)
+     phi2_                           dm  1478 [0001]   variable(global)
+     phi3_                           dm  1479 [0001]   variable(global)
+     gain1_                          dm  147A [0001]   variable(global)
+     gain2_                          dm  147B [0001]   variable(global)
+     gain3_                          dm  147C [0001]   variable(global)
+     delta_count_                    dm  147D [0001]   variable        
+     sin_place                       dm  147E [0001]   variable        
+     sin_data                        dm  12A8 [0008]   variable        
+     I0_HOLD                         dm  14D1 [0001]   variable        
+     L0_HOLD                         dm  14D2 [0001]   variable        
+     genSignal_                      pm  18D0          label(global)
+     initSignal_                     pm  18C5          label(global)
+     FillSin_                        pm  18D8          label(global)
+     Fill_Sine                       pm  18E9          label        
+     sin_coeff                       dm  14D3 [0005]   variable        
+     mr_hold                         dm  14D8 [0003]   variable        
+     sr1_hold                        dm  147F [0001]   variable        
+     ireg_hold                       dm  14DB [0001]   variable        
+     ax0_hold                        dm  14DC [0001]   variable        
+     mx1_hold                        dm  14DD [0001]   variable        
+     sin                             pm  18ED          label(global)
+     approx                          pm  1907          label        
+     RegRestore                          1120 [0000]   extern(RegUtil)        
+     RegSave                             10F8 [0000]   extern(RegUtil)        
+
+     xref for module: FFT     
+
+     FFT                             pm  1916 [0124]   module(global)
+     cos_table                       pm  0A00 [0100]   variable        
+     window                          pm  0B00 [0100]   variable        
+     M3_SPACE                        dm  14DE [0001]   variable        
+     BFY_COUNT                       dm  14DF [0001]   variable        
+     output                          dm  3800 [0200]   variable        
+     inplace                         dm  24DC [0200]   variable        
+     dofft_                          pm  1916          label(global)
+     dousbfft_                       pm  191F          label(global)
+     dolsbfft_                       pm  1929          label(global)
+     get_data                        pm  1933          label        
+     get_data2                       pm  1934          label        
+     wfloop                          pm  1947          label        
+     no_window                       pm  1949          label        
+     floop                           pm  194F          label        
+     results                         dm  26DC [0080]   variable        
+     magnitude_squared               pm  1951          label        
+     square                          pm  1956          label        
+     no_log                          pm  1961          label        
+     log_coeffs                      pm  00E5 [0005]   variable        
+     log                             pm  1964          label        
+     compute                         pm  1968          label        
+     approx                          pm  197B          label        
+     error                           pm  1985          label        
+     fft                             pm  1987          label        
+     stage1                          pm  1990          label        
+     stg1bfy                         pm  19A3          label        
+     stage2                          pm  19C2          label        
+     stage3                          pm  19D2          label        
+     laststage                       pm  19E2          label        
+     laststgbfy                      pm  19F4          label        
+     mid_stg                         pm  1A0B          label        
+     midbfy                          pm  1A14          label        
+     RegRestore                          1120 [0000]   extern(RegUtil)        
+     HannOn_                             127B [0001]   extern(main_routine)        
+     RegSave                             10F8 [0000]   extern(RegUtil)        
+     LogOn_                              127A [0001]   extern(main_routine)        
+     Input_Position                      1336 [0001]   extern(modes)        
+     LSB_BUFFER_                         1B40 [0100]   extern(main_routine)        
+     USB_BUFFER_                         1A40 [0100]   extern(main_routine)        
+
+     xref for module: page0     
+
+     page0                           pm  0000 [00D7]   module        
+     old_l1                          dm  14E0 [0001]   variable        
+     start                           pm  0000          label        
+     Sound_Port_Int                  pm  001C          label        
+     same_sample_rate                pm  0026          label        
+     not_winwave                     pm  0039          label        
+     get_sample                      pm  0053          label        
+     no_input_mute                   pm  0065          label        
+     do_mute                         pm  0067          label        
+     either_mute                     pm  0070          label        
+     end_switch                      pm  0079          label        
+     check_ibm                       pm  007B          label        
+     write_ibm                       pm  0087          label        
+     not_out_number                  pm  0098          label        
+     not_out_length                  pm  009D          label        
+     out_char_int                    pm  009E          label        
+     not_zero_len                    pm  00A5          label        
+     erase_out_msg                   pm  00AB          label        
+     end_int                         pm  00B3          label        
+     copy_important                  pm  00BA          label        
+     copy_loop                       pm  00C6          label        
+     imp_length_zero                 pm  00C7          label        
+     sp_switch_to_2nd_bank           pm  00CF          label        
+     sp_switch_to_1st_bank           pm  00D2          label        
+     winwave                             1335 [0001]   extern(main_routine)        
+     DitLength                           117D [0001]   extern(main_routine)        
+     important_message_length            12BB [0001]   extern(main_routine)        
+     out_message_number                  12BD [0001]   extern(main_routine)        
+     main_                               0C00 [0000]   extern(main_routine)        
+     SP_address_reg                      3440 [0001]   extern(main_routine)        
+     Morse                               1D40 [0064]   extern(main_routine)        
+     SP_enable_reg                       3070 [0001]   extern(main_routine)        
+     SB_config_reg                       31E0 [0001]   extern(main_routine)        
+     important_message_number            12BA [0001]   extern(main_routine)        
+     IRQ_status_reg                      31C0 [0001]   extern(main_routine)        
+     PSS_data_reg                        3000 [0001]   extern(main_routine)        
+     data_ready                          10FA [0001]   extern(main_routine)        
+     SB_control_reg                      30C9 [0001]   extern(main_routine)        
+     MIDI_config_reg                     31E8 [0001]   extern(main_routine)        
+     PSS_status_reg                      3009 [0001]   extern(main_routine)        
+     out_message                         1EA4 [0100]   extern(main_routine)        
+     AnalogAGC                           117B [0001]   extern(main_routine)        
+     MIDI_control_reg                    3111 [0001]   extern(main_routine)        
+     HannOn_                             127B [0001]   extern(main_routine)        
+     MUSIC_status_reg                    3090 [0001]   extern(main_routine)        
+     important_message                   1DA4 [0100]   extern(main_routine)        
+     PSS_dma_reg                         3010 [0001]   extern(main_routine)        
+     ibm_data_ready                      1330 [0001]   extern(main_routine)        
+     mode                                11FC [0001]   extern(main_routine)        
+     TalkOn_                             1179 [0001]   extern(main_routine)        
+     input_data                          1640 [0200]   extern(main_routine)        
+     output_data                         1840 [0200]   extern(main_routine)        
+     play_voice                          1332 [0001]   extern(main_routine)        
+     SB_data_reg                         30C0 [0001]   extern(main_routine)        
+     UART_config_reg                     31F8 [0001]   extern(main_routine)        
+     SB_status_reg                       30C8 [0001]   extern(main_routine)        
+     old_i0                              127C [0001]   extern(main_routine)        
+     old_i1                              127D [0001]   extern(main_routine)        
+     NewIFGain                           1279 [0001]   extern(main_routine)        
+     UART_control_reg                    3149 [0001]   extern(main_routine)        
+     MIDI_data_reg                       3100 [0001]   extern(main_routine)        
+     SP_data_reg                         3448 [0001]   extern(main_routine)        
+     old_l0                              127F [0001]   extern(main_routine)        
+     old_m0                              127E [0001]   extern(main_routine)        
+     mute                                10FB [0001]   extern(main_routine)        
+     SP_dmal_reg                         3060 [0001]   extern(main_routine)        
+     LogOn_                              127A [0001]   extern(main_routine)        
+     MIDI_uart                           3118 [0001]   extern(main_routine)        
+     AGC_Down                            107A [0001]   extern(main_routine)        
+     MIDI_status_reg                     3110 [0001]   extern(main_routine)        
+     SP_dmar_reg                         3068 [0001]   extern(main_routine)        
+     SP_status_reg                       3450 [0001]   extern(main_routine)        
+     data_from_ibm                       1331 [0001]   extern(main_routine)        
+     message_pointer                     11FB [0001]   extern(main_routine)        
+     AGC_On_                             117A [0001]   extern(main_routine)        
+     message_length                      11FA [0001]   extern(main_routine)        
+     input_mute                          117E [0001]   extern(main_routine)        
+     Sample_Rate                         132C [0001]   extern(main_routine)        
+     message_number                      11F9 [0001]   extern(main_routine)        
+     fft_time                            1333 [0001]   extern(main_routine)        
+     SendingMorse                        132B [0001]   extern(main_routine)        
+     MUSIC0_reg                          3080 [0001]   extern(main_routine)        
+     IRQ_enable_reg                      31C1 [0001]   extern(main_routine)        
+     MUSIC1_reg                          3088 [0001]   extern(main_routine)        
+     UART_data_reg                       3140 [0001]   extern(main_routine)        
+     PlotLSBS                            1329 [0001]   extern(main_routine)        
+     MUSIC_pc_status_reg                 3091 [0001]   extern(main_routine)        
+     PlotLSBT                            12FF [0001]   extern(main_routine)        
+     New_Sample_Rate                     132D [0001]   extern(main_routine)        
+     sp_input_place                      107B [0001]   extern(main_routine)        
+     sp_output_place                     10F9 [0001]   extern(main_routine)        
+     ram_bank_reg                        3018 [0001]   extern(main_routine)        
+     LSB_BUFFER_                         1B40 [0100]   extern(main_routine)        
+     ext_mem_latch                       3020 [0001]   extern(main_routine)        
+     MorsePosition                       11FE [0001]   extern(main_routine)        
+     Mute_Length                         1334 [0001]   extern(main_routine)        
+     PlotUSBS                            132A [0001]   extern(main_routine)        
+     UART_status_reg                     3148 [0001]   extern(main_routine)        
+     PlotUSBT                            1328 [0001]   extern(main_routine)        
+     USB_BUFFER_                         1A40 [0100]   extern(main_routine)        
+     message                             1C40 [0100]   extern(main_routine)        
+     SP_pio_reg                          3458 [0001]   extern(main_routine)        
+     PSS_config_reg                      31D0 [0001]   extern(main_routine)        
+     NewSetTone                          11FF [0001]   extern(main_routine)        
+     AGC_Up                              1079 [0001]   extern(main_routine)        
+     out_message_overflow                12BF [0001]   extern(main_routine)        
+     WSS_config_reg                      31D8 [0001]   extern(main_routine)        
+     CurrentIFGain                       117C [0001]   extern(main_routine)        
+     PSS_control_reg                     3008 [0001]   extern(main_routine)        
+     MUSIC_dacl                          3081 [0001]   extern(main_routine)        
+     squelch                             132F [0001]   extern(main_routine)        
+     important_message_overflow          12BC [0001]   extern(main_routine)        
+     CD_config_reg                       31F0 [0001]   extern(main_routine)        
+     MUSIC_dacr                          3089 [0001]   extern(main_routine)        
+     out_message_pointer                 12FE [0001]   extern(main_routine)        
+     out_message_length                  12BE [0001]   extern(main_routine)        
+     MUSIC_divisor_reg                   3098 [0001]   extern(main_routine)        
+     MIDI_command_reg                    3108 [0001]   extern(main_routine)        
+
+
+     210x memory per echopss (pssos.ach)
+
+     0000 - 03FF [  1024.] bm rom code boot_mem                        
+     0000 - 03FF [  1024.] pm ram data/code int_pm                          
+     3800 - 39FF [   512.] dm ram data int_dm                          
+     0800 - 3FFF [ 14336.] pm ram data/code ext_pm                          
+     1000 - 2FFF [  8192.] dm ram data ext_dm                          
+     3000 - 3000 [     1.] dm ram port PSS_data_reg                    
+     3008 - 3008 [     1.] dm ram port PSS_control_reg                 
+     3009 - 3009 [     1.] dm ram port PSS_status_reg                  
+     3010 - 3010 [     1.] dm ram port PSS_dma_reg                     
+     3018 - 3018 [     1.] dm ram port ram_bank_reg                    
+     3020 - 3020 [     1.] dm ram port ext_mem_latch                   
+     3440 - 3440 [     1.] dm ram port SP_address_reg                  
+     3448 - 3448 [     1.] dm ram port SP_data_reg                     
+     3450 - 3450 [     1.] dm ram port SP_status_reg                   
+     3458 - 3458 [     1.] dm ram port SP_pio_reg                      
+     3060 - 3060 [     1.] dm ram port SP_dmal_reg                     
+     3068 - 3068 [     1.] dm ram port SP_dmar_reg                     
+     3070 - 3070 [     1.] dm ram port SP_enable_reg                   
+     3080 - 3080 [     1.] dm ram port MUSIC0_reg                      
+     3081 - 3081 [     1.] dm ram port MUSIC_dacl                      
+     3088 - 3088 [     1.] dm ram port MUSIC1_reg                      
+     3089 - 3089 [     1.] dm ram port MUSIC_dacr                      
+     3090 - 3090 [     1.] dm ram port MUSIC_status_reg                
+     3091 - 3091 [     1.] dm ram port MUSIC_pc_status_reg             
+     3098 - 3098 [     1.] dm ram port MUSIC_divisor_reg               
+     30C0 - 30C0 [     1.] dm ram port SB_data_reg                     
+     30C8 - 30C8 [     1.] dm ram port SB_status_reg                   
+     30C9 - 30C9 [     1.] dm ram port SB_control_reg                  
+     30D0 - 30D0 [     1.] dm ram port SM_divisor_reg                  
+     3100 - 3100 [     1.] dm ram port MIDI_data_reg                   
+     3108 - 3108 [     1.] dm ram port MIDI_command_reg                
+     3110 - 3110 [     1.] dm ram port MIDI_status_reg                 
+     3111 - 3111 [     1.] dm ram port MIDI_control_reg                
+     3118 - 3118 [     1.] dm ram port MIDI_uart                       
+     3140 - 3140 [     1.] dm ram port UART_data_reg                   
+     3148 - 3148 [     1.] dm ram port UART_status_reg                 
+     3149 - 3149 [     1.] dm ram port UART_control_reg                
+     31C0 - 31C0 [     1.] dm ram port IRQ_status_reg                  
+     31C1 - 31C1 [     1.] dm ram port IRQ_enable_reg                  
+     31C8 - 31C8 [     1.] dm ram port PIO_                            
+     31D0 - 31D0 [     1.] dm ram port PSS_config_reg                  
+     31D8 - 31D8 [     1.] dm ram port WSS_config_reg                  
+     31E0 - 31E0 [     1.] dm ram port SB_config_reg                   
+     31E8 - 31E8 [     1.] dm ram port MIDI_config_reg                 
+     31F0 - 31F0 [     1.] dm ram port CD_config_reg                   
+     31F8 - 31F8 [     1.] dm ram port UART_config_reg                 
+
+
+
+     boot memory and bootable run time program memory map:
+
+     fixed program memory map:
+
+     0000 - 00D6 [   215.] pm ram      module   page0
+     00D8 - 00DB [     4.] pm ram circ variable coeff_fm of FIR_LPF 
+     00DC - 00E4 [     9.] pm ram      module   Signal_Gen
+     00E5 - 00E9 [     5.] pm ram      variable log_coeffs of FFT 
+     0100 - 0150 [    81.] pm ram circ variable coeff_fm16 of FIR_LPF 
+     0180 - 01F8 [   121.] pm ram circ variable coeff_highpass of FIR_LPF 
+     0200 - 0250 [    81.] pm ram circ variable fir_coeff of FIR_LPF 
+     0280 - 02D0 [    81.] pm ram circ variable coeff_3to30 of FIR_LPF 
+     0300 - 0350 [    81.] pm ram circ variable coeff_9to11 of FIR_LPF 
+     0380 - 03D0 [    81.] pm ram circ variable coeff_4to22 of FIR_LPF 
+     0800 - 0850 [    81.] pm ram circ variable coeff_8to12 of FIR_LPF 
+     0880 - 08D0 [    81.] pm ram circ variable coeff_9to10 of FIR_LPF 
+     0900 - 0950 [    81.] pm ram circ variable coeff_custom of FIR_LPF 
+     0980 - 09D0 [    81.] pm ram circ variable coeff_60_hz of FIR_LPF 
+     0A00 - 0AFF [   256.] pm ram circ variable cos_table of FFT 
+     0B00 - 0BFF [   256.] pm ram circ variable window of FFT 
+     0C00 - 0E74 [   629.] pm ram      module   main_routine
+     0E75 - 10F7 [   643.] pm ram      module   modes
+     10F8 - 1197 [   160.] pm ram      module   RegUtil
+     1198 - 1583 [  1004.] pm ram      module   FIR_LPF
+     1584 - 18C4 [   833.] pm ram      module   VOLUMEMOD
+     18C5 - 1915 [    81.] pm ram      module   Sin_Approximation
+     1916 - 1A39 [   292.] pm ram      module   FFT
+
+
+
+     fixed program memory rom:      0.
+     fixed program memory ram:   5237.
+
+
+     dynamic data memory map:
+
+     fixed data memory map:
+
+     1000 - 1078 [   121.] dm ram circ variable data of FIR_LPF 
+     1079 - 1079 [     1.] dm ram      variable AGC_Up of main_routine 
+     107A - 107A [     1.] dm ram      variable AGC_Down of main_routine 
+     107B - 107B [     1.] dm ram      variable sp_input_place of main_routine 
+     107C - 107F [     4.] dm ram circ variable fm_data of FIR_LPF 
+     1080 - 10F8 [   121.] dm ram circ variable usb_data of FIR_LPF 
+     10F9 - 10F9 [     1.] dm ram      variable sp_output_place of main_routine 
+     10FA - 10FA [     1.] dm ram      variable data_ready of main_routine 
+     10FB - 10FB [     1.] dm ram      variable mute of main_routine 
+     10FC - 10FF [     4.] dm ram circ variable fm2_data of FIR_LPF 
+     1100 - 1178 [   121.] dm ram circ variable lsb_data of FIR_LPF 
+     1179 - 1179 [     1.] dm ram      variable TalkOn_ of main_routine 
+     117A - 117A [     1.] dm ram      variable AGC_On_ of main_routine 
+     117B - 117B [     1.] dm ram      variable AnalogAGC of main_routine 
+     117C - 117C [     1.] dm ram      variable CurrentIFGain of main_routine 
+     117D - 117D [     1.] dm ram      variable DitLength of main_routine 
+     117E - 117E [     1.] dm ram      variable input_mute of main_routine 
+     117F - 117F [     1.] dm ram      variable last_data of main_routine 
+     1180 - 11F8 [   121.] dm ram circ variable highpass_usb_data of FIR_LPF 
+     11F9 - 11F9 [     1.] dm ram      variable message_number of main_routine 
+     11FA - 11FA [     1.] dm ram      variable message_length of main_routine 
+     11FB - 11FB [     1.] dm ram      variable message_pointer of main_routine 
+     11FC - 11FC [     1.] dm ram      variable mode of main_routine 
+     11FD - 11FD [     1.] dm ram      variable Monitor of main_routine 
+     11FE - 11FE [     1.] dm ram      variable MorsePosition of main_routine 
+     11FF - 11FF [     1.] dm ram      variable NewSetTone of main_routine 
+     1200 - 1278 [   121.] dm ram circ variable highpass_lsb_data of FIR_LPF 
+     1279 - 1279 [     1.] dm ram      variable NewIFGain of main_routine 
+     127A - 127A [     1.] dm ram      variable LogOn_ of main_routine 
+     127B - 127B [     1.] dm ram      variable HannOn_ of main_routine 
+     127C - 127C [     1.] dm ram      variable old_i0 of main_routine 
+     127D - 127D [     1.] dm ram      variable old_i1 of main_routine 
+     127E - 127E [     1.] dm ram      variable old_m0 of main_routine 
+     127F - 127F [     1.] dm ram      variable old_l0 of main_routine 
+     1280 - 12A7 [    40.] dm ram circ variable delay_data of FIR_LPF 
+     12A8 - 12AF [     8.] dm ram circ variable sin_data of Sin_Approximation 
+     12B0 - 12B9 [    10.] dm ram circ variable least_noise of FIR_LPF 
+     12BA - 12BA [     1.] dm ram      variable important_message_number of main_routine 
+     12BB - 12BB [     1.] dm ram      variable important_message_length of main_routine 
+     12BC - 12BC [     1.] dm ram      variable important_message_overflow of main_routine 
+     12BD - 12BD [     1.] dm ram      variable out_message_number of main_routine 
+     12BE - 12BE [     1.] dm ram      variable out_message_length of main_routine 
+     12BF - 12BF [     1.] dm ram      variable out_message_overflow of main_routine 
+     12C0 - 12E7 [    40.] dm ram circ variable delay2_data of FIR_LPF 
+     12E8 - 12FD [    22.] dm ram      variable reg_1848 of main_routine 
+     12FE - 12FE [     1.] dm ram      variable out_message_pointer of main_routine 
+     12FF - 12FF [     1.] dm ram      variable PlotLSBT of main_routine 
+     1300 - 1327 [    40.] dm ram circ variable delay3_data of FIR_LPF 
+     1328 - 1328 [     1.] dm ram      variable PlotUSBT of main_routine 
+     1329 - 1329 [     1.] dm ram      variable PlotLSBS of main_routine 
+     132A - 132A [     1.] dm ram      variable PlotUSBS of main_routine 
+     132B - 132B [     1.] dm ram      variable SendingMorse of main_routine 
+     132C - 132C [     1.] dm ram      variable Sample_Rate of main_routine 
+     132D - 132D [     1.] dm ram      variable New_Sample_Rate of main_routine 
+     132E - 132E [     1.] dm ram      variable smeter_on of main_routine 
+     132F - 132F [     1.] dm ram      variable squelch of main_routine 
+     1330 - 1330 [     1.] dm ram      variable ibm_data_ready of main_routine 
+     1331 - 1331 [     1.] dm ram      variable data_from_ibm of main_routine 
+     1332 - 1332 [     1.] dm ram      variable play_voice of main_routine 
+     1333 - 1333 [     1.] dm ram      variable fft_time of main_routine 
+     1334 - 1334 [     1.] dm ram      variable Mute_Length of main_routine 
+     1335 - 1335 [     1.] dm ram      variable winwave of main_routine 
+     1336 - 1336 [     1.] dm ram      variable Input_Position of modes 
+     1337 - 1337 [     1.] dm ram      variable Output_Position of modes 
+     1338 - 1338 [     1.] dm ram      variable Buffer_Position of modes 
+     1339 - 1339 [     1.] dm ram      variable RTTY_Data_Pnt of modes 
+     133A - 133A [     1.] dm ram      variable RTTY_Data_Count of modes 
+     133B - 133D [     3.] dm ram      variable AnalogMessage of modes 
+     133E - 133E [     1.] dm ram      variable last_data of modes 
+     133F - 133F [     1.] dm ram      variable smeter of modes 
+     1340 - 1367 [    40.] dm ram circ variable delay4_data of FIR_LPF 
+     1368 - 1368 [     1.] dm ram      variable smeter_time of modes 
+     1369 - 1369 [     1.] dm ram      variable AM_Tune of modes 
+     136A - 136A [     1.] dm ram      variable Noise_Level of modes 
+     136B - 1371 [     7.] dm ram      variable reg_l0 of FIR_LPF 
+     1372 - 1377 [     6.] dm ram      variable usb_pnt of FIR_LPF 
+     1378 - 1379 [     2.] dm ram      variable highpass_usb_pnt of FIR_LPF 
+     137A - 137F [     6.] dm ram      variable fm_pnt of FIR_LPF 
+     1380 - 13D0 [    81.] dm ram circ variable hz_60_data_usb of FIR_LPF 
+     13D1 - 13D1 [     1.] dm ram      variable highpass_pnt of FIR_LPF 
+     13D2 - 13D2 [     1.] dm ram      variable Last_Decimate of FIR_LPF 
+     13D3 - 13D4 [     2.] dm ram      variable which_filter of FIR_LPF 
+     13D5 - 13D6 [     2.] dm ram      variable FM3_Last of FIR_LPF 
+     13D7 - 13D8 [     2.] dm ram      variable Delta_Last of FIR_LPF 
+     13D9 - 13DC [     4.] dm ram      variable rtty_usb of FIR_LPF 
+     13DD - 13DD [     1.] dm ram      variable Deemphisize_data of FIR_LPF 
+     13DE - 13DE [     1.] dm ram      variable Emphisize_data of FIR_LPF 
+     13DF - 13DF [     1.] dm ram      variable noise_pnt of FIR_LPF 
+     13E0 - 13F4 [    21.] dm ram circ variable rtty_data of FIR_LPF 
+     13F5 - 13F5 [     1.] dm ram      variable rtty_samples_left of VOLUMEMOD 
+     13F6 - 13F6 [     1.] dm ram      variable last_rtty_sample of VOLUMEMOD 
+     13F7 - 13F7 [     1.] dm ram      variable temp of VOLUMEMOD 
+     13F8 - 13F8 [     1.] dm ram      variable true_volume of VOLUMEMOD 
+     13F9 - 13F9 [     1.] dm ram      variable volume of VOLUMEMOD 
+     13FA - 13FA [     1.] dm ram      variable reg_l0 of VOLUMEMOD 
+     13FB - 13FB [     1.] dm ram      variable largest of VOLUMEMOD 
+     13FC - 13FC [     1.] dm ram      variable error of VOLUMEMOD 
+     13FD - 13FD [     1.] dm ram      variable PIO_reg_data of VOLUMEMOD 
+     13FE - 13FE [     1.] dm ram      variable OFFSET of VOLUMEMOD 
+     13FF - 13FF [     1.] dm ram      variable wanted_volume of VOLUMEMOD 
+     1400 - 1450 [    81.] dm ram circ variable hz_60_data_lsb of FIR_LPF 
+     1451 - 1451 [     1.] dm ram      variable I_Volume of VOLUMEMOD 
+     1452 - 1452 [     1.] dm ram      variable slow_agc_pnt of VOLUMEMOD 
+     1453 - 1453 [     1.] dm ram      variable High_Pass_0 of VOLUMEMOD 
+     1454 - 1454 [     1.] dm ram      variable High_Pass_1 of VOLUMEMOD 
+     1455 - 1455 [     1.] dm ram      variable Offset_1_pnt of VOLUMEMOD 
+     1456 - 1456 [     1.] dm ram      variable Offset_2_pnt of VOLUMEMOD 
+     1457 - 1458 [     2.] dm ram      variable save_flags of VOLUMEMOD 
+     1459 - 145A [     2.] dm ram      variable Transfer_Data of VOLUMEMOD 
+     145B - 145F [     5.] dm ram      variable sqrt_coeff of VOLUMEMOD 
+     1460 - 1473 [    20.] dm ram circ variable cw_data of FIR_LPF 
+     1474 - 1476 [     3.] dm ram      variable freq1_ of Sin_Approximation 
+     1477 - 1479 [     3.] dm ram      variable phi1_ of Sin_Approximation 
+     147A - 147C [     3.] dm ram      variable gain1_ of Sin_Approximation 
+     147D - 147D [     1.] dm ram      variable delta_count_ of Sin_Approximation 
+     147E - 147E [     1.] dm ram      variable sin_place of Sin_Approximation 
+     147F - 147F [     1.] dm ram      variable sr1_hold of Sin_Approximation 
+     1480 - 14D0 [    81.] dm ram circ variable hilbert_data of FIR_LPF 
+     14D1 - 14D2 [     2.] dm ram      variable I0_HOLD of Sin_Approximation 
+     14D3 - 14D7 [     5.] dm ram      variable sin_coeff of Sin_Approximation 
+     14D8 - 14DA [     3.] dm ram      variable mr_hold of Sin_Approximation 
+     14DB - 14DB [     1.] dm ram      variable ireg_hold of Sin_Approximation 
+     14DC - 14DC [     1.] dm ram      variable ax0_hold of Sin_Approximation 
+     14DD - 14DD [     1.] dm ram      variable mx1_hold of Sin_Approximation 
+     14DE - 14DE [     1.] dm ram      variable M3_SPACE of FFT 
+     14DF - 14DF [     1.] dm ram      variable BFY_COUNT of FFT 
+     14E0 - 14E0 [     1.] dm ram      variable old_l1 of page0 
+     1500 - 1550 [    81.] dm ram circ variable hilbert3_data of FIR_LPF 
+     1580 - 15BF [    64.] dm ram circ variable slow_agc_values of VOLUMEMOD 
+     15C0 - 15FF [    64.] dm ram circ variable Offset_Array_1 of VOLUMEMOD 
+     1600 - 163F [    64.] dm ram circ variable Offset_Array_2 of VOLUMEMOD 
+     1640 - 183F [   512.] dm ram      variable input_data of main_routine 
+     1840 - 1A3F [   512.] dm ram      variable output_data of main_routine 
+     1A40 - 1B3F [   256.] dm ram      variable USB_BUFFER_ of main_routine 
+     1B40 - 1C3F [   256.] dm ram      variable LSB_BUFFER_ of main_routine 
+     1C40 - 1D3F [   256.] dm ram      variable message of main_routine 
+     1D40 - 1DA3 [   100.] dm ram      variable Morse of main_routine 
+     1DA4 - 1EA3 [   256.] dm ram      variable important_message of main_routine 
+     1EA4 - 1FA3 [   256.] dm ram      variable out_message of main_routine 
+     1FA4 - 206B [   200.] dm ram      variable RTTY_Data of modes 
+     206C - 216B [   256.] dm ram      variable Calc_Buffer of modes 
+     216C - 226B [   256.] dm ram      variable Calc_Buffer2 of modes 
+     226C - 236B [   256.] dm ram      variable Calc_Buffer3 of modes 
+     236C - 23A3 [    56.] dm ram      variable RegArea of RegUtil 
+     23A4 - 23DB [    56.] dm ram      variable RegArea2 of RegUtil 
+     23DC - 24DB [   256.] dm ram      variable arctan_data of VOLUMEMOD 
+     24DC - 26DB [   512.] dm ram      variable inplace of FFT 
+     26DC - 275B [   128.] dm ram      variable results of FFT 
+     3000 - 3000 [     1.] dm ram      port     PSS_data_reg of main_routine 
+     3008 - 3008 [     1.] dm ram      port     PSS_control_reg of main_routine 
+     3009 - 3009 [     1.] dm ram      port     PSS_status_reg of main_routine 
+     3010 - 3010 [     1.] dm ram      port     PSS_dma_reg of main_routine 
+     3018 - 3018 [     1.] dm ram      port     ram_bank_reg of main_routine 
+     3020 - 3020 [     1.] dm ram      port     ext_mem_latch of main_routine 
+     3060 - 3060 [     1.] dm ram      port     SP_dmal_reg of main_routine 
+     3068 - 3068 [     1.] dm ram      port     SP_dmar_reg of main_routine 
+     3070 - 3070 [     1.] dm ram      port     SP_enable_reg of main_routine 
+     3080 - 3080 [     1.] dm ram      port     MUSIC0_reg of main_routine 
+     3081 - 3081 [     1.] dm ram      port     MUSIC_dacl of main_routine 
+     3088 - 3088 [     1.] dm ram      port     MUSIC1_reg of main_routine 
+     3089 - 3089 [     1.] dm ram      port     MUSIC_dacr of main_routine 
+     3090 - 3090 [     1.] dm ram      port     MUSIC_status_reg of main_routine 
+     3091 - 3091 [     1.] dm ram      port     MUSIC_pc_status_reg of main_routine 
+     3098 - 3098 [     1.] dm ram      port     MUSIC_divisor_reg of main_routine 
+     30C0 - 30C0 [     1.] dm ram      port     SB_data_reg of main_routine 
+     30C8 - 30C8 [     1.] dm ram      port     SB_status_reg of main_routine 
+     30C9 - 30C9 [     1.] dm ram      port     SB_control_reg of main_routine 
+     3100 - 3100 [     1.] dm ram      port     MIDI_data_reg of main_routine 
+     3108 - 3108 [     1.] dm ram      port     MIDI_command_reg of main_routine 
+     3110 - 3110 [     1.] dm ram      port     MIDI_status_reg of main_routine 
+     3111 - 3111 [     1.] dm ram      port     MIDI_control_reg of main_routine 
+     3118 - 3118 [     1.] dm ram      port     MIDI_uart of main_routine 
+     3140 - 3140 [     1.] dm ram      port     UART_data_reg of main_routine 
+     3148 - 3148 [     1.] dm ram      port     UART_status_reg of main_routine 
+     3149 - 3149 [     1.] dm ram      port     UART_control_reg of main_routine 
+     31C0 - 31C0 [     1.] dm ram      port     IRQ_status_reg of main_routine 
+     31C1 - 31C1 [     1.] dm ram      port     IRQ_enable_reg of main_routine 
+     31C8 - 31C8 [     1.] dm ram      variable PIO_ of VOLUMEMOD 
+     31D0 - 31D0 [     1.] dm ram      port     PSS_config_reg of main_routine 
+     31D8 - 31D8 [     1.] dm ram      port     WSS_config_reg of main_routine 
+     31E0 - 31E0 [     1.] dm ram      port     SB_config_reg of main_routine 
+     31E8 - 31E8 [     1.] dm ram      port     MIDI_config_reg of main_routine 
+     31F0 - 31F0 [     1.] dm ram      port     CD_config_reg of main_routine 
+     31F8 - 31F8 [     1.] dm ram      port     UART_config_reg of main_routine 
+     3440 - 3440 [     1.] dm ram      port     SP_address_reg of main_routine 
+     3448 - 3448 [     1.] dm ram      port     SP_data_reg of main_routine 
+     3450 - 3450 [     1.] dm ram      port     SP_status_reg of main_routine 
+     3458 - 3458 [     1.] dm ram      port     SP_pio_reg of main_routine 
+     3800 - 39FF [   512.] dm ram      variable output of FFT 
+
+
+
+     fixed data memory rom:      0.
+     fixed data memory ram:   6454.
+
+
+

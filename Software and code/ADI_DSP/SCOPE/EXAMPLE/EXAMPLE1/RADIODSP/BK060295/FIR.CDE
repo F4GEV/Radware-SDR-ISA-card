@@ -1,0 +1,961 @@
+$m.i,d,rAFIR_LPF 
+$c1C000F .uRegSave ,f04 
+$c340000 .udata ,f04 
+$c340014 
+$c340518 
+$c340001 .uusb_data ,f04 
+$c340015 
+$c340519 
+$c340002 .ulsb_data ,f04 
+$c340016 
+$c34051A 
+$c340003 .uhz_60_data_lsb ,f04 
+$c340017 
+$c34051B 
+$c3C0515 
+$c14000E .uzero ,f04 
+$cA00000 
+$cA00005 
+$cA0000A 
+$cA0000F 
+$c940000 .ui0_pnt ,f04 
+$c940001 .uusb_pnt ,f04 
+$c940002 .ulsb_pnt ,f04 
+$c940003 .uhz_60_pnt_lsb ,f04 
+$c340000 .uhz_60_data_usb ,f04 
+$c340014 
+$c340518 
+$c340001 .uhilbert_data ,f04 
+$c340519 
+$c340002 .uhilbert3_data ,f04 
+$c34051A 
+$c3C0515 
+$c14000E .uzero_usb ,f04 
+$cA00000 
+$cA00004 
+$cA00008 
+$c940000 .uhz_60_pnt_usb ,f04 
+$c940001 .uhilbert_pnt ,f04 
+$c940002 .uhilbert3_pnt ,f04 
+$c340000 .udelay_data ,f04 
+$c340014 
+$c340288 
+$c340001 .udelay2_data ,f04 
+$c340289 
+$c340002 .udelay3_data ,f04 
+$c34028A 
+$c340003 .udelay4_data ,f04 
+$c34028B 
+$c3C0285 
+$c14000E .uzero_delay ,f04 
+$cA00000 
+$cA00004 
+$cA00008 
+$cA0000C 
+$c940000 .udelay_pnt ,f04 
+$c940001 .udelay2_pnt ,f04 
+$c940002 .udelay3_pnt ,f04 
+$c940003 .udelay4_pnt ,f04 
+$c340000 .ufm_data ,f04 
+$c340014 
+$c340048 
+$c340001 .ufm2_data ,f04 
+$c340049 
+$c3C0045 
+$c14000E .uzero_fm ,f04 
+$cA00000 
+$cA00004 
+$c940000 .ufm_pnt ,f04 
+$c940001 .ufm2_pnt ,f04 
+$c340000 .urtty_data ,f04 
+$c340014 
+$c340158 
+$c3C0155 
+$c14000E .uzero_rtty ,f04 
+$cA00000 
+$c940000 .urtty_pnt ,f04 
+$c340000 .ucw_data ,f04 
+$c340014 
+$c340058 
+$c3C0055 
+$c14000E .uzero_cw ,f04 
+$cA00000 
+$c940000 .ucw_pnt ,f04 
+$c400000 
+$c900000 .ucw_time ,f04 
+$c900000 .ucw_detected ,f04 
+$c340040 
+$c940000 .uwhich_filter ,f04 
+$c340000 .uOffset_Array_1 ,f04 
+$c940000 .uOffset_1_pnt ,f04 
+$c340000 .uOffset_Array_2 ,f04 
+$c940000 .uOffset_2_pnt ,f04 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c1C000F .udelayLine ,f04 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c840000 .udelay_pnt ,f04 
+$c340014 
+$c340288 
+$c6000B0 
+$c840000 .udelay_pnt ,f04 
+$c6800A0 
+$c940000 .udelay_pnt ,f04 
+$c0F23FF 
+$c0D00AF 
+$c0A000F 
+$c840000 .udelay_pnt ,f04 
+$c340014 
+$c340288 
+$c6000B0 
+$c840000 .udelay_pnt ,f04 
+$c6800A0 
+$c940000 .udelay_pnt ,f04 
+$c0A000F 
+$c840000 .udelay2_pnt ,f04 
+$c340014 
+$c340288 
+$c6000B0 
+$c840000 .udelay2_pnt ,f04 
+$c6800A0 
+$c940000 .udelay2_pnt ,f04 
+$c0F23FF 
+$c0D00AF 
+$c0A000F 
+$c840000 .udelay3_pnt ,f04 
+$c340014 
+$c340288 
+$c6000B0 
+$c840000 .udelay3_pnt ,f04 
+$c6800A0 
+$c940000 .udelay3_pnt ,f04 
+$c0F23FF 
+$c0D00AF 
+$c0A000F 
+$c840000 .udelay4_pnt ,f04 
+$c340014 
+$c340288 
+$c6000B0 
+$c840000 .udelay4_pnt ,f04 
+$c6800A0 
+$c940000 .udelay4_pnt ,f04 
+$c0F23FF 
+$c0D00AF 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0C2000 
+$c840000 .ufm_pnt ,f04 
+$c340014 
+$c340048 
+$c380000 .ucoeff_fm ,f04 
+$c380014 
+$c380048 
+$c6800A0 
+$c3C0035 
+$c1C000F .ufir_df ,f04 
+$c940000 .ufm_pnt ,f04 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c840000 .ufm2_pnt ,f04 
+$c340014 
+$c340048 
+$c380000 .ucoeff_fm ,f04 
+$c380014 
+$c380048 
+$c6800A0 
+$c3C0035 
+$c1C000F .ufir_df ,f04 
+$c940000 .ufm2_pnt ,f04 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c403041 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c0D000A 
+$c22E80F 
+$c27E20F 
+$c27310F 
+$c180002 .uFM_Filt3 ,f04 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c406085 
+$c227A0F 
+$c180002 .uFM_Filt3a ,f04 
+$c226A0F 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c22EA0F 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c403041 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c0D000A 
+$c22E80F 
+$c27E20F 
+$c27310F 
+$c180002 .uFM_Filt6 ,f04 
+$c0A000F 
+$c406085 
+$c227A0F 
+$c180002 .uFM_Filt6a ,f04 
+$c226A0F 
+$c0A000F 
+$c22EA0F 
+$c0A000F 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c0D000A 
+$c0D00CA 
+$c22E80F 
+$c267A0F 
+$c800001 .uDelta_Last ,f04 
+$c23310F 
+$c27E20F 
+$c403041 
+$c27310F 
+$c180002 .uFM_Filt5 ,f04 
+$c22E80F 
+$c90000A .uDelta_Last ,f04 
+$c0A000F 
+$c406084 
+$c227A0F 
+$c180002 .uFM_Filt5b ,f04 
+$c22E80F 
+$c22620F 
+$c18000F .uFM_Filt5a ,f04 
+$c22E80F 
+$c22E20F 
+$c18000F .uFM_Filt5a ,f04 
+$c0D000A 
+$c267A0F 
+$c800001 .uDelta_Last2 ,f04 
+$c23310F 
+$c27E20F 
+$c403041 
+$c27310F 
+$c180002 .uFM_Filt7 ,f04 
+$c27E20F 
+$c402841 
+$c27310F 
+$c27E20F 
+$c401841 
+$c27310F 
+$c180002 .uFM_Filt7c ,f04 
+$c0D00A0 
+$c90000A .uDelta_Last2 ,f04 
+$c0A000F 
+$c405084 
+$c18000F .uFM_Filt7d ,f04 
+$c403084 
+$c18000F .uFM_Filt7d ,f04 
+$c406084 
+$c227A0F 
+$c180002 .uFM_Filt7b ,f04 
+$c22600F 
+$c18000F .uFM_Filt7a ,f04 
+$c22E00F 
+$c18000F .uFM_Filt7a ,f04 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c0D000A 
+$c22E80F 
+$c267A0F 
+$c800001 .uDelta_Last ,f04 
+$c23310F 
+$c27E20F 
+$c409091 
+$c27310F 
+$c180002 .uFM_Filt8c ,f04 
+$c27E20F 
+$c403041 
+$c27310F 
+$c180002 .uFM_Filt8 ,f04 
+$c22E80F 
+$c90000A .uDelta_Last ,f04 
+$c0A000F 
+$c403044 
+$c227A0F 
+$c180002 .uFM_Filt8b ,f04 
+$c22E80F 
+$c22620F 
+$c18000F .uFM_Filt8a ,f04 
+$c22E80F 
+$c23220F 
+$c18000F .uFM_Filt8a ,f04 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c22EA0F 
+$c0A000F 
+$c403041 
+$c800005 .uFM3_Last ,f04 
+$c90000A .uFM3_Last ,f04 
+$c0D000A 
+$c22E80F 
+$c27E20F 
+$c27310F 
+$c180002 .uFM_Filt4 ,f04 
+$c0A000F 
+$c406085 
+$c227A0F 
+$c180002 .uFM_Filt4a ,f04 
+$c226A0F 
+$c0A000F 
+$c22EA0F 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c0D041A 
+$c340009 
+$c340015 
+$c340006 
+$c3C0805 
+$c6000A6 
+$c14000E .uloop_60_hz ,f04 
+$c1C000F .uFilter_60_Hz_USB ,f04 
+$c6800A5 
+$c6000A6 
+$c1C000F .uFilter_60_Hz_LSB ,f04 
+$c6800A5 
+$c6000A6 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c0D041A 
+$c340009 
+$c340025 
+$c340006 
+$c3C0805 
+$c6000A6 
+$c14000E .ud_loop_60_hz ,f04 
+$c1C000F .uFilter_60_Hz_USB ,f04 
+$c1C000F .uFilter_60_Hz_LSB ,f04 
+$c6800A5 
+$c6000A6 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c840000 .uhz_60_pnt_usb ,f04 
+$c340014 
+$c340518 
+$c380000 .ucoeff_60_hz ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .uhz_60_pnt_usb ,f04 
+$c0A000F 
+$c840000 .uhz_60_pnt_lsb ,f04 
+$c340014 
+$c340518 
+$c380000 .ucoeff_60_hz ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .uhz_60_pnt_lsb ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c1C000F .usFilter ,f04 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c840000 .ui0_pnt ,f04 
+$c340014 
+$c340518 
+$c380000 .ufir_coeff ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .ui0_pnt ,f04 
+$c0F22FF 
+$c0D00AF 
+$c0A000F 
+$c840000 .ui0_pnt ,f04 
+$c340014 
+$c340518 
+$c380000 .ufir_coeff ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .ui0_pnt ,f04 
+$c0A000F 
+$c840000 .uhilbert_pnt ,f04 
+$c340014 
+$c340518 
+$c380000 .ufir_coeff ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .uhilbert_pnt ,f04 
+$c0F22FF 
+$c0D00AF 
+$c0A000F 
+$c840000 .uhilbert3_pnt ,f04 
+$c340014 
+$c340518 
+$c380000 .ufir_coeff ,f04 
+$c380014 
+$c380518 
+$c1C000F .uFilter ,f04 
+$c940000 .uhilbert3_pnt ,f04 
+$c0F22FF 
+$c0D00AF 
+$c0A000F 
+$c90000A .uwhich_filter ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c800004 .uwhich_filter ,f04 
+$c400050 
+$c26E00F 
+$c180000 .uno_filter ,f04 
+$c0C2000 
+$c840000 .uusb_pnt ,f04 
+$c340014 
+$c340518 
+$c1C000F .uChooseFilter ,f04 
+$c1C000F .uFilter ,f04 
+$c940000 .uusb_pnt ,f04 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c800004 .uwhich_filter ,f04 
+$c400050 
+$c26E00F 
+$c180000 .uno_filter ,f04 
+$c0C2000 
+$c840000 .ulsb_pnt ,f04 
+$c340014 
+$c340518 
+$c1C000F .uChooseFilter ,f04 
+$c1C000F .uFilter ,f04 
+$c940000 .ulsb_pnt ,f04 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c800004 .uwhich_filter ,f04 
+$c27000F 
+$c180004 .ufilt9to10 ,f04 
+$c180000 .ufilt9to11 ,f04 
+$c400030 
+$c27200F 
+$c180004 .ufilt8to12 ,f04 
+$c180000 .ufilt4to22 ,f04 
+$c380000 .ucoeff_3to30 ,f04 
+$c380014 
+$c380518 
+$c0A000F 
+$c380000 .ucoeff_8to12 ,f04 
+$c380014 
+$c380518 
+$c0A000F 
+$c380000 .ucoeff_4to22 ,f04 
+$c380014 
+$c380518 
+$c0A000F 
+$c380000 .ucoeff_9to11 ,f04 
+$c380014 
+$c380518 
+$c0A000F 
+$c380000 .ucoeff_9to10 ,f04 
+$c380014 
+$c380518 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D043A 
+$c34000A 
+$c34000B 
+$c340016 
+$c0C2000 
+$c3C0805 
+$c14000E .uRemove_Loop3 ,f04 
+$c6000AA 
+$c0F22FF 
+$c0D001F 
+$c1C000F .udelayLine ,f04 
+$c0D004A 
+$c6000AA 
+$c0F22FF 
+$c0D005F 
+$c1C000F .usFilter ,f04 
+$c22620F 
+$c6800AE 
+$c22690F 
+$c1C000F .udelayLine2 ,f04 
+$c0D004A 
+$c22E90F 
+$c1C000F .uHilbert2 ,f04 
+$c22E20F 
+$c6800AE 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D043A 
+$c34000A 
+$c34000B 
+$c340016 
+$c3C0805 
+$c0C2000 
+$c14000E .uRemove_Loop2 ,f04 
+$c6000AA 
+$c0F22FF 
+$c0D001F 
+$c6000AA 
+$c0F22FF 
+$c0D005F 
+$c22690F 
+$c1C000F .udelayLine2 ,f04 
+$c0F22FF 
+$c0D000F 
+$c22E90F 
+$c6800AE 
+$c22690F 
+$c6800AE 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D043A 
+$c34000A 
+$c34000B 
+$c340016 
+$c0C2000 
+$c3C0805 
+$c14000E .uRemove_Loop ,f04 
+$c6000AA 
+$c0F22FF 
+$c0D001F 
+$c6000AA 
+$c0F22FF 
+$c0D005F 
+$c22E90F 
+$c1C000F .udelayLine2 ,f04 
+$c6800AE 
+$c0D00A5 
+$c1C000F .uHilbert2 ,f04 
+$c0D005A 
+$c0D00A1 
+$c1C000F .uHilbert3 ,f04 
+$c22EA0F 
+$c6800AE 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D0435 
+$c34000A 
+$c34000B 
+$c340016 
+$c6000AA 
+$c3C0805 
+$c0C2000 
+$c14000E .uT_and_D_loop ,f04 
+$c1C000F .usFilter ,f04 
+$c0D004A 
+$c6000AA 
+$c1C000F .udelayLine ,f04 
+$c0D000A 
+$c23200F 
+$c6800AE 
+$c22600F 
+$c6800AE 
+$c6000AA 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D0435 
+$c34000A 
+$c34000B 
+$c340016 
+$c6000AA 
+$c3C0805 
+$c0C2000 
+$c14000E .uXmit_LSB_loop ,f04 
+$c1C000F .usFilterx2 ,f04 
+$c6800AE 
+$c6000AA 
+$c1C000F .udelayLinex2 ,f04 
+$c6800AE 
+$c6000AA 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D0435 
+$c34000A 
+$c34000B 
+$c340016 
+$c6000AA 
+$c3C0805 
+$c0C2000 
+$c14000E .uXmit_USB_loop ,f04 
+$c1C000F .udelayLinex2 ,f04 
+$c6800AE 
+$c6000AA 
+$c1C000F .usFilterx2 ,f04 
+$c6800AE 
+$c6000AA 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D0435 
+$c34000A 
+$c34000B 
+$c340016 
+$c340007 
+$c6000AB 
+$c3C0805 
+$c0C2000 
+$c14000E .uT_and_D_loop2 ,f04 
+$c1C000F .usFilter ,f04 
+$c0D004A 
+$c6000AA 
+$c1C000F .udelayLine2 ,f04 
+$c0D005A 
+$c6000AB 
+$c1C000F .udelayLine ,f04 
+$c0D000A 
+$c6000AA 
+$c1C000F .uHilbert2 ,f04 
+$c0D001A 
+$c23200F 
+$c6800AE 
+$c22690F 
+$c6800AE 
+$c6000AB 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c0D0435 
+$c34000A 
+$c34000B 
+$c340016 
+$c340007 
+$c6000AB 
+$c3C0805 
+$c0C2000 
+$c14000E .uT_and_D_loop3 ,f04 
+$c1C000F .usFilter ,f04 
+$c0D004A 
+$c6000AA 
+$c1C000F .udelayLine2 ,f04 
+$c0C2000 
+$c0D005A 
+$c6000AB 
+$c0C2000 
+$c1C000F .udelayLine ,f04 
+$c0D000A 
+$c6000AA 
+$c1C000F .uHilbert2 ,f04 
+$c0D001A 
+$c23200F 
+$c1C000F .udelayLine3 ,f04 
+$c6800AE 
+$c22690F 
+$c1C000F .uHilbert3 ,f04 
+$c6800AE 
+$c6000AB 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0C2000 
+$c0D042A 
+$c340006 
+$c340017 
+$c34000A 
+$c3C0805 
+$c6000AA 
+$c14000E .uFirst_Loop2 ,f04 
+$c1C000F .uFilter_FM ,f04 
+$c1C000F .uFilter_60_Hz_USB ,f04 
+$c6800AB 
+$c6800AB 
+$c6000AA 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c840000 .uusb_pnt ,f04 
+$c340014 
+$c340298 
+$c380000 .ucoeff_fm16 ,f04 
+$c380014 
+$c380298 
+$c3C0285 
+$c1C000F .ufir_cnt ,f04 
+$c940000 .uusb_pnt ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D040A 
+$c340014 
+$c340005 
+$c340008 
+$c3C0805 
+$c6000A1 
+$c14000E .uBoth_Loop ,f04 
+$c1C000F .uUFilter_ ,f04 
+$c6800A0 
+$c6000A1 
+$c1C000F .uLFilter_ ,f04 
+$c6800A0 
+$c6000A1 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c340016 
+$c340005 
+$c340008 
+$c3C0805 
+$c6000A9 
+$c0C2000 
+$c14000E .uHighpass_Loop ,f04 
+$c380000 .ucoeff_highpass ,f04 
+$c380014 
+$c380518 
+$c840000 .uusb_pnt ,f04 
+$c340014 
+$c340518 
+$c1C000F .uFilter ,f04 
+$c940000 .uusb_pnt ,f04 
+$c6800AA 
+$c6000A9 
+$c840000 .ulsb_pnt ,f04 
+$c340014 
+$c340518 
+$c1C000F .uFilter ,f04 
+$c940000 .ulsb_pnt ,f04 
+$c6800AA 
+$c6000A9 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave2 ,f04 
+$c0D042A 
+$c340026 
+$c340007 
+$c34000A 
+$c3C0805 
+$c6000AB 
+$c0C2000 
+$c14000E .uFirst_Loop ,f04 
+$c1C000F .uUFilter_ ,f04 
+$c6800AA 
+$c6000AB 
+$c0C3000 
+$c1C000F .uRegRestore2 ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0D040A 
+$c0D041A 
+$c340014 
+$c340025 
+$c340008 
+$c340009 
+$c3C0805 
+$c6000A4 
+$c6000A5 
+$c14000E .uRemove_USB_Loop ,f04 
+$c6800A1 
+$c6000A5 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0D040A 
+$c340014 
+$c340008 
+$c3C0805 
+$c6000A0 
+$c14000E .uRemove_LSB_Loop ,f04 
+$c6800A0 
+$c6000A0 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0D040A 
+$c0D0415 
+$c340024 
+$c340015 
+$c340008 
+$c340009 
+$c3C0805 
+$c6000A0 
+$c14000E .uMake_SSB_Loop ,f04 
+$c6800A5 
+$c6000A0 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c0C2000 
+$c402007 
+$c0D0405 
+$c0D041A 
+$c0D000A 
+$c340008 
+$c340009 
+$c340014 
+$c340005 
+$c609830 
+$c3C0805 
+$c14000E .uCW_Block_USB ,f04 
+$c610930 
+$c0D00EC 
+$c0D040A 
+$c3C0805 
+$c400961 
+$c800005 .ucw_detected ,f04 
+$c800000 .ucw_time ,f04 
+$c14000E .uCW_Block_loop ,f04 
+$c400014 
+$c22600F 
+$c0D000A 
+$c600041 
+$c23260F 
+$c27E20F 
+$c40000A 
+$c27310F 
+$c180009 .uCW_no_tone ,f04 
+$c403E8A 
+$c1C000F .ucw_fir ,f04 
+$c6800A0 
+$c272A0F 
+$c180000 .uCW_Block_loop ,f04 
+$c680054 
+$c680004 
+$c400000 
+$c0D005A 
+$c000000 
+$c900005 .ucw_time ,f04 
+$c900000 .ucw_detected ,f04 
+$c0D0400 
+$c40000A 
+$c6800A4 
+$c403E80 
+$c6800A0 
+$c680000 
+$c6800A0 
+$c680000 
+$c0C3000 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c840002 .ucw_pnt ,f04 
+$c340016 
+$c34005A 
+$c6800AA 
+$c940002 .ucw_pnt ,f04 
+$c3C0055 
+$c400016 
+$c40000B 
+$c60002A 
+$c14000E .ucw_fir_loop ,f04 
+$c61002A 
+$c227B0F 
+$c180000 .uend_cw_fir ,f04 
+$c403E8A 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c402007 
+$c0D040A 
+$c340008 
+$c340014 
+$c340005 
+$c609830 
+$c3C0805 
+$c14000E .uBlock_USB ,f04 
+$c610930 
+$c0D00EC 
+$c0D0405 
+$c3C0805 
+$c609830 
+$c14000E .uBlock_LSB ,f04 
+$c610930 
+$c0D00FC 
+$c3C0805 
+$c0D040A 
+$c0D0415 
+$c340009 
+$c14000E .uBlock_loop ,f04 
+$c600041 
+$c400000 
+$c632655 
+$c6800A4 
+$c27E20F 
+$c232F0F 
+$c23E20F 
+$c23320F 
+$c180008 .uBlock_UL ,f04 
+$c180000 .uBlock_none ,f04 
+$c400640 
+$c18000F .uBlock_none ,f04 
+$c4FF9C0 
+$c0D00A0 
+$c1C000F .urtty_fir ,f04 
+$c6800A0 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c800004 .urtty_usb ,f04 
+$c800001 .urtty_lsb ,f04 
+$c90000A .urtty_usb ,f04 
+$c900005 .urtty_lsb ,f04 
+$c22E20F 
+$c27E20F 
+$c23290F 
+$c23E20F 
+$c22F20F 
+$c180008 .ulsb_rtty ,f04 
+$c180000 .uno_rtty ,f04 
+$c40064A 
+$c1C000F .urtty_fir ,f04 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$c4FF9CA 
+$c18000F .urtty_cfir ,f04 
+$c40000A 
+$c18000F .urtty_cfir ,f04 
+$c0C2000 
+$c840002 .urtty_pnt ,f04 
+$c340016 
+$c34015A 
+$c6800AA 
+$c3C0155 
+$c400016 
+$c60982A 
+$c14000E .urtty_loop ,f04 
+$c61002A 
+$c0D00AB 
+$c940002 .urtty_pnt ,f04 
+$c0C3000 
+$c227A0F 
+$c18000B .umax_hi ,f04 
+$c18000A .umax_low ,f04 
+$c0A000F 
+$c403E8A 
+$c18000F .urtty_end ,f04 
+$c4FC18A 
+$c18000F .urtty_end ,f04 
+$m.o,l03BE 
+$ 

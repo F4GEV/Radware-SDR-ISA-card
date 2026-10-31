@@ -1,0 +1,480 @@
+Workstation V2.00a, Plus V3.00a (mid-March 90):
+
+1) Repair to "insufficient EMS memory", other EMS memory error messages.
+
+2) Reduction in size of .EXE file by about 30K to help increase the range of
+   executable programs that can be used with the new External Module
+   Configuration function.
+
+
+Workstation V2.01, Plus 3.01
+
+1) Complete overhaul and update of on-line HELP file.  Also, enhancements in
+   the way HELP display works, including use of left and right mouse keys to
+   jump to beginning and end of help display, respectively.
+
+2) Repair to file acquisition with sampling rate entry above 1.xx MHz.
+
+3) Correction to log frequency axis display where some "orders of magnitude"
+   values would cause waveform display to extend past left edge of display.
+
+4) Correction to Data Translation 282x series 2-channel D/A playback sampling
+   rate.
+
+5) Correction to Digital Audio Labs DRB1 and Data Translation DT282x D/A
+   playback.
+
+6) Addition of User Setup field "Zoom Slew Rate" to control rate of "rapid"
+   mouse movement in waveform displays.
+
+7) "Keyboard only" selection in Mouse Configuration function now reprograms
+   keyboard for 3x faster operation, making waveform display zoom and other
+   target window-based functions much easier to use.
+
+8) Repair to graphical filter desired response editing when in "scaled up"
+   (PgUp key) display modes.
+
+9) Correction to SINEGEN.DOC example external module file.  Also, a new
+   CONFIG.DOC file that is referenced by all Hyperception-provided example
+   external modules has been created.  This file performs read/write
+   interface to Hypersignal configuration files, and includes extensive
+   documentation and comments that describe the structure of data inside
+   configuration save files, as well as how to change the data.  Another
+   example external module has also been added, "PTRACKER", which is a
+   rudimentary pitch estimator and tracker for use in vocal work.
+
+
+Workstation V2.02, Plus 3.02
+
+CORRECTIONS, REPAIRS
+--------------------
+
+1)  Repair to Differentiator FIR filter design, where the program initialized
+    the entire differentiator response (usually a single "transition band-
+    width") to "undefined", and no desired response showed in the initial
+    filter design graphical display.
+
+2)  Correction to PC-56 and DSP-C25 board sampling rate and ADC filter
+    programming.  Also, AIC chip control word is now available in the config-
+    uration file for these boards, so that default gain, loopback, and ADC
+    filter enable/disable settings can be easily changed.
+
+3)  Repair to Texas Instruments TMS320C25 SWDS board analog functions (scope,
+    analyzer, etc.) which were not working.
+
+4)  Repair to program operation with monochrome (e.g. Hercules) displays.
+
+5)  Repair to entry in Graphics Configuration menu, which was only accepting
+    values of 70 or less.
+
+6)  Repair to File Acquisition problem where "Channel Strip" values greater
+    than zero caused the software to treat the output file as multichannel.
+    In the process, a new "Post-Acquisition" field has been added to the File
+    Acquisition function allowing Framesize, FFT Order, and Number of Channels
+    to be specified for output file header entry, to take effect in subsequent
+    processing after the File Acquisition function.
+
+7)  All frequency domain display functions, including the Spectrum Analyzer,
+    have been updated to take into account final-output scaling caused by use
+    of any non-rectangular time domain window prior to the FFT.
+
+8)  Repair to on-line HELP display from Analogic AT6400, Data Translation
+    DT282x, or Digital Audio Labs DRB1 Spectrum Analyzer functions that may
+    have crashed due to stack misallocation.
+
+9)  Correction to real/imag waveform data files, which had (# of frames)*2
+    extra points being written out.
+
+10) Correction to Convolution/Correlation function when the h[n] file exceeds
+    16384 points in total length.
+
+11) Corrections to TMS320C30 filter code generation, including basic design
+    flaw in IIR structure 2 and mislabeling of IIR structure 1 and 2
+    coefficient storage (coefficients were stored correctly, but A1i, A2i
+    labels were reversed) and improvements to FIR code and comments.
+
+12) Device driver added for AT&T DSP32C development board T7520 codec.
+    'ATT32C' selection from System Configuration should now work correctly
+    for analog-related functions.  Also, codec control word is now available
+    in configuration file (see variable "ATT_CTRL_WORD" in "CONFIG.DOC" file)
+    should Hypersignal default settings of codec need to be altered.
+
+13) Corrections made to D/A playback for CAC DSP32C-AT board.
+
+14) Repair to "mean subtraction" in File Acquisition function, which was not
+    working.
+
+15) Correction to structure 1 and 2 IIR filter code generator for Motorola
+    DSP56000, where "intermediate stage scaling" statements that should
+    be "commented" for optional use only were not.
+
+16) Repair to 3-D Spectrogram plotting with log-frequency axes and the "mesh"
+    option ("surface" field set to 'M') both enabled.
+
+17) Repair to cases of Data Translation 282x board lock-up with certain,
+    infrequently occurring sampling rate values. This appears to be a hardware
+    problem, where the boards fail to operate with a "counter" value of 0FFH.
+
+18) Repair to labeling of Spectrum Analyzer lefthand edge of frequency axis
+    (log mode only), which was displaying incorrect value.
+
+19) Repair to Power Spectra Generation function which occasionally coughed up
+    a run-time error for some combinations of FFT parameters followed by a
+    straight section-average power spectra generation.
+
+20) Repair to built-in F2 print function in following case:  EMS memory print
+    from 2-D Spectrograph function with current screen resolution 640x480 or
+    below (for VGA/EGA cards) or 720x350 or below (Hercules mono-type cards).
+    Symptom was that box descriptors and units did show up on printout, and
+    then disappeared from screen also.  Screen dumps (non-EMS) were okay and
+    were unaffected.
+
+21) Same problem in 20) above could've caused color printer (e.g. HP PaintJet)
+    printouts to have either no box descriptors and units or garbled ones.
+    Color printout text should now be okay regardless of current screen
+    resolution.
+
+22) Correction to DSP56001 Spectrum Analyzer log magnitude display, which
+    was adding an erroneous 6 dB to all signals (i.e. for a 16-bit A/D input,
+    a sine wave would appear to be full-scale, or 0 dB, when the peak input A/D
+    value was only 16422).
+
+23) Correction to Spectrum Analyzer dual display from file, which was crashing
+    in some cases.
+
+24) Correction to unity-gain problem in convolution with FIR Filter
+    Construction-generated output when filter coefficient(s) exceeded 1.00.
+
+25) Correction to Hercules graphics digital scope and spectrum analyzer
+    display where page 2 had some uninitialized garbage.
+
+26) Correction to impulse responses generated for IIR filters where first
+    sample was zero, causing extra pi shift in phase response.
+
+27) Correction to File Acquisition function import of 8-bit unsigned data.
+
+28) Correction to Stimulus & Response operation where this operation had to be
+    the first performed inside the Analog Conversion function in order to
+    work correctly.
+
+29) Correction to DT282x board Spectrum Analyzer voltage scaling based on
+    entry in INPUT RANGE field.
+
+
+ENHANCEMENTS, NEW FEATURES
+--------------------------
+
+1)  Significant key commands that may not easily be remembered inside waveform
+    display functions are now listed in a column to the right of displays.
+
+2)  Enabling of PgUp/PgDn scaling while in linear amplitude mode in filter
+    design display.
+
+3)  Improved scaling and calibration scheme for log displays in Spectrum
+    Analyzer.  See on-line HELP for explanation.
+
+4)  D/A playback from time Waveform Display/Edit capable of higher rates in
+    general, due to increased buffer sizes.
+
+5)  Removal of maximum length on cut-and-paste editing operations.  Any size
+    chunk of waveform data may now be inserted/deleted/copied.
+
+6)  Improvement to estimation of length for FIR Kaiser-Window and Parks-
+    McClellan filters.
+
+7)  Addition of "zoom-undo" function that allows "backing-out" from zoomed
+    waveform displays.  A "zoom-history" is kept up to 16 levels; the two
+    outer keys on the mouse are pressed simultaneously to back up to the
+    previous zoom level.
+
+8)  Further addition of automatic "stereo/analytic sampling" waveform
+    handling to time domain functions and stereo waveform handling to the
+    Power Spectra Generation frequency domain function.  These functions
+    handle stereo waveforms and complex waveforms automatically, without
+    manual intervention, creating stereo or complex output for further
+    processing or display.
+
+9)  Addition of "rubber-band" mode to time domain waveform editor.  To
+    accommodate "region-mode" and "point-mode" commands that allow switching
+    between cut-and-paste and rubber-band editor modes, the "P" key is now
+    used to enter point-mode (as it always has been in graphical filter
+    design); the "B" key is now used for controlling the display background
+    color (used to be the "P" key), and the Backspace key pans frame displays
+    backwards (since the space bar pans forwards).  The Backspace key (instead
+    of "B" key) change affects ALL program graphical displays.
+
+    Once in point-mode, use the 'Home' key (middle button on mouse) to "tack"
+    and "untack" the waveform to the crosshair cursor.  When the waveform is
+    attached to the cursor, you can freely move waveform points around.
+
+10) Copy and overwrite options added to cut-and-paste mode editing.  Pressing
+    the 'DEL' key causes a prompt asking for either a delete ('D') or copy
+    ('C') function (instead of the old 'Y/N' prompt).  Pressing the 'INS' key
+    causes a prompt asking for either an insert ('I') or overwrite ('W')
+    function.  Below is a summary of what happens with the four basic
+    cut-and-paste mode editing functions:
+
+    -Delete:  data inside target (zoom) window read into internal "paste"
+              buffer, then deleted from waveform
+
+    -Copy:    data inside target (zoom) window read into internal "paste"
+              buffer, waveform is unchanged
+
+    -Insert:  data currently inside internal "paste" buffer inserted into
+              waveform starting at left edge of target window (i.e. current
+              window width irrelevant)
+
+    -Write:   data currently inside internal "paste" buffer overwritten onto
+              waveform starting at left edge of target window (i.e. current
+              window width irrelevant)
+
+11) All instrumentation functions now write non-screen-scaled data to disk
+    when the "WRITE" function is invoked.  The data written is exactly as it
+    was received from the DSP/analog board.  Due to this change, all DSP
+    source code had to be completely overhauled.  We took advantage of the
+    opportunity to clean many things up, greatly increase the modularity of
+    the DSP source code, improve the function library documentation and
+    more clearly define each function, and improve the documentation and
+    procedure for user-modification of the DSP source code.  In general, the
+    source is faster, requires less program memory space, and has become easier
+    to work with.
+
+    As another side-benefit to this project, the instrumentation displays no
+    longer require long pauses when displaying disk file input, and all
+    Spectrum Analyzer inter- and intrachannel display combinations are defined
+    except for intrachannel (same-channel) display of log power spectra and
+    linear power spectra.
+
+12) "Snap-in" real-time filtering for all analog-related functions, either
+    FIR or IIR (structures 2 and 3) using either Hypersignal-created or
+    user-designed filter coefficient files.  For digital oscilloscope and
+    spectrum analyzer enter the filter filename after the "An" input channel
+    entries.  For analog conversion (and playback from displays) enter the
+    filter filename after the CHANNEL LIST field entry, e.g. '0,1,filtname'.
+    Use a comma (',') as a separator before the filter filename.  As an option,
+    you may enter the number of bits to quantize filter coefficients to after
+    the filter name (again, use a comma as separator).  Otherwise, the program
+    will automatically choose the maximum possible quantization level (quanti-
+    zation applies only to fixed-point DSPs).
+    
+13) Installation in Analog Conversion function of "stimulus and response"
+    simultaneous D/A playback of waveform disk file during A/D record (using
+    optional positive or negative trigger delay).  To specify the stimulus
+    (output) file, enter a comma (or other separator) followed by the stimulus
+    filename (with no extension) after the 'A' or 'AM' entry in the ACQ/GEN
+    field.  To specify a record delay, enter in units of seconds, after 
+    "mode" and "level" in the "Trigger" field.  A positive delay will cause
+    recording to start at delay seconds AFTER the stimulus has begun; a
+    negative delay will cause recording to start delay seconds BEFORE the
+    stimulus begins.
+
+14) As the Analog Conversion function is getting more sophisticated, we felt
+    that it deserved setup "save" files, as is done with Difference Equations
+    and Filter Construction.  These files have ".ADC" extensions, and use the
+    same filename as the waveform being recorded or generated.  These setup
+    save files should go a long ways in reducing confusion between separate
+    Analog Conversion operations that use different gain settings, channel
+    lists, etc.  Also, these files will make it more difficult to accidentally
+    overwrite important existing waveforms when using the Analog Conversion
+    function; thus, we have placed the "dive, dive" audible warning under
+    global User Setup sound control.
+
+15) Buffer sizes used by analog functions reduced to roughly 1 buffer/sec
+    when sampling rates are less than the maximum buffer size allowed by the
+    current analog hardware.  This provides greater resolution in acquiring
+    the requested amount of data in low sampling rate operations, and will
+    eliminate time spent waiting for huge buffers to fill with extra, unneeded
+    data in low sampling rate operations.
+
+16) Acceleration of the Convolution function when using some DSP hardware
+    (in general:  TMS320C25, TMS320C30, DSP56001, and DSP32C).  Also, the board
+    in use needs at least 24 Kw of free RAM (not including whatever space is
+    occupied by executable code).  This means that many boards will need to
+    have their expanded-memory option in place.  Hypersignal automatically
+    looks for the required memory (usually depends on filter/impulse response
+    size); if not found, the user is given the option of continuing using
+    standard 80x86/80x87 processing.
+
+17) LSI (Spectrum Signal Proc.) TMS320C30 board support added.  Use 'LSI30'
+    or 'LSIC30' in System Configuration menu.
+
+18) Support for PCI200041C carrier board added.  Analog A/D modules 19M, 23M,
+    and 341M, D/A module 3M, and the 31M expander/sequencer module (and
+    combinations thereof) are currently supported.  Analog Conversion to/from
+    disk, Digital Oscilloscope, and D/A playback from from waveform displays
+    are active.  Also, with an inexpensive "DSP Coprocessor" board added (such
+    as the Burr-Brown ZPB32), the Spectrum Analyzer function can be activated.
+    Use 'PCI41C'in the System Configuration menu.
+
+19) Support for the PCI20202C "smart" carrier has been substantially upgraded.
+    All TMS320C25 corrections, new features, source code improvements, etc.
+    described elsewhere apply also to this board.  Also, specifically for this
+    system, two-channel D/A operation has been enabled, and hard disk transfer
+    rates have been substantially increased by dynamically locating sections
+    of TMS320C25 code into onchip RAM during operation, allowing the TMS320C25
+    to continue processing while its external memory is accessed by the host.
+
+20) ASPI (Atlanta Signal Proc.) "Banshee" TMS320C30 board support added.  Use
+    'ASPI30' or 'ASPIC30' in System Configuration menu.  Please note than an
+    "AD16" daughterboard is required for analog I/O.
+
+21) Sonitech "Spirit-30" TMS320C30 board support added. Use 'SON30' or 'SONC30'
+    in System Configuration menu.  Please note that an "IC-100" external unit
+    is required for analog I/O.
+
+22) "Monitor" function (listen before, during record) activated for all DSP32C
+    and TMS320C25 boards.
+
+23) NEW! NEW! New version 3.6A MetaWindow graphics driver can be loaded into
+    "high" memory as a device driver, freeing about 113 kbyte of DOS memory for
+    User-Defined external programs (or other, uses, such as memory-resident
+    utilities).  Use the "LOADHI" command in your EMS memory manager to load
+    the met_shel.exe program into high DOS (above 640K but below 1024K) memory.
+
+24) Addition of more 1024x768 graphics hardware modes.
+
+25) Built-in print function ('F2' key) now prints target window and its labels
+    if present on display during print function.
+
+26) When convolution/correlation is now invoked with an arbitrary h[n] file
+    (NOT a filter file), a version of Parseval's theorem has been installed to
+    ensure unity-power (NOT unity-gain) in the output waveform w.r.t the
+    input waveform.  The idea here is that an arbitrary h[n] might increase
+    gain at certain frequencies at the expense of other frequencies, but the
+    overall power of the output waveform cannot increase beyond that of the
+    original input waveform.
+
+27) Texas Instruments EVM TMS320C30 board support added.  Use 'EVM30' or
+    'EVMC30' in System Configuration menu.
+
+28) Trace 1 / Trace 2 selector activated in Waveform Display/Edit and 2-D
+    Spectrograph functions.  Current active trace affects both waveform
+    editing and D/A playback.
+
+29) Transfer Function Generation added to Frequency Domain menu.  Ratio of
+    two real/imaginary (complex) waveforms is calculated.  New real/imag
+    output, as well as magnitude waveform suitable for 3-D or 2-D viewing,
+    is generated.
+
+30) Convolution and stimulus & response have been activated for all
+    TMS320C25 boards.  Also, all TMS320C25 DSP Source Code Interface libraries,
+    modules were converted to T.I. COFF format.
+
+31) Complete DSP32C upgrade for all DSP32C boards supported.  DSP32C source
+    completely rewritten to comply with standardized, modular conventions used
+    by other supported DSPs.   All DSP32C boards were given full functionality,
+    including snap-in real-time filtering, convolution acceleration,
+    stimulus & response, 4096 pt. FFTs, etc.
+
+32) Several Spectrum Analyzer improvements made, including:  addition of 1/N
+    Octave Band display (separate option from log-axis display), entry of
+    minimum frequency to display for log-axis or octave band display enabled,
+    entry of 'NN' frame averaging during transfer function display enabled.
+
+33) ASPI Banshee board performance dramatically upgraded by using new
+    TMS320C30 DMA controller data-transfer technique.
+
+34) An external clock option can now be "attached" to each entry in the
+    System Configuration menu for boards that support such a feature.
+
+35) A "headitor" (header-editor) has been written in the form of the external
+    module "HEADITOR.EXE" that can be used to directly edit any part of a
+    Hypersignal waveform header.
+
+36) Support added for Burr-Brown ZPB32 and ZPB34 boards, including the
+    following analog I/O modules:  ZPD 1001, ZPD 1002, ZPB1100, ZPB2100,
+    and ZPB6064 interface board.  The ZPD 1002 allows 10 MHz Spectrum
+    Analyzer and Digital Oscilloscope operation.
+
+37) A new Software Reference Guide & Tutorial has been published and is
+    shipping with all V2.02s.  The SRG contains about a dozen practical
+    DSP examples, including sampling rate conversion, heterodyning,
+    Hilbert Transform design, waveform editing, etc.
+
+38) A new Hardware Reference Guide has been published and is shipping.  The
+    HRG contains individual sections on each supported board, with very
+    specific information and details about the board and its use in
+    conjunction with Hypersignal.  Memory usage (and memory expansion
+    recommendations), as well as significant deviations from standard
+    Hypersignal operation, if any, are discussed.
+
+    Also, the HRG now contains all documentation concerning the DSP Source
+    Code Interface, which now includes 7 different DSP chips.  This section
+    has been greatly upgraded and better organized; the standardization
+    in code modification and testing across DSP chip families that we have
+    been striving for is now paying dividends.
+
+
+Workstation V2.03, Plus 3.03
+
+CORRECTIONS, REPAIRS
+--------------------
+
+1)  Following transfer function bugs fixed:  crash with 4096 pt. FFT size,
+    misalignment of multiple frame output (which caused invalid 2-D and 3-D
+    Spectrograph viewing). 
+
+2)  Fixed obscure problem in Convolution when samples beyond "FRAMESIZE" in
+    H[n] were mistakenly used in the H[n] array.
+
+3)  Selecting trace 2 in Waveform Display/Edit and 2-D Spectrograph now also
+    correctly selects trace 2 sampling rate (if different) for D/A playback.
+    Also, Waveform Display/Edit now changes time axis and zoom box units
+    readout based on new sampling frequency.
+
+4)  Incorrect wait-state register value for LSI DSP32C board in "reset.s"
+    source module of "DSP32.OUT" file fixed (correct value is 2).
+
+5)  Problem where Magnitude Display, Phase Display, and 3-D Spectrogram were
+    displaying 1 too many samples in each frame fixed (problem only occurred
+    when original time domain data was complex).
+
+6)  Analog Conversion, Digital Oscilloscope, and Spectrum Analyzer functions
+    changed to have no limit on number of channels entered in menu CHANNEL
+    LIST field (possible entry now is from 0 to 63), regardless of the DSP
+    board in use (only applies to hardware with onboard DSP chip).
+
+7)  Fix to data-entry menu background color for some monochrome displays,
+    where data-entry menu descriptions and input text could not be seen.
+
+8)  Polarity corrected for write to reset port within general-purpose DSP56001
+    host-interface (applies only to Hyperception-manufactured "Hyper-ADM"
+    board).  Also, post reset-pulse delay increased to 100 msec.
+
+9)  Relative amplitude problem fixed in frequency-domain Magnitude Display and
+    3-D Spectrogram Display log display when "Dual Autoscaling" is enabled.
+
+10) Difference Equation bug where one extra output sample was calculated and
+    used to determine maximum output amplitude (but not actually written to
+    output file) has been corrected.
+
+11) Fixed problem with DSP56001 FIR filter code generation where second 
+    half of coefficients were being written out inverted.  This problem
+    was accidentally introduced into version 2.02.
+
+12) Fixed long-term problem where .BAT (batch) files would not execute from
+    external module menu selections.
+
+13) Fixed problem where screen dumps (not EMS memory re-draws) from 2-D
+    Spectrograph function would not show gray-scale on B/W printers.
+
+14) Fixed problem where stimulus files with length less than 1280 bytes were
+    not being accepted in the Analog Conversion function.
+
+15) Fixed problem where Convolution/Correlation was not estimating required
+    amount of DSP board memory correctly for DSP32C boards.
+
+16) Correction to TMS320C25 board Convolution/Correlation acceleration for
+    FIR filters with coefficients greater than 1.
+
+
+ENHANCEMENTS, NEW FEATURES
+--------------------------
+
+1)  Final support added for NEC DDK77220 development board.  Complete 77220
+    DSP Source Code Interface is now in place.
+
+2)  Support added for Techron TEF20HI system. Special version of "DSP56000.LOD"
+    file is required for this system.
+
+

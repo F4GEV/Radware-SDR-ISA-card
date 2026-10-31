@@ -1,0 +1,218 @@
+Version 1.08 (4/23/95)
+
+Problems noted by Walt Schuknecht
+  S-Meter & AM-Offset where turned off in version 1.07
+
+Problems
+  Memory Banks that came up on startup always had the 1st bank crosslinked
+    into them.
+
+Version 1.07 (4/17/95)
+  BEFORE UPGRADING, delete all old .set files in working directory!!!!!!
+  Also, as this completely redid the method of opening and closing windows
+    to eleviate the GPF plague we were having, large portions of the code
+    has changed. As is always the case when such large tasks are undertaken,
+    it is very easy for somthing unforseen to crop in. Please notify me of
+    any problems you encounter.
+
+Suggestions by John Bower
+  Added an Amateur Bands window.
+  Added '*' to the Morse Code charactor set.
+
+Problems noted by Jim Gorman
+  The Stations, Amateur Bands, & Voice Memories had the wrong size
+    windows. (They where 4 pixels to tall)
+
+Problems noted by Walt Schuknecht
+  The callsign window did not come back on if you left it on.
+  The callsign window had developed the incredible shrinking window
+    symdrome.
+  The AM Offset Window was not saving its place & did not come back on
+    when you quit & restarted.
+
+Additions
+  Automatically brings up About Radware. An unfortunate, but necessary evil
+    due to the copyright notice.
+  The Escape Key now toggles between XMIT/RECV. This key is active anytime
+    any RADWARE window has the input focus. (Generally whenevr a RADWARE window
+    is the active window.) We first tried this with the space bar, but whenever
+    you typed a space in the send morse window, it toggled between XMIT/RECV.
+    We welcome your ideas for what would be the best hot key to assign to this &
+    what other hotkeys you would like to see!
+  Made all windows come up
+  Totally redid the method of opening & closing windows to try to relieve
+    some of the GPF faults that are occuring.
+  Saves TX Analog gain.
+  Padded the settings file so that future changes will not require its deletion.
+  Turns TX off when RADWARE is exited.
+  Added RX Sideband Adjust to allow calibration of the I/Q inputs to
+    increase Sideband rejection. To use, tune to a carrier in USB. Turn
+    on the USB Time & LSB Time Analyzers. Then enter the configure
+    Dialog and press the RX Sideband... button. Adjust the number until
+    LSB Time Analyzer is at minimum.
+    This control works by multipling the gain to I by n/32768.
+  Turned the TDA 8425 Bass & Treble controls to -12 DB (Minimum). This
+    was previously left at whatever the user had set them when the card
+    was installed.
+
+Version 1.06 (3/13/95)
+
+Problems
+  Changing bands to all no long tells you that you can not do this while
+    the spectrum analyzer is running unless the spectrum analyzer is
+    running.
+
+Additions
+  9 Channel quick memmories has been moved under stations, & there are
+    now 9 banks of channels.
+  Added check to make sure a window has not moved beyond the screen
+    limit, and return it into the screen area if it has.
+  S Meter is now calculating out the Analog Gain and the RF AMP/ATTN
+  AGC no longer access the RF AMP/ATTN or the Analog Gain when in AM.
+    The overhead of AGC & AM Tuning is too much for any computer except
+    the pentium. This will return once the algorithms have been sped up.
+
+Version 1.05 (3/8/95)
+
+Problems noted by Jim Gorman
+  LSB was allowed to enter 16KHz filter. This has been removed
+
+Problems
+  SMeter was looking at the weakest sideband. Now looks at strongest
+    applicable sideband.
+  AGC had the same problem as the s meter.
+
+Additions
+  9 Channel Quick memory channels were added. These were previously in
+    the radio menu. To store a channel, set the radio to the appropriate
+    settings and press the right mouse button while on the "button" of the
+    channel you wish to store it in. The left mouse button on that
+    "button" will recall the channel.
+
+Version 1.04 (3/3/95)
+
+Problems noted by Jim Gorman
+  AGC Continues to attempt to increase/ decrease gain after max/min
+    has been reached. This caused a noise in the agc.
+
+Problems noted by Walt Walters
+  Frequency was not going back to the true frequency when switching
+    out of AM. (It stays on the frequency that it was last locked to)
+
+Additions
+  Rewrote the entire installation program!
+
+Version 1.03
+
+Problems noted by Bob LaRose
+  AM Offset was tuning in the wrong direction.
+
+Problems noted by Jim Gorman
+  Simulation mode was causing a GPF fault upon startup. Corrected.
+
+Version 1.02
+Problems
+  Could tune out of Amateur bands while in TX. You can no longer tune
+    while you are transmitting.
+  When going to Transmit, if compression is on, compression level was
+    being loaded at 1/2 level.
+
+Version 1.01
+
+Additions
+  Changed RX & TX Antenna power to RX & TX Antenna DC Power
+  Added warnings to RX Antenna power & TX Antenna Power
+  Improved AGC Operation.
+
+Problems
+  USB & LSB were the wrong way round. Inverted them.
+
+Version 1.0
+  BEFORE UPGRADING, delete all old .set files in working directory!!!!!!
+
+Problems noted by Jim Gorman
+  Removed the flashing from the frequency windows when they were updated from
+    another window.
+  Going below AM on the mode brought up a strange icon.
+  Changed Frequency & TX Frequency to VFO A & VFO B.
+  Stopped Volume type Controls from wrapping arround.
+
+Problems
+  Spectrum Analyzer now starts at the min freq. & stops 4 KHz below Max
+    Frequency.
+  Stopped LSB Time & USB Time Analyzers from requiring each other to work.
+  Prevented Bands from being changed while the Spectrum Analyzer is open.
+  Revamped S Meter algorithm to avoid Log Domain error.
+  Restart S Meter when starting program if left open.
+  Spectrum Analyzer caused a system fault when a frequency out of range was
+    typed in on the keypad.
+  Initialization File set the radio settings before determining RADWARE address
+    (This fix caused all previous version to be incompatible with the new
+     version. To solve this problem, you must DELETE the old .set files.)
+
+Additions
+  AGC modifies the Analog Gain settings
+  AGC modifies the Mixer Gain/Attenuators
+  Added Scale to USB Time & LSB Time
+  Added DC/AC to USB Time & LSB Time
+  Cleared Preselectors upon exit of program to prevent noise from entering
+    sound card when not in use.
+
+Version 0.15
+
+Problems noted by Jim Gorman
+  Added (619) to modem number.
+  Changed "HOLD" to "HLD" in "AGC" window to fit on button.
+  Changed "STATIONS" & "Fast Channel" to "CHANNELS".
+  Calibrate was being titled "Frequency" when brought up from the menu.
+  S Meter had no system menu.
+  Marine Band  4.1395 - 4.166 MHz was not operational.
+  Added title above list box in stations dialog to clairify operation.
+  Converted Receiver to Receiver whenever found.
+  Min Frequency did not come up if left on.
+  Min Frequency was not coming up at the right size when brought up from
+    the menu.
+  Stopped TX Frequency from crashing the system if it was not enabled at
+    startup.
+  The keypad for enter frequency by the keyboard had an extra Freq. in the
+    title during Frequency, Max Frequency, Min Frequency, & Tx Frequency.
+  Increased the speed that the frequency windows are updated to try to
+    eliminate overrun problem.
+  Renamed Antenna Power to RX Antenna Power.
+  The Configure settings where not being saved correctly
+  Defaults menu item was not changing icons to windows before placing them.
+  Configure was not updating the TX Frequency window when suppress leading
+    zeros was changed.
+  Changing Bands did not update the TX Frequency window.
+  Spectrum Analyzer would crash if you closed the frequency window settings
+    before closeing the Spectrum Analyzer itself.
+    (Also detected by Walt Walters)
+  Morse to Send was only callable once.
+  Sent Morse was not going away & staying away.
+  Allowed all Windows to be hidable on startup.
+
+Problems
+  Min frequency came up red, not green like Max frequency.
+  Address control in Configure was did not modify the true address.
+  Suppress leading zeros on startup if active.
+  SMeter was only openable once.
+  
+Additions
+  The RADWARE program now accepts command line parameters. To use these,
+    all parameters must be the name of a file WITHOUT any extension. the
+    file need not exist. The first extension will control where the places
+    of the windows will be kept, and .plc will be appended to it. The
+    second extension controls what settings the radio has, and will have
+    .set appended to it. If the second parameter is missing, it will default
+
+    to the first parameter. The 3rd parameter will name the file for storing
+    the stations in. It will be appended by .sta and will default to the
+    first parameter if missing. If there are no parameters, the RADWARE
+    program will default to places.plc, settings.set & stations.dat.
+    Deleting the appropriate files will cause the RADWARE program to give
+    a warning message & the default to standard settings. All files will be
+    updated/created at the time that RADWARE is closed.
+  Added a check for a corrupt .PLC file. If .PLC is detected as corrupt,
+    RADWARE will default.
+  Inhibited all transmitions outside of HAM frequencies.
+  

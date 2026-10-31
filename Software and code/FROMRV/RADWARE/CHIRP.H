@@ -1,0 +1,9 @@
+#define MinFreq                     101
+#define MaxFreq                     102
+#define Speed                       103
+#define Duration                    105
+#define Freq                        107
+#define Volume                      109
+#define Voluem                      104
+#define ChirpVolume                 112
+#define CcittDlgVolume              113

@@ -1,0 +1,38 @@
+$m.i,d,rAFFT 
+$d.v,p,c,rAcos_table ,s0100 
+$d.v,p,c,rAwindow ,s0100 
+$d.v,d,rAM3_SPACE 
+$d.v,d,rABFY_COUNT 
+$d.v,d,a3800 ,rAoutput ,s0200 
+$d.v,d,rAinplace ,s0200 
+$d.edofft_ 
+$d.ldofft_ ,o0000 
+$d.lget_data ,o0009 
+$d.lwfloop ,o001D 
+$d.lno_window ,o001F 
+$d.lfloop ,o0025 
+$d.v,d,rAresults ,s0080 
+$d.lmagnitude_squared ,o0027 
+$d.lsquare ,o002C 
+$d.lno_log ,o0037 
+$d.v,p,rAlog_coeffs ,s0005 
+$d.llog ,o003A 
+$d.lcompute ,o003E 
+$d.lapprox ,o0051 
+$d.lerror ,o005B 
+$d.lfft ,o005D 
+$d.lstage1 ,o0066 
+$d.lstg1bfy ,o0079 
+$d.lstage2 ,o0098 
+$d.lstage3 ,o00A8 
+$d.llaststage ,o00B8 
+$d.llaststgbfy ,o00CA 
+$d.lmid_stg ,o00E1 
+$d.lmidbfy ,o00EA 
+$d.xRegRestore 
+$d.xHannOn_ 
+$d.xRegSave 
+$d.xLogOn_ 
+$d.xlastInputBuffer_ 
+$m.o,l0110 
+$ 

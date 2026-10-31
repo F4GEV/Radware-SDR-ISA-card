@@ -1,0 +1,19 @@
+library file is d:\DSP\21xx\lib\libda.a
+21XXlnk: radware, trying to open library d:\DSP\21xx\lib
+21XXlnk: radware, searching library d:\DSP\21xx\lib
+21XXlnk: radware, trying to open library d:\DSP\21xx\lib
+21XXlnk: radware, searching library d:\DSP\21xx\lib
+21XXlnk: radware, MultiplyAllByVolume_ not linked 
+21XXlnk: radware, Remove_LSB_ not linked 
+21XXlnk: radware, data_ready not linked 
+21XXlnk: radware, Make_SSB_ not linked 
+21XXlnk: radware, input_data not linked 
+21XXlnk: radware, output_data not linked 
+21XXlnk: radware, Filter_60_Hz_ not linked 
+21XXlnk: radware, Filter_Both_ not linked 
+21XXlnk: radware, Copy_Data_256_ not linked 
+21XXlnk: radware, Hilbert_And_Delay_ not linked 
+21XXlnk: radware, Adjust_I_ not linked 
+21XXlnk: radware, Which_AGC_ not linked 
+21XXlnk: radware, library(ies) searched!: d:\DSP\21xx\lib\; 
+21XXlnk: radware, link errors

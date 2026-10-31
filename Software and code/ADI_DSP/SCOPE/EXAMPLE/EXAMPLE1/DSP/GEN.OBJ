@@ -1,0 +1,29 @@
+$m.i,d,rASignal_Gen 
+$d.v,d,rAfreq1_ freq2_ freq3_ 
+$d.v,d,rAphi1_ phi2_ phi3_ 
+$d.v,d,rAgain1_ gain2_ gain3_ 
+$d.v,d,rAchirp_phi_ chirp_freq_ chirp_freq_max_ chirp_freq_min_ chirp_freq_delta_h_ chirp_freq_delta_l_ delta_count_ 
+$d.v,d,rAchirp_gain_ ccitt_gain_ 
+$d.gfreq1_ freq2_ freq3_ 
+$d.gphi1_ phi2_ phi3_ 
+$d.ggain1_ gain2_ gain3_ 
+$d.gchirp_phi_ chirp_freq_ chirp_freq_max_ chirp_freq_min_ chirp_freq_delta_h_ chirp_freq_delta_l_ delta_count_ 
+$d.gchirp_gain_ ccitt_gain_ 
+$d.v,d,c,rAccitt_table ,s0400 
+$d.v,d,rAccitt_hold 
+$d.egenSignal_ 
+$d.einitSignal_ 
+$d.linitSignal_ ,o0000 
+$d.lgenSignal_ ,o000C 
+$d.lsin_2 ,o001A 
+$d.lsin_3 ,o0025 
+$d.lchirp ,o0030 
+$d.lok ,o0041 
+$d.lccitt_noise ,o0046 
+$d.lgenEnd ,o004D 
+$d.lccitt ,o0051 
+$d.xRegRestore 
+$d.xRegSave 
+$d.xsin 
+$m.o,l0057 
+$ 

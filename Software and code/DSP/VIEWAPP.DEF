@@ -1,0 +1,19 @@
+;------------------------------------------------
+;   Main view
+;   Comer Communications, Inc.
+;   Copyright © 1994. All Rights Reserved.
+;
+;   SUBSYSTEM:    view.exe Module Defintion File
+;   FILE:         viewapp.def
+;   AUTHOR:       Alan Comer
+;
+;------------------------------------------------
+
+NAME view
+
+DESCRIPTION 'view Application - Copyright © 1994. All Rights Reserved.'
+EXETYPE     WINDOWS
+CODE        PRELOAD MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE    4096
+STACKSIZE   8192

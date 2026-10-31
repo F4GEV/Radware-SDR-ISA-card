@@ -1,0 +1,30 @@
+$m.i,d,a0000 ,rAADSP2150_Runtime_Header 
+$d.e___lib_prog_term 
+$d.l__Reset_vector ,o0000 
+$d.l___lib_prog_term ,o0002 
+$d.l__Interrupt2 ,o0004 
+$d.l__Hip_write ,o0008 
+$d.l__Hip_read ,o000C 
+$d.l__Sport0_trans ,o0010 
+$d.l__Sport0_recv ,o0014 
+$d.l__Dac_trans ,o0018 
+$d.l__Adc_recv ,o001C 
+$d.l__Interrupt1 ,o0020 
+$d.l__Interrupt0 ,o0024 
+$d.l__Timer_interrupt ,o0028 
+$d.l__Powerdown_interrupt ,o002C 
+$d.x___lib_tmri_ctrl 
+$d.xmain_ 
+$d.x___lib_setup_everything 
+$d.x___lib_int0_ctrl 
+$d.x___lib_int1_ctrl 
+$d.x___lib_int2_ctrl 
+$d.x___lib_sp0r_ctrl 
+$d.x___lib_sp0x_ctrl 
+$d.x___lib_adcr_ctrl 
+$d.x___lib_dacx_ctrl 
+$d.x___lib_hipr_ctrl 
+$d.x___lib_pwdi_ctrl 
+$d.x___lib_hipw_ctrl 
+$m.o,l0030 
+$ 

@@ -1,0 +1,44 @@
+$m.i,d,rASin_Approximation 
+$c90000D .umr_hold ,f04 
+$c90000C .umr_hold ,f04 ,o0001 
+$c90000B .umr_hold ,f04 ,o0002 
+$c90000F .usr1_hold ,f04 
+$c940002 .uireg_hold ,f04 
+$c900000 .uax0_hold ,f04 
+$c900003 .umx1_hold ,f04 
+$c0D000A 
+$c340002 .usin_coeff ,f04 
+$c34000A 
+$c440005 
+$c2F88A0 
+$c233801 
+$c47FFF5 
+$c238A0F 
+$c0D007A 
+$c642A39 
+$c608939 
+$c3C0035 
+$c14000E .uapprox ,f04 
+$c21110F 
+$c643239 
+$c21110F 
+$c643239 
+$c21110F 
+$c643239 
+$c21110F 
+$c0F2403 
+$c0F1B03 
+$c227F0F 
+$c220804 
+$c26780F 
+$c233A04 
+$c80000B .umr_hold ,f04 ,o0002 
+$c80000C .umr_hold ,f04 ,o0001 
+$c80000D .umr_hold ,f04 
+$c80000F .usr1_hold ,f04 
+$c840002 .uireg_hold ,f04 
+$c800000 .uax0_hold ,f04 
+$c800003 .umx1_hold ,f04 
+$c0A000F 
+$m.o,l0029 
+$ 

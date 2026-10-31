@@ -1,0 +1,228 @@
+#include "echo.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+#include <mmsystem.h>
+
+#define msg_RECIEVE      1504
+#define msg_IF_GAIN      1508
+#define msg_VOLUME       1510
+#define msg_MUTE         1515
+#define msg_GET_1848     1524
+#define ECHO_ASIC_614_ID 4
+#define ECHO_ASIC_615_ID 0
+
+int Sound_Card = 0x240;
+int Bootload_File(char *filename);
+int Write_DSP_Boot_Word(unsigned int value);
+int Write_DSP_Word(unsigned int value);
+int simulation = 0;
+int pss_data,pss_control,pss_status;
+int AGC = 0;
+int IF_Gain = 15;
+void Autodetect_Sound_Card();
+
+unsigned int Read_DSP_Word();
+long DSPSendMsg (LONG number,LPVOID message,DWORD length);
+
+main()
+
+{
+  char c;
+  int message[12];
+  int temp;
+  int pos=0;
+
+  Autodetect_Sound_Card();
+  printf("Sound Card found at address %X\n",Sound_Card);
+  printf("Version %d\n",Bootload_File("Radware.ld"));
+  do
+  {
+    if (inpw(Sound_Card+pss_status) & PSS_RF)
+    {
+      temp = inpw(Sound_Card+pss_data);
+//      if (temp<500)
+      {
+        printf("%04X %d\n",temp,temp);
+/*        if ((pos+=2)>60)
+        {
+          pos = 0;
+          printf("\n");
+        }
+*/      }
+    }
+    if (kbhit())
+      c = getch();
+    else
+      c = 0;
+    switch (c)
+    {
+      case 'R' : printf("Switching to Receive\n");
+                 message[0] = 0;
+                 message[1] = 3000;
+                 message[2] = AGC;
+                 message[3] = IF_Gain;
+                 message[4] = 63;
+                 message[5] = 0x8000;
+                 DSPSendMsg(msg_RECIEVE,message,6);
+                 break;
+      case '5' : message[0] = 0;
+                 DSPSendMsg(msg_GET_1848,message,1);
+                 break;
+      case '4' : message[0] = 0;
+                 DSPSendMsg(msg_MUTE,message,1);
+                 break;
+      case '3' : message[0] = 0;
+                 DSPSendMsg(msg_IF_GAIN,message,1);
+                 break;
+      case '2' : message[0] = 4;
+                 DSPSendMsg(msg_IF_GAIN,message,1);
+                 break;
+      case '1' : message[0] = 300;
+                 DSPSendMsg(msg_VOLUME,message,1);
+                 break;
+      case '0' : message[0] = 2000;
+                 DSPSendMsg(msg_VOLUME,message,1);
+                 break;
+    }
+  }
+  while (c!=27);
+}
+
+int Bootload_File(char *filename)
+
+{
+  FILE *stream;
+  int count;
+  int data;
+  int config;
+
+  stream = fopen(filename,"rb");
+  if (!stream)
+  {
+    printf("File not found.");
+    return 0;
+  }
+  outpw(Sound_Card+pss_control,PSS_RESET);       /* Boot DSP */
+  data = fgetc(stream);
+  outpw(Sound_Card+pss_data,data);
+  config = outpw(Sound_Card+pss_control,0);
+  count = 0;
+  while (!feof(stream))
+  {
+    data = fgetc(stream);
+    Write_DSP_Boot_Word(data);
+    count++;
+  }
+  outpw(Sound_Card+pss_data,0);
+  printf("Bootload Complete %u bytes written\n",count);
+  return Read_DSP_Word();
+}
+
+int Write_DSP_Boot_Word(unsigned int value)
+
+{
+  int count;
+
+  for(count=0;count<1024;count++)
+    if (inpw(Sound_Card+pss_status) & PSS_FLAG3)
+    {
+      outpw(Sound_Card+pss_data,value);
+      return 1;
+    }
+  printf("Timeout Error in Bootloading DSP \n");
+  return 0;
+}
+
+int Write_DSP_Word(unsigned int value)
+
+{
+  long register count;
+
+  printf("send %d \n",value);
+  for(count=0;count<100000l;count++)
+    if (inpw(Sound_Card+pss_status) & PSS_WE)
+    {
+      outpw(Sound_Card+pss_data,value);
+//      printf("%d \n",Read_DSP_Word());
+      if (inpw(Sound_Card+pss_status) & PSS_RF)
+        printf("char read = %d \n",inpw(Sound_Card+pss_data));
+//      else
+  //      printf("no flag %d \n",inpw(Sound_Card+pss_data));
+      return 1;
+    }
+  return 0;
+}
+
+unsigned int Read_DSP_Word()
+
+{
+  long register count;
+
+  for(count=0;count<4000000L;count++)
+    if (inpw(Sound_Card+pss_status) & PSS_RF)
+      return inpw(Sound_Card+pss_data);
+  printf("Read DSP Word Timeout Error");
+  return 0;
+}
+
+long DSPSendMsg (LONG number,LPVOID message,DWORD length)
+
+{
+  long count;
+  int *Message;
+
+  Message = (int *) message;
+  if (simulation)
+	 return 0;
+  Write_DSP_Word(number);
+  Write_DSP_Word(length);
+  for(count=0;count<length;count++)
+    Write_DSP_Word(Message[count]);
+  return 1;
+}
+
+void Autodetect_Sound_Card()
+
+{
+  int asic;
+
+  Sound_Card = 0x220;
+  asic = inpw(Sound_Card+ECHO_ASIC_614_ID)& 0xFF00;
+  printf("asic 1 = %X\n",asic);
+  if (asic !=0x4500)
+  {
+    Sound_Card= 0x240;
+    asic = inpw(Sound_Card+ECHO_ASIC_614_ID)& 0xFF00;
+    printf("asic 2 = %X\n",asic);
+    if (asic!=0x4500)
+    {
+      Sound_Card=0x220;
+      pss_control = 0x12;
+      outpw(Sound_Card+pss_control,ECHO_ASIC_615_ID);
+      asic = inpw(Sound_Card+16)&0xFF00;
+      printf("asic 3 = %X\n",asic);
+      if (asic!=0x4500 && asic!=0x5000)
+      {
+        Sound_Card=0x240;
+        outpw(Sound_Card+pss_control,ECHO_ASIC_615_ID);
+        asic = inpw(Sound_Card+0x16)&0xFF00;
+        printf("asic 4 = %X\n",asic);
+        if (asic!=0x4500 && asic!=0x5000)
+        {
+          simulation = 1;
+          Sound_Card = 0;
+          return;
+        }
+      }
+      pss_data = 0x10;
+      pss_status = 0x14;
+      return;
+    }
+  }
+  pss_data = 0;
+  pss_control = 2;
+  pss_status = 2;
+}
+

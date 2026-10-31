@@ -1,0 +1,24 @@
+SCREENCOLOR: blue,black
+TITLE: "RADWARE ver 1.04 INSTALLATION",bold,italic
+TITLECOLOR: white
+BEGINFIRSTSCREEN
+
+    Welcome to RADWARE. This Installation program will ask you
+  several questions and then install RADWARE onto your hard disk.
+  If you do not have a PSA compatible sound card, we will install
+  this software in simulation mode. If you experience any
+  problems, feel free to call us at (619) 599-0476. 
+           Alan D. Comer
+
+ENDFIRSTSCREEN
+MINDISKSPACE: 2000000
+DEFAULTDIR: D:\RADTEST
+IF LOCATE(SYNTH.LD)
+ADDTEXT:"[RADIO]","$WINDIR$\dspmgr.ini","1"
+ADDTEXT:"file=$DEFAULTDIR$\radio.ld","$WINDIR$\dspmgr.ini","2"
+ADDTEXT:"clock=16000000","$WINDIR$\dspmgr.ini","3"
+ADDTEXT:"processor=DSP_ADSP2101 DSP_ADSP2115","$WINDIR$\dspmgr.ini","4"
+ADDTEXT:"scopecompatible=yes","$WINDIR$\dspmgr.ini","5"
+ADDTEXT:" ","$WINDIR$\dspmgr.ini","6"
+IF LOCATE(DSP001.LD)
+ADDTEXT:"[RADIO]","$WINDIR$\dspmgr.ini","1"

@@ -1,0 +1,142 @@
+/*   Volume.dsp  */
+/*   Version 0.1 slow AGC prototype */
+/*   Version 0.2 faster AGC prototype 6/30/94 */
+.MODULE/RAM        VOLUMEMOD;
+
+.VAR/DM/RAM        true_volume;
+.VAR/DM/RAM        volume; 
+.VAR/DM/RAM        reg_l0;
+.VAR/DM/RAM        largest;
+.VAR/DM/RAM        error;
+
+.external RegSave;
+.external RegRestore;
+
+.ENTRY ChangeVolume_;
+.ENTRY RestoreVolume_;
+.ENTRY GetVolume_;
+.ENTRY GetError_;
+.ENTRY ClearError_;
+.ENTRY MultiplyByVolume_;
+.ENTRY AGC_;
+.ENTRY NewAttn_;
+
+/* New Attn returns new value in AR for Attenuators in 1848 based on AGC Volume */
+/* NewAttn_ has never been tested due to noise from 1848 change! */
+
+NewAttn_:      call RegSave;
+               AX0 = dm(volume);
+               MR0 = AR;
+               AY1 = H#00F0;
+               AR = MR0 AND AY1;
+               MX1 = AR;
+               AY1 = H#000F;
+               AR = MR0 AND AY1;
+               AY1 = H#100;
+               AY0 = 1;
+               AF = AX0-AY1;
+               if AC jump decrease_attn;
+               AY1= H#1000;
+               AF = AX0-AY1;
+               if AC jump return;
+               AR=AR+AY0;
+               AY1 = 10;
+               AF = AR-AY1;
+               if AC jump return;
+               AR=AR-AY0;
+               jump return;
+decrease_attn: AR=AR-AY0;
+               if NE jump return;
+               AR=AR+AY0;
+return:        AY0 = MX1;
+               AR = AR+AY0;
+               call RegRestore;
+               rts;
+ 
+ChangeVolume_: dm(volume) = AR;
+               dm(true_volume) = AR;
+               RTS;
+
+RestoreVolume_: AR = dm(true_volume);
+                dm(volume) = AR;
+                rts;
+ 
+GetVolume_: AR = dm(largest);
+            RTS;
+
+ClearError_: AR = 0;
+             dm(error) = AR;
+             RTS;
+
+GetError_: AR = dm(error);
+           rts;
+
+MultiplyByVolume_: call RegSave;
+                   MY1=dm(volume);
+                   MR=AR*MY1(SS);
+                   SR=LSHIFT MR0 BY -10 (LO);
+                   SR=SR OR ASHIFT MR1 BY -10 (HI);
+                   AF=PASS SR1;
+                   IF GT JUMP MaxSine;
+                   AF = AF+1;
+                   IF LT JUMP MinSine;
+                   AR=SR0;
+                   call RegRestore;
+                   RTS;
+MinSine:           AR=H#8000;
+                   dm(error)=AR;
+                   call RegRestore;
+                   RTS;
+MaxSine:           AR=H#7FFF;
+                   dm(error)=AR;
+                   call RegRestore;
+                   RTS;
+
+AGC_:       call RegSave;
+            dm(reg_l0) = l0;
+            i0 = AR;
+            l0 = 0;
+            m0 = 2;
+            CNTR = 128;
+            AY0 = 0;
+            AY1 = H#FFFF;
+            AX0 = dm(i0,m0);
+            do AGC_loop UNTIL CE;
+            AX1 = H#8000;
+            AF = PASS AX1;
+            AR = AX0+AF;
+            AF = AR - AY0;
+            if NOT AC jump not_high;
+            AY0 = AR;
+not_high:   AF = AR-AY1;
+            if AC jump AGC_loop;
+            AY1 = AR;
+AGC_loop:   AX0 = dm(i0,m0);
+            AX0 = AY1;
+            AR = AY0-AX0;
+            AY0 = AR;
+            dm(largest) = AY0;
+            AX0 = AY0;
+            SI = dm(true_volume);
+            SR = LSHIFT SI BY 12 (LO);
+            AY1 = SR1;
+            AY0 = SR0; 
+            AF = PASS 0;
+/*            AY1 = H#0002;
+            AY1 = H#0080;
+*/            AY0 = H#0000;
+            CALL divide;
+            dm(volume) = AY0;
+            l0 = dm(reg_l0);
+            call RegRestore;
+            rts;        
+    
+divide:     DIVS AY1,AX0;
+            DIVQ AX0; DIVQ AX0; DIVQ AX0;
+            DIVQ AX0; DIVQ AX0; DIVQ AX0;
+            DIVQ AX0; DIVQ AX0; DIVQ AX0;
+            DIVQ AX0; DIVQ AX0; DIVQ AX0;
+            DIVQ AX0; DIVQ AX0; DIVQ AX0;
+            RTS;
+
+.ENDMOD;

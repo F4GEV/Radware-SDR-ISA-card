@@ -1,0 +1,225 @@
+
+
+    Aperture Information                                           RADV2.PCB
+
+                                        
+
+                         Aperture and Tool Descriptions
+    ========================================================================
+
+    Code   Shape    X    Y     Hole  Type   Comment
+    ------------------------------------------------------------------------
+    D10    Ellipse  008  008   000   Both     8 Mil Round  Draw
+    D11    Ellipse  010  010   000   Both    10 Mil Round  Draw
+    D12    Ellipse  012  012   000   Both    12 Mil Round  Draw
+    D13    Ellipse  020  020   000   Both    20 Mil Round  Draw
+    D14    Ellipse  050  050   000   Both    50 Mil Round  Draw
+    D15    Ellipse  030  030   000   Flash   30 Mil Round  Flash
+    D16    Ellipse  040  040   000   Flash   40 Mil Round  Flash
+    D17    Ellipse  050  050   000   Flash   50 Mil Round  Flash
+    D18    Ellipse  060  060   000   Flash   60 Mil Round  Flash
+    D19    Ellipse  070  070   000   Flash   70 Mil Round  Flash
+    D20    Ellipse  100  100   000   Flash  100 Mil Round  Flash
+    D21    Ellipse  110  110   000   Flash  110 Mil Round  Flash
+    D22    Ellipse  200  200   000   Flash  200 Mil Round  Flash
+    D23    Ellipse  210  210   000   Flash  210 Mil Round  Flash
+    D24    Sq Rect  030  030   000   Flash   30 Mil Square Flash
+    D25    Sq Rect  040  040   000   Flash   40 Mil Square Flash
+    D26    Sq Rect  050  050   000   Flash   50 Mil Square Flash
+    D27    Sq Rect  060  060   000   Flash   60 Mil Square Flash
+    D28    Sq Rect  070  070   000   Flash   70 Mil Square Flash
+    D29    Sq Rect  100  100   000   Flash  100 Mil Square Flash
+    D30    Ellipse  030  030   015   Flash    30/15 Round
+    D31    Ellipse  040  040   025   Flash    40/25 round
+    D32    Ellipse  050  050   030   Flash    50/30 round
+    D33    Ellipse  060  060   040   Flash    60/40 round
+    D34    Ellipse  070  070   040   Flash    70/40 round
+    D35    Ellipse  070  070   050   Both     70/50 ROUND
+    D36    Ellipse  100  100   060   Both     100/60 round
+    D39    Ellipse  200  200   125   Flash  200/125 flash
+    D40    Thermal  030  030   015   Flash    30/15 thermal
+    D41    Thermal  040  040   025   Flash    40/25 thermal
+    D42    Thermal  050  050   030   Flash    50/30 Thermal
+    D43    Thermal  060  060   040   Flash    60/40 Thermal
+    D44    Thermal  075  075   040   Flash    70/40 Thermal
+    D45    Thermal  075  075   050   Both     70/50 thermal
+    D46    Thermal  100  100   060   Both     100/60 thermal
+    D47    Thermal  040  040   020   Both     40/20 thermal
+    D49    Thermal  200  200   125   Flash  200/125 flash
+    D50    Ellipse  035  035   015   Flash    30/15 solder mask
+    D51    Ellipse  045  045   025   Flash    40/25 solder mask
+    D52    Ellipse  055  055   030   Flash    50/30 solder mask
+    D53    Ellipse  065  065   040   Flash    60/40 solder mask
+    D54    Ellipse  075  075   040   Flash    70/40 solder mask
+
+                                         
+
+    14-Apr-97  21:11                                                 Page  1
+
+    Aperture Information                                           RADV2.PCB
+
+                                        
+
+                         Aperture and Tool Descriptions
+    ========================================================================
+
+    Code   Shape    X    Y     Hole  Type   Comment
+    ------------------------------------------------------------------------
+    D55    Ellipse  075  075   050   Both     70/50 solder mask
+    D56    Ellipse  105  105   060   Both     100/60 solder mask
+    D59    Ellipse  220  220   125   Flash  200/125 solder mask
+    D60    Sq Rect  026  080   000   Flash  26/80 Mil  Flash
+    D70    Sq Rect  030  085   000   Flash  26/80 Mil solder mask
+    D71    Sq Rect  200  200   000   Flash  200 Mil Square Flash
+    D72    Sq Rect  210  210   000   Flash  210 Mil Square Flash
+    D73    Target   500  500   000   Flash  500 Mil Target Flash
+    D80    Sq Rect  026  080   000   Flash  26/80 Mil  Flash
+    D81    Sq Rect  050  040   020   Flash  50/40/20 Mil  Flash
+    D82    Ellipse  040  040   020   Flash  50/40/20 Mil  Flash
+    D83    Thermal  040  040   020   Flash  50/40/20 Mil  Flash
+    D84    Sq Rect  055  044   020   Flash  50/40/20 Mil  Flash
+    D85    Ellipse  100  100   080   Flash  100/80 Mil  Flash
+    D86    Ellipse  105  105   080   Flash  100/80 Mil  Flash
+    D87    Thermal  100  100   080   Flash  100/80 Mil  Flash
+    D88    Ellipse  150  150   055   Flash   150/55 Ellipse
+    D89    Ellipse  150  150   100   Flash   150/100 Ellipse
+    D90    Thermal  150  150   055   Flash   150/100 Ellipse
+    D91    Ellipse  270  270   000   Flash    8 Mil Round  Draw
+    
+
+
+    Code   Hole Diameter
+    --------------------
+    T01    015
+    T02    020
+    T03    030
+    T04    040
+    T05    060
+    T06    125
+    T07    025
+    T08    050
+    T09    080
+    T10    035
+
+
+
+
+
+
+
+
+                                         
+
+    14-Apr-97  21:11                                                 Page  2
+
+    Aperture Information                                           RADV2.PCB
+
+                                        
+
+                          Aperture and Tool Assignments
+    ========================================================================
+
+    Item                     Normal  S Mask   Plane   Thermal  Drl Sym  Tool
+    ------------------------------------------------------------------------
+    DRAW APERTURE            D11      -        -       -        -        -
+    LINE_002                 DRAW     -        -       -        -        -
+    LINE_006                 DRAW     -        -       -        -        -
+    LINE_008                 D10      -        -       -        -        -
+    LINE_010                 D11      -        -       -        -        -
+    LINE_012                 D12      -        -       -        -        -
+    LINE_020                 D13      -        -       -        -        -
+    LINE_030                 DRAW     -        -       -        -        -
+    LINE_040                  *       -        -       -        -        -
+    LINE_050                 D14      -        -       -        -        -
+    LINE_100                  *       -        -       -        -        -
+    P_EL_0040_0040_025_AL    D31     D51      D51     D41       -        -
+    P_EL_0050_0050_030_AL    D32     D52      D19     D42       -        -
+    P_EL_0060_0060_040_AL    D33     D53      D21     D43       -        -
+    P_EL_0070_0070_030_AL    D19     D20      D20     D44       -        -
+    P_EL_0070_0070_040_AL    D34     D54      D20     D44       -        -
+    P_EL_0070_0070_050_AL    D35     D55      D55     D45       -        -
+    P_EL_0100_0100_050_AL    D20     D21      D21     D46       -        -
+    P_EL_0100_0100_060_AL    D35     D55      D20     D45       -        -
+    P_EL_0100_0100_080_AL    D85     D86      D85     D87       -        -
+    P_EL_0220_0220_125_AL    D22     D39      D22     D49       -        -
+    P_SQ_0026_0080_000_BL     *       *        -       -        -        -
+    P_SQ_0026_0080_000_TL     *       *        -       -        -        -
+    P_SQ_0032_0032_000_BL     *       *        -       -        -        -
+    P_SQ_0032_0032_000_TL     *       *        -       -        -        -
+    P_SQ_0050_0050_000_BL     *       *        -       -        -        -
+    P_SQ_0050_0050_000_TL     *       *        -       -        -        -
+    P_SQ_0050_0050_030_AL    D26     D27      D17     D42       -        -
+    P_SQ_0050_0070_000_BL     *       *        -       -        -        -
+    P_SQ_0050_0070_000_TL     *       *        -       -        -        -
+    P_SQ_0056_0060_000_BL     *       *        -       -        -        -
+    P_SQ_0056_0060_000_TL     *       *        -       -        -        -
+    P_SQ_0060_0056_000_BL     *       *        -       -        -        -
+    P_SQ_0060_0056_000_TL     *       *        -       -        -        -
+    P_SQ_0060_0060_040_AL    D33     D53      D53     D43       -        -
+    P_SQ_0064_0064_000_BL     *       *        -       -        -        -
+    P_SQ_0064_0064_000_TL     *       *        -       -        -        -
+    P_SQ_0064_0102_000_TL     *       *        -       -        -        -
+    P_SQ_0070_0050_000_BL     *       *        -       -        -        -
+    P_SQ_0070_0050_000_TL     *       *        -       -        -        -
+    P_SQ_0070_0070_000_TL     *       *        -       -        -        -
+    P_SQ_0070_0102_000_BL     *       *        -       -        -        -
+
+                                         
+
+    14-Apr-97  21:11                                                 Page  3
+
+    Aperture Information                                           RADV2.PCB
+
+                                        
+
+                          Aperture and Tool Assignments
+    ========================================================================
+
+    Item                     Normal  S Mask   Plane   Thermal  Drl Sym  Tool
+    ------------------------------------------------------------------------
+    P_SQ_0070_0102_000_TL     *       *        -       -        -        -
+    P_SQ_0070_0126_000_BL     *       *        -       -        -        -
+    P_SQ_0070_0126_000_TL     *       *        -       -        -        -
+    P_SQ_0080_0026_000_BL     *       *        -       -        -        -
+    P_SQ_0080_0026_000_TL     *       *        -       -        -        -
+    P_SQ_0100_0100_000_BL     *       *        -       -        -        -
+    P_SQ_0100_0100_000_TL     *       *        -       -        -        -
+    P_SQ_0102_0064_000_TL     *       *        -       -        -        -
+    P_SQ_0102_0070_000_BL     *       *        -       -        -        -
+    P_SQ_0102_0070_000_TL     *       *        -       -        -        -
+    P_SQ_0114_0150_000_BL     *       *        -       -        -        -
+    P_SQ_0114_0150_000_TL     *       *        -       -        -        -
+    P_SQ_0118_0110_000_TL     *       *        -       -        -        -
+    P_SQ_0120_0120_000_TL     *       *        -       -        -        -
+    P_SQ_0126_0070_000_BL     *       *        -       -        -        -
+    P_SQ_0126_0070_000_TL     *       *        -       -        -        -
+    P_SQ_0140_0070_000_BL     *       *        -       -        -        -
+    P_SQ_0150_0114_000_BL     *       *        -       -        -        -
+    P_SQ_0150_0114_000_TL     *       *        -       -        -        -
+    P_SQ_0150_0150_125_AL    DRAW    DRAW     DRAW    DRAW      -        -
+    P_SQ_0170_0100_000_BL     *       *        -       -        -        -
+    P_SQ_0170_0100_000_TL     *       *        -       -        -        -
+    P_SQ_0225_0275_000_TL     *       *        -       -        -        -
+    P_SQ_0275_0225_000_BL     *       *        -       -        -        -
+    P_SQ_0330_0420_000_BL     *       *        -       -        -        -
+    V_CR_030_020             D15     D16      D16     D40       -        -
+    HOLE_020                  -       -        -       -        *       T02
+    HOLE_025                  -       -        -       -       DRAW     T07
+    HOLE_030                  -       -        -       -       DRAW     T03
+    HOLE_040                  -       -        -       -       DRAW     T04
+    HOLE_050                  -       -        -       -       DRAW     T08
+    HOLE_060                  -       -        -       -       DRAW     T05
+    HOLE_080                  -       -        -       -        *       T09
+    HOLE_125                  -       -        -       -       DRAW     T06
+    
+
+    - : Not applicable.                   * : Aperture/tool is not assigned.
+
+
+
+
+
+
+                                         
+
+    14-Apr-97  21:11                                                 Page  4

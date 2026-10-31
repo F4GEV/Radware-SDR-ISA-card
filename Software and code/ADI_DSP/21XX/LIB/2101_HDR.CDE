@@ -1,0 +1,31 @@
+$m.i,d,a0000 ,rAADSP2101_Runtime_Header 
+$c1C000F .u___lib_setup_everything ,f04 
+$c1C000F .umain_ ,f04 
+$c18000F .u___lib_prog_term ,f04 
+$c000000 
+$c18000F .u___lib_int2_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$c18000F .u___lib_sp0x_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$c18000F .u___lib_sp0r_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$c18000F .u___lib_int1_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$c18000F .u___lib_int0_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$c18000F .u___lib_tmri_ctrl ,f04 
+$c000000 
+$c000000 
+$c000000 
+$m.o,l001C 
+$ 

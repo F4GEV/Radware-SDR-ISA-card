@@ -1,0 +1,203 @@
+$m.i,d,rAVOLUMEMOD 
+$d.v,d,rAtemp 
+$d.v,d,rAtrue_volume 
+$d.v,d,rAvolume 
+$d.v,d,rAreg_l0 
+$d.v,d,rAlargest 
+$d.v,d,rAerror 
+$d.v,d,rAPIO_reg_data 
+$d.v,d,rAOFFSET 
+$d.v,d,rAwanted_volume 
+$d.v,d,rAI_Volume 
+$d.v,d,c,rAslow_agc_values ,s0040 
+$d.v,d,rAslow_agc_pnt 
+$d.v,d,rAarctan_data ,s0100 
+$d.v,d,rAHigh_Pass_0 
+$d.v,d,rAHigh_Pass_1 
+$d.v,d,c,rAOffset_Array_1 ,s0040 
+$d.v,d,c,rAOffset_Array_2 ,s0040 
+$d.v,d,rAOffset_1_pnt 
+$d.v,d,rAOffset_2_pnt 
+$d.v,d,a31C8 ,rAPIO_ 
+$d.gOffset_Array_1 
+$d.gOffset_Array_2 
+$d.gOffset_1_pnt 
+$d.gOffset_2_pnt 
+$d.eCenterAll_ 
+$d.eChangeVolume_ 
+$d.eRestoreVolume_ 
+$d.eGetVolume_ 
+$d.eGetError_ 
+$d.eClearError_ 
+$d.eChange_I_ 
+$d.eClearOffset_ 
+$d.eMultiplyByVolume_ 
+$d.eMultiplyAllByVolume_ 
+$d.eAGC_ 
+$d.eAdjust_I_ 
+$d.eSetTone_ 
+$d.eSlowAGC_ 
+$d.eInitAGC_ 
+$d.eSSBAGC_ 
+$d.eFreqCal_ 
+$d.eChangeIFGain_ 
+$d.eChangeIFGain2_ 
+$d.eMultiply_ 
+$d.eFreqCal2_ 
+$d.eFreqCal3_ 
+$d.eFreqCal4_ 
+$d.eHighPass_ 
+$d.ePythagoras_ 
+$d.eCenter_ 
+$d.eFM_ 
+$d.eFM2_ 
+$d.eFM3_ 
+$d.eCheckAnalog_ 
+$d.eCopy_Data_128_ 
+$d.eCopy_Data_256_ 
+$d.eCopy_Data_256_to_128_ 
+$d.eCopy_Data_128_to_256_ 
+$d.lCopy_Data_256_to_128_ ,o0000 
+$d.lCopy_Data_256_ ,o0004 
+$d.lCopy_Data_128_ ,o0007 
+$d.lCopy_Data ,o0009 
+$d.lCopy_Data2 ,o000A 
+$d.lCopy_128 ,o0011 
+$d.lCopy_Data_128_to_256_ ,o0014 
+$d.lCopy_128_256 ,o001F 
+$d.lChangeIFGain2_ ,o0022 
+$d.lChangeIFGain_ ,o0047 
+$d.lWrite_1848 ,o0058 
+$d.lInitAGC_ ,o0062 
+$d.linitialize ,o0069 
+$d.lCheckAnalog_ ,o006F 
+$d.lcheck_end ,o0078 
+$d.lcheck_down ,o007A 
+$d.lcheck_up ,o007C 
+$d.lChangeVolume_ ,o007E 
+$d.lChange_I_ ,o0084 
+$d.lRestoreVolume_ ,o0086 
+$d.lGetVolume_ ,o008C 
+$d.lClearOffset_ ,o008E 
+$d.lClearError_ ,o0091 
+$d.lGetError_ ,o0094 
+$d.lAdjust_I_ ,o0096 
+$d.lI_Loop ,o00A3 
+$d.lMultiplyAllByVolume_ ,o00A6 
+$d.lModVolumeAll ,o00B9 
+$d.lMultiplyAllLoop ,o00BA 
+$d.lHighPass_ ,o00BD 
+$d.lHighPass2 ,o00CD 
+$d.lCenterAll_ ,o00D2 
+$d.lCenterAll ,o00ED 
+$d.lCalc_Offset ,o00F0 
+$d.lCalc_Off1 ,o00F7 
+$d.lAverage_Offset ,o00FA 
+$d.lAverage_Loop ,o0102 
+$d.lMinSineAll ,o0104 
+$d.lMaxSineAll ,o0107 
+$d.lMultiplyByVolume_ ,o010A 
+$d.lmod_volume ,o0116 
+$d.lend_volume ,o0117 
+$d.lMinSine ,o011A 
+$d.lMaxSine ,o011D 
+$d.lSlowAGC_ ,o0120 
+$d.lslow_agc ,o012D 
+$d.lSSBAGC_ ,o0132 
+$d.lssb_not_hi ,o0141 
+$d.lssb_loop ,o0145 
+$d.lAGC_ ,o014B 
+$d.lnot_high ,o015C 
+$d.lAGC_loop ,o0160 
+$d.lnot_high2 ,o0166 
+$d.lAGC_loop2 ,o016A 
+$d.lAR_BIG ,o0176 
+$d.lAF_BIG ,o0179 
+$d.lnot_hi ,o0183 
+$d.lno_squelch ,o0187 
+$d.lRX_AGC ,o0190 
+$d.lTX_AGC ,o0191 
+$d.lrestore ,o0196 
+$d.ldivide ,o0198 
+$d.lsdivide ,o01AA 
+$d.lPythagoras_ ,o01BB 
+$d.lPythagoras2 ,o01C6 
+$d.lMultiply_ ,o01CA 
+$d.lFreqCal_ ,o01D3 
+$d.lFreqLoop ,o01DC 
+$d.lFreqCal4_ ,o01E0 
+$d.lFreqLoop4 ,o01EF 
+$d.ldontmodify4 ,o01F2 
+$d.lFreqCal3_ ,o01F4 
+$d.lFreqLoop3 ,o01FF 
+$d.ldontmodify ,o0208 
+$d.lFreqCal2_ ,o020A 
+$d.lSetTone_ ,o0215 
+$d.lset_MASTER ,o0225 
+$d.lstart_I2C ,o0253 
+$d.lsend_I2C_bit ,o0260 
+$d.lsend_I2C_one ,o0263 
+$d.lsend_I2C_zero ,o026B 
+$d.lstop_I2C ,o0273 
+$d.lclock_high_I2C ,o027B 
+$d.lclock_low_I2C ,o0281 
+$d.ldata_high_I2C ,o0287 
+$d.ldata_low_I2C ,o028D 
+$d.ldelay_I2C ,o0293 
+$d.lI2C_delay ,o0296 
+$d.ldelay_I2C2 ,o0298 
+$d.lI2C_delay2 ,o029E 
+$d.ldelay_us_ ,o02A0 
+$d.ldwait ,o02A4 
+$d.ldw2 ,o02A5 
+$d.lMySetTone_ ,o02A7 
+$d.lMyI2CByte ,o02B3 
+$d.lI2CStart ,o02BF 
+$d.lI2CStop ,o02CF 
+$d.lI2CLoadWord ,o02D9 
+$d.lI2CLoadByte ,o02DE 
+$d.lI2CLoad ,o02E1 
+$d.lI2CLoop ,o02EE 
+$d.v,d,rAsqrt_coeff ,s0005 
+$d.esqrt 
+$d.lsqrt ,o02F0 
+$d.lapprox ,o02FE 
+$d.lscale ,o0304 
+$d.lcompute ,o030C 
+$d.lpwr_ok ,o030D 
+$d.lfrac ,o0327 
+$d.lCenter_ ,o032A 
+$d.lcenter2_not_hi ,o033A 
+$d.lcenter2_loop ,o033D 
+$d.lcenter2_2 ,o034C 
+$d.lFM2_ ,o0351 
+$d.lFM2_loop ,o0363 
+$d.lFM3_ ,o0366 
+$d.lFM_ ,o036E 
+$d.lFM ,o0375 
+$d.ltosmalladj ,o037B 
+$d.lno_fm_over ,o0383 
+$d.lend_fm ,o038B 
+$d.v,d,c,rAatn_coeff ,s0005 
+$d.earctan 
+$d.larctan ,o038E 
+$d.lposi ,o0397 
+$d.lnoinv ,o03B5 
+$d.lapproximate ,o03BB 
+$d.xRegRestore 
+$d.xFM_Filter4 
+$d.xFM_Filter5 
+$d.xFM_Filter6 
+$d.xFM_Filter7 
+$d.xFM_Filter8 
+$d.xFM_Filter9 
+$d.xLFilter_ 
+$d.xUFilter_ 
+$d.xTalkOn_ 
+$d.xRegSave 
+$d.xRegRestore2 
+$d.xFM_Filter_ 
+$d.xRegSave2 
+$d.xUSB_BUFFER_ 
+$m.o,l03C4 
+$ 

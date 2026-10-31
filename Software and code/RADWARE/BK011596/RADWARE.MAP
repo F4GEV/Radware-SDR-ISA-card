@@ -1,0 +1,4028 @@
+Error: Segment DSP1_TEXT exceeds 64K
+
+ Start         Length Name               Class
+
+  0001:0000    1B7CH  _TEXT              CODE
+  0002:0000    07E1H  ALLRECV_TEXT       CODE
+  0002:07E2    073EH  ALLXMIT_TEXT       CODE
+  0003:0000    2B27H  FREQSCAN_TEXT      CODE
+  0004:0000    3CD2H  CHANNELS_TEXT      CODE
+  0005:0000    24CDH  BANDSCAN_TEXT      CODE
+  0006:0000    0748H  DIAGNOSE_TEXT      CODE
+  0006:0748    0651H  ABOUT_TEXT         CODE
+  0006:0D9A    0CB9H  ALLFREQ_TEXT       CODE
+  0007:0000    2119H  AWINDOW_TEXT       CODE
+  0008:0000    0EBDH  BANDCHLD_TEXT      CODE
+  0008:0EBE    0FAAH  CALLSIGN_TEXT      CODE
+  0009:0000    0E55H  CNTRLCLS_TEXT      CODE
+  000A:0000    1D19H  CONFIGUR_TEXT      CODE
+  000B:0000    306AH  CTRLCHLD_TEXT      CODE
+  000C:0000    10BFH  DSP1_TEXT          CODE
+  000D:0000    11D1H  ENTERDLG_TEXT      CODE
+  000E:0000    1121H  FREQWIND_TEXT      CODE
+  000F:0000    29EAH  FREQWIN2_TEXT      CODE
+  0010:0000    0F86H  MARKER_TEXT        CODE
+  0010:0F86    0964H  PACKET_TEXT        CODE
+  0011:0000    08BEH  PTTCHLD_TEXT       CODE
+  0012:0000    1C04H  SENDMORS_TEXT      CODE
+  0013:0000    06A6H  SENTMORS_TEXT      CODE
+  0013:06A6    0DA2H  SMTRCHLD_TEXT      CODE
+  0014:0000    3B98H  SPECWIND_TEXT      CODE
+  0015:0000    1346H  STATCHLD_TEXT      CODE
+  0016:0000    10A0H  STATIONS_TEXT      CODE
+  0017:0000    12E0H  VOICECHD_TEXT      CODE
+  0018:0000    0FC9H  VOICEDLG_TEXT      CODE
+  0018:0FCA    0703H  LOADDSP_TEXT       CODE
+  0019:0000    2CD2H  DSP1LIB_TEXT       CODE
+  001A:0000    0000H  GLOBAL_TEXT        CODE
+  001A:0000    01FCH  WINMAIN_TEXT       CODE
+  001A:01FC    03B1H  _TEXTB             CODE
+  001B:0000    0000H  _FARDATA           FAR_DATA
+  001B:0000    0010H  ALLRECV5_DATA      FAR_DATA
+  001C:0000    0010H  ALLXMIT5_DATA      FAR_DATA
+  001D:0000    0100H  FREQSCAN5_DATA     FAR_DATA
+  001E:0000    0F60H  CHANNELS5_DATA     FAR_DATA
+  001F:0000    0100H  BANDSCAN5_DATA     FAR_DATA
+  0020:0000    0020H  DIAGNOSE5_DATA     FAR_DATA
+  0021:0000    0020H  ABOUT5_DATA        FAR_DATA
+  0022:0000    0050H  ALLFREQ5_DATA      FAR_DATA
+  0023:0000    0040H  AWINDOW5_DATA      FAR_DATA
+  0024:0000    0030H  AWINDOW6_DATA      FAR_DATA
+  0025:0000    0030H  AWINDOW7_DATA      FAR_DATA
+  0026:0000    00A0H  BANDCHLD5_DATA     FAR_DATA
+  0027:0000    0040H  CALLSIGN5_DATA     FAR_DATA
+  0028:0000    0080H  CONFIGUR5_DATA     FAR_DATA
+  0029:0000    0140H  CTRLCHLD5_DATA     FAR_DATA
+  002A:0000    0110H  ENTERDLG5_DATA     FAR_DATA
+  002B:0000    0060H  FREQWIND5_DATA     FAR_DATA
+  002C:0000    00A0H  FREQWIN25_DATA     FAR_DATA
+  002D:0000    0040H  MARKER5_DATA       FAR_DATA
+  002E:0000    0030H  PTTCHLD5_DATA      FAR_DATA
+  002F:0000    0170H  SENDMORS5_DATA     FAR_DATA
+  0030:0000    0020H  SMTRCHLD5_DATA     FAR_DATA
+  0031:0000    0130H  STATCHLD5_DATA     FAR_DATA
+  0032:0000    0050H  STATIONS5_DATA     FAR_DATA
+  0033:0000    0140H  VOICECHD5_DATA     FAR_DATA
+  0034:0000    0070H  VOICEDLG5_DATA     FAR_DATA
+  0035:0000    0000H  _FARBSS            FAR_BSS
+  0035:0000    0024H  NULL               BEGDATA
+  0035:0030    372CH  _DATA              DATA
+  0035:375C    0004H  _FPSEG             DATA
+  0035:3760    0004H  _CVTSEG            DATA
+  0035:3764    000CH  _SCNSEG            DATA
+  0035:3770    0000H  _CONST             CONST
+  0035:3770    00A8H  _INIT_             INITDATA
+  0035:3818    0000H  _INITEND_          INITDATA
+  0035:3818    001EH  _EXIT_             EXITDATA
+  0035:3836    0000H  _EXITEND_          EXITDATA
+  0035:3836    5CA4H  _BSS               BSS
+  0035:94DA    0000H  _BSSEND            BSSEND
+
+
+Detailed map of segments
+
+ 0001:0000 01A3 C=CODE   S=_TEXT          G=(none)  M=c0w.asm    ACBP=48
+ 0001:01A4 0472 C=CODE   S=_TEXT          G=(none)  M=ehinst     ACBP=48
+ 0001:0616 0008 C=CODE   S=_TEXT          G=(none)  M=xxasstub   ACBP=28
+ 0001:061E 000A C=CODE   S=_TEXT          G=(none)  M=setupio    ACBP=48
+ 0001:0628 0000 C=CODE   S=_TEXT          G=(none)  M=ctype      ACBP=48
+ 0001:0628 0032 C=CODE   S=_TEXT          G=(none)  M=toupper    ACBP=48
+ 0001:065A 001B C=CODE   S=_TEXT          G=(none)  M=atof       ACBP=48
+ 0001:0676 0000 C=CODE   S=_TEXT          G=(none)  M=hugeval    ACBP=48
+ 0001:0676 00DD C=CODE   S=_TEXT          G=(none)  M=strtod     ACBP=48
+ 0001:0754 0010 C=CODE   S=_TEXT          G=(none)  M=atan       ACBP=48
+ 0001:0764 00BE C=CODE   S=_TEXT          G=(none)  M=ldtrunc    ACBP=48
+ 0001:0822 01E1 C=CODE   S=_TEXT          G=(none)  M=realcvt2   ACBP=48
+ 0001:0A04 03B1 C=CODE   S=_TEXT          G=(none)  M=scantod2   ACBP=48
+ 0001:0DB6 021E C=CODE   S=_TEXT          G=(none)  M=xcvt       ACBP=48
+ 0001:0FD4 00F7 C=CODE   S=_TEXT          G=(none)  M=fbstp      ACBP=28
+ 0001:10CB 02F5 C=CODE   S=_TEXT          G=(none)  M=wintrans   ACBP=28
+ 0001:13C0 002C C=CODE   S=_TEXT          G=(none)  M=fftol      ACBP=28
+ 0001:13EC 0017 C=CODE   S=_TEXT          G=(none)  M=f_lxmul    ACBP=28
+ 0001:1403 00AE C=CODE   S=_TEXT          G=(none)  M=h_ldiv     ACBP=28
+ 0001:14B1 0021 C=CODE   S=_TEXT          G=(none)  M=h_llsh     ACBP=28
+ 0001:14D2 002E C=CODE   S=_TEXT          G=(none)  M=labs       ACBP=48
+ 0001:1500 001C C=CODE   S=_TEXT          G=(none)  M=cvtfak     ACBP=28
+ 0001:151C 0011 C=CODE   S=_TEXT          G=(none)  M=fperr      ACBP=28
+ 0001:152D 0058 C=CODE   S=_TEXT          G=(none)  M=fpinit     ACBP=28
+ 0001:1585 000C C=CODE   S=_TEXT          G=(none)  M=wscantod   ACBP=28
+ 0001:1591 002B C=CODE   S=_TEXT          G=(none)  M=h_chkstk   ACBP=28
+ 0001:15BC 001C C=CODE   S=_TEXT          G=(none)  M=f_scopy    ACBP=28
+ 0001:15D8 0027 C=CODE   S=_TEXT          G=(none)  M=h_spush    ACBP=28
+ 0001:1600 0019 C=CODE   S=_TEXT          G=(none)  M=errormsg   ACBP=48
+ 0001:161A 0012 C=CODE   S=_TEXT          G=(none)  M=abort      ACBP=48
+ 0001:162C 0032 C=CODE   S=_TEXT          G=(none)  M=atexit     ACBP=48
+ 0001:165E 00C7 C=CODE   S=_TEXT          G=(none)  M=exit       ACBP=48
+ 0001:1726 0019 C=CODE   S=_TEXT          G=(none)  M=_abort     ACBP=48
+ 0001:1740 00C7 C=CODE   S=_TEXT          G=(none)  M=errexit    ACBP=48
+ 0001:1808 02E8 C=CODE   S=_TEXT          G=(none)  M=setargv    ACBP=48
+ 0001:1AF0 0059 C=CODE   S=_TEXT          G=(none)  M=setargv0   ACBP=48
+ 0001:1B4A 0032 C=CODE   S=_TEXT          G=(none)  M=getdate    ACBP=48
+ 0002:0000 07E1 C=CODE   S=ALLRECV_TEXT   G=(none)  M=ALLRECV.CPP ACBP=48
+ 0002:07E2 073E C=CODE   S=ALLXMIT_TEXT   G=(none)  M=ALLXMIT.CPP ACBP=48
+ 0003:0000 2B27 C=CODE   S=FREQSCAN_TEXT  G=(none)  M=FREQSCAN.CPP ACBP=48
+ 0004:0000 3CD2 C=CODE   S=CHANNELS_TEXT  G=(none)  M=CHANNELS.CPP ACBP=48
+ 0005:0000 24CD C=CODE   S=BANDSCAN_TEXT  G=(none)  M=BANDSCAN.CPP ACBP=48
+ 0006:0000 0748 C=CODE   S=DIAGNOSE_TEXT  G=(none)  M=DIAGNOSE.CPP ACBP=48
+ 0006:0748 0651 C=CODE   S=ABOUT_TEXT     G=(none)  M=ABOUT.CPP  ACBP=48
+ 0006:0D9A 0CB9 C=CODE   S=ALLFREQ_TEXT   G=(none)  M=ALLFREQ.CPP ACBP=48
+ 0007:0000 2119 C=CODE   S=AWINDOW_TEXT   G=(none)  M=AWINDOW.CPP ACBP=48
+ 0008:0000 0EBD C=CODE   S=BANDCHLD_TEXT  G=(none)  M=BANDCHLD.CPP ACBP=48
+ 0008:0EBE 0FAA C=CODE   S=CALLSIGN_TEXT  G=(none)  M=CALLSIGN.CPP ACBP=48
+ 0009:0000 0E55 C=CODE   S=CNTRLCLS_TEXT  G=(none)  M=CNTRLCLS.CPP ACBP=48
+ 000A:0000 1D19 C=CODE   S=CONFIGUR_TEXT  G=(none)  M=CONFIGUR.CPP ACBP=48
+ 000B:0000 306A C=CODE   S=CTRLCHLD_TEXT  G=(none)  M=CTRLCHLD.CPP ACBP=48
+ 000C:0000 000110BF C=CODE   S=DSP1_TEXT      G=(none)  M=DSP1.CPP   ACBP=48
+ 000D:0000 11D1 C=CODE   S=ENTERDLG_TEXT  G=(none)  M=ENTERDLG.CPP ACBP=48
+ 000E:0000 1121 C=CODE   S=FREQWIND_TEXT  G=(none)  M=FREQWIND.CPP ACBP=48
+ 000F:0000 29EA C=CODE   S=FREQWIN2_TEXT  G=(none)  M=FREQWIN2.CPP ACBP=48
+ 0010:0000 0F86 C=CODE   S=MARKER_TEXT    G=(none)  M=MARKER.CPP ACBP=48
+ 0010:0F86 0964 C=CODE   S=PACKET_TEXT    G=(none)  M=PACKET.CPP ACBP=48
+ 0011:0000 08BE C=CODE   S=PTTCHLD_TEXT   G=(none)  M=PTTCHLD.CPP ACBP=48
+ 0012:0000 1C04 C=CODE   S=SENDMORS_TEXT  G=(none)  M=SENDMORS.CPP ACBP=48
+ 0013:0000 06A6 C=CODE   S=SENTMORS_TEXT  G=(none)  M=SENTMORS.CPP ACBP=48
+ 0013:06A6 0DA2 C=CODE   S=SMTRCHLD_TEXT  G=(none)  M=SMTRCHLD.CPP ACBP=48
+ 0014:0000 3B98 C=CODE   S=SPECWIND_TEXT  G=(none)  M=SPECWIND.CPP ACBP=48
+ 0015:0000 1346 C=CODE   S=STATCHLD_TEXT  G=(none)  M=STATCHLD.CPP ACBP=48
+ 0016:0000 10A0 C=CODE   S=STATIONS_TEXT  G=(none)  M=STATIONS.CPP ACBP=48
+ 0017:0000 12E0 C=CODE   S=VOICECHD_TEXT  G=(none)  M=VOICECHD.CPP ACBP=48
+ 0018:0000 0FC9 C=CODE   S=VOICEDLG_TEXT  G=(none)  M=VOICEDLG.CPP ACBP=48
+ 0018:0FCA 0703 C=CODE   S=LOADDSP_TEXT   G=(none)  M=loaddsp    ACBP=48
+ 0019:0000 2CD2 C=CODE   S=DSP1LIB_TEXT   G=(none)  M=dsp1lib    ACBP=48
+ 001A:0000 0000 C=CODE   S=GLOBAL_TEXT    G=(none)  M=global     ACBP=48
+ 001A:0000 01FC C=CODE   S=WINMAIN_TEXT   G=(none)  M=winmain    ACBP=48
+ 001A:01FC 005F C=CODE   S=_TEXTB         G=(none)  M=xxa        ACBP=48
+ 001A:025C 0351 C=CODE   S=_TEXTB         G=(none)  M=xxv        ACBP=48
+ 001B:0000 0000 C=FAR_DATA S=_FARDATA       G=(none)  M=c0w.asm    ACBP=68
+ 001B:0000 0010 C=FAR_DATA S=ALLRECV5_DATA  G=(none)  M=ALLRECV.CPP ACBP=68
+ 001C:0000 0010 C=FAR_DATA S=ALLXMIT5_DATA  G=(none)  M=ALLXMIT.CPP ACBP=68
+ 001D:0000 0100 C=FAR_DATA S=FREQSCAN5_DATA G=(none)  M=FREQSCAN.CPP ACBP=68
+ 001E:0000 0F60 C=FAR_DATA S=CHANNELS5_DATA G=(none)  M=CHANNELS.CPP ACBP=68
+ 001F:0000 0100 C=FAR_DATA S=BANDSCAN5_DATA G=(none)  M=BANDSCAN.CPP ACBP=68
+ 0020:0000 0020 C=FAR_DATA S=DIAGNOSE5_DATA G=(none)  M=DIAGNOSE.CPP ACBP=68
+ 0021:0000 0020 C=FAR_DATA S=ABOUT5_DATA    G=(none)  M=ABOUT.CPP  ACBP=68
+ 0022:0000 0050 C=FAR_DATA S=ALLFREQ5_DATA  G=(none)  M=ALLFREQ.CPP ACBP=68
+ 0023:0000 0040 C=FAR_DATA S=AWINDOW5_DATA  G=(none)  M=AWINDOW.CPP ACBP=68
+ 0024:0000 0030 C=FAR_DATA S=AWINDOW6_DATA  G=(none)  M=AWINDOW.CPP ACBP=68
+ 0025:0000 0030 C=FAR_DATA S=AWINDOW7_DATA  G=(none)  M=AWINDOW.CPP ACBP=68
+ 0026:0000 00A0 C=FAR_DATA S=BANDCHLD5_DATA G=(none)  M=BANDCHLD.CPP ACBP=68
+ 0027:0000 0040 C=FAR_DATA S=CALLSIGN5_DATA G=(none)  M=CALLSIGN.CPP ACBP=68
+ 0028:0000 0080 C=FAR_DATA S=CONFIGUR5_DATA G=(none)  M=CONFIGUR.CPP ACBP=68
+ 0029:0000 0140 C=FAR_DATA S=CTRLCHLD5_DATA G=(none)  M=CTRLCHLD.CPP ACBP=68
+ 002A:0000 0110 C=FAR_DATA S=ENTERDLG5_DATA G=(none)  M=ENTERDLG.CPP ACBP=68
+ 002B:0000 0060 C=FAR_DATA S=FREQWIND5_DATA G=(none)  M=FREQWIND.CPP ACBP=68
+ 002C:0000 00A0 C=FAR_DATA S=FREQWIN25_DATA G=(none)  M=FREQWIN2.CPP ACBP=68
+ 002D:0000 0040 C=FAR_DATA S=MARKER5_DATA   G=(none)  M=MARKER.CPP ACBP=68
+ 002E:0000 0030 C=FAR_DATA S=PTTCHLD5_DATA  G=(none)  M=PTTCHLD.CPP ACBP=68
+ 002F:0000 0170 C=FAR_DATA S=SENDMORS5_DATA G=(none)  M=SENDMORS.CPP ACBP=68
+ 0030:0000 0020 C=FAR_DATA S=SMTRCHLD5_DATA G=(none)  M=SMTRCHLD.CPP ACBP=68
+ 0031:0000 0130 C=FAR_DATA S=STATCHLD5_DATA G=(none)  M=STATCHLD.CPP ACBP=68
+ 0032:0000 0050 C=FAR_DATA S=STATIONS5_DATA G=(none)  M=STATIONS.CPP ACBP=68
+ 0033:0000 0140 C=FAR_DATA S=VOICECHD5_DATA G=(none)  M=VOICECHD.CPP ACBP=68
+ 0034:0000 0070 C=FAR_DATA S=VOICEDLG5_DATA G=(none)  M=VOICEDLG.CPP ACBP=68
+ 0035:0000 0000 C=FAR_BSS S=_FARBSS        G=DGROUP  M=c0w.asm    ACBP=68
+ 0035:0000 0024 C=BEGDATA S=NULL           G=DGROUP  M=c0w.asm    ACBP=68
+ 0035:0030 008A C=DATA   S=_DATA          G=DGROUP  M=c0w.asm    ACBP=68
+ 0035:00BA 0000 C=DATA   S=_DATA          G=DGROUP  M=ALLRECV.CPP ACBP=48
+ 0035:00BA 0000 C=DATA   S=_DATA          G=DGROUP  M=ALLXMIT.CPP ACBP=48
+ 0035:00BA 009C C=DATA   S=_DATA          G=DGROUP  M=FREQSCAN.CPP ACBP=48
+ 0035:0156 07A8 C=DATA   S=_DATA          G=DGROUP  M=CHANNELS.CPP ACBP=48
+ 0035:08FE 009C C=DATA   S=_DATA          G=DGROUP  M=BANDSCAN.CPP ACBP=48
+ 0035:099A 0008 C=DATA   S=_DATA          G=DGROUP  M=DIAGNOSE.CPP ACBP=48
+ 0035:09A2 0008 C=DATA   S=_DATA          G=DGROUP  M=ABOUT.CPP  ACBP=48
+ 0035:09AA 0020 C=DATA   S=_DATA          G=DGROUP  M=ALLFREQ.CPP ACBP=48
+ 0035:09CA 0038 C=DATA   S=_DATA          G=DGROUP  M=AWINDOW.CPP ACBP=48
+ 0035:0A02 0048 C=DATA   S=_DATA          G=DGROUP  M=BANDCHLD.CPP ACBP=48
+ 0035:0A4A 0026 C=DATA   S=_DATA          G=DGROUP  M=CALLSIGN.CPP ACBP=48
+ 0035:0A70 0000 C=DATA   S=_DATA          G=DGROUP  M=CNTRLCLS.CPP ACBP=48
+ 0035:0A70 0048 C=DATA   S=_DATA          G=DGROUP  M=CONFIGUR.CPP ACBP=48
+ 0035:0AB8 00AC C=DATA   S=_DATA          G=DGROUP  M=CTRLCHLD.CPP ACBP=48
+ 0035:0B64 1318 C=DATA   S=_DATA          G=DGROUP  M=DSP1.CPP   ACBP=48
+ 0035:1E7C 0088 C=DATA   S=_DATA          G=DGROUP  M=ENTERDLG.CPP ACBP=48
+ 0035:1F04 0032 C=DATA   S=_DATA          G=DGROUP  M=FREQWIND.CPP ACBP=48
+ 0035:1F36 0050 C=DATA   S=_DATA          G=DGROUP  M=FREQWIN2.CPP ACBP=48
+ 0035:1F86 0034 C=DATA   S=_DATA          G=DGROUP  M=MARKER.CPP ACBP=48
+ 0035:1FBA 000A C=DATA   S=_DATA          G=DGROUP  M=PACKET.CPP ACBP=48
+ 0035:1FC4 0010 C=DATA   S=_DATA          G=DGROUP  M=PTTCHLD.CPP ACBP=48
+ 0035:1FD4 026B C=DATA   S=_DATA          G=DGROUP  M=SENDMORS.CPP ACBP=48
+ 0035:2240 0000 C=DATA   S=_DATA          G=DGROUP  M=SENTMORS.CPP ACBP=48
+ 0035:2240 0028 C=DATA   S=_DATA          G=DGROUP  M=SMTRCHLD.CPP ACBP=48
+ 0035:2268 031C C=DATA   S=_DATA          G=DGROUP  M=SPECWIND.CPP ACBP=48
+ 0035:2584 0090 C=DATA   S=_DATA          G=DGROUP  M=STATCHLD.CPP ACBP=48
+ 0035:2614 0020 C=DATA   S=_DATA          G=DGROUP  M=STATIONS.CPP ACBP=48
+ 0035:2634 00A0 C=DATA   S=_DATA          G=DGROUP  M=VOICECHD.CPP ACBP=48
+ 0035:26D4 0030 C=DATA   S=_DATA          G=DGROUP  M=VOICEDLG.CPP ACBP=48
+ 0035:2704 003B C=DATA   S=_DATA          G=DGROUP  M=loaddsp    ACBP=48
+ 0035:2740 0C5A C=DATA   S=_DATA          G=DGROUP  M=dsp1lib    ACBP=48
+ 0035:339A 0008 C=DATA   S=_DATA          G=DGROUP  M=global     ACBP=48
+ 0035:33A2 0017 C=DATA   S=_DATA          G=DGROUP  M=winmain    ACBP=48
+ 0035:33BA 0000 C=DATA   S=_DATA          G=DGROUP  M=xxa        ACBP=48
+ 0035:33BA 0128 C=DATA   S=_DATA          G=DGROUP  M=xxv        ACBP=48
+ 0035:34E2 0024 C=DATA   S=_DATA          G=DGROUP  M=ehinst     ACBP=48
+ 0035:3506 0000 C=DATA   S=_DATA          G=DGROUP  M=xxasstub   ACBP=48
+ 0035:3506 0000 C=DATA   S=_DATA          G=DGROUP  M=setupio    ACBP=48
+ 0035:3506 0101 C=DATA   S=_DATA          G=DGROUP  M=ctype      ACBP=48
+ 0035:3608 0000 C=DATA   S=_DATA          G=DGROUP  M=toupper    ACBP=48
+ 0035:3608 0000 C=DATA   S=_DATA          G=DGROUP  M=atof       ACBP=48
+ 0035:3608 0024 C=DATA   S=_DATA          G=DGROUP  M=hugeval    ACBP=48
+ 0035:362C 0000 C=DATA   S=_DATA          G=DGROUP  M=strtod     ACBP=48
+ 0035:362C 0000 C=DATA   S=_DATA          G=DGROUP  M=atan       ACBP=48
+ 0035:362C 0000 C=DATA   S=_DATA          G=DGROUP  M=ldtrunc    ACBP=48
+ 0035:362C 0000 C=DATA   S=_DATA          G=DGROUP  M=realcvt2   ACBP=48
+ 0035:362C 0018 C=DATA   S=_DATA          G=DGROUP  M=scantod2   ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=xcvt       ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=fbstp      ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=wintrans   ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=fftol      ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=f_lxmul    ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=h_ldiv     ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=h_llsh     ACBP=48
+ 0035:3644 0000 C=DATA   S=_DATA          G=DGROUP  M=labs       ACBP=48
+ 0035:3644 0030 C=DATA   S=_DATA          G=DGROUP  M=cvtfak     ACBP=48
+ 0035:3674 0000 C=DATA   S=_DATA          G=DGROUP  M=fperr      ACBP=48
+ 0035:3674 000A C=DATA   S=_DATA          G=DGROUP  M=fpinit     ACBP=48
+ 0035:367E 0000 C=DATA   S=_DATA          G=DGROUP  M=wscantod   ACBP=48
+ 0035:367E 001E C=DATA   S=_DATA          G=DGROUP  M=h_chkstk   ACBP=48
+ 0035:369C 0000 C=DATA   S=_DATA          G=DGROUP  M=f_scopy    ACBP=48
+ 0035:369C 0000 C=DATA   S=_DATA          G=DGROUP  M=h_spush    ACBP=48
+ 0035:369C 0000 C=DATA   S=_DATA          G=DGROUP  M=errormsg   ACBP=48
+ 0035:369C 0000 C=DATA   S=_DATA          G=DGROUP  M=abort      ACBP=48
+ 0035:369C 0002 C=DATA   S=_DATA          G=DGROUP  M=atexit     ACBP=48
+ 0035:369E 000E C=DATA   S=_DATA          G=DGROUP  M=exit       ACBP=48
+ 0035:36AC 001F C=DATA   S=_DATA          G=DGROUP  M=_abort     ACBP=48
+ 0035:36CC 0000 C=DATA   S=_DATA          G=DGROUP  M=errexit    ACBP=48
+ 0035:36CC 006F C=DATA   S=_DATA          G=DGROUP  M=setargv    ACBP=48
+ 0035:373C 001F C=DATA   S=_DATA          G=DGROUP  M=setargv0   ACBP=48
+ 0035:375C 0000 C=DATA   S=_DATA          G=DGROUP  M=getdate    ACBP=48
+ 0035:375C 0004 C=DATA   S=_FPSEG         G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3760 0000 C=DATA   S=_CVTSEG        G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3760 0002 C=DATA   S=_CVTSEG        G=DGROUP  M=realcvt2   ACBP=48
+ 0035:3762 0002 C=DATA   S=_CVTSEG        G=DGROUP  M=cvtfak     ACBP=48
+ 0035:3764 0000 C=DATA   S=_SCNSEG        G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3764 0006 C=DATA   S=_SCNSEG        G=DGROUP  M=scantod2   ACBP=48
+ 0035:376A 0006 C=DATA   S=_SCNSEG        G=DGROUP  M=cvtfak     ACBP=48
+ 0035:3770 0000 C=CONST  S=_CONST         G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3770 0000 C=INITDATA S=_INIT_         G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3770 0006 C=INITDATA S=_INIT_         G=DGROUP  M=FREQSCAN.CPP ACBP=48
+ 0035:3776 0006 C=INITDATA S=_INIT_         G=DGROUP  M=CHANNELS.CPP ACBP=48
+ 0035:377C 0006 C=INITDATA S=_INIT_         G=DGROUP  M=BANDSCAN.CPP ACBP=48
+ 0035:3782 0006 C=INITDATA S=_INIT_         G=DGROUP  M=DIAGNOSE.CPP ACBP=48
+ 0035:3788 0006 C=INITDATA S=_INIT_         G=DGROUP  M=ABOUT.CPP  ACBP=48
+ 0035:378E 0006 C=INITDATA S=_INIT_         G=DGROUP  M=ALLFREQ.CPP ACBP=48
+ 0035:3794 0006 C=INITDATA S=_INIT_         G=DGROUP  M=AWINDOW.CPP ACBP=48
+ 0035:379A 0006 C=INITDATA S=_INIT_         G=DGROUP  M=BANDCHLD.CPP ACBP=48
+ 0035:37A0 0006 C=INITDATA S=_INIT_         G=DGROUP  M=CALLSIGN.CPP ACBP=48
+ 0035:37A6 0006 C=INITDATA S=_INIT_         G=DGROUP  M=CONFIGUR.CPP ACBP=48
+ 0035:37AC 0006 C=INITDATA S=_INIT_         G=DGROUP  M=CTRLCHLD.CPP ACBP=48
+ 0035:37B2 0006 C=INITDATA S=_INIT_         G=DGROUP  M=DSP1.CPP   ACBP=48
+ 0035:37B8 0006 C=INITDATA S=_INIT_         G=DGROUP  M=ENTERDLG.CPP ACBP=48
+ 0035:37BE 0006 C=INITDATA S=_INIT_         G=DGROUP  M=FREQWIND.CPP ACBP=48
+ 0035:37C4 0006 C=INITDATA S=_INIT_         G=DGROUP  M=FREQWIN2.CPP ACBP=48
+ 0035:37CA 0006 C=INITDATA S=_INIT_         G=DGROUP  M=MARKER.CPP ACBP=48
+ 0035:37D0 0006 C=INITDATA S=_INIT_         G=DGROUP  M=PTTCHLD.CPP ACBP=48
+ 0035:37D6 0006 C=INITDATA S=_INIT_         G=DGROUP  M=SENDMORS.CPP ACBP=48
+ 0035:37DC 0006 C=INITDATA S=_INIT_         G=DGROUP  M=SMTRCHLD.CPP ACBP=48
+ 0035:37E2 0006 C=INITDATA S=_INIT_         G=DGROUP  M=SPECWIND.CPP ACBP=48
+ 0035:37E8 0006 C=INITDATA S=_INIT_         G=DGROUP  M=STATCHLD.CPP ACBP=48
+ 0035:37EE 0006 C=INITDATA S=_INIT_         G=DGROUP  M=STATIONS.CPP ACBP=48
+ 0035:37F4 0006 C=INITDATA S=_INIT_         G=DGROUP  M=VOICECHD.CPP ACBP=48
+ 0035:37FA 0006 C=INITDATA S=_INIT_         G=DGROUP  M=VOICEDLG.CPP ACBP=48
+ 0035:3800 0006 C=INITDATA S=_INIT_         G=DGROUP  M=setupio    ACBP=48
+ 0035:3806 0006 C=INITDATA S=_INIT_         G=DGROUP  M=fpinit     ACBP=48
+ 0035:380C 0006 C=INITDATA S=_INIT_         G=DGROUP  M=setargv    ACBP=48
+ 0035:3812 0006 C=INITDATA S=_INIT_         G=DGROUP  M=setargv0   ACBP=48
+ 0035:3818 0000 C=INITDATA S=_INITEND_      G=DGROUP  M=c0w.asm    ACBP=28
+ 0035:3818 0000 C=EXITDATA S=_EXIT_         G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3818 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=winmain    ACBP=48
+ 0035:381E 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=setupio    ACBP=48
+ 0035:3824 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=fpinit     ACBP=48
+ 0035:382A 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=setargv    ACBP=48
+ 0035:3830 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=setargv0   ACBP=48
+ 0035:3836 0000 C=EXITDATA S=_EXITEND_      G=DGROUP  M=c0w.asm    ACBP=28
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=c0w.asm    ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=ALLRECV.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=ALLXMIT.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=FREQSCAN.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=CHANNELS.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=BANDSCAN.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=DIAGNOSE.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=ABOUT.CPP  ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=ALLFREQ.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=AWINDOW.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=BANDCHLD.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=CALLSIGN.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=CNTRLCLS.CPP ACBP=48
+ 0035:3836 0000 C=BSS    S=_BSS           G=DGROUP  M=CONFIGUR.CPP ACBP=48
+ 0035:3836 0006 C=BSS    S=_BSS           G=DGROUP  M=CTRLCHLD.CPP ACBP=48
+ 0035:383C 3B96 C=BSS    S=_BSS           G=DGROUP  M=DSP1.CPP   ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=ENTERDLG.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=FREQWIND.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=FREQWIN2.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=MARKER.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=PACKET.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=PTTCHLD.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=SENDMORS.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=SENTMORS.CPP ACBP=48
+ 0035:73D2 0000 C=BSS    S=_BSS           G=DGROUP  M=SMTRCHLD.CPP ACBP=48
+ 0035:73D2 0006 C=BSS    S=_BSS           G=DGROUP  M=SPECWIND.CPP ACBP=48
+ 0035:73D8 0000 C=BSS    S=_BSS           G=DGROUP  M=STATCHLD.CPP ACBP=48
+ 0035:73D8 0004 C=BSS    S=_BSS           G=DGROUP  M=STATIONS.CPP ACBP=48
+ 0035:73DC 0202 C=BSS    S=_BSS           G=DGROUP  M=VOICECHD.CPP ACBP=48
+ 0035:75DE 0000 C=BSS    S=_BSS           G=DGROUP  M=VOICEDLG.CPP ACBP=48
+ 0035:75DE 1E62 C=BSS    S=_BSS           G=DGROUP  M=loaddsp    ACBP=48
+ 0035:9440 000E C=BSS    S=_BSS           G=DGROUP  M=dsp1lib    ACBP=48
+ 0035:944E 0000 C=BSS    S=_BSS           G=DGROUP  M=winmain    ACBP=48
+ 0035:944E 0000 C=BSS    S=_BSS           G=DGROUP  M=xxa        ACBP=48
+ 0035:944E 0004 C=BSS    S=_BSS           G=DGROUP  M=xxv        ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=setupio    ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=atan       ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=ldtrunc    ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=realcvt2   ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=scantod2   ACBP=48
+ 0035:9452 0000 C=BSS    S=_BSS           G=DGROUP  M=xcvt       ACBP=48
+ 0035:9452 0080 C=BSS    S=_BSS           G=DGROUP  M=atexit     ACBP=48
+ 0035:94D2 0008 C=BSS    S=_BSS           G=DGROUP  M=setargv    ACBP=48
+ 0035:94DA 0000 C=BSS    S=_BSS           G=DGROUP  M=setargv0   ACBP=48
+ 0035:94DA 0000 C=BSSEND S=_BSSEND        G=DGROUP  M=c0w.asm    ACBP=28
+
+  Address         Publics by Name
+
+ 0000:0000 idle  operator delete(void far*)
+ 0000:0000 idle  operator new(unsigned int)
+ 000A:187E       __vc1$thunk__[f,f,f,6,39,0]
+ 0006:17CD       __vc1$thunk__[f,f,f,6,3d,0]
+ 0006:17DB       __vc1$thunk__[f,f,f,6,41,0]
+ 0006:17E9       __vc1$thunk__[f,f,f,6,45,0]
+ 0006:17F7       __vc1$thunk__[f,f,f,6,49,0]
+ 000D:0F2B       __vc1$thunk__[f,f,f,6,4d,0]
+ 000D:0F39       __vc1$thunk__[f,f,f,6,51,0]
+ 000D:0F47       __vc1$thunk__[f,f,f,6,55,0]
+ 000D:0F55       __vc1$thunk__[f,f,f,6,59,0]
+ 000D:0F63       __vc1$thunk__[f,f,f,6,5d,0]
+ 000D:0F71       __vc1$thunk__[f,f,f,6,61,0]
+ 0007:2069       __tpdsc__[tcreateddc]
+ 0008:1E22       __tpdsc__[tgdiobject]
+ 000A:1944       __tpdsc__[tscrollbar]
+ 000C:0136       __tpdsc__[tvoicechld]
+ 000C:073A       __tpdsc__[agc_control]
+ 0014:3931       __tpdsc__[int_control]
+ 000C:03E4       __tpdsc__[ptt_control]
+ 0002:0495       __tpdsc__[tallrecieve]
+ 000C:FD2E       __tpdsc__[tmainwindow]
+ 000C:00D8       __tpdsc__[tpacketchld]
+ 0007:189D       __tpdsc__[whitestatic]
+ 000C:058C       __tpdsc__[mode_control]
+ 0009:0D1B       __tpdsc__[span_control]
+ 0003:244D       __tpdsc__[stop_control]
+ 0002:0DAC       __tpdsc__[talltransmit]
+ 000C:FCDA       __tpdsc__[tapplication]
+ 000B:2EAD       __tpdsc__[tcontrolchld]
+ 0002:0789       __tpdsc__[tframewindow]
+ 0004:388D       __tpdsc__[tinputdialog]
+ 000A:18EC       __tpdsc__[tradiobutton]
+ 000C:FA3A       __tpdsc__[tstationsdlg]
+ 0007:1C31       __tpdsc__[abitmapbutton]
+ 0003:2AF7       __tpdsc__[radio_control]
+ 000C:0516       __tpdsc__[split_control]
+ 0003:2485       __tpdsc__[start_control]
+ 0005:2329       __tpdsc__[tbandscanchld]
+ 000C:0EB4       __tpdsc__[tcommondialog]
+ 000A:1A62       __tpdsc__[tconfiguredlg]
+ 0002:06B5       __tpdsc__[teventhandler]
+ 000A:188C       __tpdsc__[tfreq_window2]
+ 0009:0D7B       __tpdsc__[center_control]
+ 000C:05C4       __tpdsc__[filter_control]
+ 0009:0CB9       __tpdsc__[marker_control]
+ 0006:05EA       __tpdsc__[tdiagnosticdlg]
+ 000C:07AC       __tpdsc__[volume_control]
+ 000C:0638       __tpdsc__[if_gain_control]
+ 000C:03AA       __tpdsc__[monitor_control]
+ 000C:05FE       __tpdsc__[squelch_control]
+ 0006:18DD       __tpdsc__[tallfrequencies]
+ 000C:F913       __tpdsc__[tfileopendialog]
+ 000C:F975       __tpdsc__[tfilesavedialog]
+ 000C:FF60       __tpdsc__[topensavedialog]
+ 000C:FD8C       __tpdsc__[tsend_morsechld]
+ 000C:01F0       __tpdsc__[tsent_morsechld]
+ 0002:0663       __tpdsc__[tstreamablebase]
+ 000C:02EC       __tpdsc__[i_adjust_control]
+ 000C:049A       __tpdsc__[calibrate_control]
+ 0003:2737       __tpdsc__[frequency_control]
+ 000C:0770       __tpdsc__[mic_level_control]
+ 0003:2411       __tpdsc__[step_size_control]
+ 0004:3B29       __tpdsc__[tall_channelschld]
+ 0002:0C80       __tpdsc__[tfrequency_window]
+ 000C:054E       __tpdsc__[mixer_gain_control]
+ 000C:036C       __tpdsc__[compression_control]
+ 000D:106F       __tpdsc__[tenter_frequencydlg]
+ 0003:258D       __tpdsc__[tfrequency_scanchld]
+ 000C:02AE       __tpdsc__[tx_i_adjust_control]
+ 000C:04D6       __tpdsc__[tx_frequency_control]
+ 000C:06B4       __tpdsc__[antenna_power_control]
+ 000C:045A       __tpdsc__[max_frequency_control]
+ 000C:041A       __tpdsc__[min_frequency_control]
+ 000C:F8C9       __tpdsc__[topensavedialog::tdata]
+ 000C:0672       __tpdsc__[txantenna_power_control]
+ 000C:0328       __tpdsc__[compression_level_control]
+ 000C:06F4       __tpdsc__[am_frequency_offset_control]
+ 0007:20AF       __tpdsc__[tdc]
+ 000C:FB4C       __tpdsc__[dsp1]
+ 0014:37AF       __tpdsc__[tpen]
+ 001A:01C4       __tpdsc__[xmsg] const
+ 0003:236F       __tpdsc__[aedit]
+ 0003:28E5       __tpdsc__[tedit]
+ 0008:1B1B       __tpdsc__[tfont]
+ 000C:0F5E       __tpdsc__[string]
+ 000C:FC59       __tpdsc__[tresid]
+ 0004:3A07       __tpdsc__[abutton]
+ 0010:0DE8       __tpdsc__[amarker]
+ 0002:06E5       __tpdsc__[awindow]
+ 000C:FC17       __tpdsc__[tbitmap]
+ 0003:22C9       __tpdsc__[tbutton]
+ 0004:39B5       __tpdsc__[tdialog]
+ 000C:0F14       __tpdsc__[tmodule]
+ 000E:0E2C       __tpdsc__[tregion]
+ 0003:23BF       __tpdsc__[tstatic]
+ 0002:073F       __tpdsc__[twindow]
+ 0003:2808       __tpdsc__[tcontrol]
+ 0007:20ED       __tpdsc__[tgdibase]
+ 0016:0FCD       __tpdsc__[tlistbox]
+ 0011:0736       __tpdsc__[tpttchld]
+ 0006:0C41       __tpdsc__[taboutdlg]
+ 0008:0D4D       __tpdsc__[tbandchld]
+ 0008:1C2B       __tpdsc__[tcallsign]
+ 0003:231B       __tpdsc__[tcheckbox]
+ 000F:26DB       __tpdsc__[tclientdc]
+ 0016:0D08       __tpdsc__[tcombobox]
+ 0007:17B1       __tpdsc__[tmemorydc]
+ 000C:0252       __tpdsc__[tsmtrchld]
+ 000C:FDEE       __tpdsc__[tspectrum]
+ 000C:0194       __tpdsc__[tstatchld]
+ 0017:1028       __tpdsc__[tvoicedlg]
+ 000F:29A6       __tpdsc__[twindowdc]
+ 001A:01B3       __tpdsc__[xmsg far&]
+ 000A:17BE       __tpdsc__[tscrollbar far*]
+ 000C:F7E7       __tpdsc__[tvoicechld far*]
+ 000C:F4F5       __tpdsc__[agc_control far*]
+ 0014:3655       __tpdsc__[int_control far*]
+ 000C:F6A3       __tpdsc__[ptt_control far*]
+ 000C:FA9A       __tpdsc__[tmainwindow far*]
+ 000C:F7FE       __tpdsc__[tpacketchld far*]
+ 0010:0CCE       __tpdsc__[whitestatic far*]
+ 000C:F5CE       __tpdsc__[mode_control far*]
+ 0014:3688       __tpdsc__[span_control far*]
+ 0003:212A       __tpdsc__[stop_control far*]
+ 000C:F75A       __tpdsc__[tcontrolchld far*]
+ 0014:36F5       __tpdsc__[tinputdialog far*]
+ 000A:17E7       __tpdsc__[tradiobutton far*]
+ 0012:1951       __tpdsc__[abitmapbutton far*]
+ 000C:F606       __tpdsc__[split_control far*]
+ 0003:2110       __tpdsc__[start_control far*]
+ 000C:F816       __tpdsc__[tbandscanchld far*]
+ 000A:1800       __tpdsc__[tfreq_window2 far*]
+ 0014:366D       __tpdsc__[center_control far*]
+ 000C:F5B3       __tpdsc__[filter_control far*]
+ 0010:0CB3       __tpdsc__[marker_control far*]
+ 000C:FA1F       __tpdsc__[tdiagnosticdlg far*]
+ 000C:F4BC       __tpdsc__[volume_control far*]
+ 000C:F57B       __tpdsc__[if_gain_control far*]
+ 000C:F6BB       __tpdsc__[monitor_control far*]
+ 000C:F597       __tpdsc__[squelch_control far*]
+ 0014:36A1       __tpdsc__[tallfrequencies far*]
+ 000C:F9ED       __tpdsc__[tsend_morsechld far*]
+ 000C:F79F       __tpdsc__[tsent_morsechld far*]
+ 000C:F71D       __tpdsc__[i_adjust_control far*]
+ 000C:F641       __tpdsc__[calibrate_control far*]
+ 000C:F49E       __tpdsc__[frequency_control far*]
+ 000C:F4D7       __tpdsc__[mic_level_control far*]
+ 0003:2143       __tpdsc__[step_size_control far*]
+ 0005:21A5       __tpdsc__[tall_channelschld far*]
+ 0002:0C62       __tpdsc__[tfrequency_window far*]
+ 000C:F5E7       __tpdsc__[mixer_gain_control far*]
+ 000C:F6D7       __tpdsc__[compression_control far*]
+ 000E:0D66       __tpdsc__[tenter_frequencydlg far*]
+ 000C:F830       __tpdsc__[tfrequency_scanchld far*]
+ 000C:F73A       __tpdsc__[tx_i_adjust_control far*]
+ 000C:F620       __tpdsc__[tx_frequency_control far*]
+ 000C:F535       __tpdsc__[antenna_power_control far*]
+ 000C:F65F       __tpdsc__[max_frequency_control far*]
+ 000C:F681       __tpdsc__[min_frequency_control far*]
+ 000C:F557       __tpdsc__[txantenna_power_control far*]
+ 000C:F6F7       __tpdsc__[compression_level_control far*]
+ 000C:F50D       __tpdsc__[am_frequency_offset_control far*]
+ 000F:25AC       __tpdsc__[tdc far*]
+ 0003:2175       __tpdsc__[aedit far*]
+ 000A:17D5       __tpdsc__[tedit far*]
+ 0008:1A73       __tpdsc__[tfont far*]
+ 000C:FB8C       __tpdsc__[tresid far*]
+ 0004:3879       __tpdsc__[abutton far*]
+ 0014:36BD       __tpdsc__[amarker far*]
+ 000C:FB9F       __tpdsc__[tbitmap far*]
+ 0003:219D       __tpdsc__[tbutton far*]
+ 0006:0B37       __tpdsc__[tdialog far*]
+ 0003:2161       __tpdsc__[tstatic far*]
+ 000C:FA09       __tpdsc__[taboutdlg far*]
+ 000C:F7D1       __tpdsc__[tbandchld far*]
+ 000C:F773       __tpdsc__[tcallsign far*]
+ 0003:2187       __tpdsc__[tcheckbox far*]
+ 000F:2596       __tpdsc__[tclientdc far*]
+ 0016:0C62       __tpdsc__[tcombobox far*]
+ 0007:15C9       __tpdsc__[tmemorydc far*]
+ 000C:F789       __tpdsc__[tsmtrchld far*]
+ 000C:F9D7       __tpdsc__[tspectrum far*]
+ 000C:F7BB       __tpdsc__[tstatchld far*]
+ 0007:0512       abitmapbutton::abitmapbutton(twindow far*,int,char far*,int,int,int,int,tbitmap far*,tbitmap far*)
+ 0007:1C91       abitmapbutton::~abitmapbutton()
+ 0007:084F       abitmapbutton::evlbuttondown(unsigned int,tpoint far&)
+ 0007:087C       abitmapbutton::evlbuttonup(unsigned int,tpoint far&)
+ 0007:08CA       abitmapbutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:072F       abitmapbutton::paint(tdc far&,int,trect far&)
+ 0024:0000       abitmapbutton::__entries
+ 0007:1B65       abitmapbutton::
+ 0007:1D61       abitmapbutton::
+ 0008:1A52       abs(int)
+ 0007:0C99       abutton::abutton(twindow far*,int,char far*,int,int,int,int,int)
+ 0007:0DA7       abutton::~abutton()
+ 0007:0F0D       abutton::evlbuttonup(unsigned int,tpoint far&)
+ 0007:0EAD       abutton::evrbuttonup(unsigned int,tpoint far&)
+ 0007:0F5B       abutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:0E8F       abutton::getclassname()
+ 0025:0000       abutton::__entries
+ 0007:19D1       abutton::
+ 0007:1A75       abutton::
+ 0007:0A4E       aedit::aedit(twindow far*,int)
+ 0007:093E       aedit::aedit(twindow far*,int,char far*,int,int,int,int)
+ 0003:285C       aedit::~aedit()
+ 0007:0B4A       aedit::get_value()
+ 0007:0BC8       aedit::get_value_double()
+ 0007:0B89       aedit::get_value_long()
+ 0007:0C0A       aedit::set_value(int)
+ 0007:0C52       aedit::set_value(long)
+ 0007:1A99       aedit::
+ 0007:1B41       aedit::
+ 0019:1886       agc_control::get_error_message()
+ 0019:1925       agc_control::get_max()
+ 0019:1911       agc_control::get_min()
+ 0019:1871       agc_control::get_name()
+ 0019:189B       agc_control::get_value()
+ 0019:193A       agc_control::mute()
+ 0019:1948       agc_control::restore()
+ 0019:18AF       agc_control::set_value(long)
+ 000C:0B3A       agc_control::
+ 0010:00E2       amarker::amarker(twindow far*,int,char far*,int,twindow far*,unsigned int[2]far*,long[2]far*,start_control far*,stop_control far*,long far*,long far*)
+ 0010:05EE       amarker::~amarker()
+ 0010:079C       amarker::changed_marker()
+ 0010:0B9B       amarker::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0010:0722       amarker::getclassname()
+ 0010:0740       amarker::getwindowclass(tagwndclass far&)
+ 0010:0A98       amarker::get_last()
+ 0010:0A5C       amarker::get_value()
+ 0010:0A43       amarker::next_button()
+ 0010:097C       amarker::peak_button()
+ 0010:0ACE       amarker::set_dbm(int)
+ 002D:0000       amarker::__entries
+ 0010:0D18       amarker::
+ 0010:0E42       amarker::
+ 0019:06FE       am_frequency_offset_control::get_error_message()
+ 0019:077D       am_frequency_offset_control::get_max()
+ 0019:0767       am_frequency_offset_control::get_min()
+ 0019:06E9       am_frequency_offset_control::get_name()
+ 0019:0713       am_frequency_offset_control::get_value()
+ 0019:0792       am_frequency_offset_control::mute()
+ 0019:07AC       am_frequency_offset_control::restore()
+ 0019:0727       am_frequency_offset_control::set_value(long)
+ 000C:0B12       am_frequency_offset_control::
+ 0019:034C       antenna_power_control::get_error_message()
+ 0019:03EB       antenna_power_control::get_max()
+ 0019:03D7       antenna_power_control::get_min()
+ 0019:0337       antenna_power_control::get_name()
+ 0019:0361       antenna_power_control::get_value()
+ 0019:0400       antenna_power_control::mute()
+ 0019:040E       antenna_power_control::restore()
+ 0019:0375       antenna_power_control::set_value(long)
+ 000C:0AEA       antenna_power_control::
+ 0007:15DF       atoi(const char far*)
+ 0018:15D0 idle  autodetect_sound_card()
+ 0007:0000       awindow::awindow(twindow far*,char far*,int)
+ 0007:018A       awindow::~awindow()
+ 0007:033F       awindow::evactivate(unsigned int,int,const hwnd__ near*)
+ 0007:03AA       awindow::evchar(unsigned int,unsigned int,unsigned int)
+ 0007:02DA       awindow::evmove(tpoint far&)
+ 0007:049F       awindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:03C3       awindow::move(int,int,int,int)
+ 0007:0464       awindow::redraw()
+ 0007:041B       awindow::where_x()
+ 0007:043E       awindow::where_y()
+ 0023:0000       awindow::__entries
+ 0007:1E8D       awindow::
+ 0007:1F55       awindow::
+ 0018:13E7 idle  bootload_file(char far*)
+ 0019:0431       calibrate_control::get_error_message()
+ 0019:04BC       calibrate_control::get_max()
+ 0019:04A6       calibrate_control::get_min()
+ 0019:041C       calibrate_control::get_name()
+ 0019:0446       calibrate_control::get_value()
+ 0019:04D2       calibrate_control::mute()
+ 0019:04E0       calibrate_control::restore()
+ 0019:045D       calibrate_control::set_value(long)
+ 000C:0982       calibrate_control::
+ 0009:038E       center_control::center_control(long far*,long far*)
+ 0009:044B       center_control::get_error_message()
+ 0009:040E       center_control::get_name()
+ 0009:0469       center_control::get_value()
+ 0009:04A9       center_control::set_value(long)
+ 0009:0D53       center_control::
+ 0019:06B0 idle  change_filter()
+ 0019:145F idle  change_mode()
+ 000C:37B6 idle  check_key()
+ 0019:2AAC       check_ptt_time()
+ 0019:262C       clear_preselectors()
+ 0019:1730       compression_control::get_error_message()
+ 0019:17B2       compression_control::get_max()
+ 0019:179E       compression_control::get_min()
+ 0019:171B       compression_control::get_name()
+ 0019:1745       compression_control::get_value()
+ 0019:17C7       compression_control::mute()
+ 0019:17D5       compression_control::restore()
+ 0019:1759       compression_control::set_value(long)
+ 000C:08BA       compression_control::
+ 0019:1A51       compression_level_control::get_error_message()
+ 0019:1AF1       compression_level_control::get_max()
+ 0019:1ADD       compression_level_control::get_min()
+ 0019:1A3C       compression_level_control::get_name()
+ 0019:1A66       compression_level_control::get_value()
+ 0019:1B06       compression_level_control::mute()
+ 0019:1B14       compression_level_control::restore()
+ 0019:1A7A       compression_level_control::set_value(long)
+ 000C:0892       compression_level_control::
+ 0019:2796 idle  convert_from_baudot(int)
+ 000C:A904 idle  default_places()
+ 0019:21EC idle  delay(long)
+ 000C:D765       dly()
+ 000C:FAB2       dsp1::dsp1(char far*)
+ 000C:FC83       dsp1::~dsp1()
+ 000C:95D3 idle  dsp1::initmainwindow()
+ 000C:9667 idle  dsp1::processappmsg(tagmsg far&)
+ 000C:07E6       dsp1::
+ 000C:0836       dsp1::
+ 0018:1388       dspgetdata(unsigned long)
+ 0018:0FDE       dspgetmsg()
+ 0018:1269       dspgetnumdevs()
+ 0018:12A5       dsploadalg(unsigned long,unsigned long,char far*,const hwnd__ near*)
+ 0018:12E0       dspreset()
+ 0018:1374       dspsenddata(void far*,unsigned long)
+ 0018:13C1       dspsenddatanull(int)
+ 0018:12F5       dspsendmsg(long,void far*,unsigned long)
+ 0018:139D       dspunloadalg()
+ 0019:2818       end_play()
+ 0019:283B idle  end_play_and_null()
+ 000C:D874 idle  feof_or_null(file far*)
+ 0019:05E3       filter_control::get_error_message()
+ 0019:067F       filter_control::get_max()
+ 0019:066B       filter_control::get_min()
+ 0019:05CE       filter_control::get_name()
+ 0019:05F8       filter_control::get_value()
+ 0019:0694       filter_control::mute()
+ 0019:06A2       filter_control::restore()
+ 0019:060C       filter_control::set_value(long)
+ 000C:0A4A       filter_control::
+ 0019:07DB       frequency_control::get_error_message()
+ 0019:0990       frequency_control::get_max()
+ 0019:0979       frequency_control::get_min()
+ 0019:07C6       frequency_control::get_name()
+ 0019:07F0       frequency_control::get_value()
+ 0019:09A7       frequency_control::mute()
+ 0019:09B5       frequency_control::restore()
+ 0019:0807       frequency_control::set_value(long)
+ 0009:0E2D       frequency_control::
+ 0019:2A15       get_1848()
+ 0019:0000       get_agc()
+ 0019:2C36       get_callsign(char far*)
+ 0019:0013       get_filter()
+ 0019:2BFC       get_frequency_wrap()
+ 000C:D72C idle  get_long(file far*)
+ 0019:2B5B       get_port_on_off()
+ 0019:25F8       get_radware_address()
+ 0018:16BA       get_sound_card()
+ 0019:2A02       get_tx_analog_gain()
+ 0000:0000 idle  handleglobalexception(xmsg far&,char far*,char far*)
+ 0019:1518       if_gain_control::get_error_message()
+ 0019:15E2       if_gain_control::get_max()
+ 0019:15CE       if_gain_control::get_min()
+ 0019:1503       if_gain_control::get_name()
+ 0019:152D       if_gain_control::get_value()
+ 0019:15F7       if_gain_control::mute()
+ 0019:1605       if_gain_control::restore()
+ 0019:154E       if_gain_control::set_value(long)
+ 000C:0A9A       if_gain_control::
+ 0019:1FF4       int_control::int_control(int,int)
+ 0019:2072       int_control::get_error_message()
+ 0019:2118       int_control::get_max()
+ 0019:2100       int_control::get_min()
+ 0019:205D       int_control::get_name()
+ 0019:2087       int_control::get_value()
+ 0019:2130       int_control::mute()
+ 0019:213E       int_control::restore()
+ 0019:209F       int_control::set_value(long)
+ 0019:2CAA       int_control::
+ 0019:2C56       is_frequency_amateur(long)
+ 0019:003B       i_adjust_control::get_error_message()
+ 0019:010B       i_adjust_control::get_max()
+ 0019:00F6       i_adjust_control::get_min()
+ 0019:0026       i_adjust_control::get_name()
+ 0019:0050       i_adjust_control::get_value()
+ 0019:0120       i_adjust_control::mute()
+ 0019:012E       i_adjust_control::restore()
+ 0019:0067       i_adjust_control::set_value(long)
+ 000C:086A       i_adjust_control::
+ 000C:D7B2 idle  keyboard(unsigned int,unsigned int,unsigned int)
+ 0010:16DF idle  last_8_bits(int)
+ 0018:127E idle  load_dsp(const hwnd__ near*)
+ 000C:A725 idle  load_places()
+ 000C:AC64 idle  load_stations()
+ 0009:085B       marker_control::marker_control(long far*,long far*)
+ 0009:093D       marker_control::get_error_message()
+ 0009:0AB1       marker_control::get_max()
+ 0009:0A8A       marker_control::get_min()
+ 0009:090A       marker_control::get_name()
+ 0009:095B       marker_control::get_value()
+ 0009:09E9       marker_control::set_value(long)
+ 0009:0C91       marker_control::
+ 0019:0BD5       max_frequency_control::get_error_message()
+ 0019:0D25       max_frequency_control::get_max()
+ 0019:0D0F       max_frequency_control::get_min()
+ 0019:0BC0       max_frequency_control::get_name()
+ 0019:0BEA       max_frequency_control::get_value()
+ 0019:0D3B       max_frequency_control::mute()
+ 0019:0D49       max_frequency_control::restore()
+ 0019:0C01       max_frequency_control::set_value(long)
+ 000C:095A       max_frequency_control::
+ 0019:196B       mic_level_control::get_error_message()
+ 0019:1A0B       mic_level_control::get_max()
+ 0019:19F7       mic_level_control::get_min()
+ 0019:1956       mic_level_control::get_name()
+ 0019:1980       mic_level_control::get_value()
+ 0019:1A20       mic_level_control::mute()
+ 0019:1A2E       mic_level_control::restore()
+ 0019:1994       mic_level_control::set_value(long)
+ 000C:0B62       mic_level_control::
+ 0019:0D6C       min_frequency_control::get_error_message()
+ 0019:0EBC       min_frequency_control::get_max()
+ 0019:0EA6       min_frequency_control::get_min()
+ 0019:0D57       min_frequency_control::get_name()
+ 0019:0D81       min_frequency_control::get_value()
+ 0019:0ED2       min_frequency_control::mute()
+ 0019:0EE0       min_frequency_control::restore()
+ 0019:0D98       min_frequency_control::set_value(long)
+ 000C:0932       min_frequency_control::
+ 0019:133A       mixer_gain_control::get_error_message()
+ 0019:13B5       mixer_gain_control::get_max()
+ 0019:13A1       mixer_gain_control::get_min()
+ 0019:1325       mixer_gain_control::get_name()
+ 0019:134F       mixer_gain_control::get_value()
+ 0019:13CA       mixer_gain_control::mute()
+ 0019:13D8       mixer_gain_control::restore()
+ 0019:1363       mixer_gain_control::set_value(long)
+ 000C:09FA       mixer_gain_control::
+ 0019:13FB       mode_control::get_error_message()
+ 0019:14D2       mode_control::get_max()
+ 0019:14BE       mode_control::get_min()
+ 0019:13E6       mode_control::get_name()
+ 0019:1410       mode_control::get_value()
+ 0019:14E7       mode_control::mute()
+ 0019:14F5       mode_control::restore()
+ 0019:1424       mode_control::set_value(long)
+ 000C:0A22       mode_control::
+ 0019:1C57       monitor_control::get_error_message()
+ 0019:1CC3       monitor_control::get_max()
+ 0019:1CAF       monitor_control::get_min()
+ 0019:1C42       monitor_control::get_name()
+ 0019:1C6C       monitor_control::get_value()
+ 0019:1CD8       monitor_control::mute()
+ 0019:1CE6       monitor_control::restore()
+ 0019:1C80       monitor_control::set_value(long)
+ 000C:08E2       monitor_control::
+ 000C:D81A       movewindowtotopoflist(int)
+ 000C:9B48       owlmain(int,char far*far*)
+ 0017:0B77       play_voice_memory()
+ 0017:0AE5 idle  play_voice_memory_start(int)
+ 000C:D8AC idle  printint(int)
+ 0007:12B0 idle  print_int(int)
+ 0019:1D09       ptt_control::get_error_message()
+ 0019:1F2F       ptt_control::get_max()
+ 0019:1F1B       ptt_control::get_min()
+ 0019:1CF4       ptt_control::get_name()
+ 0019:1D1E       ptt_control::get_value()
+ 0019:1F44       ptt_control::mute()
+ 0019:1F52       ptt_control::restore()
+ 0019:1D32       ptt_control::set_value(long)
+ 000C:090A       ptt_control::
+ 0019:1F75       radio_control::get_error_message()
+ 0019:1FC4       radio_control::get_max()
+ 0019:1FB0       radio_control::get_min()
+ 0019:1F60       radio_control::get_name()
+ 0019:1F8A       radio_control::get_value()
+ 0019:1FD8       radio_control::mute()
+ 0019:1FE6       radio_control::restore()
+ 0019:1F9E       radio_control::set_value(long)
+ 0009:0E05       radio_control::
+ 0018:155F idle  read_dsp_word()
+ 0015:0B4B       recall_channel(int)
+ 000C:80E3 idle  remove_old_classes()
+ 000C:D43C idle  save_stations()
+ 0019:28F0       save_voice_memory()
+ 0019:296D       save_voice_memory_end()
+ 0019:29BB       save_voice_memory_open()
+ 0019:2889       save_voice_memory_start(char far*,int)
+ 0019:2312 idle  select_next_band()
+ 0019:222F idle  select_previous_band()
+ 0019:17E3 idle  send_compression()
+ 0019:2866       send_play_message(int far*)
+ 0019:260B       set_am_side(int)
+ 0019:2C0F       set_callsign(char far*)
+ 0019:0EEE idle  set_frequency()
+ 0019:2BDE       set_frequency_wrap(int)
+ 0019:2A43       set_morse(int)
+ 0019:2B92 idle  set_parallel_port(int)
+ 0019:2B6E       set_port_on_off(int)
+ 0019:2641 idle  set_preselectors()
+ 0019:1D50 idle  set_ptt(long)
+ 0019:25D3       set_radware_address(int)
+ 001A:0266 idle  set_terminate(void(far*)())
+ 0019:29DB       set_tx_analog_gain(int)
+ 001A:03A8 idle  set_unexpected(void(far*)())
+ 0018:0FCA       simulation_mode()
+ 0009:05DD       span_control::span_control(long far*,long far*)
+ 0009:0673       span_control::get_error_message()
+ 0009:083D       span_control::get_min()
+ 0009:0696       span_control::get_name()
+ 0009:06B4       span_control::get_value()
+ 0009:06E9       span_control::set_value(long)
+ 0009:0CF3       span_control::
+ 0019:0503       split_control::get_error_message()
+ 0019:059D       split_control::get_max()
+ 0019:0589       split_control::get_min()
+ 0019:04EE       split_control::get_name()
+ 0019:0518       split_control::get_value()
+ 0019:05B2       split_control::mute()
+ 0019:05C0       split_control::restore()
+ 0019:052C       split_control::set_value(long)
+ 000C:09D2       split_control::
+ 0019:1628       squelch_control::get_error_message()
+ 0019:16EA       squelch_control::get_max()
+ 0019:16D6       squelch_control::get_min()
+ 0019:1613       squelch_control::get_name()
+ 0019:163D       squelch_control::get_value()
+ 0019:16FF       squelch_control::mute()
+ 0019:170D       squelch_control::restore()
+ 0019:1651       squelch_control::set_value(long)
+ 000C:0A72       squelch_control::
+ 0009:0000       start_control::start_control(long far*,long far*)
+ 0009:00BB       start_control::get_error_message()
+ 0009:007F       start_control::get_name()
+ 0009:00D9       start_control::get_value()
+ 0009:0100       start_control::set_value(long)
+ 0009:0DDD       start_control::
+ 0019:27F5       start_play()
+ 0009:0AD8       step_size_control::step_size_control()
+ 0009:0B7C       step_size_control::get_error_message()
+ 0009:0C4B       step_size_control::get_max()
+ 0009:0C2D       step_size_control::get_min()
+ 0009:0B46       step_size_control::get_name()
+ 0009:0B9A       step_size_control::get_value()
+ 0009:0BBE       step_size_control::set_value(long)
+ 0009:0C69       step_size_control::
+ 0009:01C8       stop_control::stop_control(long far*,long far*)
+ 0009:0281       stop_control::get_error_message()
+ 0009:0246       stop_control::get_name()
+ 0009:029F       stop_control::get_value()
+ 0009:02C6       stop_control::set_value(long)
+ 0009:0DB5       stop_control::
+ 0000:0000 idle  string::string(const char far*)
+ 0000:0000 idle  string::~string()
+ 0000:0000 idle  string::assign(const string far&,unsigned int,unsigned int)
+ 000F:229A idle  string_insert(char far*,char,int)
+ 0006:074E       taboutdlg::taboutdlg(twindow far*,char far*)
+ 0006:089D       taboutdlg::~taboutdlg()
+ 0006:0A56       taboutdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0006:09A6       taboutdlg::ordering()
+ 0021:0000       taboutdlg::__entries
+ 0006:0B7D       taboutdlg::
+ 0006:0C9D       taboutdlg::
+ 0006:0E5B       tallfrequencies::tallfrequencies(twindow far*,char far*,start_control far*,stop_control far*,center_control far*,span_control far*,step_size_control far*,int)
+ 0006:1274       tallfrequencies::~tallfrequencies()
+ 0006:14F0       tallfrequencies::changed_center()
+ 0006:15A3       tallfrequencies::changed_span()
+ 0006:138A       tallfrequencies::changed_start()
+ 0006:143D       tallfrequencies::changed_stop()
+ 0006:1656       tallfrequencies::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0022:0000       tallfrequencies::__entries
+ 0006:1805       tallfrequencies::
+ 0006:193F       tallfrequencies::
+ 0002:000C       tallrecieve::tallrecieve(awindow far*,char far*,frequency_control far*,int)
+ 0002:0244       tallrecieve::~tallrecieve()
+ 0002:035A       tallrecieve::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 001B:0000       tallrecieve::__entries
+ 0002:03CD       tallrecieve::
+ 0002:0543       tallrecieve::
+ 0002:0818       talltransmit::talltransmit(awindow far*,char far*,frequency_control far*,int)
+ 0002:0AD9       talltransmit::~talltransmit()
+ 0002:0BEF       talltransmit::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 001C:0000       talltransmit::__entries
+ 0002:0CE4       talltransmit::
+ 0002:0E0C       talltransmit::
+ 0004:0069       tall_channelschld::tall_channelschld(awindow far*,int,char far*,int)
+ 0004:0466       tall_channelschld::~tall_channelschld()
+ 0004:0672       tall_channelschld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0004:0A49       tall_channelschld::evchar(unsigned int,unsigned int,unsigned int)
+ 0004:09EC       tall_channelschld::evmove(tpoint far&)
+ 0004:0B0C       tall_channelschld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0004:06EE       tall_channelschld::getclassname()
+ 0004:070C       tall_channelschld::getwindowclass(tagwndclass far&)
+ 0004:075D       tall_channelschld::get_channel(unsigned int)
+ 0004:0989       tall_channelschld::get_selected()
+ 0004:06B5       tall_channelschld::returnfocus()
+ 0004:05F6       tall_channelschld::setupwindow()
+ 0004:07E0       tall_channelschld::set_channel(unsigned int)
+ 0004:0A8F       tall_channelschld::update_channel_names()
+ 0004:073A       tall_channelschld::where_y()
+ 001E:0000       tall_channelschld::__entries
+ 0004:3A59       tall_channelschld::
+ 0004:3B8D       tall_channelschld::
+ 0000:0000 idle  tapplication::tapplication(const char far*,tmodule far*far&,tappdictionary far*)
+ 0000:0000 idle  tapplication::~tapplication()
+ 0000:0000 idle  tapplication::canclose()
+ 0000:0000 idle  tapplication::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tapplication::idleaction(long)
+ 0000:0000 idle  tapplication::initapplication()
+ 0000:0000 idle  tapplication::initcmdline
+ 0000:0000 idle  tapplication::initcmdshow
+ 0000:0000 idle  tapplication::inithinstance
+ 0000:0000 idle  tapplication::inithprevinstance
+ 0000:0000 idle  tapplication::initinstance()
+ 0000:0000 idle  tapplication::messageloop()
+ 0000:0000 idle  tapplication::preprocessmenu(const hmenu__ near*)
+ 0000:0000 idle  tapplication::processappmsg(tagmsg far&)
+ 0000:0000 idle  tapplication::run()
+ 0000:0000 idle  tapplication::setmainwindow(tframewindow far*)
+ 0000:0000 idle  tapplication::start()
+ 0000:0000 idle  tapplication::terminstance(int)
+ 0008:0130       tbandchld::tbandchld(awindow far*,char far*,int)
+ 0008:06B1       tbandchld::~tbandchld()
+ 0008:0826       tbandchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0008:0A2E       tbandchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0008:08D1       tbandchld::reply_button(unsigned int)
+ 0008:0869       tbandchld::where_y()
+ 0026:0000       tbandchld::__entries
+ 0008:0C85       tbandchld::
+ 0008:0DA9       tbandchld::
+ 0005:0363       tbandscanchld::tbandscanchld(awindow far*,int,char far*,int)
+ 0005:0F3C       tbandscanchld::~tbandscanchld()
+ 0005:12BA       tbandscanchld::change_band()
+ 0005:1352       tbandscanchld::change_channel()
+ 0005:1451       tbandscanchld::change_hold_time()
+ 0005:1412       tbandscanchld::change_infinity()
+ 0005:13BF       tbandscanchld::change_listen_time()
+ 0005:126C       tbandscanchld::change_max_ss()
+ 0005:121E       tbandscanchld::change_min_ss()
+ 0005:1137       tbandscanchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0005:1DD3       tbandscanchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0005:1D76       tbandscanchld::evmove(tpoint far&)
+ 0005:1E19       tbandscanchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0005:11AF       tbandscanchld::getclassname()
+ 0005:11CD       tbandscanchld::getwindowclass(tagwndclass far&)
+ 0005:175F       tbandscanchld::next_channel()
+ 0005:193C       tbandscanchld::open_channels()
+ 0005:1548       tbandscanchld::prev_channel()
+ 0005:117A       tbandscanchld::returnfocus()
+ 0005:14A4       tbandscanchld::scan_backward()
+ 0005:18DE       tbandscanchld::scan_forward()
+ 0005:10C8       tbandscanchld::setupwindow()
+ 0005:16C7       tbandscanchld::stop_scanning()
+ 0005:1A57       tbandscanchld::s_meter_report(double)
+ 0005:11FB       tbandscanchld::where_y()
+ 001F:0000       tbandscanchld::__entries
+ 0005:2259       tbandscanchld::
+ 0005:2389       tbandscanchld::
+ 0000:0000 idle  tbitmap::tbitmap(const hinstance__ near*,tresid)
+ 000C:0F98       tbitmap::~tbitmap()
+ 0000:0000 idle  tbutton::tbutton(twindow far*,int,const char far*,int,int,int,int,int,tmodule far*)
+ 0003:29EF       tbutton::~tbutton()
+ 0000:0000 idle  tbutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tbutton::setupwindow()
+ 0008:0EF2       tcallsign::tcallsign(twindow far*,int,char far*,int,int,char far*,char far*)
+ 0008:1208       tcallsign::~tcallsign()
+ 0008:17C8       tcallsign::evchar(unsigned int,unsigned int,unsigned int)
+ 0008:1855       tcallsign::evlbuttondown(unsigned int,tpoint far&)
+ 0008:13F8       tcallsign::evsize(unsigned int,tsize far&)
+ 0008:193B       tcallsign::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0008:1374       tcallsign::getclassname()
+ 0008:17A2       tcallsign::height()
+ 0008:1675       tcallsign::paint(tdc far&,int,trect far&)
+ 0008:1730       tcallsign::where_x()
+ 0008:1756       tcallsign::where_y()
+ 0008:177C       tcallsign::width()
+ 0027:0000       tcallsign::__entries
+ 0008:1B5B       tcallsign::
+ 0008:1C87       tcallsign::
+ 0000:0000 idle  tcheckbox::tcheckbox(twindow far*,int,tgroupbox far*,tmodule far*)
+ 0000:0000 idle  tcheckbox::tcheckbox(twindow far*,int,const char far*,int,int,int,int,tgroupbox far*,tmodule far*)
+ 0003:2935       tcheckbox::~tcheckbox()
+ 0003:21B1       tcheckbox::check()
+ 0003:2203       tcheckbox::getcheck() const
+ 0000:0000 idle  tcheckbox::setcheck(unsigned int)
+ 0003:21DA       tcheckbox::uncheck()
+ 0000:0000 idle  tclientdc::tclientdc(const hwnd__ near*)
+ 000F:294F       tclientdc::~tclientdc()
+ 000F:2503       tcolor::tcolor(int,int,int)
+ 0014:370E       tcolor::tcolor(unsigned long)
+ 0014:37EF       tcolor::operator unsigned long() const
+ 0000:0000 idle  tcombobox::tcombobox(twindow far*,int,unsigned int,tmodule far*)
+ 0016:0F2C       tcombobox::~tcombobox()
+ 0016:0C78       tcombobox::gettext(char far*,int) const
+ 000C:0FEF       tcommondialog::~tcommondialog()
+ 000A:01F0       tconfiguredlg::tconfiguredlg(twindow far*,char far*)
+ 000A:09C2       tconfiguredlg::~tconfiguredlg()
+ 000A:0F4D       tconfiguredlg::address()
+ 000A:0E22       tconfiguredlg::dip_switch()
+ 000A:0F09       tconfiguredlg::evhscroll(unsigned int,unsigned int,const hwnd__ near*)
+ 000A:15F3       tconfiguredlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000A:1103       tconfiguredlg::i_adjust_window()
+ 000A:12CC       tconfiguredlg::ok()
+ 000A:0ACC       tconfiguredlg::setupwindow()
+ 000A:1203       tconfiguredlg::tx_i_adjust_window()
+ 000A:1545       tconfiguredlg::update_i_adjust()
+ 000A:159C       tconfiguredlg::update_tx_i_adjust()
+ 0028:0000       tconfiguredlg::__entries
+ 000A:199A       tconfiguredlg::
+ 000A:1AC2       tconfiguredlg::
+ 0003:2A84       tcontrol::~tcontrol()
+ 0000:0000 idle  tcontrol::compareitem(tagcompareitemstruct far&)
+ 0000:0000 idle  tcontrol::deleteitem(tagdeleteitemstruct far&)
+ 0000:0000 idle  tcontrol::drawitem(tagdrawitemstruct far&)
+ 0000:0000 idle  tcontrol::measureitem(tagmeasureitemstruct far&)
+ 0000:0000 idle  tcontrol::odadrawentire(tagdrawitemstruct far&)
+ 0000:0000 idle  tcontrol::odafocus(tagdrawitemstruct far&)
+ 0000:0000 idle  tcontrol::odaselect(tagdrawitemstruct far&)
+ 000B:0498       tcontrolchld::tcontrolchld(awindow far*,int,char far*,int,radio_control far*,char[20]far*,int,char far*,int)
+ 000B:17D4       tcontrolchld::~tcontrolchld()
+ 000B:1AAA       tcontrolchld::button1()
+ 000B:1C49       tcontrolchld::button10()
+ 000B:1AD3       tcontrolchld::button2()
+ 000B:1AFC       tcontrolchld::button3()
+ 000B:1B25       tcontrolchld::button4()
+ 000B:1B4E       tcontrolchld::button5()
+ 000B:1B77       tcontrolchld::button6()
+ 000B:1BCE       tcontrolchld::button7()
+ 000B:1BF7       tcontrolchld::button8()
+ 000B:1C20       tcontrolchld::button9()
+ 000B:1C72       tcontrolchld::buttonmute()
+ 000B:1DB2       tcontrolchld::check_for_repaint()
+ 000B:19CC       tcontrolchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 000B:1D6C       tcontrolchld::evchar(unsigned int,unsigned int,unsigned int)
+ 000B:2257       tcontrolchld::evlbuttondown(unsigned int,tpoint far&)
+ 000B:26FB       tcontrolchld::evlbuttonup(unsigned int,tpoint far&)
+ 000B:1D0D       tcontrolchld::evmove(tpoint far&)
+ 000B:24CD       tcontrolchld::evrbuttondown(unsigned int,tpoint far&)
+ 000B:272B       tcontrolchld::evrbuttonup(unsigned int,tpoint far&)
+ 000B:26AC       tcontrolchld::evtimer(unsigned int)
+ 000B:2854       tcontrolchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000B:1A3C       tcontrolchld::getclassname()
+ 000B:1A5E       tcontrolchld::getwindowclass(tagwndclass far&)
+ 000B:1E63       tcontrolchld::paint(tdc far&,int,trect far&)
+ 000B:1967       tcontrolchld::relabel_buttons(char[20]far*)
+ 000B:1A10       tcontrolchld::returnfocus()
+ 000B:275B       tcontrolchld::set_value(int)
+ 000B:1CEA       tcontrolchld::where_y()
+ 0029:0000       tcontrolchld::__entries
+ 000B:2DD9       tcontrolchld::
+ 000B:2F0D       tcontrolchld::
+ 0000:0000 idle  tcreateddc::~tcreateddc()
+ 0000:0000 idle  tdc::~tdc()
+ 0007:1698       tdc::operator const hdc__ near*() const
+ 0007:1540       tdc::bitblt(int,int,int,int,const tdc far&,int,int,unsigned long)
+ 0007:1679       tdc::gethdc() const
+ 000E:0DBD       tdc::lineto(int,int)
+ 000E:0D86       tdc::moveto(int,int)
+ 000E:0DF0       tdc::paintrgn(const tregion far&)
+ 0000:0000 idle  tdc::restoreobjects()
+ 0000:0000 idle  tdc::selectobject(const tpen far&)
+ 0014:3757       tdc::setpixel(int,int,tcolor)
+ 0006:0030       tdiagnosticdlg::tdiagnosticdlg(twindow far*,char far*)
+ 0006:0258       tdiagnosticdlg::~tdiagnosticdlg()
+ 0006:03EE       tdiagnosticdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0006:0385       tdiagnosticdlg::recieved_1848()
+ 0006:0362       tdiagnosticdlg::request_update()
+ 0020:0000       tdiagnosticdlg::__entries
+ 0006:0526       tdiagnosticdlg::
+ 0006:064C       tdiagnosticdlg::
+ 0000:0000 idle  tdialog::tdialog(twindow far*,tresid,tmodule far*)
+ 0000:0000 idle  tdialog::~tdialog()
+ 0000:0000 idle  tdialog::closewindow(int)
+ 0000:0000 idle  tdialog::create()
+ 0000:0000 idle  tdialog::destroy(int)
+ 0000:0000 idle  tdialog::dialogfunction(unsigned int,unsigned int,long)
+ 0000:0000 idle  tdialog::docreate()
+ 0000:0000 idle  tdialog::doexecute()
+ 0000:0000 idle  tdialog::evinitdialog(const hwnd__ near*)
+ 0000:0000 idle  tdialog::execute()
+ 0000:0000 idle  tdialog::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tdialog::getclassname()
+ 0000:0000 idle  tdialog::getwindowclass(tagwndclass far&)
+ 0000:0000 idle  tdialog::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  tdialog::setcaption(const char far*)
+ 0000:0000 idle  tdialog::setupwindow()
+ 0000:0000 idle  tedit::tedit(twindow far*,int,const char far*,int,int,int,int,unsigned int,int,tmodule far*)
+ 0000:0000 idle  tedit::tedit(twindow far*,int,unsigned int,tmodule far*)
+ 0000:0000 idle  tedit::~tedit()
+ 0000:0000 idle  tedit::canclose()
+ 0000:0000 idle  tedit::clear()
+ 0000:0000 idle  tedit::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tedit::getclassname()
+ 000D:0EC7       tedit::insert(const char far*)
+ 0012:196B       tedit::setselection(unsigned int,unsigned int)
+ 0000:0000 idle  tedit::setupwindow()
+ 0000:0000 idle  tedit::transfer(void far*,ttransferdirection)
+ 000D:0034       tenter_frequencydlg::tenter_frequencydlg(twindow far*,char far*,frequency_control far*)
+ 000D:0274       tenter_frequencydlg::~tenter_frequencydlg()
+ 000D:0A26       tenter_frequencydlg::check_edit()
+ 000D:09F7       tenter_frequencydlg::close()
+ 000D:0B65       tenter_frequencydlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000D:0739       tenter_frequencydlg::hz()
+ 000D:081B       tenter_frequencydlg::khz()
+ 000D:090C       tenter_frequencydlg::mhz()
+ 000D:03E6       tenter_frequencydlg::rtenter_frequency102()
+ 000D:0433       tenter_frequencydlg::rtenter_frequency103()
+ 000D:0480       tenter_frequencydlg::rtenter_frequency104()
+ 000D:04CD       tenter_frequencydlg::rtenter_frequency105()
+ 000D:051A       tenter_frequencydlg::rtenter_frequency106()
+ 000D:0567       tenter_frequencydlg::rtenter_frequency107()
+ 000D:05B4       tenter_frequencydlg::rtenter_frequency108()
+ 000D:0601       tenter_frequencydlg::rtenter_frequency109()
+ 000D:064E       tenter_frequencydlg::rtenter_frequency110()
+ 000D:069B       tenter_frequencydlg::rtenter_frequency111()
+ 000D:06E8       tenter_frequencydlg::rtenter_frequency112()
+ 002A:0000       tenter_frequencydlg::__entries
+ 000D:0F7F       tenter_frequencydlg::
+ 000D:10D5       tenter_frequencydlg::
+ 001A:025C       terminate()
+ 0000:0000 idle  teventhandler::dispatch(teventhandler::teventinfo far&,int,long)
+ 0000:0000 idle  teventhandler::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  teventhandler::searchentries(tresponsetableentry<generic>far*,teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0002:06A5       teventhandler::
+ 0000:0000 idle  tfileopendialog::tfileopendialog(twindow far*,topensavedialog::tdata far&,...
+ 000C:FFC2       tfileopendialog::~tfileopendialog()
+ 0000:0000 idle  tfilesavedialog::tfilesavedialog(twindow far*,topensavedialog::tdata far&,...
+ 000C:FE4A       tfilesavedialog::~tfilesavedialog()
+ 0000:0000 idle  tfont::tfont(const char far*,int,int,int,int,int,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char)
+ 0008:1DCB       tfont::~tfont()
+ 0000:0000 idle  tframewindow::tframewindow(twindow far*,const char far*,twindow far*,int,tmodule far*)
+ 0000:0000 idle  tframewindow::~tframewindow()
+ 0000:0000 idle  tframewindow::assignmenu(tresid)
+ 0000:0000 idle  tframewindow::evcommand(unsigned int,const hwnd__ near*,unsigned int)
+ 0000:0000 idle  tframewindow::evcommandenable(tcommandenabler far&)
+ 0000:0000 idle  tframewindow::evsize(unsigned int,tsize far&)
+ 0000:0000 idle  tframewindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tframewindow::getclientwindow()
+ 0000:0000 idle  tframewindow::getcommandtarget()
+ 0000:0000 idle  tframewindow::holdfocushwnd(const hwnd__ near*,const hwnd__ near*)
+ 0000:0000 idle  tframewindow::idleaction(long)
+ 0000:0000 idle  tframewindow::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  tframewindow::removechild(twindow far*)
+ 0000:0000 idle  tframewindow::setclientwindow(twindow far*)
+ 0000:0000 idle  tframewindow::setdoctitle(const char far*,int)
+ 0000:0000 idle  tframewindow::setmenu(const hmenu__ near*)
+ 0000:0000 idle  tframewindow::setupwindow()
+ 0003:034D       tfrequency_scanchld::tfrequency_scanchld(awindow far*,int,char far*,int)
+ 0003:105A       tfrequency_scanchld::~tfrequency_scanchld()
+ 0003:1509       tfrequency_scanchld::change_hold_time()
+ 0003:14CA       tfrequency_scanchld::change_infinity()
+ 0003:1477       tfrequency_scanchld::change_listen_time()
+ 0003:1390       tfrequency_scanchld::change_max_ss()
+ 0003:1342       tfrequency_scanchld::change_min_ss()
+ 0003:13DE       tfrequency_scanchld::change_start_frequency()
+ 0003:1434       tfrequency_scanchld::change_step_size()
+ 0003:1409       tfrequency_scanchld::change_stop_frequency()
+ 0003:1255       tfrequency_scanchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0003:1C5A       tfrequency_scanchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0003:1BFD       tfrequency_scanchld::evmove(tpoint far&)
+ 0003:1DDD       tfrequency_scanchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0003:12D3       tfrequency_scanchld::getclassname()
+ 0003:12F1       tfrequency_scanchld::getwindowclass(tagwndclass far&)
+ 0003:1CA0       tfrequency_scanchld::get_frequency()
+ 0003:1763       tfrequency_scanchld::next_frequency()
+ 0003:15DB       tfrequency_scanchld::prev_frequency()
+ 0003:1298       tfrequency_scanchld::returnfocus()
+ 0003:155C       tfrequency_scanchld::scan_backward()
+ 0003:1878       tfrequency_scanchld::scan_forward()
+ 0003:11E6       tfrequency_scanchld::setupwindow()
+ 0003:1D19       tfrequency_scanchld::set_frequency(long)
+ 0003:16F0       tfrequency_scanchld::stop_scanning()
+ 0003:18DE       tfrequency_scanchld::s_meter_report(double)
+ 0003:131F       tfrequency_scanchld::where_y()
+ 001D:0000       tfrequency_scanchld::__entries
+ 0003:24BD       tfrequency_scanchld::
+ 0003:25F3       tfrequency_scanchld::
+ 000E:0024       tfrequency_window::tfrequency_window(twindow far*,int,char far*,frequency_control far*,int,int)
+ 000E:0297       tfrequency_window::~tfrequency_window()
+ 000E:0462       tfrequency_window::callenterdlg()
+ 000E:0872       tfrequency_window::evlbuttondown(unsigned int,tpoint far&)
+ 000E:081D       tfrequency_window::evlbuttonup(unsigned int,tpoint far&)
+ 000E:09DB       tfrequency_window::evmousemove(unsigned int,tpoint far&)
+ 000E:0989       tfrequency_window::evrbuttondown(unsigned int,tpoint far&)
+ 000E:0BF4       tfrequency_window::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000E:03AA       tfrequency_window::getclassname()
+ 000E:03C8       tfrequency_window::getwindowclass(tagwndclass far&)
+ 000E:05D5       tfrequency_window::paint(tdc far&,int,trect far&)
+ 000E:0B7E       tfrequency_window::updateall()
+ 002B:0000       tfrequency_window::__entries
+ 000E:0EF1       tfrequency_window::
+ 000E:0FC5       tfrequency_window::
+ 000F:00EA       tfreq_window2::tfreq_window2(twindow far*,int,char far*,frequency_control far*,int,int,int,int)
+ 000F:0702       tfreq_window2::~tfreq_window2()
+ 000F:0D90       tfreq_window2::callenterdlg()
+ 000F:1D89       tfreq_window2::check_for_repaint()
+ 000F:1D05       tfreq_window2::evactivate(unsigned int,int,const hwnd__ near*)
+ 000F:223B       tfreq_window2::evchar(unsigned int,unsigned int,unsigned int)
+ 000F:1768       tfreq_window2::evlbuttondown(unsigned int,tpoint far&)
+ 000F:14D4       tfreq_window2::evlbuttonup(unsigned int,tpoint far&)
+ 000F:19F4       tfreq_window2::evmousemove(unsigned int,tpoint far&)
+ 000F:195D       tfreq_window2::evrbuttondown(unsigned int,tpoint far&)
+ 000F:0A04       tfreq_window2::evsize(unsigned int,tsize far&)
+ 000F:22DE       tfreq_window2::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000F:095B       tfreq_window2::getclassname()
+ 000F:0CC8       tfreq_window2::getwindowclass(tagwndclass far&)
+ 000F:2215       tfreq_window2::height()
+ 000F:1065       tfreq_window2::paint(tdc far&,int,trect far&)
+ 000F:1643       tfreq_window2::redraw_frequency()
+ 000F:0F59       tfreq_window2::set_equal()
+ 000F:1590       tfreq_window2::set_value(long)
+ 000F:1E72       tfreq_window2::updateall()
+ 000F:21EF       tfreq_window2::width()
+ 002C:0000       tfreq_window2::__entries
+ 000F:271F       tfreq_window2::
+ 000F:27F3       tfreq_window2::
+ 0000:0000 idle  tgdiobject::~tgdiobject()
+ 0000:0000 idle  tinputdialog::tinputdialog(twindow far*,const char far*,const char far*,char far*,int,tmodule far*,tvalidator far*)
+ 0000:0000 idle  tinputdialog::~tinputdialog()
+ 0016:1021       tlistbox::~tlistbox()
+ 0000:0000 idle  tlistbox::getselstring(char far*,int) const
+ 000C:000F idle  tmainwindow::tmainwindow(awindow far*,char far*)
+ 000C:01DB idle  tmainwindow::~tmainwindow()
+ 000C:7C6F idle  tmainwindow::about()
+ 000C:3798 idle  tmainwindow::check_key()
+ 000C:27AF idle  tmainwindow::close_window_number(int)
+ 000C:7DC9 idle  tmainwindow::configure()
+ 000C:3766 idle  tmainwindow::evtimer(unsigned int)
+ 000C:D8EF idle  tmainwindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000C:7FD1 idle  tmainwindow::getmsg()
+ 000C:7FEA idle  tmainwindow::getmsg2(unsigned int,long)
+ 000C:034F idle  tmainwindow::getwindowclass(tagwndclass far&)
+ 000C:7D7F idle  tmainwindow::help_contents()
+ 000C:3BDC idle  tmainwindow::load_places()
+ 000C:B35D idle  tmainwindow::load_settings()
+ 000C:3DD6 idle  tmainwindow::load_settings()
+ 000C:3FCF idle  tmainwindow::load_stations()
+ 000C:896A idle  tmainwindow::notify_agc_analog()
+ 000C:856C idle  tmainwindow::notify_frequency_calibrate()
+ 000C:8C0C idle  tmainwindow::notify_get_1848()
+ 000C:8152 idle  tmainwindow::notify_lsb_spectrum_analyzer()
+ 000C:8267 idle  tmainwindow::notify_lsb_time_spectrum_analyzer()
+ 000C:8503 idle  tmainwindow::notify_morse_end_morse()
+ 000C:84C0 idle  tmainwindow::notify_morse_next_char()
+ 000C:8BCF idle  tmainwindow::notify_packet()
+ 000C:8BAB idle  tmainwindow::notify_play_voice()
+ 000C:8B8D idle  tmainwindow::notify_save_voice()
+ 000C:8365 idle  tmainwindow::notify_s_meter()
+ 000C:81E6 idle  tmainwindow::notify_usb_spectrum_analyzer()
+ 000C:82FB idle  tmainwindow::notify_usb_time_spectrum_analyzer()
+ 000C:15CB idle  tmainwindow::open_window_number(int)
+ 000C:8003 idle  tmainwindow::post()
+ 000C:94E6 idle  tmainwindow::release_windows()
+ 000C:3AAC idle  tmainwindow::reload_all()
+ 000C:39B4 idle  tmainwindow::reload_places()
+ 000C:3A67 idle  tmainwindow::reload_settings()
+ 000C:3A8E idle  tmainwindow::reload_stations()
+ 000C:80FC idle  tmainwindow::reset()
+ 000C:3B51 idle  tmainwindow::save_all()
+ 000C:C9EC idle  tmainwindow::save_places()
+ 000C:3AE5 idle  tmainwindow::save_places()
+ 000C:41C7 idle  tmainwindow::save_places_as()
+ 000C:C373 idle  tmainwindow::save_settings()
+ 000C:3B0C idle  tmainwindow::save_settings()
+ 000C:43C2 idle  tmainwindow::save_settings_as()
+ 000C:3B33 idle  tmainwindow::save_stations()
+ 000C:45BD idle  tmainwindow::save_stations_as()
+ 000C:923C idle  tmainwindow::select_all_band(unsigned int)
+ 000C:90B0 idle  tmainwindow::select_band(unsigned int)
+ 000C:0754 idle  tmainwindow::setupwindow()
+ 000C:93B1 idle  tmainwindow::stations()
+ 000C:80B5 idle  tmainwindow::takeplot()
+ 000C:8C35 idle  tmainwindow::update_from_frequency()
+ 000C:8D2E idle  tmainwindow::update_from_max_frequency()
+ 000C:8DA7 idle  tmainwindow::update_from_min_frequency()
+ 000C:8F90 idle  tmainwindow::update_from_mode()
+ 000C:8F52 idle  tmainwindow::update_from_ptt()
+ 000C:9029 idle  tmainwindow::update_from_send_morse()
+ 000C:8F19 idle  tmainwindow::update_from_spectrum_analyzer()
+ 000C:8E20 idle  tmainwindow::update_from_vfo_b()
+ 000C:4791 idle  tmainwindow::window_agc()
+ 000C:726B idle  tmainwindow::window_amateur_bands()
+ 000C:48BF idle  tmainwindow::window_am_offset()
+ 000C:49E4 idle  tmainwindow::window_analog_gain()
+ 000C:4B17 idle  tmainwindow::window_antenna_power()
+ 000C:57B9 idle  tmainwindow::window_band_scan()
+ 000C:4D71 idle  tmainwindow::window_calibrate()
+ 000C:74DB idle  tmainwindow::window_call_sign()
+ 000C:760D idle  tmainwindow::window_compression()
+ 000C:773E idle  tmainwindow::window_compression_level()
+ 000C:3185 idle  tmainwindow::window_defaults()
+ 000C:7F3A idle  tmainwindow::window_diagnostic()
+ 000C:68C4 idle  tmainwindow::window_fast_channels_1()
+ 000C:69D6 idle  tmainwindow::window_fast_channels_2()
+ 000C:6AEA idle  tmainwindow::window_fast_channels_3()
+ 000C:6BFC idle  tmainwindow::window_fast_channels_4()
+ 000C:6D0E idle  tmainwindow::window_fast_channels_5()
+ 000C:6E20 idle  tmainwindow::window_fast_channels_6()
+ 000C:6F32 idle  tmainwindow::window_fast_channels_7()
+ 000C:7044 idle  tmainwindow::window_fast_channels_8()
+ 000C:7156 idle  tmainwindow::window_fast_channels_9()
+ 000C:4E92 idle  tmainwindow::window_filter()
+ 000C:4FB5 idle  tmainwindow::window_frequency()
+ 000C:58D1 idle  tmainwindow::window_frequency_scan()
+ 000C:5B1B idle  tmainwindow::window_lsb_spectrum()
+ 000C:5DBA idle  tmainwindow::window_lsb_time()
+ 000C:51EF idle  tmainwindow::window_max_frequency()
+ 000C:7AC4 idle  tmainwindow::window_mic_gain()
+ 000C:5310 idle  tmainwindow::window_min_frequency()
+ 000C:5436 idle  tmainwindow::window_mixer_gain()
+ 000C:5563 idle  tmainwindow::window_mode()
+ 000C:7996 idle  tmainwindow::window_monitor()
+ 000C:630D idle  tmainwindow::window_morse()
+ 000C:568A idle  tmainwindow::window_ptt()
+ 000C:650C idle  tmainwindow::window_recieved_morse()
+ 000C:6550 idle  tmainwindow::window_recieved_packet()
+ 000C:6422 idle  tmainwindow::window_sent_morse()
+ 000C:59E3 idle  tmainwindow::window_spectrum_analyzer()
+ 000C:786C idle  tmainwindow::window_split()
+ 000C:679C idle  tmainwindow::window_squelch()
+ 000C:61E4 idle  tmainwindow::window_s_meter()
+ 000C:4C4A idle  tmainwindow::window_tx_antenna()
+ 000C:50CE idle  tmainwindow::window_tx_frequency()
+ 000C:5C68 idle  tmainwindow::window_usb_spectrum()
+ 000C:5F0C idle  tmainwindow::window_usb_time()
+ 000C:7375 idle  tmainwindow::window_voice_memories(unsigned int)
+ 000C:666F idle  tmainwindow::window_volume()
+ 000C:605D idle  tmainwindow::window_xy_time()
+ 0035:0FD4 idle  tmainwindow::__entries
+ 000C:0BB2       tmainwindow::
+ 000C:0C7E       tmainwindow::
+ 0000:0000 idle  tmemorydc::tmemorydc(const tdc far&)
+ 0000:0000 idle  tmemorydc::~tmemorydc()
+ 0000:0000 idle  tmemorydc::restorebitmap()
+ 0007:1594       tmemorydc::restoreobjects()
+ 0000:0000 idle  tmemorydc::selectobject(const tbitmap far&)
+ 0000:0000 idle  tmodule::tmodule(const char far*,const hinstance__ near*)
+ 0000:0000 idle  tmodule::~tmodule()
+ 0000:0000 idle  tmodule::error(int)
+ 0000:0000 idle  tmodule::error(xmsg far&,unsigned int,unsigned int)
+ 0000:0000 idle  tmodule::execdialog(tdialog far*)
+ 000C:0DAA       topensavedialog::~topensavedialog()
+ 0000:0000 idle  topensavedialog::tdata::tdata(unsigned long,const char far*,char far*,char far*,char far*,int)
+ 0000:0000 idle  topensavedialog::tdata::~tdata()
+ 0010:0FAB       tpacketchld::tpacketchld(twindow far*,int,char far*,int,int,int)
+ 0010:1247       tpacketchld::~tpacketchld()
+ 0010:1404       tpacketchld::add_int_string(int far*)
+ 0010:13C0       tpacketchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0010:1220       tpacketchld::setupwindow()
+ 0010:170D       tpacketchld::
+ 0010:17D5       tpacketchld::
+ 0000:0000 idle  tpen::tpen(const hpen__ near*,tautodelete)
+ 0014:38DA       tpen::~tpen()
+ 000B:2C4F       tpoint::tpoint()
+ 0011:002D       tpttchld::tpttchld(twindow far*,int,char far*,int,radio_control far*,char far*)
+ 0011:0292       tpttchld::~tpttchld()
+ 0011:04CE       tpttchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0011:051B       tpttchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0011:03B3       tpttchld::getclassname()
+ 0011:0428       tpttchld::toggle_button()
+ 0011:03D1       tpttchld::where_x()
+ 0011:03F4       tpttchld::where_y()
+ 002E:0000       tpttchld::__entries
+ 0011:066A       tpttchld::
+ 0011:0792       tpttchld::
+ 0000:0000 idle  tradiobutton::tradiobutton(twindow far*,int,tgroupbox far*,tmodule far*)
+ 000A:1C53       tradiobutton::~tradiobutton()
+ 0000:0000 idle  tregion::tregion(const hrgn__ near*,tautodelete)
+ 0000:0000 idle  tregion::~tregion()
+ 000E:0E6E       tregion::operator const hrgn__ near*() const
+ 000C:F881       tresid::tresid(int)
+ 0006:04AB       tresid::tresid(const char far*)
+ 0000:0000 idle  tscrollbar::tscrollbar(twindow far*,int,tmodule far*)
+ 000A:1BBE       tscrollbar::~tscrollbar()
+ 0012:00E6       tsend_morsechld::tsend_morsechld(twindow far*,int,char far*,int,int,int)
+ 0012:05FD       tsend_morsechld::~tsend_morsechld()
+ 0012:0CAD       tsend_morsechld::add_callsign()
+ 0012:1082       tsend_morsechld::add_tune_char()
+ 0012:1303       tsend_morsechld::change_macro(unsigned int)
+ 0012:0D52       tsend_morsechld::change_wpm()
+ 0012:10CD       tsend_morsechld::cq_button()
+ 0012:07CF       tsend_morsechld::edit_check()
+ 0012:0BC1       tsend_morsechld::end_morse()
+ 0012:079E       tsend_morsechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0012:14D5       tsend_morsechld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0012:1207       tsend_morsechld::finish_macro()
+ 0012:1155       tsend_morsechld::macro(unsigned int)
+ 0012:1490       tsend_morsechld::paint(tdc far&,int,trect far&)
+ 0012:0FCD       tsend_morsechld::read_file()
+ 0012:0E2D       tsend_morsechld::send_file()
+ 0012:0916       tsend_morsechld::send_next_char()
+ 0012:05C8       tsend_morsechld::setupwindow()
+ 0012:0FE6       tsend_morsechld::tune()
+ 002F:0000       tsend_morsechld::__entries
+ 0012:1A0C       tsend_morsechld::
+ 0012:1AD8       tsend_morsechld::
+ 0013:0025       tsent_morsechld::tsent_morsechld(twindow far*,char far*,int,int,int)
+ 0013:0286       tsent_morsechld::~tsent_morsechld()
+ 0013:0444       tsent_morsechld::add_char(char)
+ 0013:0401       tsent_morsechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0013:04CA       tsent_morsechld::
+ 0013:0592       tsent_morsechld::
+ 0013:06F9       tsmtrchld::tsmtrchld(twindow far*,int,char far*,int,int,int,char far*,int)
+ 0013:0AB7       tsmtrchld::~tsmtrchld()
+ 0013:1128       tsmtrchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0013:0A50       tsmtrchld::getclassname()
+ 0013:0A75       tsmtrchld::getwindowclass(tagwndclass far&)
+ 0013:0C63       tsmtrchld::height()
+ 0013:0E6B       tsmtrchld::paint(tdc far&,int,trect far&)
+ 0013:0C97       tsmtrchld::set_value(int)
+ 0013:0DBB       tsmtrchld::toggle_mute()
+ 0013:0C1D       tsmtrchld::where_y()
+ 0013:0C40       tsmtrchld::width()
+ 0030:0000       tsmtrchld::__entries
+ 0013:1217       tsmtrchld::
+ 0013:12EB       tsmtrchld::
+ 0014:0231       tspectrum::tspectrum(twindow far*,int,char far*,int,int,frequency_control far*,int far*,int far*,int)
+ 0014:1497       tspectrum::~tspectrum()
+ 0014:1C26 idle  tspectrum::address()
+ 0014:169D idle  tspectrum::button_ac_dc()
+ 0014:1964 idle  tspectrum::button_frequency()
+ 0014:1A8B idle  tspectrum::button_marker()
+ 0014:1807 idle  tspectrum::button_scale()
+ 0014:1BA6 idle  tspectrum::button_sweep()
+ 0014:1E49 idle  tspectrum::center_frequency()
+ 0014:1C0D idle  tspectrum::channel()
+ 0014:1621 idle  tspectrum::evchar(unsigned int,unsigned int,unsigned int)
+ 0014:2793 idle  tspectrum::evlbuttonup(unsigned int,tpoint far&)
+ 0014:27AC idle  tspectrum::evsize(unsigned int,tsize far&)
+ 0014:1BF4 idle  tspectrum::evtimer(unsigned int)
+ 0014:3233 idle  tspectrum::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0014:1F50 idle  tspectrum::frequency_span()
+ 0014:142D idle  tspectrum::getclassname()
+ 0014:144B idle  tspectrum::getwindowclass(tagwndclass far&)
+ 0014:2857 idle  tspectrum::height()
+ 0014:0C2A idle  tspectrum::lsb_data()
+ 0014:2566 idle  tspectrum::marker101()
+ 0014:2CFA idle  tspectrum::paint(tdc far&,int,trect far&)
+ 0014:1C71 idle  tspectrum::start_frequency()
+ 0014:2A2E idle  tspectrum::start_sweep()
+ 0014:2052 idle  tspectrum::step_size()
+ 0014:1D58 idle  tspectrum::stop_frequency()
+ 0014:2976 idle  tspectrum::stop_sweep()
+ 0014:1BCD idle  tspectrum::sweep()
+ 0014:2283 idle  tspectrum::sweep_data()
+ 0014:218A idle  tspectrum::sweep_speed()
+ 0014:10E5 idle  tspectrum::usb_data()
+ 0014:29B2 idle  tspectrum::valid_frequency(long)
+ 0014:27E8 idle  tspectrum::where_x()
+ 0014:280E idle  tspectrum::where_y()
+ 0014:2831 idle  tspectrum::width()
+ 0035:2370 idle  tspectrum::__entries
+ 0014:3967       tspectrum::
+ 0014:3A3B       tspectrum::
+ 0015:0114       tstatchld::tstatchld(awindow far*,char far*,int,int)
+ 0015:06DA       tstatchld::~tstatchld()
+ 0015:08C0       tstatchld::change_button(unsigned int)
+ 0015:0D78       tstatchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0015:0833       tstatchld::reply_button(unsigned int)
+ 0015:0A6D       tstatchld::update_channel()
+ 0015:0810       tstatchld::where_y()
+ 0031:0000       tstatchld::__entries
+ 0015:116A       tstatchld::
+ 0015:1232       tstatchld::
+ 0000:0000 idle  tstatic::tstatic(twindow far*,int,const char far*,int,int,int,int,unsigned int,tmodule far*)
+ 0000:0000 idle  tstatic::tstatic(twindow far*,int,unsigned int,tmodule far*)
+ 0003:2773       tstatic::~tstatic()
+ 0000:0000 idle  tstatic::clear()
+ 0000:0000 idle  tstatic::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0005:2177       tstatic::gettext(char far*,int)
+ 0005:214C       tstatic::settext(const char far*)
+ 0000:0000 idle  tstatic::transfer(void far*,ttransferdirection)
+ 0016:0024       tstationsdlg::tstationsdlg(twindow far*,char far*)
+ 0016:0243       tstationsdlg::~tstationsdlg()
+ 0016:0B1E       tstationsdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0016:04F7       tstationsdlg::rtstations102()
+ 0016:085B       tstationsdlg::rtstations103()
+ 0016:08D7       tstationsdlg::rtstations104()
+ 0016:0A67       tstationsdlg::rtstations105()
+ 0016:03B3       tstationsdlg::setupwindow()
+ 0032:0000       tstationsdlg::__entries
+ 0016:0D5C       tstationsdlg::
+ 0016:0E30       tstationsdlg::
+ 000C:FB2D       tstatus::operator int() const
+ 0000:0000 idle  tstreamablebase::~tstreamablebase()
+ 0002:0657       tstreamablebase::
+ 0017:0114       tvoicechld::tvoicechld(awindow far*,char far*,int,int)
+ 0017:06E7       tvoicechld::~tvoicechld()
+ 0017:09A8       tvoicechld::change_button(unsigned int)
+ 0017:085C       tvoicechld::cleanupwindow()
+ 0017:08A7       tvoicechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0017:0C39       tvoicechld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0017:0939       tvoicechld::reply_button(unsigned int)
+ 0017:08EA       tvoicechld::updateallbuttons()
+ 0017:0884       tvoicechld::where_y()
+ 0033:0000       tvoicechld::__entries
+ 0017:10E8       tvoicechld::
+ 0017:11B4       tvoicechld::
+ 0018:00D0       tvoicedlg::tvoicedlg(twindow far*,int)
+ 0018:0593       tvoicedlg::~tvoicedlg()
+ 0018:0BF3       tvoicedlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0018:0B10       tvoicedlg::ok()
+ 0018:09F4       tvoicedlg::respond_air_play()
+ 0018:0998       tvoicedlg::respond_air_record()
+ 0018:096A       tvoicedlg::respond_mic_record()
+ 0018:0A45       tvoicedlg::respond_record()
+ 0018:09C6       tvoicedlg::respond_speaker_play()
+ 0018:0893       tvoicedlg::setupwindow()
+ 0034:0000       tvoicedlg::__entries
+ 0018:0DF1       tvoicedlg::
+ 0018:0ECD       tvoicedlg::
+ 0000:0000 idle  twindow::twindow()
+ 0000:0000 idle  twindow::~twindow()
+ 000F:2576       twindow::operator const hwnd__ near*() const
+ 0007:144B       twindow::bringwindowtotop()
+ 0000:0000 idle  twindow::canclose()
+ 0018:0D91       twindow::checkradiobutton(int,int,int)
+ 0000:0000 idle  twindow::cleanupwindow()
+ 0000:0000 idle  twindow::closewindow(int)
+ 0000:0000 idle  twindow::create()
+ 0000:0000 idle  twindow::defaultprocessing()
+ 0000:0000 idle  twindow::defwindowproc(unsigned int,unsigned int,long)
+ 0000:0000 idle  twindow::destroy(int)
+ 0002:04F3       twindow::enablewindow(int)
+ 0007:1470       twindow::evactivate(unsigned int,int,const hwnd__ near*)
+ 0000:0000 idle  twindow::evcommand(unsigned int,const hwnd__ near*,unsigned int)
+ 0000:0000 idle  twindow::evcommandenable(tcommandenabler far&)
+ 0000:0000 idle  twindow::evhscroll(unsigned int,unsigned int,const hwnd__ near*)
+ 0007:1652       twindow::evlbuttonup(unsigned int,tpoint far&)
+ 0000:0000 idle  twindow::evmove(tpoint far&)
+ 0007:1606       twindow::evrbuttonup(unsigned int,tpoint far&)
+ 0000:0000 idle  twindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0014:36D1       twindow::getapplication() const
+ 0000:0000 idle  twindow::getclassname()
+ 0006:0B13       twindow::getmodule() const
+ 0000:0000 idle  twindow::getwindowclass(tagwndclass far&)
+ 0016:0CA8       twindow::getwindowtext(char far*,int) const
+ 0000:0000 idle  twindow::handlemessage(unsigned int,unsigned int,long)
+ 0000:0000 idle  twindow::holdfocushwnd(const hwnd__ near*,const hwnd__ near*)
+ 0000:0000 idle  twindow::idleaction(long)
+ 0007:14F0       twindow::invalidatergn(const hrgn__ near*,int)
+ 0007:1497       twindow::isiconic() const
+ 000B:2CB7       twindow::killtimer(unsigned int)
+ 0000:0000 idle  twindow::messagebox(const char far*,const char far*,unsigned int)
+ 0007:14BC       twindow::movewindow(int,int,int,int,int)
+ 0000:0000 idle  twindow::paint(tdc far&,int,trect far&)
+ 0000:0000 idle  twindow::performcreate(int)
+ 000C:F850       twindow::postmessage(unsigned int,unsigned int,long)
+ 0000:0000 idle  twindow::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  twindow::register()
+ 000F:2558       twindow::releasecapture()
+ 0000:0000 idle  twindow::removechild(twindow far*)
+ 0000:0000 idle  twindow::sendmessage(unsigned int,unsigned int,long)
+ 0000:0000 idle  twindow::setcaption(const char far*)
+ 000F:25BC       twindow::setcapture()
+ 0000:0000 idle  twindow::setdoctitle(const char far*,int)
+ 0007:162D       twindow::setfocus()
+ 0000:0000 idle  twindow::setparent(twindow far*)
+ 000B:2C86       twindow::settimer(unsigned int,unsigned int,void(far*)(const hwnd__ near*,unsigned int,unsigned int,unsigned long))
+ 0000:0000 idle  twindow::setupwindow()
+ 0000:0000 idle  twindow::show(int)
+ 0002:051B       twindow::showwindow(int)
+ 0000:0000 idle  twindow::transfer(void far*,ttransferdirection)
+ 0000:0000 idle  twindow::transferdata(ttransferdirection)
+ 0007:151B       twindow::updatewindow()
+ 0000:0000 idle  twindow::windowproc(unsigned int,unsigned int,long)
+ 0000:0000 idle  twindowdc::~twindowdc()
+ 0019:0267       txantenna_power_control::get_error_message()
+ 0019:0306       txantenna_power_control::get_max()
+ 0019:02F2       txantenna_power_control::get_min()
+ 0019:0252       txantenna_power_control::get_name()
+ 0019:027C       txantenna_power_control::get_value()
+ 0019:031B       txantenna_power_control::mute()
+ 0019:0329       txantenna_power_control::restore()
+ 0019:0290       txantenna_power_control::set_value(long)
+ 000C:0AC2       txantenna_power_control::
+ 0019:09D8       tx_frequency_control::get_error_message()
+ 0019:0B8D       tx_frequency_control::get_max()
+ 0019:0B76       tx_frequency_control::get_min()
+ 0019:09C3       tx_frequency_control::get_name()
+ 0019:09ED       tx_frequency_control::get_value()
+ 0019:0BA4       tx_frequency_control::mute()
+ 0019:0BB2       tx_frequency_control::restore()
+ 0019:0A04       tx_frequency_control::set_value(long)
+ 000C:09AA       tx_frequency_control::
+ 0019:0151       tx_i_adjust_control::get_error_message()
+ 0019:0221       tx_i_adjust_control::get_max()
+ 0019:020C       tx_i_adjust_control::get_min()
+ 0019:013C       tx_i_adjust_control::get_name()
+ 0019:0166       tx_i_adjust_control::get_value()
+ 0019:0236       tx_i_adjust_control::mute()
+ 0019:0244       tx_i_adjust_control::restore()
+ 0019:017D       tx_i_adjust_control::set_value(long)
+ 000C:0842       tx_i_adjust_control::
+ 001A:039F       unexpected()
+ 0019:214C idle  update_dds_control()
+ 0019:242F idle  valid_callsign(int)
+ 0019:2531 idle  valid_tx_frequency(int)
+ 0019:23FB       valid_xmit(int)
+ 0019:1B37       volume_control::get_error_message()
+ 0019:1BD0       volume_control::get_max()
+ 0019:1BBC       volume_control::get_min()
+ 0019:1B22       volume_control::get_name()
+ 0019:1B4C       volume_control::get_value()
+ 0019:1BE5       volume_control::mute()
+ 0019:1C1B       volume_control::restore()
+ 0019:1B60       volume_control::set_value(long)
+ 000C:0B8A       volume_control::
+ 0000:0000 idle  v_activate_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 0000:0000 idle  v_dispatch(generic far&,generic far&,void(*)(),unsigned int,long)
+ 0000:0000 idle  v_point_dispatch(generic far&,generic far&,void(*)(tpoint far&),unsigned int,long)
+ 000B:2DA7       v_point_sig(tcontrolchld far&,void(*)(tpoint far&))
+ 0005:21F5       v_point_sig(tbandscanchld far&,void(*)(tpoint far&))
+ 0004:391F       v_point_sig(tall_channelschld far&,void(*)(tpoint far&))
+ 0003:2265       v_point_sig(tfrequency_scanchld far&,void(*)(tpoint far&))
+ 0007:171B       v_point_sig(awindow far&,void(*)(tpoint far&))
+ 000C:FBB3       v_sig(tmainwindow far&,void(*)())
+ 000B:2CDF       v_sig(tcontrolchld far&,void(*)())
+ 0016:0CD6       v_sig(tstationsdlg far&,void(*)())
+ 0005:2227       v_sig(tbandscanchld far&,void(*)())
+ 000A:181A       v_sig(tconfiguredlg far&,void(*)())
+ 000F:25E1       v_sig(tfreq_window2 far&,void(*)())
+ 0006:04F4       v_sig(tdiagnosticdlg far&,void(*)())
+ 0006:179B       v_sig(tallfrequencies far&,void(*)())
+ 0012:19A8       v_sig(tsend_morsechld far&,void(*)())
+ 0004:3951       v_sig(tall_channelschld far&,void(*)())
+ 000E:0E8D       v_sig(tfrequency_window far&,void(*)())
+ 000D:0EF9       v_sig(tenter_frequencydlg far&,void(*)())
+ 0003:2297       v_sig(tfrequency_scanchld far&,void(*)())
+ 0010:0CE6       v_sig(amarker far&,void(*)())
+ 0011:0606       v_sig(tpttchld far&,void(*)())
+ 0006:0B4B       v_sig(taboutdlg far&,void(*)())
+ 0013:11E5       v_sig(tsmtrchld far&,void(*)())
+ 0014:3812       v_sig(tspectrum far&,void(*)())
+ 0018:0DBF       v_sig(tvoicedlg far&,void(*)())
+ 0017:10B6       v_u_b_w_sig(tvoicechld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 000B:2D11       v_u_b_w_sig(tcontrolchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0005:21C3       v_u_b_w_sig(tbandscanchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 000F:26A9       v_u_b_w_sig(tfreq_window2 far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0004:38ED       v_u_b_w_sig(tall_channelschld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0003:2233       v_u_b_w_sig(tfrequency_scanchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0007:16B7       v_u_b_w_sig(awindow far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0000:0000 idle  v_u_point_dispatch(generic far&,generic far&,void(*)(unsigned int,tpoint far&),unsigned int,long)
+ 000B:2D43       v_u_point_sig(tcontrolchld far&,void(*)(unsigned int,tpoint far&))
+ 0007:174D       v_u_point_sig(abitmapbutton far&,void(*)(unsigned int,tpoint far&))
+ 000F:2645       v_u_point_sig(tfreq_window2 far&,void(*)(unsigned int,tpoint far&))
+ 000E:0EBF       v_u_point_sig(tfrequency_window far&,void(*)(unsigned int,tpoint far&))
+ 0007:177F       v_u_point_sig(abutton far&,void(*)(unsigned int,tpoint far&))
+ 0008:1A85       v_u_point_sig(tcallsign far&,void(*)(unsigned int,tpoint far&))
+ 0014:3876       v_u_point_sig(tspectrum far&,void(*)(unsigned int,tpoint far&))
+ 0017:1084       v_u_sig(tvoicechld far&,void(*)(unsigned int))
+ 000C:FBE5       v_u_sig(tmainwindow far&,void(*)(unsigned int))
+ 000B:2D75       v_u_sig(tcontrolchld far&,void(*)(unsigned int))
+ 0012:19DA       v_u_sig(tsend_morsechld far&,void(*)(unsigned int))
+ 0004:3983       v_u_sig(tall_channelschld far&,void(*)(unsigned int))
+ 0008:0C53       v_u_sig(tbandchld far&,void(*)(unsigned int))
+ 0014:3844       v_u_sig(tspectrum far&,void(*)(unsigned int))
+ 0015:1138       v_u_sig(tstatchld far&,void(*)(unsigned int))
+ 000F:2613       v_u_size_sig(tfreq_window2 far&,void(*)(unsigned int,tsize far&))
+ 0008:1AB7       v_u_size_sig(tcallsign far&,void(*)(unsigned int,tsize far&))
+ 0014:38A8       v_u_size_sig(tspectrum far&,void(*)(unsigned int,tsize far&))
+ 0000:0000 idle  v_u_u_u_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 000F:2677       v_u_u_u_sig(tfreq_window2 far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0007:16E9       v_u_u_u_sig(awindow far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0011:0638       v_u_u_u_sig(tpttchld far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0008:1AE9       v_u_u_u_sig(tcallsign far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0000:0000 idle  v_u_u_w_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 000A:184C       v_u_u_w_sig(tconfiguredlg far&,void(*)(unsigned int,unsigned int,const hwnd__ near*))
+ 0000:0000 idle  v_wparam_dispatch(generic far&,generic far&,void(*)(unsigned int),unsigned int,long)
+ 0007:10C0       whitestatic::whitestatic(twindow far*,int,const char far*,int,int,int,int,unsigned int)
+ 0007:0FCD       whitestatic::whitestatic(twindow far*,int,unsigned int)
+ 0007:18F3       whitestatic::~whitestatic()
+ 0007:11D1       whitestatic::getclassname()
+ 0007:11EF       whitestatic::getwindowclass(tagwndclass far&)
+ 0007:1238       whitestatic::paint(tdc far&,int,trect far&)
+ 0007:17F5       whitestatic::
+ 0007:19AD       whitestatic::
+ 0018:1491 idle  write_dsp_boot_word(unsigned int)
+ 0018:14CD idle  write_dsp_word(unsigned int)
+ 0000:0000 idle  xmsg::~xmsg()
+ 0000:0000 idle  _catchcleanup()
+ 0001:01C1       __eh_alloctable()
+ 0001:04C7       __eh_getclientdata(unsigned int)
+ 0001:05C2       __eh_initstaticdata()
+ 001A:0487 idle  __getpolymorphicdtc(void far*,unsigned int)
+ 001A:04DB       __getpolymorphicdtcfar(void far*,unsigned int)
+ 0000:0000 idle  __refdestructorcount()
+ 0000:0000 idle  BITBLT
+ 0000:0000 idle  BRINGWINDOWTOTOP
+ 0018:13B1       CALLBACKFUNCTION
+ 0000:0000 idle  CHECKRADIOBUTTON
+ 0000:0000 idle  CLIPCURSOR
+ 0000:0000 idle  CREATEPENINDIRECT
+ 0000:0000 idle  CREATERECTRGN
+ 0000:0000 idle  CREATESOLIDBRUSH
+ 0000:0000 idle  DELETEOBJECT
+ 0000:0000 idle  ENABLEWINDOW
+ 0000:0000 idle  ENUMTASKWINDOWS
+ 0000:0000 idle  FATALEXIT
+ 0000:FE32 idle  FIARQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:0632 idle  FISRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:4000 idle  FJARQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:8000 idle  FJSRQQ
+ 0000:0000 idle  FREELIBRARY
+ 0000:0000 idle  FREEPROCINSTANCE
+ 0001:13C0 idle  FTOL@
+ 0001:1594       F_CHKSTK@
+ 0001:13C0       F_FTOL@
+ 0001:1406       F_LDIV@
+ 0001:1415       F_LMOD@
+ 0001:140D idle  F_LUDIV@
+ 0001:141D idle  F_LUMOD@
+ 0001:14B4       F_LXLSH@
+ 0001:13EC       F_LXMUL@
+ 0001:15BC       F_SCOPY@
+ 0001:15DE       F_SPUSH@
+ 0000:0000 idle  GETCURRENTTASK
+ 0000:0000 idle  GETDESKTOPWINDOW
+ 0000:0000 idle  GETMODULEFILENAME
+ 0000:0000 idle  GETMODULEUSAGE
+ 0000:0000 idle  GETWINDOWRECT
+ 0000:0000 idle  GETWINDOWTEXT
+ 0000:0000 idle  GETWINFLAGS
+ 0000:0000 idle  GLOBALALLOC
+ 0000:0000 idle  GLOBALFREE
+ 0000:0000 idle  GLOBALHANDLE
+ 0000:0000 idle  GLOBALLOCK
+ 0000:0000 idle  GLOBALUNLOCK
+ 0000:0000 idle  INITAPP
+ 0000:0000 idle  INITTASK
+ 0000:0000 idle  INVALIDATERGN
+ 0000:0000 idle  ISICONIC
+ 0000:0000 idle  KILLTIMER
+ 0001:1406 idle  LDIV@
+ 0000:0000 idle  LINETO
+ 0001:1415 idle  LMOD@
+ 0000:0000 idle  LOADICON
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  LOCKSEGMENT
+ 0001:140D idle  LUDIV@
+ 0001:141D idle  LUMOD@
+ 0001:14B4 idle  LXLSH@
+ 0001:13EC idle  LXMUL@
+ 0000:0000 idle  MAKEPROCINSTANCE
+ 0000:0000 idle  MESSAGEBOX
+ 0000:0000 idle  MOVETOEX
+ 0000:0000 idle  MOVEWINDOW
+ 0001:1591 idle  N_CHKSTK@
+ 0001:1403 idle  N_LDIV@
+ 0001:1412 idle  N_LMOD@
+ 0001:140A idle  N_LUDIV@
+ 0001:141A idle  N_LUMOD@
+ 0001:14B1 idle  N_LXLSH@
+ 0001:15D8 idle  N_SPUSH@
+ 0000:0000 idle  OPENICON
+ 0000:0000 idle  PAINTRGN
+ 0000:0000 idle  POSTMESSAGE
+ 0000:0000 idle  RELEASECAPTURE
+ 0001:15BC idle  SCOPY@
+ 0000:0000 idle  SENDMESSAGE
+ 0000:0000 idle  SETCAPTURE
+ 0000:0000 idle  SETCURSORPOS
+ 0000:0000 idle  SETFOCUS
+ 0000:0000 idle  SETPIXEL
+ 0000:0000 idle  SETTIMER
+ 0000:0000 idle  SETWINDOWTEXT
+ 0000:0000 idle  SHOWCURSOR
+ 0000:0000 idle  SHOWWINDOW
+ 0001:15DE idle  SPUSH@
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0000:0000 idle  UPDATEWINDOW
+ 0000:0000 idle  WAITEVENT
+ 0000:0000 idle  WINEXEC
+ 001A:005E       WINMAIN
+ 0001:161A       _abort
+ 0035:227A idle  _ac_dc_labels
+ 0035:7376 idle  _agc_control
+ 0035:0CAC idle  _agc_labels
+ 0035:730E       _am_meter_bitmap
+ 0035:0F1C       _am_offset_active
+ 0035:737A idle  _am_offset_control
+ 0035:85EC       _analog_string
+ 0035:7392 idle  _antenna_power_control
+ 0035:0EA0 idle  _antenna_power_labels
+ 0001:0754       _atan
+ 0001:162C idle  _atexit
+ 0001:065A       _atof
+ 0000:0000 idle  _atol
+ 0035:2BD6       _banded
+ 0035:2740       _bands
+ 0035:2B4E       _band_pointers
+ 0035:6F54       _Band_Scan_Data
+ 0035:2A08 idle  _Baudot
+ 0035:2ACC idle  _baudot_alphabet
+ 0035:2AC8 idle  _baudot_recieve_shift
+ 0035:2ACA idle  _baudot_transmit_shift
+ 0035:1FC2 idle  _bits
+ 0035:6FA8       _Blue
+ 0035:0FCC idle  _calibrate_amount
+ 0035:73B6 idle  _calibrate_control
+ 0035:0FC8 idle  _calibrate_data
+ 0035:73CE idle  _calibrate_increment
+ 0035:0FD0 idle  _calibrate_last_direction
+ 0035:0FD2 idle  _calibrate_last_distance
+ 0035:75DE idle  _CallBack
+ 0035:72C2 idle  _CallBackInstance
+ 0035:0FC6 idle  _change_calibrate
+ 0035:4A10       _channels_selected
+ 0035:2368 idle  _channel_status
+ 0035:0FBC       _closing
+ 0035:73D4 idle  _comm
+ 0035:7382 idle  _compression_control
+ 0035:0CE8 idle  _compression_labels
+ 0035:7386 idle  _compression_level_control
+ 0035:3836 idle  _control_timer_message
+ 0035:3838 idle  _control_timer_point
+ 0000:0000 idle  _cos
+ 0035:2270 idle  _current_frequency
+ 0035:2BA8       _dds_control_address
+ 0035:2BAA       _dds_freq_address
+ 0035:70DE       _delete_class
+ 0035:7322 idle  _Diagnostics
+ 0035:0A70 idle  _dip_switch
+ 0035:339E idle  _DocTemplateStaticHead
+ 0035:0B82 idle  _dsp_message
+ 0035:0030 idle  _errno
+ 0001:16DF       _exit
+ 0000:0000 idle  _fclose
+ 0000:0000 idle  _fflush
+ 0000:0000 idle  _fgetc
+ 0000:0000 idle  _fgets
+ 0035:739E       _filter_control
+ 0035:0D38 idle  _filter_labels
+ 0000:0000 idle  _flushall
+ 0000:0000 idle  _fopen
+ 0000:0000 idle  _fprintf
+ 0000:0000 idle  _fputc
+ 0000:0000 idle  _free
+ 0035:83EC       _frequency_calibrate_string
+ 0035:73A6       _frequency_control
+ 0035:6F7A       _Frequency_Scan_Data
+ 0035:9442       _frequency_time
+ 0035:2278 idle  _freq_speed
+ 0000:0000 idle  _fscanf
+ 0035:75E8       _Game_Port_Address
+ 0001:1B4A idle  _getdate
+ 0001:1B63       _gettime
+ 0035:8BEC       _get_1848_string
+ 0035:6FAA       _Green
+ 0035:226A idle  _grid
+ 0035:73D6 idle  _have_data
+ 0035:7372 idle  _if_gain_control
+ 0035:2276 idle  _in_timer
+ 0035:738A       _i_adjust_control
+ 0035:0FBE       _key_config
+ 0035:72C6       _knobs
+ 0035:0B86       _knob_speed
+ 0001:14D2       _labs
+ 0035:1FC0 idle  _last_amount
+ 0035:1FBE idle  _last_direction
+ 0035:2722 idle  _last_message_recieved
+ 0035:73C2       _leading_zeros
+ 0000:0000 idle  _log10
+ 0035:271C idle  _lost_transmit_charactors
+ 0035:79EC       _lsb_string
+ 0035:7DEC       _lsb_time_string
+ 0035:73CA idle  _MainWindow
+ 0000:0000 idle  _malloc
+ 0035:73AE       _max_frequency_control
+ 0035:73DC idle  _message
+ 0035:271A idle  _message_length
+ 0035:2718 idle  _message_number
+ 0035:75EA idle  _message_pointer
+ 0035:75EC idle  _message_string
+ 0035:2BAC idle  _mic_level
+ 0035:736E idle  _mic_level_control
+ 0035:73B2       _min_frequency_control
+ 0035:739A idle  _mixer_gain_control
+ 0035:0EC8 idle  _mixer_gain_labels
+ 0035:73A2       _mode_control
+ 0035:0E00 idle  _mode_labels
+ 0035:339A       _Module
+ 0035:73BE idle  _monitor_control
+ 0035:0BB6       _morse_button_macros
+ 0035:0B92       _morse_button_names
+ 0035:2160 idle  _morse_charactors
+ 0035:1FD4 idle  _morse_dit_dahs
+ 0035:0B90 idle  _Need_More_Voice
+ 0035:8C2C idle  _null_data
+ 0035:0B8B idle  _OFF_STRING
+ 0035:0F20       _old_key
+ 0035:944A idle  _old_ptt
+ 0035:0B88 idle  _ON_STRING
+ 0035:943C       _packet_length
+ 0035:1FBA idle  _packet_speed
+ 0035:89EC       _packet_string
+ 0035:1FBC idle  _packet_tolerance
+ 0035:2BD8 idle  _parallel_port
+ 0035:0AB8 idle  _pi
+ 0035:724A idle  _places_name
+ 0035:73D0 idle  _poll_dsp
+ 0000:0000 idle  _pow
+ 0000:0000 idle  _pow10
+ 0035:2BAE       _preselector_address
+ 0035:75E4 idle  _pss_control
+ 0035:75E2 idle  _pss_data
+ 0035:75E6 idle  _pss_status
+ 0035:7326       _PTAGC
+ 0035:0F54 idle  _PTAmateurBands
+ 0035:0FA4 idle  _PTAM_Meter
+ 0035:7362 idle  _PTAM_Offset
+ 0035:733A idle  _PTAntenna_Power
+ 0035:0F58       _PTBandScan
+ 0035:383C idle  _PTCal
+ 0035:735E idle  _PTCalibrate
+ 0035:734A idle  _PTCompression
+ 0035:734E idle  _PTCompression_Level
+ 0035:732A       _PTFilter
+ 0035:735A       _PTFreq
+ 0035:0F5C idle  _PTFrequencyScan
+ 0035:7332 idle  _PTGain
+ 0035:0F28       _PTMaxFreq
+ 0035:7342 idle  _PTMic_Level
+ 0035:0F2C       _PTMinFreq
+ 0035:733E idle  _PTMixer_Gain
+ 0035:7336       _PTMode
+ 0035:7356 idle  _PTMonitor
+ 0035:0FAC idle  _PTMorse
+ 0035:0FB8 idle  _PTPacket
+ 0035:0FA8       _PTPTT
+ 0035:0FB0 idle  _PTSent_Morse
+ 0035:0F84       _PTSpectrum
+ 0035:7352 idle  _PTSplit
+ 0035:0FB4 idle  _PTSquelch
+ 0035:0F30       _PTStations
+ 0035:0FA0 idle  _PTS_Meter
+ 0035:7346 idle  _PTTXAntenna_Power
+ 0035:0F24       _PTTXFreq
+ 0035:0FC0 idle  _ptt_check_for_time
+ 0035:73BA       _ptt_control
+ 0035:0D10 idle  _ptt_labels
+ 0035:9446 idle  _ptt_time
+ 0035:0F1E       _ptt_via_joystick
+ 0035:0F60 idle  _PTVoice_Memories
+ 0035:732E idle  _PTVolume
+ 0035:0F9C idle  _PT_CallSign
+ 0035:0F8C idle  _PT_LSB_Spectrum
+ 0035:0F94 idle  _PT_LSB_Time
+ 0035:0F88 idle  _PT_USB_Spectrum
+ 0035:0F90 idle  _PT_USB_Time
+ 0035:0F98 idle  _PT_XY_Time
+ 0035:41A0       _quick_stations
+ 0035:73C6 idle  _RadioWareAlg
+ 0000:0000 idle  _raise
+ 0000:0000 idle  _realloc
+ 0035:6FAC       _Red
+ 0035:263A idle  _repeat
+ 0035:0F22       _save_on_exit
+ 0035:22A2 idle  _scale_labels
+ 0035:2356 idle  _scale_values
+ 0035:0F18 idle  _screen_max_x
+ 0035:0F1A idle  _screen_max_y
+ 0035:2268 idle  _send_to_null
+ 0035:2BDA idle  _sent
+ 0035:7272 idle  _settings_name
+ 0035:7312 idle  _sheet_bitmap
+ 0035:0B8E idle  _Show_About
+ 0035:73D2 idle  _show_errors
+ 0000:0000 idle  _sin
+ 0035:944C idle  _sine
+ 0035:730A       _smeter_bitmap
+ 0035:81EC       _smeter_string
+ 0035:6FAE       _Sound_Card
+ 0035:2720 idle  _spectrum_length
+ 0035:77EC idle  _spectrum_string
+ 0035:737E       _split_control
+ 0035:0DB0 idle  _split_labels
+ 0000:0000 idle  _sprintf
+ 0000:0000 idle  _sqrt
+ 0035:7366 idle  _squelch_control
+ 0000:0000 idle  _sscanf
+ 0035:6FB2       _starting_places
+ 0035:7174       _starting_sizes
+ 0035:3840       _stations
+ 0035:729A idle  _stations_name
+ 0035:73C4       _stations_reset_bands
+ 0035:73D8 idle  _station_data
+ 0035:226C idle  _step_size
+ 0000:0000 idle  _strcat
+ 0000:0000 idle  _strcmp
+ 0000:0000 idle  _strcpy
+ 0000:0000 idle  _strlen
+ 0000:0000 idle  _strncmp
+ 0000:0000 idle  _strncpy
+ 0000:0000 idle  _strrchr
+ 0001:071D       _strtod
+ 0000:0000 idle  _strupr
+ 0035:2274 idle  _sweep_speed
+ 0035:73C8       _TestWindow
+ 0035:943E idle  _timeout
+ 0035:6FB0 idle  _TimerID
+ 0001:0628       _toupper
+ 0035:731A       _tune_bitmap
+ 0035:7396 idle  _tx_antenna_power_control
+ 0035:73AA       _tx_frequency_control
+ 0035:738E       _tx_i_adjust_control
+ 0035:7BEC       _usb_string
+ 0035:7FEC       _usb_time_string
+ 0035:4AC4       _voice_memories
+ 0035:87EC       _voice_string
+ 0035:736A idle  _volume_control
+ 0035:0F04 idle  _volume_labels
+ 0035:2ACE idle  _Volume_Levels
+ 0035:2724 idle  _wait_for_message
+ 0035:71B4 idle  _windows_on_top
+ 0035:0FC4 idle  _xmit
+ 0035:0034 idle  __8086
+ 0035:0036 idle  __8087
+ 0035:0049 idle  __abend
+ 0001:1726       __abort
+ 0000:0000 idle  __acrtused
+ 0001:1A31 idle  __addarg
+ 0001:1594 idle  __aFchkstk
+ 0001:1591 idle  __aNchkstk
+ 0035:94D2       __argc
+ 0035:94D4       __argv
+ 0035:373C       __argv0
+ 0035:369C       __atexitcnt
+ 0035:9452       __atexittbl
+ 0001:1709 idle  __cexit
+ 0001:0104       __checknull
+ 0001:00F2       __cleanup
+ 0035:0040 idle  __cmdShow
+ 0035:3506       __ctype
+ 0000:0000  Abs  __cvtfak
+ 0001:1717 idle  __c_exit
+ 0000:0010 idle  __DestructorCount
+ 0035:944E idle  __DestructorCountPtr
+ 0001:178E       __errorBox
+ 0001:17E6       __errorExitBox
+ 001A:0533       __ExceptInit
+ 0000:0000 idle  __ExceptionHandler
+ 0000:0014 idle  __Exception_list
+ 0001:16F4       __exit
+ 0035:369E       __exitbuf
+ 0035:36A2       __exitfopen
+ 0035:36A6       __exitopen
+ 0001:11FA       __f87_ArcTan
+ 0001:1101 idle  __f87_Cosine
+ 0001:12E7 idle  __f87_Exp
+ 0001:12DD idle  __f87_Exp10
+ 0001:12D9 idle  __f87_Exp2
+ 0001:126D idle  __f87_Log
+ 0001:1268 idle  __f87_Log10
+ 0001:1263 idle  __f87_Log2
+ 0001:10FD idle  __f87_Sine
+ 0001:1105 idle  __f87_Tangent
+ 0001:0FF2       __fbstp
+ 0000:8087 idle  __floatconvert
+ 0000:0000 idle  __fmemcpy
+ 0000:0000 idle  __FpeHandler
+ 0001:151C       __fperr
+ 0000:0000 idle  __FPMATH
+ 0001:152D idle  __fpreset
+ 0035:375C       __FPVector
+ 0001:0623 idle  __freeio
+ 0001:011B       __GetDGROUP
+ 0000:0000 idle  __GETRTLINSTANCEDATA
+ 0035:003A       __hInstance
+ 0035:003C idle  __hPrev
+ 0035:360C       __huge_dble
+ 0035:3608 idle  __huge_flt
+ 0035:3614 idle  __huge_ldble
+ 0035:361E idle  __indefinite
+ 0001:0062 idle  __INITAPPCALLED
+ 0001:0764       __LDTRUNC
+ 0035:0047       __LockWIN87EM
+ 0035:0042 idle  __osmajor
+ 0035:0043 idle  __osminor
+ 0035:0044 idle  __osmode
+ 0035:0042 idle  __osversion
+ 0035:0032 idle  __protected
+ 0035:0038       __psp
+ 0035:003E       __pszCmdline
+ 0035:3760 idle  __RealCvtVector
+ 0001:0105       __restorezero
+ 0000:0000 idle  __Return_unwind
+ 0001:158D idle  __scanpop
+ 0001:1589 idle  __scanrslt
+ 0001:1585       __scantod
+ 0035:3764       __ScanTodVector
+ 0001:1808 idle  __setargv
+ 0001:061E       __setupio
+ 0001:06AA idle  __strtold
+ 0001:0106       __terminate
+ 0035:3622 idle  __tiny_ldble
+ 0000:0000  Abs  __turboCvt
+ 0000:8087  Abs  __turboFloat
+ 0035:0042 idle  __version
+ 0035:0045 idle  __WinAllocFlag
+ 0000:0000 idle  __windowsFloat
+ 0001:00DB idle  __WINMAINCALL
+ 0001:0DB6       __XCVT
+ 0035:3500       ___cachedSS
+ 0035:3502       ___cachedVarPtr
+ 001A:02EC idle  ___call_terminate
+ 001A:0404 idle  ___call_unexpected
+ 0035:33BA       ___CPPexceptionList
+ 0035:34E2       ___EH_TablePtr
+ 0001:1600       ___ErrorMessage
+ 0035:33BE idle  ___exceptFlags
+ 0035:33E2 idle  ___exceptionNameBuff
+ 0035:33DE idle  ___exceptMemAllocVars
+ 0035:33DA idle  ___exceptStaticBuffP
+ 0035:3462 idle  ___ExceptStaticXbuff
+ 0000:0000 idle  ___ExitExceptBlocks
+ 0000:0000 idle  ___getErrno
+ 001A:01FC       ___InitExceptBlock
+ 0001:0616       ___InitExceptBlocks
+ 0000:0000 idle  ___InitExceptBlocksX
+ 0001:065A idle  ___org_atof
+ 0001:071D idle  ___org_strtod
+ 001A:0487 idle  ___org__GetPolymorphicDTC
+ 0001:06AA idle  ___org__strtold
+ 0035:33C0 idle  ___savedDS
+ 0035:33C2 idle  ___savedSI
+ 0035:33C4 idle  ___terminatePTR
+ 0035:33CC idle  ___terminate_DS
+ 0035:33D6 idle  ___throwExceptionName
+ 0035:33D0 idle  ___throwFileName
+ 0035:33D4 idle  ___throwLineNumber
+ 0035:33C8 idle  ___unexpectdPTR
+ 0035:33CE idle  ___unexpectd_DS
+
+  Address         Publics by Value
+
+ 0000:0000 idle  _sscanf
+ 0000:0000 idle  twindow::transfer(void far*,ttransferdirection)
+ 0000:0000 idle  ___InitExceptBlocksX
+ 0000:0000 idle  tframewindow::idleaction(long)
+ 0000:0000 idle  twindow::handlemessage(unsigned int,unsigned int,long)
+ 0000:0000 idle  tlistbox::getselstring(char far*,int) const
+ 0000:0000 idle  _fprintf
+ 0000:0000 idle  WAITEVENT
+ 0000:0000 idle  GLOBALHANDLE
+ 0000:0000 idle  __FPMATH
+ 0000:0000 idle  tframewindow::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  tdc::~tdc()
+ 0000:0000 idle  tapplication::messageloop()
+ 0000:0000 idle  tapplication::initapplication()
+ 0000:0000 idle  tframewindow::setmenu(const hmenu__ near*)
+ 0000:0000 idle  tcombobox::tcombobox(twindow far*,int,unsigned int,tmodule far*)
+ 0000:0000 idle  twindow::setupwindow()
+ 0000:0000 idle  operator new(unsigned int)
+ 0000:0000 idle  string::assign(const string far&,unsigned int,unsigned int)
+ 0000:0000 idle  GLOBALALLOC
+ 0000:0000 idle  twindow::destroy(int)
+ 0000:0000 idle  tinputdialog::~tinputdialog()
+ 0000:0000 idle  tedit::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  twindow::getwindowclass(tagwndclass far&)
+ 0000:0000 idle  tframewindow::~tframewindow()
+ 0000:0000 idle  twindow::show(int)
+ 0000:0000 idle  twindow::transferdata(ttransferdirection)
+ 0000:0000 idle  _pow10
+ 0000:0000 idle  _malloc
+ 0000:0000 idle  tdialog::getwindowclass(tagwndclass far&)
+ 0000:0000 idle  DELETEOBJECT
+ 0000:0000 idle  tdialog::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tfilesavedialog::tfilesavedialog(twindow far*,topensavedialog::tdata far&,...
+ 0000:0000 idle  BITBLT
+ 0000:0000 idle  tmodule::error(int)
+ 0000:0000 idle  twindow::setparent(twindow far*)
+ 0000:0000 idle  _sprintf
+ 0000:0000 idle  FREEPROCINSTANCE
+ 0000:0000 idle  GETDESKTOPWINDOW
+ 0000:0000 idle  tcontrol::compareitem(tagcompareitemstruct far&)
+ 0000:0000 idle  twindow::paint(tdc far&,int,trect far&)
+ 0000:0000 idle  SENDMESSAGE
+ 0000:0000 idle  SETFOCUS
+ 0000:0000 idle  SHOWCURSOR
+ 0000:0000 idle  CREATERECTRGN
+ 0000:0000 idle  tapplication::initcmdshow
+ 0000:0000 idle  tbutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tmemorydc::restorebitmap()
+ 0000:0000 idle  twindow::messagebox(const char far*,const char far*,unsigned int)
+ 0000:0000 idle  tstatic::transfer(void far*,ttransferdirection)
+ 0000:0000 idle  _fclose
+ 0000:0000 idle  tframewindow::evsize(unsigned int,tsize far&)
+ 0000:0000 idle  ISICONIC
+ 0000:0000 idle  _strcat
+ 0000:0000  Abs  __turboCvt
+ 0000:0000 idle  twindow::cleanupwindow()
+ 0000:0000 idle  tclientdc::tclientdc(const hwnd__ near*)
+ 0000:0000 idle  tmodule::execdialog(tdialog far*)
+ 0000:0000 idle  twindow::closewindow(int)
+ 0000:0000 idle  v_wparam_dispatch(generic far&,generic far&,void(*)(unsigned int),unsigned int,long)
+ 0000:0000 idle  __Return_unwind
+ 0000:0000 idle  string::string(const char far*)
+ 0000:0000 idle  LOADICON
+ 0000:0000 idle  CHECKRADIOBUTTON
+ 0000:0000 idle  _realloc
+ 0000:0000 idle  SHOWWINDOW
+ 0000:0000 idle  FATALEXIT
+ 0000:0000 idle  MESSAGEBOX
+ 0000:0000 idle  twindow::defaultprocessing()
+ 0000:0000 idle  tapplication::processappmsg(tagmsg far&)
+ 0000:0000 idle  tapplication::run()
+ 0000:0000 idle  tbutton::setupwindow()
+ 0000:0000 idle  twindow::evmove(tpoint far&)
+ 0000:0000 idle  v_u_u_w_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 0000:0000 idle  tdialog::tdialog(twindow far*,tresid,tmodule far*)
+ 0000:0000 idle  tscrollbar::tscrollbar(twindow far*,int,tmodule far*)
+ 0000:0000 idle  handleglobalexception(xmsg far&,char far*,char far*)
+ 0000:0000 idle  tedit::clear()
+ 0000:0000 idle  _strcmp
+ 0000:0000 idle  CREATEPENINDIRECT
+ 0000:0000 idle  twindow::defwindowproc(unsigned int,unsigned int,long)
+ 0000:0000 idle  tcontrol::deleteitem(tagdeleteitemstruct far&)
+ 0000:0000 idle  twindow::evhscroll(unsigned int,unsigned int,const hwnd__ near*)
+ 0000:0000 idle  _pow
+ 0000:0000 idle  _strlen
+ 0000:0000 idle  _fgetc
+ 0000:0000 idle  ENABLEWINDOW
+ 0000:0000 idle  twindow::performcreate(int)
+ 0000:0000 idle  tedit::canclose()
+ 0000:0000 idle  v_dispatch(generic far&,generic far&,void(*)(),unsigned int,long)
+ 0000:0000 idle  tdialog::create()
+ 0000:0000 idle  twindow::windowproc(unsigned int,unsigned int,long)
+ 0000:0000 idle  tapplication::tapplication(const char far*,tmodule far*far&,tappdictionary far*)
+ 0000:0000 idle  _strcpy
+ 0000:0000 idle  operator delete(void far*)
+ 0000:0000 idle  twindow::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  MOVEWINDOW
+ 0000:0000 idle  _raise
+ 0000:0000 idle  __FpeHandler
+ 0000:0000 idle  twindowdc::~twindowdc()
+ 0000:0000 idle  twindow::evcommandenable(tcommandenabler far&)
+ 0000:0000 idle  tcontrol::odadrawentire(tagdrawitemstruct far&)
+ 0000:0000 idle  _fscanf
+ 0000:0000 idle  SETPIXEL
+ 0000:0000 idle  tcontrol::drawitem(tagdrawitemstruct far&)
+ 0000:0000 idle  tmodule::~tmodule()
+ 0000:0000 idle  tdc::selectobject(const tpen far&)
+ 0000:0000 idle  teventhandler::dispatch(teventhandler::teventinfo far&,int,long)
+ 0000:0000 idle  tdialog::destroy(int)
+ 0000:0000 idle  tdialog::docreate()
+ 0000:0000 idle  tmodule::error(xmsg far&,unsigned int,unsigned int)
+ 0000:0000 idle  tdialog::dialogfunction(unsigned int,unsigned int,long)
+ 0000:0000 idle  tdialog::preprocessmsg(tagmsg far&)
+ 0000:0000 idle  tcheckbox::setcheck(unsigned int)
+ 0000:0000 idle  tdialog::closewindow(int)
+ 0000:0000 idle  GLOBALFREE
+ 0000:0000 idle  tedit::getclassname()
+ 0000:0000 idle  tinputdialog::tinputdialog(twindow far*,const char far*,const char far*,char far*,int,tmodule far*,tvalidator far*)
+ 0000:0000 idle  MOVETOEX
+ 0000:0000 idle  _log10
+ 0000:0000 idle  tmemorydc::~tmemorydc()
+ 0000:0000 idle  tframewindow::tframewindow(twindow far*,const char far*,twindow far*,int,tmodule far*)
+ 0000:0000 idle  __acrtused
+ 0000:0000 idle  tcheckbox::tcheckbox(twindow far*,int,const char far*,int,int,int,int,tgroupbox far*,tmodule far*)
+ 0000:0000 idle  tstatic::clear()
+ 0000:0000 idle  tframewindow::getclientwindow()
+ 0000:0000 idle  tstatic::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  _fopen
+ 0000:0000 idle  PAINTRGN
+ 0000:0000 idle  tapplication::canclose()
+ 0000:0000 idle  topensavedialog::tdata::tdata(unsigned long,const char far*,char far*,char far*,char far*,int)
+ 0000:0000 idle  tradiobutton::tradiobutton(twindow far*,int,tgroupbox far*,tmodule far*)
+ 0000:0000 idle  twindow::canclose()
+ 0000:0000 idle  _strrchr
+ 0000:0000 idle  tmemorydc::selectobject(const tbitmap far&)
+ 0000:0000 idle  __refdestructorcount()
+ 0000:0000 idle  RELEASECAPTURE
+ 0000:0000 idle  string::~string()
+ 0000:0000 idle  INVALIDATERGN
+ 0000:0000 idle  tstatic::tstatic(twindow far*,int,const char far*,int,int,int,int,unsigned int,tmodule far*)
+ 0000:0000 idle  tmemorydc::tmemorydc(const tdc far&)
+ 0000:0000 idle  tstreamablebase::~tstreamablebase()
+ 0000:0000 idle  GLOBALUNLOCK
+ 0000:0000 idle  GETMODULEUSAGE
+ 0000:0000 idle  tapplication::inithprevinstance
+ 0000:0000 idle  tapplication::idleaction(long)
+ 0000:0000 idle  tapplication::initinstance()
+ 0000:0000 idle  GETMODULEFILENAME
+ 0000:0000 idle  _sin
+ 0000:0000 idle  tapplication::initcmdline
+ 0000:0000 idle  _atol
+ 0000:0000 idle  _fputc
+ 0000:0000 idle  tpen::tpen(const hpen__ near*,tautodelete)
+ 0000:0000 idle  _catchcleanup()
+ 0000:0000 idle  LOCKSEGMENT
+ 0000:0000 idle  UPDATEWINDOW
+ 0000:0000 idle  v_u_u_u_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 0000:0000 idle  BRINGWINDOWTOTOP
+ 0000:0000 idle  tframewindow::setdoctitle(const char far*,int)
+ 0000:0000 idle  tapplication::setmainwindow(tframewindow far*)
+ 0000:0000 idle  tdialog::setupwindow()
+ 0000:0000 idle  twindow::register()
+ 0000:0000 idle  _cos
+ 0000:0000 idle  tdialog::~tdialog()
+ 0000:0000 idle  twindow::holdfocushwnd(const hwnd__ near*,const hwnd__ near*)
+ 0000:0000 idle  MAKEPROCINSTANCE
+ 0000:0000 idle  _free
+ 0000:0000 idle  xmsg::~xmsg()
+ 0000:0000 idle  tframewindow::getcommandtarget()
+ 0000:0000  Abs  __cvtfak
+ 0000:0000 idle  tcontrol::odafocus(tagdrawitemstruct far&)
+ 0000:0000 idle  twindow::create()
+ 0000:0000 idle  GETWINDOWRECT
+ 0000:0000 idle  twindow::idleaction(long)
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  tstatic::tstatic(twindow far*,int,unsigned int,tmodule far*)
+ 0000:0000 idle  tframewindow::setclientwindow(twindow far*)
+ 0000:0000 idle  topensavedialog::tdata::~tdata()
+ 0000:0000 idle  twindow::setcaption(const char far*)
+ 0000:0000 idle  tedit::~tedit()
+ 0000:0000 idle  tregion::~tregion()
+ 0000:0000 idle  tgdiobject::~tgdiobject()
+ 0000:0000 idle  _strncpy
+ 0000:0000 idle  tregion::tregion(const hrgn__ near*,tautodelete)
+ 0000:0000 idle  _sqrt
+ 0000:0000 idle  tcontrol::measureitem(tagmeasureitemstruct far&)
+ 0000:0000 idle  tmodule::tmodule(const char far*,const hinstance__ near*)
+ 0000:0000 idle  teventhandler::searchentries(tresponsetableentry<generic>far*,teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  ___getErrno
+ 0000:0000 idle  twindow::sendmessage(unsigned int,unsigned int,long)
+ 0000:0000 idle  tframewindow::removechild(twindow far*)
+ 0000:0000 idle  GETWINFLAGS
+ 0000:0000 idle  tedit::tedit(twindow far*,int,unsigned int,tmodule far*)
+ 0000:0000 idle  tapplication::inithinstance
+ 0000:0000 idle  tdialog::getclassname()
+ 0000:0000 idle  __fmemcpy
+ 0000:0000 idle  _flushall
+ 0000:0000 idle  GETCURRENTTASK
+ 0000:0000 idle  tapplication::start()
+ 0000:0000 idle  SETCAPTURE
+ 0000:0000 idle  twindow::getclassname()
+ 0000:0000 idle  tapplication::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tapplication::~tapplication()
+ 0000:0000 idle  __GETRTLINSTANCEDATA
+ 0000:0000 idle  twindow::evcommand(unsigned int,const hwnd__ near*,unsigned int)
+ 0000:0000 idle  tdialog::evinitdialog(const hwnd__ near*)
+ 0000:0000 idle  WINEXEC
+ 0000:0000 idle  GETWINDOWTEXT
+ 0000:0000 idle  twindow::~twindow()
+ 0000:0000 idle  SETWINDOWTEXT
+ 0000:0000 idle  twindow::twindow()
+ 0000:0000 idle  tedit::tedit(twindow far*,int,const char far*,int,int,int,int,unsigned int,int,tmodule far*)
+ 0000:0000 idle  v_u_point_dispatch(generic far&,generic far&,void(*)(unsigned int,tpoint far&),unsigned int,long)
+ 0000:0000 idle  KILLTIMER
+ 0000:0000 idle  tcreateddc::~tcreateddc()
+ 0000:0000 idle  tfont::tfont(const char far*,int,int,int,int,int,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char)
+ 0000:0000 idle  v_activate_dispatch(generic far&,generic far&,void(*)(unsigned int,unsigned int,unsigned int),unsigned int,long)
+ 0000:0000 idle  tbutton::tbutton(twindow far*,int,const char far*,int,int,int,int,int,tmodule far*)
+ 0000:0000 idle  __ExceptionHandler
+ 0000:0000 idle  twindow::removechild(twindow far*)
+ 0000:0000 idle  LINETO
+ 0000:0000 idle  tframewindow::setupwindow()
+ 0000:0000 idle  SETTIMER
+ 0000:0000 idle  twindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tframewindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  tapplication::terminstance(int)
+ 0000:0000 idle  ___ExitExceptBlocks
+ 0000:0000 idle  ENUMTASKWINDOWS
+ 0000:0000 idle  _strupr
+ 0000:0000 idle  __windowsFloat
+ 0000:0000 idle  tdialog::setcaption(const char far*)
+ 0000:0000 idle  tdialog::doexecute()
+ 0000:0000 idle  tframewindow::evcommand(unsigned int,const hwnd__ near*,unsigned int)
+ 0000:0000 idle  tdc::restoreobjects()
+ 0000:0000 idle  tfileopendialog::tfileopendialog(twindow far*,topensavedialog::tdata far&,...
+ 0000:0000 idle  tdialog::execute()
+ 0000:0000 idle  GLOBALLOCK
+ 0000:0000 idle  INITTASK
+ 0000:0000 idle  tapplication::preprocessmenu(const hmenu__ near*)
+ 0000:0000 idle  tframewindow::assignmenu(tresid)
+ 0000:0000 idle  POSTMESSAGE
+ 0000:0000 idle  twindow::setdoctitle(const char far*,int)
+ 0000:0000 idle  tframewindow::evcommandenable(tcommandenabler far&)
+ 0000:0000 idle  INITAPP
+ 0000:0000 idle  tcheckbox::tcheckbox(twindow far*,int,tgroupbox far*,tmodule far*)
+ 0000:0000 idle  FREELIBRARY
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0000:0000 idle  tedit::transfer(void far*,ttransferdirection)
+ 0000:0000 idle  tedit::setupwindow()
+ 0000:0000 idle  _fflush
+ 0000:0000 idle  teventhandler::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0000:0000 idle  _strncmp
+ 0000:0000 idle  CREATESOLIDBRUSH
+ 0000:0000 idle  tbitmap::tbitmap(const hinstance__ near*,tresid)
+ 0000:0000 idle  v_point_dispatch(generic far&,generic far&,void(*)(tpoint far&),unsigned int,long)
+ 0000:0000 idle  CLIPCURSOR
+ 0000:0000 idle  SETCURSORPOS
+ 0000:0000 idle  OPENICON
+ 0000:0000 idle  tframewindow::holdfocushwnd(const hwnd__ near*,const hwnd__ near*)
+ 0000:0000 idle  tcontrol::odaselect(tagdrawitemstruct far&)
+ 0000:0000 idle  _fgets
+ 0000:0010 idle  __DestructorCount
+ 0000:0014 idle  __Exception_list
+ 0000:0632 idle  FISRQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:4000 idle  FJARQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:8000 idle  FJSRQQ
+ 0000:8087 idle  __floatconvert
+ 0000:8087  Abs  __turboFloat
+ 0000:A23D  Abs  FIWRQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:FE32 idle  FIARQQ
+ 0001:0062 idle  __INITAPPCALLED
+ 0001:00DB idle  __WINMAINCALL
+ 0001:00F2       __cleanup
+ 0001:0104       __checknull
+ 0001:0105       __restorezero
+ 0001:0106       __terminate
+ 0001:011B       __GetDGROUP
+ 0001:01C1       __eh_alloctable()
+ 0001:04C7       __eh_getclientdata(unsigned int)
+ 0001:05C2       __eh_initstaticdata()
+ 0001:0616       ___InitExceptBlocks
+ 0001:061E       __setupio
+ 0001:0623 idle  __freeio
+ 0001:0628       _toupper
+ 0001:065A idle  ___org_atof
+ 0001:065A       _atof
+ 0001:06AA idle  ___org__strtold
+ 0001:06AA idle  __strtold
+ 0001:071D       _strtod
+ 0001:071D idle  ___org_strtod
+ 0001:0754       _atan
+ 0001:0764       __LDTRUNC
+ 0001:0DB6       __XCVT
+ 0001:0FF2       __fbstp
+ 0001:10FD idle  __f87_Sine
+ 0001:1101 idle  __f87_Cosine
+ 0001:1105 idle  __f87_Tangent
+ 0001:11FA       __f87_ArcTan
+ 0001:1263 idle  __f87_Log2
+ 0001:1268 idle  __f87_Log10
+ 0001:126D idle  __f87_Log
+ 0001:12D9 idle  __f87_Exp2
+ 0001:12DD idle  __f87_Exp10
+ 0001:12E7 idle  __f87_Exp
+ 0001:13C0 idle  FTOL@
+ 0001:13C0       F_FTOL@
+ 0001:13EC idle  LXMUL@
+ 0001:13EC       F_LXMUL@
+ 0001:1403 idle  N_LDIV@
+ 0001:1406 idle  LDIV@
+ 0001:1406       F_LDIV@
+ 0001:140A idle  N_LUDIV@
+ 0001:140D idle  F_LUDIV@
+ 0001:140D idle  LUDIV@
+ 0001:1412 idle  N_LMOD@
+ 0001:1415       F_LMOD@
+ 0001:1415 idle  LMOD@
+ 0001:141A idle  N_LUMOD@
+ 0001:141D idle  LUMOD@
+ 0001:141D idle  F_LUMOD@
+ 0001:14B1 idle  N_LXLSH@
+ 0001:14B4 idle  LXLSH@
+ 0001:14B4       F_LXLSH@
+ 0001:14D2       _labs
+ 0001:151C       __fperr
+ 0001:152D idle  __fpreset
+ 0001:1585       __scantod
+ 0001:1589 idle  __scanrslt
+ 0001:158D idle  __scanpop
+ 0001:1591 idle  __aNchkstk
+ 0001:1591 idle  N_CHKSTK@
+ 0001:1594       F_CHKSTK@
+ 0001:1594 idle  __aFchkstk
+ 0001:15BC       F_SCOPY@
+ 0001:15BC idle  SCOPY@
+ 0001:15D8 idle  N_SPUSH@
+ 0001:15DE       F_SPUSH@
+ 0001:15DE idle  SPUSH@
+ 0001:1600       ___ErrorMessage
+ 0001:161A       _abort
+ 0001:162C idle  _atexit
+ 0001:16DF       _exit
+ 0001:16F4       __exit
+ 0001:1709 idle  __cexit
+ 0001:1717 idle  __c_exit
+ 0001:1726       __abort
+ 0001:178E       __errorBox
+ 0001:17E6       __errorExitBox
+ 0001:1808 idle  __setargv
+ 0001:1A31 idle  __addarg
+ 0001:1B4A idle  _getdate
+ 0001:1B63       _gettime
+ 0002:000C       tallrecieve::tallrecieve(awindow far*,char far*,frequency_control far*,int)
+ 0002:0244       tallrecieve::~tallrecieve()
+ 0002:035A       tallrecieve::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0002:03CD       tallrecieve::
+ 0002:0495       __tpdsc__[tallrecieve]
+ 0002:04F3       twindow::enablewindow(int)
+ 0002:051B       twindow::showwindow(int)
+ 0002:0543       tallrecieve::
+ 0002:0657       tstreamablebase::
+ 0002:0663       __tpdsc__[tstreamablebase]
+ 0002:06A5       teventhandler::
+ 0002:06B5       __tpdsc__[teventhandler]
+ 0002:06E5       __tpdsc__[awindow]
+ 0002:073F       __tpdsc__[twindow]
+ 0002:0789       __tpdsc__[tframewindow]
+ 0002:0818       talltransmit::talltransmit(awindow far*,char far*,frequency_control far*,int)
+ 0002:0AD9       talltransmit::~talltransmit()
+ 0002:0BEF       talltransmit::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0002:0C62       __tpdsc__[tfrequency_window far*]
+ 0002:0C80       __tpdsc__[tfrequency_window]
+ 0002:0CE4       talltransmit::
+ 0002:0DAC       __tpdsc__[talltransmit]
+ 0002:0E0C       talltransmit::
+ 0003:034D       tfrequency_scanchld::tfrequency_scanchld(awindow far*,int,char far*,int)
+ 0003:105A       tfrequency_scanchld::~tfrequency_scanchld()
+ 0003:11E6       tfrequency_scanchld::setupwindow()
+ 0003:1255       tfrequency_scanchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0003:1298       tfrequency_scanchld::returnfocus()
+ 0003:12D3       tfrequency_scanchld::getclassname()
+ 0003:12F1       tfrequency_scanchld::getwindowclass(tagwndclass far&)
+ 0003:131F       tfrequency_scanchld::where_y()
+ 0003:1342       tfrequency_scanchld::change_min_ss()
+ 0003:1390       tfrequency_scanchld::change_max_ss()
+ 0003:13DE       tfrequency_scanchld::change_start_frequency()
+ 0003:1409       tfrequency_scanchld::change_stop_frequency()
+ 0003:1434       tfrequency_scanchld::change_step_size()
+ 0003:1477       tfrequency_scanchld::change_listen_time()
+ 0003:14CA       tfrequency_scanchld::change_infinity()
+ 0003:1509       tfrequency_scanchld::change_hold_time()
+ 0003:155C       tfrequency_scanchld::scan_backward()
+ 0003:15DB       tfrequency_scanchld::prev_frequency()
+ 0003:16F0       tfrequency_scanchld::stop_scanning()
+ 0003:1763       tfrequency_scanchld::next_frequency()
+ 0003:1878       tfrequency_scanchld::scan_forward()
+ 0003:18DE       tfrequency_scanchld::s_meter_report(double)
+ 0003:1BFD       tfrequency_scanchld::evmove(tpoint far&)
+ 0003:1C5A       tfrequency_scanchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0003:1CA0       tfrequency_scanchld::get_frequency()
+ 0003:1D19       tfrequency_scanchld::set_frequency(long)
+ 0003:1DDD       tfrequency_scanchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0003:2110       __tpdsc__[start_control far*]
+ 0003:212A       __tpdsc__[stop_control far*]
+ 0003:2143       __tpdsc__[step_size_control far*]
+ 0003:2161       __tpdsc__[tstatic far*]
+ 0003:2175       __tpdsc__[aedit far*]
+ 0003:2187       __tpdsc__[tcheckbox far*]
+ 0003:219D       __tpdsc__[tbutton far*]
+ 0003:21B1       tcheckbox::check()
+ 0003:21DA       tcheckbox::uncheck()
+ 0003:2203       tcheckbox::getcheck() const
+ 0003:2233       v_u_b_w_sig(tfrequency_scanchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0003:2265       v_point_sig(tfrequency_scanchld far&,void(*)(tpoint far&))
+ 0003:2297       v_sig(tfrequency_scanchld far&,void(*)())
+ 0003:22C9       __tpdsc__[tbutton]
+ 0003:231B       __tpdsc__[tcheckbox]
+ 0003:236F       __tpdsc__[aedit]
+ 0003:23BF       __tpdsc__[tstatic]
+ 0003:2411       __tpdsc__[step_size_control]
+ 0003:244D       __tpdsc__[stop_control]
+ 0003:2485       __tpdsc__[start_control]
+ 0003:24BD       tfrequency_scanchld::
+ 0003:258D       __tpdsc__[tfrequency_scanchld]
+ 0003:25F3       tfrequency_scanchld::
+ 0003:2737       __tpdsc__[frequency_control]
+ 0003:2773       tstatic::~tstatic()
+ 0003:2808       __tpdsc__[tcontrol]
+ 0003:285C       aedit::~aedit()
+ 0003:28E5       __tpdsc__[tedit]
+ 0003:2935       tcheckbox::~tcheckbox()
+ 0003:29EF       tbutton::~tbutton()
+ 0003:2A84       tcontrol::~tcontrol()
+ 0003:2AF7       __tpdsc__[radio_control]
+ 0004:0069       tall_channelschld::tall_channelschld(awindow far*,int,char far*,int)
+ 0004:0466       tall_channelschld::~tall_channelschld()
+ 0004:05F6       tall_channelschld::setupwindow()
+ 0004:0672       tall_channelschld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0004:06B5       tall_channelschld::returnfocus()
+ 0004:06EE       tall_channelschld::getclassname()
+ 0004:070C       tall_channelschld::getwindowclass(tagwndclass far&)
+ 0004:073A       tall_channelschld::where_y()
+ 0004:075D       tall_channelschld::get_channel(unsigned int)
+ 0004:07E0       tall_channelschld::set_channel(unsigned int)
+ 0004:0989       tall_channelschld::get_selected()
+ 0004:09EC       tall_channelschld::evmove(tpoint far&)
+ 0004:0A49       tall_channelschld::evchar(unsigned int,unsigned int,unsigned int)
+ 0004:0A8F       tall_channelschld::update_channel_names()
+ 0004:0B0C       tall_channelschld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0004:3879       __tpdsc__[abutton far*]
+ 0004:388D       __tpdsc__[tinputdialog]
+ 0004:38ED       v_u_b_w_sig(tall_channelschld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0004:391F       v_point_sig(tall_channelschld far&,void(*)(tpoint far&))
+ 0004:3951       v_sig(tall_channelschld far&,void(*)())
+ 0004:3983       v_u_sig(tall_channelschld far&,void(*)(unsigned int))
+ 0004:39B5       __tpdsc__[tdialog]
+ 0004:3A07       __tpdsc__[abutton]
+ 0004:3A59       tall_channelschld::
+ 0004:3B29       __tpdsc__[tall_channelschld]
+ 0004:3B8D       tall_channelschld::
+ 0005:0363       tbandscanchld::tbandscanchld(awindow far*,int,char far*,int)
+ 0005:0F3C       tbandscanchld::~tbandscanchld()
+ 0005:10C8       tbandscanchld::setupwindow()
+ 0005:1137       tbandscanchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0005:117A       tbandscanchld::returnfocus()
+ 0005:11AF       tbandscanchld::getclassname()
+ 0005:11CD       tbandscanchld::getwindowclass(tagwndclass far&)
+ 0005:11FB       tbandscanchld::where_y()
+ 0005:121E       tbandscanchld::change_min_ss()
+ 0005:126C       tbandscanchld::change_max_ss()
+ 0005:12BA       tbandscanchld::change_band()
+ 0005:1352       tbandscanchld::change_channel()
+ 0005:13BF       tbandscanchld::change_listen_time()
+ 0005:1412       tbandscanchld::change_infinity()
+ 0005:1451       tbandscanchld::change_hold_time()
+ 0005:14A4       tbandscanchld::scan_backward()
+ 0005:1548       tbandscanchld::prev_channel()
+ 0005:16C7       tbandscanchld::stop_scanning()
+ 0005:175F       tbandscanchld::next_channel()
+ 0005:18DE       tbandscanchld::scan_forward()
+ 0005:193C       tbandscanchld::open_channels()
+ 0005:1A57       tbandscanchld::s_meter_report(double)
+ 0005:1D76       tbandscanchld::evmove(tpoint far&)
+ 0005:1DD3       tbandscanchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0005:1E19       tbandscanchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0005:214C       tstatic::settext(const char far*)
+ 0005:2177       tstatic::gettext(char far*,int)
+ 0005:21A5       __tpdsc__[tall_channelschld far*]
+ 0005:21C3       v_u_b_w_sig(tbandscanchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0005:21F5       v_point_sig(tbandscanchld far&,void(*)(tpoint far&))
+ 0005:2227       v_sig(tbandscanchld far&,void(*)())
+ 0005:2259       tbandscanchld::
+ 0005:2329       __tpdsc__[tbandscanchld]
+ 0005:2389       tbandscanchld::
+ 0006:0030       tdiagnosticdlg::tdiagnosticdlg(twindow far*,char far*)
+ 0006:0258       tdiagnosticdlg::~tdiagnosticdlg()
+ 0006:0362       tdiagnosticdlg::request_update()
+ 0006:0385       tdiagnosticdlg::recieved_1848()
+ 0006:03EE       tdiagnosticdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0006:04AB       tresid::tresid(const char far*)
+ 0006:04F4       v_sig(tdiagnosticdlg far&,void(*)())
+ 0006:0526       tdiagnosticdlg::
+ 0006:05EA       __tpdsc__[tdiagnosticdlg]
+ 0006:064C       tdiagnosticdlg::
+ 0006:074E       taboutdlg::taboutdlg(twindow far*,char far*)
+ 0006:089D       taboutdlg::~taboutdlg()
+ 0006:09A6       taboutdlg::ordering()
+ 0006:0A56       taboutdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0006:0B13       twindow::getmodule() const
+ 0006:0B37       __tpdsc__[tdialog far*]
+ 0006:0B4B       v_sig(taboutdlg far&,void(*)())
+ 0006:0B7D       taboutdlg::
+ 0006:0C41       __tpdsc__[taboutdlg]
+ 0006:0C9D       taboutdlg::
+ 0006:0E5B       tallfrequencies::tallfrequencies(twindow far*,char far*,start_control far*,stop_control far*,center_control far*,span_control far*,step_size_control far*,int)
+ 0006:1274       tallfrequencies::~tallfrequencies()
+ 0006:138A       tallfrequencies::changed_start()
+ 0006:143D       tallfrequencies::changed_stop()
+ 0006:14F0       tallfrequencies::changed_center()
+ 0006:15A3       tallfrequencies::changed_span()
+ 0006:1656       tallfrequencies::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0006:179B       v_sig(tallfrequencies far&,void(*)())
+ 0006:17CD       __vc1$thunk__[f,f,f,6,3d,0]
+ 0006:17DB       __vc1$thunk__[f,f,f,6,41,0]
+ 0006:17E9       __vc1$thunk__[f,f,f,6,45,0]
+ 0006:17F7       __vc1$thunk__[f,f,f,6,49,0]
+ 0006:1805       tallfrequencies::
+ 0006:18DD       __tpdsc__[tallfrequencies]
+ 0006:193F       tallfrequencies::
+ 0007:0000       awindow::awindow(twindow far*,char far*,int)
+ 0007:018A       awindow::~awindow()
+ 0007:02DA       awindow::evmove(tpoint far&)
+ 0007:033F       awindow::evactivate(unsigned int,int,const hwnd__ near*)
+ 0007:03AA       awindow::evchar(unsigned int,unsigned int,unsigned int)
+ 0007:03C3       awindow::move(int,int,int,int)
+ 0007:041B       awindow::where_x()
+ 0007:043E       awindow::where_y()
+ 0007:0464       awindow::redraw()
+ 0007:049F       awindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:0512       abitmapbutton::abitmapbutton(twindow far*,int,char far*,int,int,int,int,tbitmap far*,tbitmap far*)
+ 0007:072F       abitmapbutton::paint(tdc far&,int,trect far&)
+ 0007:084F       abitmapbutton::evlbuttondown(unsigned int,tpoint far&)
+ 0007:087C       abitmapbutton::evlbuttonup(unsigned int,tpoint far&)
+ 0007:08CA       abitmapbutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:093E       aedit::aedit(twindow far*,int,char far*,int,int,int,int)
+ 0007:0A4E       aedit::aedit(twindow far*,int)
+ 0007:0B4A       aedit::get_value()
+ 0007:0B89       aedit::get_value_long()
+ 0007:0BC8       aedit::get_value_double()
+ 0007:0C0A       aedit::set_value(int)
+ 0007:0C52       aedit::set_value(long)
+ 0007:0C99       abutton::abutton(twindow far*,int,char far*,int,int,int,int,int)
+ 0007:0DA7       abutton::~abutton()
+ 0007:0E8F       abutton::getclassname()
+ 0007:0EAD       abutton::evrbuttonup(unsigned int,tpoint far&)
+ 0007:0F0D       abutton::evlbuttonup(unsigned int,tpoint far&)
+ 0007:0F5B       abutton::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0007:0FCD       whitestatic::whitestatic(twindow far*,int,unsigned int)
+ 0007:10C0       whitestatic::whitestatic(twindow far*,int,const char far*,int,int,int,int,unsigned int)
+ 0007:11D1       whitestatic::getclassname()
+ 0007:11EF       whitestatic::getwindowclass(tagwndclass far&)
+ 0007:1238       whitestatic::paint(tdc far&,int,trect far&)
+ 0007:12B0 idle  print_int(int)
+ 0007:144B       twindow::bringwindowtotop()
+ 0007:1470       twindow::evactivate(unsigned int,int,const hwnd__ near*)
+ 0007:1497       twindow::isiconic() const
+ 0007:14BC       twindow::movewindow(int,int,int,int,int)
+ 0007:14F0       twindow::invalidatergn(const hrgn__ near*,int)
+ 0007:151B       twindow::updatewindow()
+ 0007:1540       tdc::bitblt(int,int,int,int,const tdc far&,int,int,unsigned long)
+ 0007:1594       tmemorydc::restoreobjects()
+ 0007:15C9       __tpdsc__[tmemorydc far*]
+ 0007:15DF       atoi(const char far*)
+ 0007:1606       twindow::evrbuttonup(unsigned int,tpoint far&)
+ 0007:162D       twindow::setfocus()
+ 0007:1652       twindow::evlbuttonup(unsigned int,tpoint far&)
+ 0007:1679       tdc::gethdc() const
+ 0007:1698       tdc::operator const hdc__ near*() const
+ 0007:16B7       v_u_b_w_sig(awindow far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0007:16E9       v_u_u_u_sig(awindow far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0007:171B       v_point_sig(awindow far&,void(*)(tpoint far&))
+ 0007:174D       v_u_point_sig(abitmapbutton far&,void(*)(unsigned int,tpoint far&))
+ 0007:177F       v_u_point_sig(abutton far&,void(*)(unsigned int,tpoint far&))
+ 0007:17B1       __tpdsc__[tmemorydc]
+ 0007:17F5       whitestatic::
+ 0007:189D       __tpdsc__[whitestatic]
+ 0007:18F3       whitestatic::~whitestatic()
+ 0007:19AD       whitestatic::
+ 0007:19D1       abutton::
+ 0007:1A75       abutton::
+ 0007:1A99       aedit::
+ 0007:1B41       aedit::
+ 0007:1B65       abitmapbutton::
+ 0007:1C31       __tpdsc__[abitmapbutton]
+ 0007:1C91       abitmapbutton::~abitmapbutton()
+ 0007:1D61       abitmapbutton::
+ 0007:1E8D       awindow::
+ 0007:1F55       awindow::
+ 0007:2069       __tpdsc__[tcreateddc]
+ 0007:20AF       __tpdsc__[tdc]
+ 0007:20ED       __tpdsc__[tgdibase]
+ 0008:0130       tbandchld::tbandchld(awindow far*,char far*,int)
+ 0008:06B1       tbandchld::~tbandchld()
+ 0008:0826       tbandchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0008:0869       tbandchld::where_y()
+ 0008:08D1       tbandchld::reply_button(unsigned int)
+ 0008:0A2E       tbandchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0008:0C53       v_u_sig(tbandchld far&,void(*)(unsigned int))
+ 0008:0C85       tbandchld::
+ 0008:0D4D       __tpdsc__[tbandchld]
+ 0008:0DA9       tbandchld::
+ 0008:0EF2       tcallsign::tcallsign(twindow far*,int,char far*,int,int,char far*,char far*)
+ 0008:1208       tcallsign::~tcallsign()
+ 0008:1374       tcallsign::getclassname()
+ 0008:13F8       tcallsign::evsize(unsigned int,tsize far&)
+ 0008:1675       tcallsign::paint(tdc far&,int,trect far&)
+ 0008:1730       tcallsign::where_x()
+ 0008:1756       tcallsign::where_y()
+ 0008:177C       tcallsign::width()
+ 0008:17A2       tcallsign::height()
+ 0008:17C8       tcallsign::evchar(unsigned int,unsigned int,unsigned int)
+ 0008:1855       tcallsign::evlbuttondown(unsigned int,tpoint far&)
+ 0008:193B       tcallsign::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0008:1A52       abs(int)
+ 0008:1A73       __tpdsc__[tfont far*]
+ 0008:1A85       v_u_point_sig(tcallsign far&,void(*)(unsigned int,tpoint far&))
+ 0008:1AB7       v_u_size_sig(tcallsign far&,void(*)(unsigned int,tsize far&))
+ 0008:1AE9       v_u_u_u_sig(tcallsign far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0008:1B1B       __tpdsc__[tfont]
+ 0008:1B5B       tcallsign::
+ 0008:1C2B       __tpdsc__[tcallsign]
+ 0008:1C87       tcallsign::
+ 0008:1DCB       tfont::~tfont()
+ 0008:1E22       __tpdsc__[tgdiobject]
+ 0009:0000       start_control::start_control(long far*,long far*)
+ 0009:007F       start_control::get_name()
+ 0009:00BB       start_control::get_error_message()
+ 0009:00D9       start_control::get_value()
+ 0009:0100       start_control::set_value(long)
+ 0009:01C8       stop_control::stop_control(long far*,long far*)
+ 0009:0246       stop_control::get_name()
+ 0009:0281       stop_control::get_error_message()
+ 0009:029F       stop_control::get_value()
+ 0009:02C6       stop_control::set_value(long)
+ 0009:038E       center_control::center_control(long far*,long far*)
+ 0009:040E       center_control::get_name()
+ 0009:044B       center_control::get_error_message()
+ 0009:0469       center_control::get_value()
+ 0009:04A9       center_control::set_value(long)
+ 0009:05DD       span_control::span_control(long far*,long far*)
+ 0009:0673       span_control::get_error_message()
+ 0009:0696       span_control::get_name()
+ 0009:06B4       span_control::get_value()
+ 0009:06E9       span_control::set_value(long)
+ 0009:083D       span_control::get_min()
+ 0009:085B       marker_control::marker_control(long far*,long far*)
+ 0009:090A       marker_control::get_name()
+ 0009:093D       marker_control::get_error_message()
+ 0009:095B       marker_control::get_value()
+ 0009:09E9       marker_control::set_value(long)
+ 0009:0A8A       marker_control::get_min()
+ 0009:0AB1       marker_control::get_max()
+ 0009:0AD8       step_size_control::step_size_control()
+ 0009:0B46       step_size_control::get_name()
+ 0009:0B7C       step_size_control::get_error_message()
+ 0009:0B9A       step_size_control::get_value()
+ 0009:0BBE       step_size_control::set_value(long)
+ 0009:0C2D       step_size_control::get_min()
+ 0009:0C4B       step_size_control::get_max()
+ 0009:0C69       step_size_control::
+ 0009:0C91       marker_control::
+ 0009:0CB9       __tpdsc__[marker_control]
+ 0009:0CF3       span_control::
+ 0009:0D1B       __tpdsc__[span_control]
+ 0009:0D53       center_control::
+ 0009:0D7B       __tpdsc__[center_control]
+ 0009:0DB5       stop_control::
+ 0009:0DDD       start_control::
+ 0009:0E05       radio_control::
+ 0009:0E2D       frequency_control::
+ 000A:01F0       tconfiguredlg::tconfiguredlg(twindow far*,char far*)
+ 000A:09C2       tconfiguredlg::~tconfiguredlg()
+ 000A:0ACC       tconfiguredlg::setupwindow()
+ 000A:0E22       tconfiguredlg::dip_switch()
+ 000A:0F09       tconfiguredlg::evhscroll(unsigned int,unsigned int,const hwnd__ near*)
+ 000A:0F4D       tconfiguredlg::address()
+ 000A:1103       tconfiguredlg::i_adjust_window()
+ 000A:1203       tconfiguredlg::tx_i_adjust_window()
+ 000A:12CC       tconfiguredlg::ok()
+ 000A:1545       tconfiguredlg::update_i_adjust()
+ 000A:159C       tconfiguredlg::update_tx_i_adjust()
+ 000A:15F3       tconfiguredlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000A:17BE       __tpdsc__[tscrollbar far*]
+ 000A:17D5       __tpdsc__[tedit far*]
+ 000A:17E7       __tpdsc__[tradiobutton far*]
+ 000A:1800       __tpdsc__[tfreq_window2 far*]
+ 000A:181A       v_sig(tconfiguredlg far&,void(*)())
+ 000A:184C       v_u_u_w_sig(tconfiguredlg far&,void(*)(unsigned int,unsigned int,const hwnd__ near*))
+ 000A:187E       __vc1$thunk__[f,f,f,6,39,0]
+ 000A:188C       __tpdsc__[tfreq_window2]
+ 000A:18EC       __tpdsc__[tradiobutton]
+ 000A:1944       __tpdsc__[tscrollbar]
+ 000A:199A       tconfiguredlg::
+ 000A:1A62       __tpdsc__[tconfiguredlg]
+ 000A:1AC2       tconfiguredlg::
+ 000A:1BBE       tscrollbar::~tscrollbar()
+ 000A:1C53       tradiobutton::~tradiobutton()
+ 000B:0498       tcontrolchld::tcontrolchld(awindow far*,int,char far*,int,radio_control far*,char[20]far*,int,char far*,int)
+ 000B:17D4       tcontrolchld::~tcontrolchld()
+ 000B:1967       tcontrolchld::relabel_buttons(char[20]far*)
+ 000B:19CC       tcontrolchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 000B:1A10       tcontrolchld::returnfocus()
+ 000B:1A3C       tcontrolchld::getclassname()
+ 000B:1A5E       tcontrolchld::getwindowclass(tagwndclass far&)
+ 000B:1AAA       tcontrolchld::button1()
+ 000B:1AD3       tcontrolchld::button2()
+ 000B:1AFC       tcontrolchld::button3()
+ 000B:1B25       tcontrolchld::button4()
+ 000B:1B4E       tcontrolchld::button5()
+ 000B:1B77       tcontrolchld::button6()
+ 000B:1BCE       tcontrolchld::button7()
+ 000B:1BF7       tcontrolchld::button8()
+ 000B:1C20       tcontrolchld::button9()
+ 000B:1C49       tcontrolchld::button10()
+ 000B:1C72       tcontrolchld::buttonmute()
+ 000B:1CEA       tcontrolchld::where_y()
+ 000B:1D0D       tcontrolchld::evmove(tpoint far&)
+ 000B:1D6C       tcontrolchld::evchar(unsigned int,unsigned int,unsigned int)
+ 000B:1DB2       tcontrolchld::check_for_repaint()
+ 000B:1E63       tcontrolchld::paint(tdc far&,int,trect far&)
+ 000B:2257       tcontrolchld::evlbuttondown(unsigned int,tpoint far&)
+ 000B:24CD       tcontrolchld::evrbuttondown(unsigned int,tpoint far&)
+ 000B:26AC       tcontrolchld::evtimer(unsigned int)
+ 000B:26FB       tcontrolchld::evlbuttonup(unsigned int,tpoint far&)
+ 000B:272B       tcontrolchld::evrbuttonup(unsigned int,tpoint far&)
+ 000B:275B       tcontrolchld::set_value(int)
+ 000B:2854       tcontrolchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000B:2C4F       tpoint::tpoint()
+ 000B:2C86       twindow::settimer(unsigned int,unsigned int,void(far*)(const hwnd__ near*,unsigned int,unsigned int,unsigned long))
+ 000B:2CB7       twindow::killtimer(unsigned int)
+ 000B:2CDF       v_sig(tcontrolchld far&,void(*)())
+ 000B:2D11       v_u_b_w_sig(tcontrolchld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 000B:2D43       v_u_point_sig(tcontrolchld far&,void(*)(unsigned int,tpoint far&))
+ 000B:2D75       v_u_sig(tcontrolchld far&,void(*)(unsigned int))
+ 000B:2DA7       v_point_sig(tcontrolchld far&,void(*)(tpoint far&))
+ 000B:2DD9       tcontrolchld::
+ 000B:2EAD       __tpdsc__[tcontrolchld]
+ 000B:2F0D       tcontrolchld::
+ 000C:000F idle  tmainwindow::tmainwindow(awindow far*,char far*)
+ 000C:00D8       __tpdsc__[tpacketchld]
+ 000C:0136       __tpdsc__[tvoicechld]
+ 000C:0194       __tpdsc__[tstatchld]
+ 000C:01DB idle  tmainwindow::~tmainwindow()
+ 000C:01F0       __tpdsc__[tsent_morsechld]
+ 000C:0252       __tpdsc__[tsmtrchld]
+ 000C:02AE       __tpdsc__[tx_i_adjust_control]
+ 000C:02EC       __tpdsc__[i_adjust_control]
+ 000C:0328       __tpdsc__[compression_level_control]
+ 000C:034F idle  tmainwindow::getwindowclass(tagwndclass far&)
+ 000C:036C       __tpdsc__[compression_control]
+ 000C:03AA       __tpdsc__[monitor_control]
+ 000C:03E4       __tpdsc__[ptt_control]
+ 000C:041A       __tpdsc__[min_frequency_control]
+ 000C:045A       __tpdsc__[max_frequency_control]
+ 000C:049A       __tpdsc__[calibrate_control]
+ 000C:04D6       __tpdsc__[tx_frequency_control]
+ 000C:0516       __tpdsc__[split_control]
+ 000C:054E       __tpdsc__[mixer_gain_control]
+ 000C:058C       __tpdsc__[mode_control]
+ 000C:05C4       __tpdsc__[filter_control]
+ 000C:05FE       __tpdsc__[squelch_control]
+ 000C:0638       __tpdsc__[if_gain_control]
+ 000C:0672       __tpdsc__[txantenna_power_control]
+ 000C:06B4       __tpdsc__[antenna_power_control]
+ 000C:06F4       __tpdsc__[am_frequency_offset_control]
+ 000C:073A       __tpdsc__[agc_control]
+ 000C:0754 idle  tmainwindow::setupwindow()
+ 000C:0770       __tpdsc__[mic_level_control]
+ 000C:07AC       __tpdsc__[volume_control]
+ 000C:07E6       dsp1::
+ 000C:0836       dsp1::
+ 000C:0842       tx_i_adjust_control::
+ 000C:086A       i_adjust_control::
+ 000C:0892       compression_level_control::
+ 000C:08BA       compression_control::
+ 000C:08E2       monitor_control::
+ 000C:090A       ptt_control::
+ 000C:0932       min_frequency_control::
+ 000C:095A       max_frequency_control::
+ 000C:0982       calibrate_control::
+ 000C:09AA       tx_frequency_control::
+ 000C:09D2       split_control::
+ 000C:09FA       mixer_gain_control::
+ 000C:0A22       mode_control::
+ 000C:0A4A       filter_control::
+ 000C:0A72       squelch_control::
+ 000C:0A9A       if_gain_control::
+ 000C:0AC2       txantenna_power_control::
+ 000C:0AEA       antenna_power_control::
+ 000C:0B12       am_frequency_offset_control::
+ 000C:0B3A       agc_control::
+ 000C:0B62       mic_level_control::
+ 000C:0B8A       volume_control::
+ 000C:0BB2       tmainwindow::
+ 000C:0C7E       tmainwindow::
+ 000C:0DAA       topensavedialog::~topensavedialog()
+ 000C:0EB4       __tpdsc__[tcommondialog]
+ 000C:0F14       __tpdsc__[tmodule]
+ 000C:0F5E       __tpdsc__[string]
+ 000C:0F98       tbitmap::~tbitmap()
+ 000C:0FEF       tcommondialog::~tcommondialog()
+ 000C:15CB idle  tmainwindow::open_window_number(int)
+ 000C:27AF idle  tmainwindow::close_window_number(int)
+ 000C:3185 idle  tmainwindow::window_defaults()
+ 000C:3766 idle  tmainwindow::evtimer(unsigned int)
+ 000C:3798 idle  tmainwindow::check_key()
+ 000C:37B6 idle  check_key()
+ 000C:39B4 idle  tmainwindow::reload_places()
+ 000C:3A67 idle  tmainwindow::reload_settings()
+ 000C:3A8E idle  tmainwindow::reload_stations()
+ 000C:3AAC idle  tmainwindow::reload_all()
+ 000C:3AE5 idle  tmainwindow::save_places()
+ 000C:3B0C idle  tmainwindow::save_settings()
+ 000C:3B33 idle  tmainwindow::save_stations()
+ 000C:3B51 idle  tmainwindow::save_all()
+ 000C:3BDC idle  tmainwindow::load_places()
+ 000C:3DD6 idle  tmainwindow::load_settings()
+ 000C:3FCF idle  tmainwindow::load_stations()
+ 000C:41C7 idle  tmainwindow::save_places_as()
+ 000C:43C2 idle  tmainwindow::save_settings_as()
+ 000C:45BD idle  tmainwindow::save_stations_as()
+ 000C:4791 idle  tmainwindow::window_agc()
+ 000C:48BF idle  tmainwindow::window_am_offset()
+ 000C:49E4 idle  tmainwindow::window_analog_gain()
+ 000C:4B17 idle  tmainwindow::window_antenna_power()
+ 000C:4C4A idle  tmainwindow::window_tx_antenna()
+ 000C:4D71 idle  tmainwindow::window_calibrate()
+ 000C:4E92 idle  tmainwindow::window_filter()
+ 000C:4FB5 idle  tmainwindow::window_frequency()
+ 000C:50CE idle  tmainwindow::window_tx_frequency()
+ 000C:51EF idle  tmainwindow::window_max_frequency()
+ 000C:5310 idle  tmainwindow::window_min_frequency()
+ 000C:5436 idle  tmainwindow::window_mixer_gain()
+ 000C:5563 idle  tmainwindow::window_mode()
+ 000C:568A idle  tmainwindow::window_ptt()
+ 000C:57B9 idle  tmainwindow::window_band_scan()
+ 000C:58D1 idle  tmainwindow::window_frequency_scan()
+ 000C:59E3 idle  tmainwindow::window_spectrum_analyzer()
+ 000C:5B1B idle  tmainwindow::window_lsb_spectrum()
+ 000C:5C68 idle  tmainwindow::window_usb_spectrum()
+ 000C:5DBA idle  tmainwindow::window_lsb_time()
+ 000C:5F0C idle  tmainwindow::window_usb_time()
+ 000C:605D idle  tmainwindow::window_xy_time()
+ 000C:61E4 idle  tmainwindow::window_s_meter()
+ 000C:630D idle  tmainwindow::window_morse()
+ 000C:6422 idle  tmainwindow::window_sent_morse()
+ 000C:650C idle  tmainwindow::window_recieved_morse()
+ 000C:6550 idle  tmainwindow::window_recieved_packet()
+ 000C:666F idle  tmainwindow::window_volume()
+ 000C:679C idle  tmainwindow::window_squelch()
+ 000C:68C4 idle  tmainwindow::window_fast_channels_1()
+ 000C:69D6 idle  tmainwindow::window_fast_channels_2()
+ 000C:6AEA idle  tmainwindow::window_fast_channels_3()
+ 000C:6BFC idle  tmainwindow::window_fast_channels_4()
+ 000C:6D0E idle  tmainwindow::window_fast_channels_5()
+ 000C:6E20 idle  tmainwindow::window_fast_channels_6()
+ 000C:6F32 idle  tmainwindow::window_fast_channels_7()
+ 000C:7044 idle  tmainwindow::window_fast_channels_8()
+ 000C:7156 idle  tmainwindow::window_fast_channels_9()
+ 000C:726B idle  tmainwindow::window_amateur_bands()
+ 000C:7375 idle  tmainwindow::window_voice_memories(unsigned int)
+ 000C:74DB idle  tmainwindow::window_call_sign()
+ 000C:760D idle  tmainwindow::window_compression()
+ 000C:773E idle  tmainwindow::window_compression_level()
+ 000C:786C idle  tmainwindow::window_split()
+ 000C:7996 idle  tmainwindow::window_monitor()
+ 000C:7AC4 idle  tmainwindow::window_mic_gain()
+ 000C:7C6F idle  tmainwindow::about()
+ 000C:7D7F idle  tmainwindow::help_contents()
+ 000C:7DC9 idle  tmainwindow::configure()
+ 000C:7F3A idle  tmainwindow::window_diagnostic()
+ 000C:7FD1 idle  tmainwindow::getmsg()
+ 000C:7FEA idle  tmainwindow::getmsg2(unsigned int,long)
+ 000C:8003 idle  tmainwindow::post()
+ 000C:80B5 idle  tmainwindow::takeplot()
+ 000C:80E3 idle  remove_old_classes()
+ 000C:80FC idle  tmainwindow::reset()
+ 000C:8152 idle  tmainwindow::notify_lsb_spectrum_analyzer()
+ 000C:81E6 idle  tmainwindow::notify_usb_spectrum_analyzer()
+ 000C:8267 idle  tmainwindow::notify_lsb_time_spectrum_analyzer()
+ 000C:82FB idle  tmainwindow::notify_usb_time_spectrum_analyzer()
+ 000C:8365 idle  tmainwindow::notify_s_meter()
+ 000C:84C0 idle  tmainwindow::notify_morse_next_char()
+ 000C:8503 idle  tmainwindow::notify_morse_end_morse()
+ 000C:856C idle  tmainwindow::notify_frequency_calibrate()
+ 000C:896A idle  tmainwindow::notify_agc_analog()
+ 000C:8B8D idle  tmainwindow::notify_save_voice()
+ 000C:8BAB idle  tmainwindow::notify_play_voice()
+ 000C:8BCF idle  tmainwindow::notify_packet()
+ 000C:8C0C idle  tmainwindow::notify_get_1848()
+ 000C:8C35 idle  tmainwindow::update_from_frequency()
+ 000C:8D2E idle  tmainwindow::update_from_max_frequency()
+ 000C:8DA7 idle  tmainwindow::update_from_min_frequency()
+ 000C:8E20 idle  tmainwindow::update_from_vfo_b()
+ 000C:8F19 idle  tmainwindow::update_from_spectrum_analyzer()
+ 000C:8F52 idle  tmainwindow::update_from_ptt()
+ 000C:8F90 idle  tmainwindow::update_from_mode()
+ 000C:9029 idle  tmainwindow::update_from_send_morse()
+ 000C:90B0 idle  tmainwindow::select_band(unsigned int)
+ 000C:923C idle  tmainwindow::select_all_band(unsigned int)
+ 000C:93B1 idle  tmainwindow::stations()
+ 000C:94E6 idle  tmainwindow::release_windows()
+ 000C:95D3 idle  dsp1::initmainwindow()
+ 000C:9667 idle  dsp1::processappmsg(tagmsg far&)
+ 000C:9B48       owlmain(int,char far*far*)
+ 000C:A725 idle  load_places()
+ 000C:A904 idle  default_places()
+ 000C:AC64 idle  load_stations()
+ 000C:B35D idle  tmainwindow::load_settings()
+ 000C:C373 idle  tmainwindow::save_settings()
+ 000C:C9EC idle  tmainwindow::save_places()
+ 000C:D43C idle  save_stations()
+ 000C:D72C idle  get_long(file far*)
+ 000C:D765       dly()
+ 000C:D7B2 idle  keyboard(unsigned int,unsigned int,unsigned int)
+ 000C:D81A       movewindowtotopoflist(int)
+ 000C:D874 idle  feof_or_null(file far*)
+ 000C:D8AC idle  printint(int)
+ 000C:D8EF idle  tmainwindow::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000C:F49E       __tpdsc__[frequency_control far*]
+ 000C:F4BC       __tpdsc__[volume_control far*]
+ 000C:F4D7       __tpdsc__[mic_level_control far*]
+ 000C:F4F5       __tpdsc__[agc_control far*]
+ 000C:F50D       __tpdsc__[am_frequency_offset_control far*]
+ 000C:F535       __tpdsc__[antenna_power_control far*]
+ 000C:F557       __tpdsc__[txantenna_power_control far*]
+ 000C:F57B       __tpdsc__[if_gain_control far*]
+ 000C:F597       __tpdsc__[squelch_control far*]
+ 000C:F5B3       __tpdsc__[filter_control far*]
+ 000C:F5CE       __tpdsc__[mode_control far*]
+ 000C:F5E7       __tpdsc__[mixer_gain_control far*]
+ 000C:F606       __tpdsc__[split_control far*]
+ 000C:F620       __tpdsc__[tx_frequency_control far*]
+ 000C:F641       __tpdsc__[calibrate_control far*]
+ 000C:F65F       __tpdsc__[max_frequency_control far*]
+ 000C:F681       __tpdsc__[min_frequency_control far*]
+ 000C:F6A3       __tpdsc__[ptt_control far*]
+ 000C:F6BB       __tpdsc__[monitor_control far*]
+ 000C:F6D7       __tpdsc__[compression_control far*]
+ 000C:F6F7       __tpdsc__[compression_level_control far*]
+ 000C:F71D       __tpdsc__[i_adjust_control far*]
+ 000C:F73A       __tpdsc__[tx_i_adjust_control far*]
+ 000C:F75A       __tpdsc__[tcontrolchld far*]
+ 000C:F773       __tpdsc__[tcallsign far*]
+ 000C:F789       __tpdsc__[tsmtrchld far*]
+ 000C:F79F       __tpdsc__[tsent_morsechld far*]
+ 000C:F7BB       __tpdsc__[tstatchld far*]
+ 000C:F7D1       __tpdsc__[tbandchld far*]
+ 000C:F7E7       __tpdsc__[tvoicechld far*]
+ 000C:F7FE       __tpdsc__[tpacketchld far*]
+ 000C:F816       __tpdsc__[tbandscanchld far*]
+ 000C:F830       __tpdsc__[tfrequency_scanchld far*]
+ 000C:F850       twindow::postmessage(unsigned int,unsigned int,long)
+ 000C:F881       tresid::tresid(int)
+ 000C:F8C9       __tpdsc__[topensavedialog::tdata]
+ 000C:F913       __tpdsc__[tfileopendialog]
+ 000C:F975       __tpdsc__[tfilesavedialog]
+ 000C:F9D7       __tpdsc__[tspectrum far*]
+ 000C:F9ED       __tpdsc__[tsend_morsechld far*]
+ 000C:FA09       __tpdsc__[taboutdlg far*]
+ 000C:FA1F       __tpdsc__[tdiagnosticdlg far*]
+ 000C:FA3A       __tpdsc__[tstationsdlg]
+ 000C:FA9A       __tpdsc__[tmainwindow far*]
+ 000C:FAB2       dsp1::dsp1(char far*)
+ 000C:FB2D       tstatus::operator int() const
+ 000C:FB4C       __tpdsc__[dsp1]
+ 000C:FB8C       __tpdsc__[tresid far*]
+ 000C:FB9F       __tpdsc__[tbitmap far*]
+ 000C:FBB3       v_sig(tmainwindow far&,void(*)())
+ 000C:FBE5       v_u_sig(tmainwindow far&,void(*)(unsigned int))
+ 000C:FC17       __tpdsc__[tbitmap]
+ 000C:FC59       __tpdsc__[tresid]
+ 000C:FC83       dsp1::~dsp1()
+ 000C:FCDA       __tpdsc__[tapplication]
+ 000C:FD2E       __tpdsc__[tmainwindow]
+ 000C:FD8C       __tpdsc__[tsend_morsechld]
+ 000C:FDEE       __tpdsc__[tspectrum]
+ 000C:FE4A       tfilesavedialog::~tfilesavedialog()
+ 000C:FF60       __tpdsc__[topensavedialog]
+ 000C:FFC2       tfileopendialog::~tfileopendialog()
+ 000D:0034       tenter_frequencydlg::tenter_frequencydlg(twindow far*,char far*,frequency_control far*)
+ 000D:0274       tenter_frequencydlg::~tenter_frequencydlg()
+ 000D:03E6       tenter_frequencydlg::rtenter_frequency102()
+ 000D:0433       tenter_frequencydlg::rtenter_frequency103()
+ 000D:0480       tenter_frequencydlg::rtenter_frequency104()
+ 000D:04CD       tenter_frequencydlg::rtenter_frequency105()
+ 000D:051A       tenter_frequencydlg::rtenter_frequency106()
+ 000D:0567       tenter_frequencydlg::rtenter_frequency107()
+ 000D:05B4       tenter_frequencydlg::rtenter_frequency108()
+ 000D:0601       tenter_frequencydlg::rtenter_frequency109()
+ 000D:064E       tenter_frequencydlg::rtenter_frequency110()
+ 000D:069B       tenter_frequencydlg::rtenter_frequency111()
+ 000D:06E8       tenter_frequencydlg::rtenter_frequency112()
+ 000D:0739       tenter_frequencydlg::hz()
+ 000D:081B       tenter_frequencydlg::khz()
+ 000D:090C       tenter_frequencydlg::mhz()
+ 000D:09F7       tenter_frequencydlg::close()
+ 000D:0A26       tenter_frequencydlg::check_edit()
+ 000D:0B65       tenter_frequencydlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000D:0EC7       tedit::insert(const char far*)
+ 000D:0EF9       v_sig(tenter_frequencydlg far&,void(*)())
+ 000D:0F2B       __vc1$thunk__[f,f,f,6,4d,0]
+ 000D:0F39       __vc1$thunk__[f,f,f,6,51,0]
+ 000D:0F47       __vc1$thunk__[f,f,f,6,55,0]
+ 000D:0F55       __vc1$thunk__[f,f,f,6,59,0]
+ 000D:0F63       __vc1$thunk__[f,f,f,6,5d,0]
+ 000D:0F71       __vc1$thunk__[f,f,f,6,61,0]
+ 000D:0F7F       tenter_frequencydlg::
+ 000D:106F       __tpdsc__[tenter_frequencydlg]
+ 000D:10D5       tenter_frequencydlg::
+ 000E:0024       tfrequency_window::tfrequency_window(twindow far*,int,char far*,frequency_control far*,int,int)
+ 000E:0297       tfrequency_window::~tfrequency_window()
+ 000E:03AA       tfrequency_window::getclassname()
+ 000E:03C8       tfrequency_window::getwindowclass(tagwndclass far&)
+ 000E:0462       tfrequency_window::callenterdlg()
+ 000E:05D5       tfrequency_window::paint(tdc far&,int,trect far&)
+ 000E:081D       tfrequency_window::evlbuttonup(unsigned int,tpoint far&)
+ 000E:0872       tfrequency_window::evlbuttondown(unsigned int,tpoint far&)
+ 000E:0989       tfrequency_window::evrbuttondown(unsigned int,tpoint far&)
+ 000E:09DB       tfrequency_window::evmousemove(unsigned int,tpoint far&)
+ 000E:0B7E       tfrequency_window::updateall()
+ 000E:0BF4       tfrequency_window::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000E:0D66       __tpdsc__[tenter_frequencydlg far*]
+ 000E:0D86       tdc::moveto(int,int)
+ 000E:0DBD       tdc::lineto(int,int)
+ 000E:0DF0       tdc::paintrgn(const tregion far&)
+ 000E:0E2C       __tpdsc__[tregion]
+ 000E:0E6E       tregion::operator const hrgn__ near*() const
+ 000E:0E8D       v_sig(tfrequency_window far&,void(*)())
+ 000E:0EBF       v_u_point_sig(tfrequency_window far&,void(*)(unsigned int,tpoint far&))
+ 000E:0EF1       tfrequency_window::
+ 000E:0FC5       tfrequency_window::
+ 000F:00EA       tfreq_window2::tfreq_window2(twindow far*,int,char far*,frequency_control far*,int,int,int,int)
+ 000F:0702       tfreq_window2::~tfreq_window2()
+ 000F:095B       tfreq_window2::getclassname()
+ 000F:0A04       tfreq_window2::evsize(unsigned int,tsize far&)
+ 000F:0CC8       tfreq_window2::getwindowclass(tagwndclass far&)
+ 000F:0D90       tfreq_window2::callenterdlg()
+ 000F:0F59       tfreq_window2::set_equal()
+ 000F:1065       tfreq_window2::paint(tdc far&,int,trect far&)
+ 000F:14D4       tfreq_window2::evlbuttonup(unsigned int,tpoint far&)
+ 000F:1590       tfreq_window2::set_value(long)
+ 000F:1643       tfreq_window2::redraw_frequency()
+ 000F:1768       tfreq_window2::evlbuttondown(unsigned int,tpoint far&)
+ 000F:195D       tfreq_window2::evrbuttondown(unsigned int,tpoint far&)
+ 000F:19F4       tfreq_window2::evmousemove(unsigned int,tpoint far&)
+ 000F:1D05       tfreq_window2::evactivate(unsigned int,int,const hwnd__ near*)
+ 000F:1D89       tfreq_window2::check_for_repaint()
+ 000F:1E72       tfreq_window2::updateall()
+ 000F:21EF       tfreq_window2::width()
+ 000F:2215       tfreq_window2::height()
+ 000F:223B       tfreq_window2::evchar(unsigned int,unsigned int,unsigned int)
+ 000F:229A idle  string_insert(char far*,char,int)
+ 000F:22DE       tfreq_window2::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 000F:2503       tcolor::tcolor(int,int,int)
+ 000F:2558       twindow::releasecapture()
+ 000F:2576       twindow::operator const hwnd__ near*() const
+ 000F:2596       __tpdsc__[tclientdc far*]
+ 000F:25AC       __tpdsc__[tdc far*]
+ 000F:25BC       twindow::setcapture()
+ 000F:25E1       v_sig(tfreq_window2 far&,void(*)())
+ 000F:2613       v_u_size_sig(tfreq_window2 far&,void(*)(unsigned int,tsize far&))
+ 000F:2645       v_u_point_sig(tfreq_window2 far&,void(*)(unsigned int,tpoint far&))
+ 000F:2677       v_u_u_u_sig(tfreq_window2 far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 000F:26A9       v_u_b_w_sig(tfreq_window2 far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 000F:26DB       __tpdsc__[tclientdc]
+ 000F:271F       tfreq_window2::
+ 000F:27F3       tfreq_window2::
+ 000F:294F       tclientdc::~tclientdc()
+ 000F:29A6       __tpdsc__[twindowdc]
+ 0010:00E2       amarker::amarker(twindow far*,int,char far*,int,twindow far*,unsigned int[2]far*,long[2]far*,start_control far*,stop_control far*,long far*,long far*)
+ 0010:05EE       amarker::~amarker()
+ 0010:0722       amarker::getclassname()
+ 0010:0740       amarker::getwindowclass(tagwndclass far&)
+ 0010:079C       amarker::changed_marker()
+ 0010:097C       amarker::peak_button()
+ 0010:0A43       amarker::next_button()
+ 0010:0A5C       amarker::get_value()
+ 0010:0A98       amarker::get_last()
+ 0010:0ACE       amarker::set_dbm(int)
+ 0010:0B9B       amarker::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0010:0CB3       __tpdsc__[marker_control far*]
+ 0010:0CCE       __tpdsc__[whitestatic far*]
+ 0010:0CE6       v_sig(amarker far&,void(*)())
+ 0010:0D18       amarker::
+ 0010:0DE8       __tpdsc__[amarker]
+ 0010:0E42       amarker::
+ 0010:0FAB       tpacketchld::tpacketchld(twindow far*,int,char far*,int,int,int)
+ 0010:1220       tpacketchld::setupwindow()
+ 0010:1247       tpacketchld::~tpacketchld()
+ 0010:13C0       tpacketchld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0010:1404       tpacketchld::add_int_string(int far*)
+ 0010:16DF idle  last_8_bits(int)
+ 0010:170D       tpacketchld::
+ 0010:17D5       tpacketchld::
+ 0011:002D       tpttchld::tpttchld(twindow far*,int,char far*,int,radio_control far*,char far*)
+ 0011:0292       tpttchld::~tpttchld()
+ 0011:03B3       tpttchld::getclassname()
+ 0011:03D1       tpttchld::where_x()
+ 0011:03F4       tpttchld::where_y()
+ 0011:0428       tpttchld::toggle_button()
+ 0011:04CE       tpttchld::evchar(unsigned int,unsigned int,unsigned int)
+ 0011:051B       tpttchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0011:0606       v_sig(tpttchld far&,void(*)())
+ 0011:0638       v_u_u_u_sig(tpttchld far&,void(*)(unsigned int,unsigned int,unsigned int))
+ 0011:066A       tpttchld::
+ 0011:0736       __tpdsc__[tpttchld]
+ 0011:0792       tpttchld::
+ 0012:00E6       tsend_morsechld::tsend_morsechld(twindow far*,int,char far*,int,int,int)
+ 0012:05C8       tsend_morsechld::setupwindow()
+ 0012:05FD       tsend_morsechld::~tsend_morsechld()
+ 0012:079E       tsend_morsechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0012:07CF       tsend_morsechld::edit_check()
+ 0012:0916       tsend_morsechld::send_next_char()
+ 0012:0BC1       tsend_morsechld::end_morse()
+ 0012:0CAD       tsend_morsechld::add_callsign()
+ 0012:0D52       tsend_morsechld::change_wpm()
+ 0012:0E2D       tsend_morsechld::send_file()
+ 0012:0FCD       tsend_morsechld::read_file()
+ 0012:0FE6       tsend_morsechld::tune()
+ 0012:1082       tsend_morsechld::add_tune_char()
+ 0012:10CD       tsend_morsechld::cq_button()
+ 0012:1155       tsend_morsechld::macro(unsigned int)
+ 0012:1207       tsend_morsechld::finish_macro()
+ 0012:1303       tsend_morsechld::change_macro(unsigned int)
+ 0012:1490       tsend_morsechld::paint(tdc far&,int,trect far&)
+ 0012:14D5       tsend_morsechld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0012:1951       __tpdsc__[abitmapbutton far*]
+ 0012:196B       tedit::setselection(unsigned int,unsigned int)
+ 0012:19A8       v_sig(tsend_morsechld far&,void(*)())
+ 0012:19DA       v_u_sig(tsend_morsechld far&,void(*)(unsigned int))
+ 0012:1A0C       tsend_morsechld::
+ 0012:1AD8       tsend_morsechld::
+ 0013:0025       tsent_morsechld::tsent_morsechld(twindow far*,char far*,int,int,int)
+ 0013:0286       tsent_morsechld::~tsent_morsechld()
+ 0013:0401       tsent_morsechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0013:0444       tsent_morsechld::add_char(char)
+ 0013:04CA       tsent_morsechld::
+ 0013:0592       tsent_morsechld::
+ 0013:06F9       tsmtrchld::tsmtrchld(twindow far*,int,char far*,int,int,int,char far*,int)
+ 0013:0A50       tsmtrchld::getclassname()
+ 0013:0A75       tsmtrchld::getwindowclass(tagwndclass far&)
+ 0013:0AB7       tsmtrchld::~tsmtrchld()
+ 0013:0C1D       tsmtrchld::where_y()
+ 0013:0C40       tsmtrchld::width()
+ 0013:0C63       tsmtrchld::height()
+ 0013:0C97       tsmtrchld::set_value(int)
+ 0013:0DBB       tsmtrchld::toggle_mute()
+ 0013:0E6B       tsmtrchld::paint(tdc far&,int,trect far&)
+ 0013:1128       tsmtrchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0013:11E5       v_sig(tsmtrchld far&,void(*)())
+ 0013:1217       tsmtrchld::
+ 0013:12EB       tsmtrchld::
+ 0014:0231       tspectrum::tspectrum(twindow far*,int,char far*,int,int,frequency_control far*,int far*,int far*,int)
+ 0014:0C2A idle  tspectrum::lsb_data()
+ 0014:10E5 idle  tspectrum::usb_data()
+ 0014:142D idle  tspectrum::getclassname()
+ 0014:144B idle  tspectrum::getwindowclass(tagwndclass far&)
+ 0014:1497       tspectrum::~tspectrum()
+ 0014:1621 idle  tspectrum::evchar(unsigned int,unsigned int,unsigned int)
+ 0014:169D idle  tspectrum::button_ac_dc()
+ 0014:1807 idle  tspectrum::button_scale()
+ 0014:1964 idle  tspectrum::button_frequency()
+ 0014:1A8B idle  tspectrum::button_marker()
+ 0014:1BA6 idle  tspectrum::button_sweep()
+ 0014:1BCD idle  tspectrum::sweep()
+ 0014:1BF4 idle  tspectrum::evtimer(unsigned int)
+ 0014:1C0D idle  tspectrum::channel()
+ 0014:1C26 idle  tspectrum::address()
+ 0014:1C71 idle  tspectrum::start_frequency()
+ 0014:1D58 idle  tspectrum::stop_frequency()
+ 0014:1E49 idle  tspectrum::center_frequency()
+ 0014:1F50 idle  tspectrum::frequency_span()
+ 0014:2052 idle  tspectrum::step_size()
+ 0014:218A idle  tspectrum::sweep_speed()
+ 0014:2283 idle  tspectrum::sweep_data()
+ 0014:2566 idle  tspectrum::marker101()
+ 0014:2793 idle  tspectrum::evlbuttonup(unsigned int,tpoint far&)
+ 0014:27AC idle  tspectrum::evsize(unsigned int,tsize far&)
+ 0014:27E8 idle  tspectrum::where_x()
+ 0014:280E idle  tspectrum::where_y()
+ 0014:2831 idle  tspectrum::width()
+ 0014:2857 idle  tspectrum::height()
+ 0014:2976 idle  tspectrum::stop_sweep()
+ 0014:29B2 idle  tspectrum::valid_frequency(long)
+ 0014:2A2E idle  tspectrum::start_sweep()
+ 0014:2CFA idle  tspectrum::paint(tdc far&,int,trect far&)
+ 0014:3233 idle  tspectrum::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0014:3655       __tpdsc__[int_control far*]
+ 0014:366D       __tpdsc__[center_control far*]
+ 0014:3688       __tpdsc__[span_control far*]
+ 0014:36A1       __tpdsc__[tallfrequencies far*]
+ 0014:36BD       __tpdsc__[amarker far*]
+ 0014:36D1       twindow::getapplication() const
+ 0014:36F5       __tpdsc__[tinputdialog far*]
+ 0014:370E       tcolor::tcolor(unsigned long)
+ 0014:3757       tdc::setpixel(int,int,tcolor)
+ 0014:37AF       __tpdsc__[tpen]
+ 0014:37EF       tcolor::operator unsigned long() const
+ 0014:3812       v_sig(tspectrum far&,void(*)())
+ 0014:3844       v_u_sig(tspectrum far&,void(*)(unsigned int))
+ 0014:3876       v_u_point_sig(tspectrum far&,void(*)(unsigned int,tpoint far&))
+ 0014:38A8       v_u_size_sig(tspectrum far&,void(*)(unsigned int,tsize far&))
+ 0014:38DA       tpen::~tpen()
+ 0014:3931       __tpdsc__[int_control]
+ 0014:3967       tspectrum::
+ 0014:3A3B       tspectrum::
+ 0015:0114       tstatchld::tstatchld(awindow far*,char far*,int,int)
+ 0015:06DA       tstatchld::~tstatchld()
+ 0015:0810       tstatchld::where_y()
+ 0015:0833       tstatchld::reply_button(unsigned int)
+ 0015:08C0       tstatchld::change_button(unsigned int)
+ 0015:0A6D       tstatchld::update_channel()
+ 0015:0B4B       recall_channel(int)
+ 0015:0D78       tstatchld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0015:1138       v_u_sig(tstatchld far&,void(*)(unsigned int))
+ 0015:116A       tstatchld::
+ 0015:1232       tstatchld::
+ 0016:0024       tstationsdlg::tstationsdlg(twindow far*,char far*)
+ 0016:0243       tstationsdlg::~tstationsdlg()
+ 0016:03B3       tstationsdlg::setupwindow()
+ 0016:04F7       tstationsdlg::rtstations102()
+ 0016:085B       tstationsdlg::rtstations103()
+ 0016:08D7       tstationsdlg::rtstations104()
+ 0016:0A67       tstationsdlg::rtstations105()
+ 0016:0B1E       tstationsdlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0016:0C62       __tpdsc__[tcombobox far*]
+ 0016:0C78       tcombobox::gettext(char far*,int) const
+ 0016:0CA8       twindow::getwindowtext(char far*,int) const
+ 0016:0CD6       v_sig(tstationsdlg far&,void(*)())
+ 0016:0D08       __tpdsc__[tcombobox]
+ 0016:0D5C       tstationsdlg::
+ 0016:0E30       tstationsdlg::
+ 0016:0F2C       tcombobox::~tcombobox()
+ 0016:0FCD       __tpdsc__[tlistbox]
+ 0016:1021       tlistbox::~tlistbox()
+ 0017:0114       tvoicechld::tvoicechld(awindow far*,char far*,int,int)
+ 0017:06E7       tvoicechld::~tvoicechld()
+ 0017:085C       tvoicechld::cleanupwindow()
+ 0017:0884       tvoicechld::where_y()
+ 0017:08A7       tvoicechld::evactivate(unsigned int,int,const hwnd__ near*)
+ 0017:08EA       tvoicechld::updateallbuttons()
+ 0017:0939       tvoicechld::reply_button(unsigned int)
+ 0017:09A8       tvoicechld::change_button(unsigned int)
+ 0017:0AE5 idle  play_voice_memory_start(int)
+ 0017:0B77       play_voice_memory()
+ 0017:0C39       tvoicechld::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0017:1028       __tpdsc__[tvoicedlg]
+ 0017:1084       v_u_sig(tvoicechld far&,void(*)(unsigned int))
+ 0017:10B6       v_u_b_w_sig(tvoicechld far&,void(*)(unsigned int,int,const hwnd__ near*))
+ 0017:10E8       tvoicechld::
+ 0017:11B4       tvoicechld::
+ 0018:00D0       tvoicedlg::tvoicedlg(twindow far*,int)
+ 0018:0593       tvoicedlg::~tvoicedlg()
+ 0018:0893       tvoicedlg::setupwindow()
+ 0018:096A       tvoicedlg::respond_mic_record()
+ 0018:0998       tvoicedlg::respond_air_record()
+ 0018:09C6       tvoicedlg::respond_speaker_play()
+ 0018:09F4       tvoicedlg::respond_air_play()
+ 0018:0A45       tvoicedlg::respond_record()
+ 0018:0B10       tvoicedlg::ok()
+ 0018:0BF3       tvoicedlg::find(teventhandler::teventinfo far&,(*)(tresponsetableentry<generic>far&,teventhandler::teventinfo far&,int))
+ 0018:0D91       twindow::checkradiobutton(int,int,int)
+ 0018:0DBF       v_sig(tvoicedlg far&,void(*)())
+ 0018:0DF1       tvoicedlg::
+ 0018:0ECD       tvoicedlg::
+ 0018:0FCA       simulation_mode()
+ 0018:0FDE       dspgetmsg()
+ 0018:1269       dspgetnumdevs()
+ 0018:127E idle  load_dsp(const hwnd__ near*)
+ 0018:12A5       dsploadalg(unsigned long,unsigned long,char far*,const hwnd__ near*)
+ 0018:12E0       dspreset()
+ 0018:12F5       dspsendmsg(long,void far*,unsigned long)
+ 0018:1374       dspsenddata(void far*,unsigned long)
+ 0018:1388       dspgetdata(unsigned long)
+ 0018:139D       dspunloadalg()
+ 0018:13B1       CALLBACKFUNCTION
+ 0018:13C1       dspsenddatanull(int)
+ 0018:13E7 idle  bootload_file(char far*)
+ 0018:1491 idle  write_dsp_boot_word(unsigned int)
+ 0018:14CD idle  write_dsp_word(unsigned int)
+ 0018:155F idle  read_dsp_word()
+ 0018:15D0 idle  autodetect_sound_card()
+ 0018:16BA       get_sound_card()
+ 0019:0000       get_agc()
+ 0019:0013       get_filter()
+ 0019:0026       i_adjust_control::get_name()
+ 0019:003B       i_adjust_control::get_error_message()
+ 0019:0050       i_adjust_control::get_value()
+ 0019:0067       i_adjust_control::set_value(long)
+ 0019:00F6       i_adjust_control::get_min()
+ 0019:010B       i_adjust_control::get_max()
+ 0019:0120       i_adjust_control::mute()
+ 0019:012E       i_adjust_control::restore()
+ 0019:013C       tx_i_adjust_control::get_name()
+ 0019:0151       tx_i_adjust_control::get_error_message()
+ 0019:0166       tx_i_adjust_control::get_value()
+ 0019:017D       tx_i_adjust_control::set_value(long)
+ 0019:020C       tx_i_adjust_control::get_min()
+ 0019:0221       tx_i_adjust_control::get_max()
+ 0019:0236       tx_i_adjust_control::mute()
+ 0019:0244       tx_i_adjust_control::restore()
+ 0019:0252       txantenna_power_control::get_name()
+ 0019:0267       txantenna_power_control::get_error_message()
+ 0019:027C       txantenna_power_control::get_value()
+ 0019:0290       txantenna_power_control::set_value(long)
+ 0019:02F2       txantenna_power_control::get_min()
+ 0019:0306       txantenna_power_control::get_max()
+ 0019:031B       txantenna_power_control::mute()
+ 0019:0329       txantenna_power_control::restore()
+ 0019:0337       antenna_power_control::get_name()
+ 0019:034C       antenna_power_control::get_error_message()
+ 0019:0361       antenna_power_control::get_value()
+ 0019:0375       antenna_power_control::set_value(long)
+ 0019:03D7       antenna_power_control::get_min()
+ 0019:03EB       antenna_power_control::get_max()
+ 0019:0400       antenna_power_control::mute()
+ 0019:040E       antenna_power_control::restore()
+ 0019:041C       calibrate_control::get_name()
+ 0019:0431       calibrate_control::get_error_message()
+ 0019:0446       calibrate_control::get_value()
+ 0019:045D       calibrate_control::set_value(long)
+ 0019:04A6       calibrate_control::get_min()
+ 0019:04BC       calibrate_control::get_max()
+ 0019:04D2       calibrate_control::mute()
+ 0019:04E0       calibrate_control::restore()
+ 0019:04EE       split_control::get_name()
+ 0019:0503       split_control::get_error_message()
+ 0019:0518       split_control::get_value()
+ 0019:052C       split_control::set_value(long)
+ 0019:0589       split_control::get_min()
+ 0019:059D       split_control::get_max()
+ 0019:05B2       split_control::mute()
+ 0019:05C0       split_control::restore()
+ 0019:05CE       filter_control::get_name()
+ 0019:05E3       filter_control::get_error_message()
+ 0019:05F8       filter_control::get_value()
+ 0019:060C       filter_control::set_value(long)
+ 0019:066B       filter_control::get_min()
+ 0019:067F       filter_control::get_max()
+ 0019:0694       filter_control::mute()
+ 0019:06A2       filter_control::restore()
+ 0019:06B0 idle  change_filter()
+ 0019:06E9       am_frequency_offset_control::get_name()
+ 0019:06FE       am_frequency_offset_control::get_error_message()
+ 0019:0713       am_frequency_offset_control::get_value()
+ 0019:0727       am_frequency_offset_control::set_value(long)
+ 0019:0767       am_frequency_offset_control::get_min()
+ 0019:077D       am_frequency_offset_control::get_max()
+ 0019:0792       am_frequency_offset_control::mute()
+ 0019:07AC       am_frequency_offset_control::restore()
+ 0019:07C6       frequency_control::get_name()
+ 0019:07DB       frequency_control::get_error_message()
+ 0019:07F0       frequency_control::get_value()
+ 0019:0807       frequency_control::set_value(long)
+ 0019:0979       frequency_control::get_min()
+ 0019:0990       frequency_control::get_max()
+ 0019:09A7       frequency_control::mute()
+ 0019:09B5       frequency_control::restore()
+ 0019:09C3       tx_frequency_control::get_name()
+ 0019:09D8       tx_frequency_control::get_error_message()
+ 0019:09ED       tx_frequency_control::get_value()
+ 0019:0A04       tx_frequency_control::set_value(long)
+ 0019:0B76       tx_frequency_control::get_min()
+ 0019:0B8D       tx_frequency_control::get_max()
+ 0019:0BA4       tx_frequency_control::mute()
+ 0019:0BB2       tx_frequency_control::restore()
+ 0019:0BC0       max_frequency_control::get_name()
+ 0019:0BD5       max_frequency_control::get_error_message()
+ 0019:0BEA       max_frequency_control::get_value()
+ 0019:0C01       max_frequency_control::set_value(long)
+ 0019:0D0F       max_frequency_control::get_min()
+ 0019:0D25       max_frequency_control::get_max()
+ 0019:0D3B       max_frequency_control::mute()
+ 0019:0D49       max_frequency_control::restore()
+ 0019:0D57       min_frequency_control::get_name()
+ 0019:0D6C       min_frequency_control::get_error_message()
+ 0019:0D81       min_frequency_control::get_value()
+ 0019:0D98       min_frequency_control::set_value(long)
+ 0019:0EA6       min_frequency_control::get_min()
+ 0019:0EBC       min_frequency_control::get_max()
+ 0019:0ED2       min_frequency_control::mute()
+ 0019:0EE0       min_frequency_control::restore()
+ 0019:0EEE idle  set_frequency()
+ 0019:1325       mixer_gain_control::get_name()
+ 0019:133A       mixer_gain_control::get_error_message()
+ 0019:134F       mixer_gain_control::get_value()
+ 0019:1363       mixer_gain_control::set_value(long)
+ 0019:13A1       mixer_gain_control::get_min()
+ 0019:13B5       mixer_gain_control::get_max()
+ 0019:13CA       mixer_gain_control::mute()
+ 0019:13D8       mixer_gain_control::restore()
+ 0019:13E6       mode_control::get_name()
+ 0019:13FB       mode_control::get_error_message()
+ 0019:1410       mode_control::get_value()
+ 0019:1424       mode_control::set_value(long)
+ 0019:145F idle  change_mode()
+ 0019:14BE       mode_control::get_min()
+ 0019:14D2       mode_control::get_max()
+ 0019:14E7       mode_control::mute()
+ 0019:14F5       mode_control::restore()
+ 0019:1503       if_gain_control::get_name()
+ 0019:1518       if_gain_control::get_error_message()
+ 0019:152D       if_gain_control::get_value()
+ 0019:154E       if_gain_control::set_value(long)
+ 0019:15CE       if_gain_control::get_min()
+ 0019:15E2       if_gain_control::get_max()
+ 0019:15F7       if_gain_control::mute()
+ 0019:1605       if_gain_control::restore()
+ 0019:1613       squelch_control::get_name()
+ 0019:1628       squelch_control::get_error_message()
+ 0019:163D       squelch_control::get_value()
+ 0019:1651       squelch_control::set_value(long)
+ 0019:16D6       squelch_control::get_min()
+ 0019:16EA       squelch_control::get_max()
+ 0019:16FF       squelch_control::mute()
+ 0019:170D       squelch_control::restore()
+ 0019:171B       compression_control::get_name()
+ 0019:1730       compression_control::get_error_message()
+ 0019:1745       compression_control::get_value()
+ 0019:1759       compression_control::set_value(long)
+ 0019:179E       compression_control::get_min()
+ 0019:17B2       compression_control::get_max()
+ 0019:17C7       compression_control::mute()
+ 0019:17D5       compression_control::restore()
+ 0019:17E3 idle  send_compression()
+ 0019:1871       agc_control::get_name()
+ 0019:1886       agc_control::get_error_message()
+ 0019:189B       agc_control::get_value()
+ 0019:18AF       agc_control::set_value(long)
+ 0019:1911       agc_control::get_min()
+ 0019:1925       agc_control::get_max()
+ 0019:193A       agc_control::mute()
+ 0019:1948       agc_control::restore()
+ 0019:1956       mic_level_control::get_name()
+ 0019:196B       mic_level_control::get_error_message()
+ 0019:1980       mic_level_control::get_value()
+ 0019:1994       mic_level_control::set_value(long)
+ 0019:19F7       mic_level_control::get_min()
+ 0019:1A0B       mic_level_control::get_max()
+ 0019:1A20       mic_level_control::mute()
+ 0019:1A2E       mic_level_control::restore()
+ 0019:1A3C       compression_level_control::get_name()
+ 0019:1A51       compression_level_control::get_error_message()
+ 0019:1A66       compression_level_control::get_value()
+ 0019:1A7A       compression_level_control::set_value(long)
+ 0019:1ADD       compression_level_control::get_min()
+ 0019:1AF1       compression_level_control::get_max()
+ 0019:1B06       compression_level_control::mute()
+ 0019:1B14       compression_level_control::restore()
+ 0019:1B22       volume_control::get_name()
+ 0019:1B37       volume_control::get_error_message()
+ 0019:1B4C       volume_control::get_value()
+ 0019:1B60       volume_control::set_value(long)
+ 0019:1BBC       volume_control::get_min()
+ 0019:1BD0       volume_control::get_max()
+ 0019:1BE5       volume_control::mute()
+ 0019:1C1B       volume_control::restore()
+ 0019:1C42       monitor_control::get_name()
+ 0019:1C57       monitor_control::get_error_message()
+ 0019:1C6C       monitor_control::get_value()
+ 0019:1C80       monitor_control::set_value(long)
+ 0019:1CAF       monitor_control::get_min()
+ 0019:1CC3       monitor_control::get_max()
+ 0019:1CD8       monitor_control::mute()
+ 0019:1CE6       monitor_control::restore()
+ 0019:1CF4       ptt_control::get_name()
+ 0019:1D09       ptt_control::get_error_message()
+ 0019:1D1E       ptt_control::get_value()
+ 0019:1D32       ptt_control::set_value(long)
+ 0019:1D50 idle  set_ptt(long)
+ 0019:1F1B       ptt_control::get_min()
+ 0019:1F2F       ptt_control::get_max()
+ 0019:1F44       ptt_control::mute()
+ 0019:1F52       ptt_control::restore()
+ 0019:1F60       radio_control::get_name()
+ 0019:1F75       radio_control::get_error_message()
+ 0019:1F8A       radio_control::get_value()
+ 0019:1F9E       radio_control::set_value(long)
+ 0019:1FB0       radio_control::get_min()
+ 0019:1FC4       radio_control::get_max()
+ 0019:1FD8       radio_control::mute()
+ 0019:1FE6       radio_control::restore()
+ 0019:1FF4       int_control::int_control(int,int)
+ 0019:205D       int_control::get_name()
+ 0019:2072       int_control::get_error_message()
+ 0019:2087       int_control::get_value()
+ 0019:209F       int_control::set_value(long)
+ 0019:2100       int_control::get_min()
+ 0019:2118       int_control::get_max()
+ 0019:2130       int_control::mute()
+ 0019:213E       int_control::restore()
+ 0019:214C idle  update_dds_control()
+ 0019:21EC idle  delay(long)
+ 0019:222F idle  select_previous_band()
+ 0019:2312 idle  select_next_band()
+ 0019:23FB       valid_xmit(int)
+ 0019:242F idle  valid_callsign(int)
+ 0019:2531 idle  valid_tx_frequency(int)
+ 0019:25D3       set_radware_address(int)
+ 0019:25F8       get_radware_address()
+ 0019:260B       set_am_side(int)
+ 0019:262C       clear_preselectors()
+ 0019:2641 idle  set_preselectors()
+ 0019:2796 idle  convert_from_baudot(int)
+ 0019:27F5       start_play()
+ 0019:2818       end_play()
+ 0019:283B idle  end_play_and_null()
+ 0019:2866       send_play_message(int far*)
+ 0019:2889       save_voice_memory_start(char far*,int)
+ 0019:28F0       save_voice_memory()
+ 0019:296D       save_voice_memory_end()
+ 0019:29BB       save_voice_memory_open()
+ 0019:29DB       set_tx_analog_gain(int)
+ 0019:2A02       get_tx_analog_gain()
+ 0019:2A15       get_1848()
+ 0019:2A43       set_morse(int)
+ 0019:2AAC       check_ptt_time()
+ 0019:2B5B       get_port_on_off()
+ 0019:2B6E       set_port_on_off(int)
+ 0019:2B92 idle  set_parallel_port(int)
+ 0019:2BDE       set_frequency_wrap(int)
+ 0019:2BFC       get_frequency_wrap()
+ 0019:2C0F       set_callsign(char far*)
+ 0019:2C36       get_callsign(char far*)
+ 0019:2C56       is_frequency_amateur(long)
+ 0019:2CAA       int_control::
+ 001A:005E       WINMAIN
+ 001A:01B3       __tpdsc__[xmsg far&]
+ 001A:01C4       __tpdsc__[xmsg] const
+ 001A:01FC       ___InitExceptBlock
+ 001A:025C       terminate()
+ 001A:0266 idle  set_terminate(void(far*)())
+ 001A:02EC idle  ___call_terminate
+ 001A:039F       unexpected()
+ 001A:03A8 idle  set_unexpected(void(far*)())
+ 001A:0404 idle  ___call_unexpected
+ 001A:0487 idle  ___org__GetPolymorphicDTC
+ 001A:0487 idle  __getpolymorphicdtc(void far*,unsigned int)
+ 001A:04DB       __getpolymorphicdtcfar(void far*,unsigned int)
+ 001A:0533       __ExceptInit
+ 001B:0000       tallrecieve::__entries
+ 001C:0000       talltransmit::__entries
+ 001D:0000       tfrequency_scanchld::__entries
+ 001E:0000       tall_channelschld::__entries
+ 001F:0000       tbandscanchld::__entries
+ 0020:0000       tdiagnosticdlg::__entries
+ 0021:0000       taboutdlg::__entries
+ 0022:0000       tallfrequencies::__entries
+ 0023:0000       awindow::__entries
+ 0024:0000       abitmapbutton::__entries
+ 0025:0000       abutton::__entries
+ 0026:0000       tbandchld::__entries
+ 0027:0000       tcallsign::__entries
+ 0028:0000       tconfiguredlg::__entries
+ 0029:0000       tcontrolchld::__entries
+ 002A:0000       tenter_frequencydlg::__entries
+ 002B:0000       tfrequency_window::__entries
+ 002C:0000       tfreq_window2::__entries
+ 002D:0000       amarker::__entries
+ 002E:0000       tpttchld::__entries
+ 002F:0000       tsend_morsechld::__entries
+ 0030:0000       tsmtrchld::__entries
+ 0031:0000       tstatchld::__entries
+ 0032:0000       tstationsdlg::__entries
+ 0033:0000       tvoicechld::__entries
+ 0034:0000       tvoicedlg::__entries
+ 0035:0030 idle  _errno
+ 0035:0032 idle  __protected
+ 0035:0034 idle  __8086
+ 0035:0036 idle  __8087
+ 0035:0038       __psp
+ 0035:003A       __hInstance
+ 0035:003C idle  __hPrev
+ 0035:003E       __pszCmdline
+ 0035:0040 idle  __cmdShow
+ 0035:0042 idle  __version
+ 0035:0042 idle  __osversion
+ 0035:0042 idle  __osmajor
+ 0035:0043 idle  __osminor
+ 0035:0044 idle  __osmode
+ 0035:0045 idle  __WinAllocFlag
+ 0035:0047       __LockWIN87EM
+ 0035:0049 idle  __abend
+ 0035:0A70 idle  _dip_switch
+ 0035:0AB8 idle  _pi
+ 0035:0B82 idle  _dsp_message
+ 0035:0B86       _knob_speed
+ 0035:0B88 idle  _ON_STRING
+ 0035:0B8B idle  _OFF_STRING
+ 0035:0B8E idle  _Show_About
+ 0035:0B90 idle  _Need_More_Voice
+ 0035:0B92       _morse_button_names
+ 0035:0BB6       _morse_button_macros
+ 0035:0CAC idle  _agc_labels
+ 0035:0CE8 idle  _compression_labels
+ 0035:0D10 idle  _ptt_labels
+ 0035:0D38 idle  _filter_labels
+ 0035:0DB0 idle  _split_labels
+ 0035:0E00 idle  _mode_labels
+ 0035:0EA0 idle  _antenna_power_labels
+ 0035:0EC8 idle  _mixer_gain_labels
+ 0035:0F04 idle  _volume_labels
+ 0035:0F18 idle  _screen_max_x
+ 0035:0F1A idle  _screen_max_y
+ 0035:0F1C       _am_offset_active
+ 0035:0F1E       _ptt_via_joystick
+ 0035:0F20       _old_key
+ 0035:0F22       _save_on_exit
+ 0035:0F24       _PTTXFreq
+ 0035:0F28       _PTMaxFreq
+ 0035:0F2C       _PTMinFreq
+ 0035:0F30       _PTStations
+ 0035:0F54 idle  _PTAmateurBands
+ 0035:0F58       _PTBandScan
+ 0035:0F5C idle  _PTFrequencyScan
+ 0035:0F60 idle  _PTVoice_Memories
+ 0035:0F84       _PTSpectrum
+ 0035:0F88 idle  _PT_USB_Spectrum
+ 0035:0F8C idle  _PT_LSB_Spectrum
+ 0035:0F90 idle  _PT_USB_Time
+ 0035:0F94 idle  _PT_LSB_Time
+ 0035:0F98 idle  _PT_XY_Time
+ 0035:0F9C idle  _PT_CallSign
+ 0035:0FA0 idle  _PTS_Meter
+ 0035:0FA4 idle  _PTAM_Meter
+ 0035:0FA8       _PTPTT
+ 0035:0FAC idle  _PTMorse
+ 0035:0FB0 idle  _PTSent_Morse
+ 0035:0FB4 idle  _PTSquelch
+ 0035:0FB8 idle  _PTPacket
+ 0035:0FBC       _closing
+ 0035:0FBE       _key_config
+ 0035:0FC0 idle  _ptt_check_for_time
+ 0035:0FC4 idle  _xmit
+ 0035:0FC6 idle  _change_calibrate
+ 0035:0FC8 idle  _calibrate_data
+ 0035:0FCC idle  _calibrate_amount
+ 0035:0FD0 idle  _calibrate_last_direction
+ 0035:0FD2 idle  _calibrate_last_distance
+ 0035:0FD4 idle  tmainwindow::__entries
+ 0035:1FBA idle  _packet_speed
+ 0035:1FBC idle  _packet_tolerance
+ 0035:1FBE idle  _last_direction
+ 0035:1FC0 idle  _last_amount
+ 0035:1FC2 idle  _bits
+ 0035:1FD4 idle  _morse_dit_dahs
+ 0035:2160 idle  _morse_charactors
+ 0035:2268 idle  _send_to_null
+ 0035:226A idle  _grid
+ 0035:226C idle  _step_size
+ 0035:2270 idle  _current_frequency
+ 0035:2274 idle  _sweep_speed
+ 0035:2276 idle  _in_timer
+ 0035:2278 idle  _freq_speed
+ 0035:227A idle  _ac_dc_labels
+ 0035:22A2 idle  _scale_labels
+ 0035:2356 idle  _scale_values
+ 0035:2368 idle  _channel_status
+ 0035:2370 idle  tspectrum::__entries
+ 0035:263A idle  _repeat
+ 0035:2718 idle  _message_number
+ 0035:271A idle  _message_length
+ 0035:271C idle  _lost_transmit_charactors
+ 0035:2720 idle  _spectrum_length
+ 0035:2722 idle  _last_message_recieved
+ 0035:2724 idle  _wait_for_message
+ 0035:2740       _bands
+ 0035:2A08 idle  _Baudot
+ 0035:2AC8 idle  _baudot_recieve_shift
+ 0035:2ACA idle  _baudot_transmit_shift
+ 0035:2ACC idle  _baudot_alphabet
+ 0035:2ACE idle  _Volume_Levels
+ 0035:2B4E       _band_pointers
+ 0035:2BA8       _dds_control_address
+ 0035:2BAA       _dds_freq_address
+ 0035:2BAC idle  _mic_level
+ 0035:2BAE       _preselector_address
+ 0035:2BD6       _banded
+ 0035:2BD8 idle  _parallel_port
+ 0035:2BDA idle  _sent
+ 0035:339A       _Module
+ 0035:339E idle  _DocTemplateStaticHead
+ 0035:33BA       ___CPPexceptionList
+ 0035:33BE idle  ___exceptFlags
+ 0035:33C0 idle  ___savedDS
+ 0035:33C2 idle  ___savedSI
+ 0035:33C4 idle  ___terminatePTR
+ 0035:33C8 idle  ___unexpectdPTR
+ 0035:33CC idle  ___terminate_DS
+ 0035:33CE idle  ___unexpectd_DS
+ 0035:33D0 idle  ___throwFileName
+ 0035:33D4 idle  ___throwLineNumber
+ 0035:33D6 idle  ___throwExceptionName
+ 0035:33DA idle  ___exceptStaticBuffP
+ 0035:33DE idle  ___exceptMemAllocVars
+ 0035:33E2 idle  ___exceptionNameBuff
+ 0035:3462 idle  ___ExceptStaticXbuff
+ 0035:34E2       ___EH_TablePtr
+ 0035:3500       ___cachedSS
+ 0035:3502       ___cachedVarPtr
+ 0035:3506       __ctype
+ 0035:3608 idle  __huge_flt
+ 0035:360C       __huge_dble
+ 0035:3614 idle  __huge_ldble
+ 0035:361E idle  __indefinite
+ 0035:3622 idle  __tiny_ldble
+ 0035:369C       __atexitcnt
+ 0035:369E       __exitbuf
+ 0035:36A2       __exitfopen
+ 0035:36A6       __exitopen
+ 0035:373C       __argv0
+ 0035:375C       __FPVector
+ 0035:3760 idle  __RealCvtVector
+ 0035:3764       __ScanTodVector
+ 0035:3836 idle  _control_timer_message
+ 0035:3838 idle  _control_timer_point
+ 0035:383C idle  _PTCal
+ 0035:3840       _stations
+ 0035:41A0       _quick_stations
+ 0035:4A10       _channels_selected
+ 0035:4AC4       _voice_memories
+ 0035:6F54       _Band_Scan_Data
+ 0035:6F7A       _Frequency_Scan_Data
+ 0035:6FA8       _Blue
+ 0035:6FAA       _Green
+ 0035:6FAC       _Red
+ 0035:6FAE       _Sound_Card
+ 0035:6FB0 idle  _TimerID
+ 0035:6FB2       _starting_places
+ 0035:70DE       _delete_class
+ 0035:7174       _starting_sizes
+ 0035:71B4 idle  _windows_on_top
+ 0035:724A idle  _places_name
+ 0035:7272 idle  _settings_name
+ 0035:729A idle  _stations_name
+ 0035:72C2 idle  _CallBackInstance
+ 0035:72C6       _knobs
+ 0035:730A       _smeter_bitmap
+ 0035:730E       _am_meter_bitmap
+ 0035:7312 idle  _sheet_bitmap
+ 0035:731A       _tune_bitmap
+ 0035:7322 idle  _Diagnostics
+ 0035:7326       _PTAGC
+ 0035:732A       _PTFilter
+ 0035:732E idle  _PTVolume
+ 0035:7332 idle  _PTGain
+ 0035:7336       _PTMode
+ 0035:733A idle  _PTAntenna_Power
+ 0035:733E idle  _PTMixer_Gain
+ 0035:7342 idle  _PTMic_Level
+ 0035:7346 idle  _PTTXAntenna_Power
+ 0035:734A idle  _PTCompression
+ 0035:734E idle  _PTCompression_Level
+ 0035:7352 idle  _PTSplit
+ 0035:7356 idle  _PTMonitor
+ 0035:735A       _PTFreq
+ 0035:735E idle  _PTCalibrate
+ 0035:7362 idle  _PTAM_Offset
+ 0035:7366 idle  _squelch_control
+ 0035:736A idle  _volume_control
+ 0035:736E idle  _mic_level_control
+ 0035:7372 idle  _if_gain_control
+ 0035:7376 idle  _agc_control
+ 0035:737A idle  _am_offset_control
+ 0035:737E       _split_control
+ 0035:7382 idle  _compression_control
+ 0035:7386 idle  _compression_level_control
+ 0035:738A       _i_adjust_control
+ 0035:738E       _tx_i_adjust_control
+ 0035:7392 idle  _antenna_power_control
+ 0035:7396 idle  _tx_antenna_power_control
+ 0035:739A idle  _mixer_gain_control
+ 0035:739E       _filter_control
+ 0035:73A2       _mode_control
+ 0035:73A6       _frequency_control
+ 0035:73AA       _tx_frequency_control
+ 0035:73AE       _max_frequency_control
+ 0035:73B2       _min_frequency_control
+ 0035:73B6 idle  _calibrate_control
+ 0035:73BA       _ptt_control
+ 0035:73BE idle  _monitor_control
+ 0035:73C2       _leading_zeros
+ 0035:73C4       _stations_reset_bands
+ 0035:73C6 idle  _RadioWareAlg
+ 0035:73C8       _TestWindow
+ 0035:73CA idle  _MainWindow
+ 0035:73CE idle  _calibrate_increment
+ 0035:73D0 idle  _poll_dsp
+ 0035:73D2 idle  _show_errors
+ 0035:73D4 idle  _comm
+ 0035:73D6 idle  _have_data
+ 0035:73D8 idle  _station_data
+ 0035:73DC idle  _message
+ 0035:75DE idle  _CallBack
+ 0035:75E2 idle  _pss_data
+ 0035:75E4 idle  _pss_control
+ 0035:75E6 idle  _pss_status
+ 0035:75E8       _Game_Port_Address
+ 0035:75EA idle  _message_pointer
+ 0035:75EC idle  _message_string
+ 0035:77EC idle  _spectrum_string
+ 0035:79EC       _lsb_string
+ 0035:7BEC       _usb_string
+ 0035:7DEC       _lsb_time_string
+ 0035:7FEC       _usb_time_string
+ 0035:81EC       _smeter_string
+ 0035:83EC       _frequency_calibrate_string
+ 0035:85EC       _analog_string
+ 0035:87EC       _voice_string
+ 0035:89EC       _packet_string
+ 0035:8BEC       _get_1848_string
+ 0035:8C2C idle  _null_data
+ 0035:943C       _packet_length
+ 0035:943E idle  _timeout
+ 0035:9442       _frequency_time
+ 0035:9446 idle  _ptt_time
+ 0035:944A idle  _old_ptt
+ 0035:944C idle  _sine
+ 0035:944E idle  __DestructorCountPtr
+ 0035:9452       __atexittbl
+ 0035:94D2       __argc
+ 0035:94D4       __argv
+
+

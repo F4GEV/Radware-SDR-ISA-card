@@ -1,0 +1,6 @@
+FILTER MENU
+BEGIN
+    MENUITEM   "&Replot",      IDM_REPLOT
+    MENUITEM   "&Paramaters",  IDM_PARAMATERS
+END 
+

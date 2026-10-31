@@ -1,0 +1,25 @@
+//REGEN_FILEHEADING
+//REGEN_FILEHEADING
+
+     /********************************************************************
+      *                                                                  *
+      *   Source File: FILTER.rc                                         *
+      *   Description: Resource file for FILTER application              *
+      *   Date:        Thu Sep 16 14:58:29 1993                          *
+      *                                                                  *
+      ********************************************************************/
+
+#include <windows.h>
+#include <bwcc.h>
+#include "FILTERID.h"
+#include "FILTER.h"
+//REGEN_RC
+//REGEN_RC
+
+
+#include "FILTER.mnu"
+
+
+
+
+

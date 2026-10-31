@@ -1,0 +1,9 @@
+.const  Sys_Ctrl_Reg= 		    0x3fff;
+.const  Dm_Wait_Reg= 	            0x3ffe;
+.const  Tperiod_Reg=                0x3ffd;
+.const  Tcount_Reg=                 0x3ffc;
+.const  Tscale_Reg=                 0x3ffb;
+.const  Sport1_Ctrl_Reg=            0x3ff2;
+.const  Sport1_Sclkdiv=             0x3ff1;
+.const  Sport1_Rfsdiv=              0x3ff0;
+.const  Sport1_Autobuf_Ctrl=        0x3fef;

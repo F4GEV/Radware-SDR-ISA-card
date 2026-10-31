@@ -1,0 +1,231 @@
+
+ Start         Length Name               Class
+
+  0001:0000    02B2H  _TEXT              CODE
+  0001:02B2    0050H  GLOBAL_TEXT        CODE
+  0001:0302    0323H  LIBMAIN_TEXT       CODE
+  0001:0626    0005H  OWLMAIN_TEXT       CODE
+  0002:0000    0000H  _FARDATA           FAR_DATA
+  0002:0000    0000H  _FARBSS            FAR_BSS
+  0002:0000    0024H  NULL               BEGDATA
+  0002:0030    0088H  _DATA              DATA
+  0002:00B8    0004H  _FPSEG             DATA
+  0002:00BC    0000H  _CVTSEG            DATA
+  0002:00BC    0000H  _SCNSEG            DATA
+  0002:00BC    0000H  _CONST             CONST
+  0002:00BC    000CH  _INIT_             INITDATA
+  0002:00C8    0000H  _INITEND_          INITDATA
+  0002:00C8    0012H  _EXIT_             EXITDATA
+  0002:00DA    0000H  _EXITEND_          EXITDATA
+  0002:00DA    0084H  _BSS               BSS
+  0002:015E    0000H  _BSSEND            BSSEND
+
+
+Detailed map of segments
+
+ 0001:0000 019C C=CODE   S=_TEXT          G=(none)  M=c0d.asm    ACBP=48
+ 0001:019C 0008 C=CODE   S=_TEXT          G=(none)  M=xxasstub   ACBP=28
+ 0001:01A4 000A C=CODE   S=_TEXT          G=(none)  M=setupio    ACBP=48
+ 0001:01AE 0032 C=CODE   S=_TEXT          G=(none)  M=atexit     ACBP=48
+ 0001:01E0 00C7 C=CODE   S=_TEXT          G=(none)  M=exit       ACBP=48
+ 0001:02A8 000A C=CODE   S=_TEXT          G=(none)  M=wep        ACBP=48
+ 0001:02B2 0050 C=CODE   S=GLOBAL_TEXT    G=(none)  M=global     ACBP=48
+ 0001:0302 0323 C=CODE   S=LIBMAIN_TEXT   G=(none)  M=libmain    ACBP=48
+ 0001:0626 0005 C=CODE   S=OWLMAIN_TEXT   G=(none)  M=owlmain    ACBP=48
+ 0002:0000 0000 C=FAR_DATA S=_FARDATA       G=DGROUP  M=c0d.asm    ACBP=68
+ 0002:0000 0000 C=FAR_BSS S=_FARBSS        G=DGROUP  M=c0d.asm    ACBP=68
+ 0002:0000 0024 C=BEGDATA S=NULL           G=DGROUP  M=c0d.asm    ACBP=68
+ 0002:0030 0057 C=DATA   S=_DATA          G=DGROUP  M=c0d.asm    ACBP=68
+ 0002:0088 0008 C=DATA   S=_DATA          G=DGROUP  M=global     ACBP=48
+ 0002:0090 0017 C=DATA   S=_DATA          G=DGROUP  M=libmain    ACBP=48
+ 0002:00A8 0000 C=DATA   S=_DATA          G=DGROUP  M=owlmain    ACBP=48
+ 0002:00A8 0000 C=DATA   S=_DATA          G=DGROUP  M=xxasstub   ACBP=48
+ 0002:00A8 0000 C=DATA   S=_DATA          G=DGROUP  M=setupio    ACBP=48
+ 0002:00A8 0002 C=DATA   S=_DATA          G=DGROUP  M=atexit     ACBP=48
+ 0002:00AA 000E C=DATA   S=_DATA          G=DGROUP  M=exit       ACBP=48
+ 0002:00B8 0000 C=DATA   S=_DATA          G=DGROUP  M=wep        ACBP=48
+ 0002:00B8 0004 C=DATA   S=_FPSEG         G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00BC 0000 C=DATA   S=_CVTSEG        G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00BC 0000 C=DATA   S=_SCNSEG        G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00BC 0000 C=CONST  S=_CONST         G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00BC 0000 C=INITDATA S=_INIT_         G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00BC 0006 C=INITDATA S=_INIT_         G=DGROUP  M=libmain    ACBP=48
+ 0002:00C2 0006 C=INITDATA S=_INIT_         G=DGROUP  M=setupio    ACBP=48
+ 0002:00C8 0000 C=INITDATA S=_INITEND_      G=DGROUP  M=c0d.asm    ACBP=28
+ 0002:00C8 0000 C=EXITDATA S=_EXIT_         G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00C8 000C C=EXITDATA S=_EXIT_         G=DGROUP  M=libmain    ACBP=48
+ 0002:00D4 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=setupio    ACBP=48
+ 0002:00DA 0000 C=EXITDATA S=_EXITEND_      G=DGROUP  M=c0d.asm    ACBP=28
+ 0002:00DA 0000 C=BSS    S=_BSS           G=DGROUP  M=c0d.asm    ACBP=48
+ 0002:00DA 0004 C=BSS    S=_BSS           G=DGROUP  M=libmain    ACBP=48
+ 0002:00DE 0000 C=BSS    S=_BSS           G=DGROUP  M=setupio    ACBP=48
+ 0002:00DE 0080 C=BSS    S=_BSS           G=DGROUP  M=atexit     ACBP=48
+ 0002:015E 0000 C=BSSEND S=_BSSEND        G=DGROUP  M=c0d.asm    ACBP=28
+
+  Address         Publics by Name
+
+ 0001:0562       __tpdsc__[teventhandler]
+ 0001:04E6       __tpdsc__[tstreamablebase]
+ 0001:05ED       __tpdsc__[xmsg] const
+ 0001:0528       __tpdsc__[string]
+ 0001:0592       __tpdsc__[tmodule]
+ 0001:05DC       __tpdsc__[xmsg far&]
+ 0000:0000 idle  handleglobalexception(xmsg far&,char far*,char far*)
+ 0001:0318 idle  lockdlls()
+ 0001:0626       owlmain(int,char far*far*)
+ 0000:0000 idle  string::string(const char far*)
+ 0000:0000 idle  string::~string()
+ 0000:0000 idle  string::assign(const string far&,unsigned int,unsigned int)
+ 0000:0000 idle  tapplication::initcmdline
+ 0000:0000 idle  tapplication::initcmdshow
+ 0000:0000 idle  tapplication::inithinstance
+ 0000:0000 idle  tapplication::inithprevinstance
+ 0000:0000 idle  tmodule::tmodule(const char far*,const hinstance__ near*)
+ 0000:0000 idle  tmodule::~tmodule()
+ 0000:0000 idle  tstreamablebase::~tstreamablebase()
+ 0001:0331 idle  unlockdlls()
+ 0000:0000 idle  xmsg::~xmsg()
+ 0000:0000 idle  _catchcleanup()
+ 0000:0000 idle  __refdestructorcount()
+ 0000:0000 idle  FREELIBRARY
+ 0001:02B2       GETDOCTEMPLATEHEAD
+ 0000:0000 idle  GETMODULEHANDLE
+ 0001:02DA       GETMODULEPTR
+ 0000:0000 idle  GETMODULEUSAGE
+ 0000:0000 idle  GETPROCADDRESS
+ 0000:0000 idle  GETWINFLAGS
+ 0001:0000 idle  LibEntry
+ 0001:03A2       LIBMAIN
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  LOCALINIT
+ 0000:0000 idle  LOCKSEGMENT
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0001:00D1       WEP
+ 0001:01AE idle  _atexit
+ 0002:008C idle  _DocTemplateStaticHead
+ 0002:0030 idle  _errno
+ 0001:0261 idle  _exit
+ 0002:0088       _Module
+ 0002:0034 idle  __8086
+ 0002:0036 idle  __8087
+ 0002:005A idle  __abend
+ 0000:0000 idle  __acrtused
+ 0002:00A8       __atexitcnt
+ 0002:00DE       __atexittbl
+ 0001:028B       __cexit
+ 0001:00C5       __checknull
+ 0001:00B3       __cleanup
+ 0001:0299 idle  __c_exit
+ 0001:0276 idle  __exit
+ 0002:00AA idle  __exitbuf
+ 0002:00AE idle  __exitfopen
+ 0002:00B2 idle  __exitopen
+ 0002:00B8 idle  __FPVector
+ 0001:01A9 idle  __freeio
+ 0001:0113 idle  __GetDGROUP
+ 0002:003B       __hInstance
+ 0000:0000 idle  __LockDLL
+ 0002:0041 idle  __LockRTLHandle
+ 0002:003F idle  __LockWIN87EM
+ 0002:0038 idle  __osmajor
+ 0002:0039 idle  __osminor
+ 0002:003A idle  __osmode
+ 0002:0038 idle  __osversion
+ 0002:0032 idle  __protected
+ 0002:00BC idle  __RealCvtVector
+ 0001:00C6       __restorezero
+ 0000:0000 idle  __Return_unwind
+ 0002:00BC idle  __ScanTodVector
+ 0001:01A4       __setupio
+ 0001:00C7       __terminate
+ 0002:0038 idle  __version
+ 0001:02A8       __WEP
+ 0002:003D idle  __WinAllocFlag
+ 0000:0000 idle  ___ExitExceptBlocks
+ 0001:019C       ___InitExceptBlocks
+ 0000:0000 idle  ___InitExceptBlocksX
+
+  Address         Publics by Value
+
+ 0000:0000 idle  handleglobalexception(xmsg far&,char far*,char far*)
+ 0000:0000 idle  tapplication::inithinstance
+ 0000:0000 idle  tapplication::inithprevinstance
+ 0000:0000 idle  tapplication::initcmdline
+ 0000:0000 idle  tapplication::initcmdshow
+ 0000:0000 idle  tmodule::tmodule(const char far*,const hinstance__ near*)
+ 0000:0000 idle  tmodule::~tmodule()
+ 0000:0000 idle  tstreamablebase::~tstreamablebase()
+ 0000:0000 idle  xmsg::~xmsg()
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  GETMODULEHANDLE
+ 0000:0000 idle  LOCALINIT
+ 0000:0000 idle  LOCKSEGMENT
+ 0000:0000 idle  GETMODULEUSAGE
+ 0000:0000 idle  _catchcleanup()
+ 0000:0000 idle  __Return_unwind
+ 0000:0000 idle  ___ExitExceptBlocks
+ 0000:0000 idle  string::assign(const string far&,unsigned int,unsigned int)
+ 0000:0000 idle  string::~string()
+ 0000:0000 idle  string::string(const char far*)
+ 0000:0000 idle  GETPROCADDRESS
+ 0000:0000 idle  __acrtused
+ 0000:0000 idle  __refdestructorcount()
+ 0000:0000 idle  FREELIBRARY
+ 0000:0000 idle  ___InitExceptBlocksX
+ 0000:0000 idle  __LockDLL
+ 0000:0000 idle  GETWINFLAGS
+ 0001:0000 idle  LibEntry
+ 0001:00B3       __cleanup
+ 0001:00C5       __checknull
+ 0001:00C6       __restorezero
+ 0001:00C7       __terminate
+ 0001:00D1       WEP
+ 0001:0113 idle  __GetDGROUP
+ 0001:019C       ___InitExceptBlocks
+ 0001:01A4       __setupio
+ 0001:01A9 idle  __freeio
+ 0001:01AE idle  _atexit
+ 0001:0261 idle  _exit
+ 0001:0276 idle  __exit
+ 0001:028B       __cexit
+ 0001:0299 idle  __c_exit
+ 0001:02A8       __WEP
+ 0001:02B2       GETDOCTEMPLATEHEAD
+ 0001:02DA       GETMODULEPTR
+ 0001:0318 idle  lockdlls()
+ 0001:0331 idle  unlockdlls()
+ 0001:03A2       LIBMAIN
+ 0001:04E6       __tpdsc__[tstreamablebase]
+ 0001:0528       __tpdsc__[string]
+ 0001:0562       __tpdsc__[teventhandler]
+ 0001:0592       __tpdsc__[tmodule]
+ 0001:05DC       __tpdsc__[xmsg far&]
+ 0001:05ED       __tpdsc__[xmsg] const
+ 0001:0626       owlmain(int,char far*far*)
+ 0002:0030 idle  _errno
+ 0002:0032 idle  __protected
+ 0002:0034 idle  __8086
+ 0002:0036 idle  __8087
+ 0002:0038 idle  __version
+ 0002:0038 idle  __osversion
+ 0002:0038 idle  __osmajor
+ 0002:0039 idle  __osminor
+ 0002:003A idle  __osmode
+ 0002:003B       __hInstance
+ 0002:003D idle  __WinAllocFlag
+ 0002:003F idle  __LockWIN87EM
+ 0002:0041 idle  __LockRTLHandle
+ 0002:005A idle  __abend
+ 0002:0088       _Module
+ 0002:008C idle  _DocTemplateStaticHead
+ 0002:00A8       __atexitcnt
+ 0002:00AA idle  __exitbuf
+ 0002:00AE idle  __exitfopen
+ 0002:00B2 idle  __exitopen
+ 0002:00B8 idle  __FPVector
+ 0002:00BC idle  __ScanTodVector
+ 0002:00BC idle  __RealCvtVector
+ 0002:00DE       __atexittbl
+
+

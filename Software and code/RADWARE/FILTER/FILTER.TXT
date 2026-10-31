@@ -1,0 +1,5 @@
+25 Hz Tone
+  When tone is present, We have Stereo.
+    We must reject tone.
+    must split USB and LSB.
+  When tone is missing, We have Mono. 

@@ -1,0 +1,13 @@
+$m.i,d,rAFIR_LPF 
+$ifir_coeff ,ffircoeff.dat 
+$icoeff_3to30 ,f3to30.fir 
+$icoeff_9to11 ,f9to11.fir 
+$icoeff_4to22 ,f4to22.fir 
+$icoeff_8to12 ,f8to12.fir 
+$icoeff_9to10 ,fhighpass.fir 
+$icoeff_fm16 ,ffm16.fir 
+$icoeff_highpass ,fhigh4.fir 
+$icoeff_fm ,fdif.fir 
+$icoeff_60_hz ,f60hz.fir 
+$m.o,l03A2 
+$ 

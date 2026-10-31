@@ -1,0 +1,45 @@
+
+ERROR_1		:Problem mallocing enough memory
+ERROR_2         :Usage: %s [-c] filename
+ERROR_3		:       -c     make builder case sensitive
+ERROR_4		:Warning: "%s", line %d: 
+BOOT_ABS_ADDR	:Warning: Absolute address specifyed for Boot page will be ignored.
+ERROR_5		:         Segment address will be boot page * 2K
+ERROR_6		:Error: "%s", line %d: 
+EXPCT_SYSTEM	:expecting 'SYSTEM' at symbol %s
+REDEC		:trying to redeclare symbol %s
+EXPCT_ID	:expecting an identifier at symbol %s
+EXPCT_DOT	:expecting '.' at symbol %s
+EXPCT_DIRECTIVE	:expecting directive at symbol %s
+EXPCT_CONSTANT	:expecting a constant at symbol %s
+EXPCT_SLASH	:expecting '/' at symbol %s
+EXPCT_ABS	:expecting 'ABS' at symbol %s
+SPEC_SEG_AREA	:you must specify memory segment area
+SPEC_SEG_ADDRESS	:you must specify memory segment address
+SPEC_SEG_TYPE	:you must specify memory segment type
+DM_DATA_ONLY	:DM segment can have DATA attribute only
+DM_EXCEED	:DM segment cannot exceed physical address h#3fff
+DM_EXCEED_SEG	:DM segment cannot exceed physical address h#3fffff
+EXPCT_SEG_MOD	:expecting segment modifier at symbol %s
+EXPCT_RT_BRACKET	:expecting ']' at symbol %s
+EXPCT_EQ	:expecting '=' at symbol %s
+EXPCT_SEMICOLON	:expecting ';' at symbol %s
+BOOT_LENGTH	:BOOT page exceeds max boot page size
+BOOT_BOUNDARY	:BOOT page must be on a 2K word boundary
+PORT_IN_BOOT	:ports are not allowed in boot memory
+DM_INT_EXCEED	:no DM memory at addresses 0x3a00-0x3bff
+DUP_MEM_SPACE	:only one memory space qualifier allowed per segment
+DUP_MEM_TYPE	:only one memory type qualifier allowed per segment
+ERR_OVLAP	:FATAL ERROR: over lap occurred
+ERR_BOUND	:FATAL ERROR: boundary error occurred
+ERR_INV2105	:FATAL ERROR: used invalid memory on ADSP2105 part
+ERR_NOPM	:NOTICE:?no PM found
+ERR_IMPPM	:FATAL ERROR:impossible PM configuration
+ERR_PMDA1	:NOTICE:no code space in PM and PMDA pin MUST be used as MSB in PM address
+ERR_PMDA2	:NOTICE:PMDA pin MUST be used as MSB in PM address
+ERR_NOPMCD	:NOTICE:no code space in PM
+ERR_PMDA3	:NOTICE:PMDA pin must be used as INVERTED MSB in PM address
+ERR_PMDA4	:NOTICE:PMDA pin MUST NOT be used as MSB in PM address
+ERR_SEMI	:Warning: Missing semicolon after ENDSYS directive
+ERR_PAGE	:Error: Memory segment exceeds page size
+INTERNAL_FIXED  :Error: Internal memory fixed on this part

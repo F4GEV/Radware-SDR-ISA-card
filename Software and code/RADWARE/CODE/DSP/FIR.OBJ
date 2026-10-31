@@ -1,0 +1,214 @@
+$m.i,d,rAFIR_LPF 
+$d.v,d,c,rAdata ,s0079 
+$d.v,d,c,rAusb_data ,s0079 
+$d.v,d,c,rAlsb_data ,s0079 
+$d.v,d,c,rAhighpass_usb_data ,s0079 
+$d.v,d,c,rAhighpass_lsb_data ,s0079 
+$d.v,d,c,rAdelay_data ,s0028 
+$d.v,d,c,rAdelay2_data ,s0028 
+$d.v,d,c,rAdelay3_data ,s0028 
+$d.v,d,c,rAdelay4_data ,s0028 
+$d.v,d,c,rAfm_data ,s0004 
+$d.v,d,c,rAfm2_data ,s0004 
+$d.v,d,c,rAhz_60_data_usb ,s0051 
+$d.v,d,c,rAhz_60_data_lsb ,s0051 
+$d.v,d,c,rAhilbert_data ,s0051 
+$d.v,d,c,rAhilbert3_data ,s0051 
+$d.v,d,c,rArtty_data ,s0015 
+$d.v,d,c,rAcw_data ,s0014 
+$d.v,d,rAreg_l0 reg_l4 reg_i4 reg_m4 i0_pnt hilbert3_pnt hilbert_pnt 
+$d.v,d,rAusb_pnt lsb_pnt delay_pnt delay2_pnt delay3_pnt delay4_pnt 
+$d.v,d,rAhighpass_usb_pnt highpass_lsb_pnt 
+$d.v,d,rAfm_pnt fm2_pnt hz_60_pnt_usb hz_60_pnt_lsb rtty_pnt cw_pnt 
+$d.v,d,rAhighpass_pnt 
+$d.v,d,rALast_Decimate 
+$d.v,d,rAwhich_filter FM_OFF_MAX 
+$d.v,d,rAFM3_Last FM2_Last 
+$d.v,d,rADelta_Last Delta_Last2 
+$d.v,d,rArtty_usb rtty_lsb cw_time cw_detected 
+$d.v,d,rADeemphisize_data 
+$d.v,d,rAEmphisize_data 
+$d.v,p,c,rAfir_coeff ,s0051 
+$d.v,p,c,rAcoeff_3to30 ,s0051 
+$d.v,p,c,rAcoeff_9to11 ,s0051 
+$d.v,p,c,rAcoeff_4to22 ,s0051 
+$d.v,p,c,rAcoeff_8to12 ,s0051 
+$d.v,p,c,rAcoeff_9to10 ,s0051 
+$d.v,p,c,rAcoeff_custom ,s0051 
+$d.v,p,c,nint_pm ,rAcoeff_fm16 ,s0051 
+$d.v,p,c,nint_pm ,rAcoeff_highpass ,s0079 
+$d.v,p,c,nint_pm ,rAcoeff_fm ,s0004 
+$d.v,p,c,rAcoeff_60_hz ,s0051 
+$d.v,d,c,rAleast_noise ,s000A 
+$d.v,d,rAnoise_pnt 
+$d.gcoeff_custom 
+$d.eDeemphisize 
+$d.eEmphisize 
+$d.eHighpass_Both_ 
+$d.einitFilter_ 
+$d.esFilter_ 
+$d.esFilter 
+$d.eUFilter_ 
+$d.eLFilter_ 
+$d.eNoise_AGC_ 
+$d.edelayLine_ 
+$d.edelayLine 
+$d.edelayLine3 
+$d.eHilbert2 
+$d.eSelectFilter_ 
+$d.eAverage 
+$d.eHighLow 
+$d.eFM_Filter_ 
+$d.eFM_Filter8 
+$d.eFM_Filter9 
+$d.eFilter_60_Hz_ 
+$d.eDouble_Filter_60_Hz_ 
+$d.eDecimate_And_Filter_ 
+$d.eFM_RTTY_ 
+$d.eRTTY_ 
+$d.eRTTY_Block_ 
+$d.eRemove_Noise_ 
+$d.eRemove_Noise2_ 
+$d.eRemove_Noise3_ 
+$d.eHilbert_And_Delay_ 
+$d.eHilbert_And_Delay2_ 
+$d.eHilbert_And_Delay3_ 
+$d.eXmit_LSB_H_And_D_ 
+$d.eXmit_USB_H_And_D_ 
+$d.eMake_SSB_ 
+$d.eMake_SSB_FM_ 
+$d.eFilter_Both_ 
+$d.eFilter_Both_And_Copy_ 
+$d.eFilter_First_ 
+$d.eRemove_USB_ 
+$d.eRemove_LSB_ 
+$d.eCW_Block_ 
+$d.linitFilter_ ,o0000 
+$d.lzero ,o0012 
+$d.lzero_usb ,o0022 
+$d.lzero_delay ,o0034 
+$d.lzero_fm ,o0041 
+$d.lzero_rtty ,o0049 
+$d.lzero_cw ,o0050 
+$d.lzero_high ,o0059 
+$d.lNoise_AGC_ ,o006C 
+$d.lNoise_Loop ,o0078 
+$d.lLeast_Loop ,o0086 
+$d.lDeemphisize ,o0089 
+$d.lDeemp_loop ,o0097 
+$d.lEmphisize ,o009A 
+$d.lEmp_loop ,o00A8 
+$d.lDecimate_And_Filter_ ,o00AB 
+$d.lDecm_1st ,o00B8 
+$d.lDecm_2nd ,o00B9 
+$d.lDecm_loop ,o00BE 
+$d.ldelayLine_ ,o00C1 
+$d.ldelayLine ,o00C7 
+$d.ldelayLinex2 ,o00D1 
+$d.ldelayLine2 ,o00D9 
+$d.ldelayLine3 ,o00E3 
+$d.ldelayLine4 ,o00ED 
+$d.lAverage ,o00F7 
+$d.laverage_loop ,o00FF 
+$d.lHighLow ,o0102 
+$d.lhighlow_loop ,o010B 
+$d.lFM_Filter_ ,o010D 
+$d.lFM_Filter7 ,o011C 
+$d.lFM_Filt7_End ,o012E 
+$d.lFM_Filter8 ,o0131 
+$d.lFM_F_High ,o0143 
+$d.lFM_Filt_End ,o0144 
+$d.lFM_Filter9 ,o0147 
+$d.lFilter_60_Hz_ ,o014B 
+$d.lloop_60_hz ,o0158 
+$d.lDouble_Filter_60_Hz_ ,o015B 
+$d.ld_loop_60_hz ,o0167 
+$d.lFilter_60_Hz_USB ,o016B 
+$d.lFilter_60_Hz_LSB ,o0174 
+$d.lsFilter_ ,o017D 
+$d.lsFilter ,o0183 
+$d.lsFilterx2 ,o018E 
+$d.lHilbert2 ,o0197 
+$d.lHilbert3 ,o01A2 
+$d.lSelectFilter_ ,o01AD 
+$d.lUFilter_ ,o01AF 
+$d.lno_filter ,o01BC 
+$d.lLFilter_ ,o01BE 
+$d.lChooseFilter ,o01CD 
+$d.lfilt8to12 ,o01DC 
+$d.lfilt4to22 ,o01E0 
+$d.lfilt9to11 ,o01E4 
+$d.lfilt9to10 ,o01E8 
+$d.lfilt_custom ,o01EC 
+$d.lRemove_Noise3_ ,o01F0 
+$d.lRemove_Loop3 ,o020A 
+$d.lRemove_Noise2_ ,o020E 
+$d.lRemove_Loop2 ,o0224 
+$d.lRemove_Noise_ ,o0228 
+$d.lRemove_Loop ,o0240 
+$d.lHilbert_And_Delay_ ,o0244 
+$d.lT_and_D_loop ,o0256 
+$d.lXmit_LSB_H_And_D_ ,o0259 
+$d.lXmit_LSB_loop ,o0268 
+$d.lXmit_USB_H_And_D_ ,o026C 
+$d.lXmit_USB_loop ,o027B 
+$d.lHilbert_And_Delay2_ ,o027F 
+$d.lT_and_D_loop2 ,o0299 
+$d.lHilbert_And_Delay3_ ,o029D 
+$d.lT_and_D_loop3 ,o02BB 
+$d.lFilter_Both_And_Copy_ ,o02BF 
+$d.lFirst_Loop2 ,o02CC 
+$d.lFilter_FM ,o02D0 
+$d.lFilter_Both_ ,o02DA 
+$d.lBoth_Loop ,o02E6 
+$d.lHighpass_Both_ ,o02E8 
+$d.lHighpass_Loop ,o0302 
+$d.lFilter_First_ ,o0305 
+$d.lFirst_Loop ,o0310 
+$d.lRemove_LSB_ ,o0314 
+$d.lRemove_LSB_Loop ,o031F 
+$d.lRemove_USB_ ,o0321 
+$d.lRemove_USB_Loop ,o0328 
+$d.lMake_SSB_ ,o032A 
+$d.lMake_SSB_Loop ,o0334 
+$d.lMake_SSB_FM_ ,o0336 
+$d.lMake_FM_Loop ,o0342 
+$d.lCW_Block_ ,o0345 
+$d.lCW_Block_USB ,o0352 
+$d.lCW_no_tone ,o0364 
+$d.lCW_Block_loop ,o036C 
+$d.lcw_fir ,o037A 
+$d.lcw_fir_loop ,o0384 
+$d.lend_cw_fir ,o0386 
+$d.lFM_RTTY_ ,o0387 
+$d.lRTTY_HIGH ,o0394 
+$d.lRTTY_LOW ,o0395 
+$d.lFM_RTTY ,o0397 
+$d.lRTTY_Block_ ,o039B 
+$d.lBlock_USB ,o03A4 
+$d.lBlock_LSB ,o03AA 
+$d.lBlock_UL ,o03BD 
+$d.lBlock_none ,o03BE 
+$d.lBlock_loop ,o03C0 
+$d.lRTTY_ ,o03C3 
+$d.lrtty_cfir ,o03D0 
+$d.llsb_rtty ,o03D3 
+$d.lno_rtty ,o03D5 
+$d.lrtty_fir ,o03D7 
+$d.lrtty_loop ,o03E0 
+$d.lrtty_end ,o03E7 
+$d.lmax_hi ,o03E8 
+$d.lmax_low ,o03EA 
+$d.xRegRestore 
+$d.xOffset_1_pnt 
+$d.xOffset_2_pnt 
+$d.xRegSave 
+$d.xRegRestore2 
+$d.xOffset_Array_1 
+$d.xOffset_Array_2 
+$d.xRegSave2 
+$d.xfir_cnt 
+$d.xFilter 
+$d.xfir_df 
+$m.o,l03EC 
+$ 

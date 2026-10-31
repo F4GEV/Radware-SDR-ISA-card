@@ -1,0 +1,209 @@
+PROGRAM SineGen;
+{
+=============================================================================
+
+        This is an example  source code file intended to illustrate how to
+        integrate a user-defined external module into Hypersignal, as well
+        as illustrate the format  required for a binary time waveform data
+        file. The example chosen was a numerical sine wave generation pro-
+        gram.  The program creates a sine wave time-domain file, reads the
+        Hypersignal configuration file, updates some example parameters in
+        the file (thus  altering the Hypersignal user-environent), and re-
+        turns to Hypersignal.
+
+        The SINEGEN.EXE file on the distribution diskettes was compiled from
+        SINEGEN.DOC using Turbo Pascal 5.5 (Type: 'TPC sinegen.doc <CR>').
+
+                                  Hyperception
+                            9550 Skillman LB125 #302
+                                Dallas, TX 75243
+                                  214-343-8525
+
+=============================================================================
+}
+Uses Crt;
+
+LABEL   1000, 1500, 2000, 2500;
+
+CONST   Pi=3.1415926;
+        MaxBlocks=16;
+        RecSize=64;       { 64 integers in one DOS disk record }
+
+TYPE    FileRecord  = record
+                 Amp: Integer;     {max amplitude for whole file}
+           Framesize: Integer;     {number of samples/frame for analysis period}
+                  Fs: Integer;     {sampling frequency}
+              FFTORD: Integer;     {order of FFT}
+             Numelem: Integer;     {number of samples in file}
+             Overlap: Integer;     {either FFT or LPC Autocorr. overlap amount}
+            Typedata: Integer;     {1=autocor. data, 2=filter data, 0=else}
+        Num_Channels: Integer;     {number of channels interleaved in waveform}
+               Fs_Hi: Integer;     {samp. freq. "High" value (see users man.)}
+          Numelem_Hi: Integer;     {number of samples "High" value}
+              Sample: Array[0..20000] of Integer;
+       END;
+
+VAR     Block,NumBlocks,NumFrames,Index: Integer;
+        Y:                               Text;
+        Status:                          Integer;
+        Freq:                            Real;
+        Z:                               File;
+        DataFile:                        FileRecord;
+        I,J,K:                           Integer;
+        Fileout:                         String[25];
+
+
+{$I CONFIG.DOC}    { CONFIGURATION FILE READ/WRITE, DESCRIPTION }
+
+
+{===========================================================================}
+
+PROCEDURE CURSOROFF;
+BEGIN
+{
+     MOV  AH,1
+     MOV  CH,38H
+     MOV  CL,7
+     INT  10H
+}
+     INLINE
+     ($B4/$1/$B5/$38/$B1/$7/$CD/$10);
+END;
+
+PROCEDURE CURSORON;
+BEGIN
+{
+     MOV  AH,1
+     MOV  CH,6
+     MOV  CL,7
+     INT  10H
+}
+     INLINE
+     ($B4/$1/$B5/$6/$B1/$7/$CD/$10);
+END;
+
+
+{===================== START OF MAIN ROUTINE, SINEGEN  ======================}
+
+BEGIN { SineGen }
+
+        TEXTBACKGROUND(BLACK);    {user-defined module responsible for screen}
+        TEXTCOLOR(WHITE);
+        CLRSCR;
+        CURSOROFF;
+
+{============ read in Hypersignal configuration file ===========}
+
+        config_read(status);
+        if status<>0 then begin
+            cursoron;
+            exit;
+        end;
+
+        CLRSCR;
+        CURSORON;
+        GOTOXY(1,1);
+
+WRITELN('This is an example source code file  intended to  illustrate how to');
+WRITELN('integrate a user-defined external module into  Hypersignal, as well');
+WRITELN('as illustrate the format required for a binary time  waveform  data');
+WRITELN('file.  The example chosen was a numerical sine wave generation pro-');
+WRITELN('gram.  The program creates a sine wave  time-domain file, reads the');
+WRITELN('Hypersignal configuration file,  updates some example parameters in');
+WRITELN('the file (thus altering the  Hypersignal  user-environent), and re-');
+WRITELN('starts the Hypersignal program.');
+
+1000:   DataFile.Fs:=-1;
+        GOTOXY(1,10);
+        CLREOL;
+        WRITE('Enter desired Sampling Frequency (in Hz): ');
+{$I-}
+        READLN(DataFile.Fs);           { determine the sampling frequency }
+{$I+}
+        if (IORESULT<>0) or (DataFile.Fs<1) then goto 1000;
+1500:   Freq:=-1;
+        GOTOXY(1,12);
+        CLREOL;
+        WRITE('Enter desired Frequency of Sinusoid (in Hz): ');
+{$I-}
+        READLN(Freq);                  { determine the frequency }
+{$I+}
+        if (IORESULT<>0) or (Freq<1) then goto 1500;
+
+
+        IF Freq>DataFile.Fs DIV 2 THEN { check for error in Fs }
+        BEGIN
+                GOTOXY(1,14);
+                WRITELN('Exceeds the Nyquist Sampling Rate');
+                GOTO 1000;
+        END;
+
+2000:   DataFile.Amp:=128;
+        GOTOXY(1,14);
+        CLREOL;
+        WRITE('Enter desired Amplitude of Sinusoid (-128<amp<128): ');
+{$I-}
+        READLN(DataFile.Amp);          { determine the amplitude }
+{$I+}
+        if (IORESULT<>0) or (ABS(DataFile.AMP)>128) then goto 2000;
+
+2500:   Fileout:='';
+        GOTOXY(1,16);
+        CLREOL;
+        WRITE('Enter Filename: ');     { get the output file name }
+        READLN(FileOut);
+        ASSIGN(Z, DRIVE+PATH+Fileout+'.TIM');
+                                       { add the '.tim' extension }
+{$I-}
+        REWRITE(Z);                    { create the file in the directory }
+{$I+}
+        if (IORESULT<>0) or (Fileout='') then goto 2500;
+
+        NumFrames:=8;                  { arbitrarily define number of frames }
+
+        WITH DataFile DO BEGIN
+             Amp:=ABS(Amp);            { absolute value of max amplitude }
+             Framesize:=128;           { arbitrarily set framesize to 128
+                                                   samples }
+                                       { Sampling Freq (Fs) already defined }
+             FFTORD:=0;
+             Numelem:=Framesize*NumFrames;
+                                       { calculate # of elements }
+             Overlap:=0;               { no overlap, yet }
+             TypeData:=0;              { use the fast magnitude approximation }
+             Num_Channels:=0;          { non-interleaved data }
+             Fs_Hi:=0;                 { samp. freq. < 32767 }
+             Numelem_Hi:=0;            { number of samples < 16384 }
+        END;
+
+        NumBlocks:=(DataFile.Numelem+10) DIV RecSize;
+                                       { calculate the # of blocks to write }
+        FOR Index:=0 to DataFile.Numelem-1 DO BEGIN
+
+             DataFile.Sample[Index]:=  { calculate the sine wave }
+                      ROUND(DataFile.Amp*SIN(2*Pi*Index*Freq/DataFile.Fs));
+        END;
+        BLOCKWRITE(Z, DataFile, NumBlocks);
+                                       { write the file }
+        CLOSE(Z);                      { make the file permanent (save it) }
+
+
+{============ update any user modified values, if desired =============}
+
+        FIELD[2,3,2]:=Fileout;         { update TIME filename to Sine file }
+        MEM_STATEY[0]:=0;              { set initial menu selection
+                                             to time display }
+
+        SGCOLOR:=TICOLOR;
+        SGBCOLOR:=TIBCOLOR;
+        SGGCOLOR:=TIGCOLOR;
+        IIRFILTERFILE:='none';
+        RECURINFILE:='none';
+
+
+{============ write out Hypersignal configuration file ==========}
+
+        config_write(status);
+
+        cursoron;
+END.

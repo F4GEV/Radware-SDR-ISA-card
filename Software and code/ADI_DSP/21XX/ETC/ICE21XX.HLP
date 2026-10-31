@@ -1,0 +1,1609 @@
+/* @(#)help.txt	1.11 9/15/93 1 */
+
+ New & improved help file for EZ-ICE Release 4.0 V1.0
+ Started on 5Apr93 by AEM
+ Includes some judicious cut-and-pasting from old help
+ file, plus a lot of totally new stuff.
+
+ 15Sep93  Adding in 2111 specific help text for ez_2111  AEM
+
+%%
+1,0:1
+2,0:2
+3,0:3
+4,0:4
+5,0:5
+6,0:6
+7,0:7
+8,0:8
+9,0:9
+10,0:10
+11,0:11
+12,0:12
+14,0:14
+15,0:15
+16,0:16
+17,0:17
+18,0:18
+19,0:19
+20,0:20
+21,0:21
+22,0:21
+23,0:23
+24,0:23
+25,0:23
+26,0:23
+27,0:23
+28,0:23
+29,0:29
+30,0:29
+31,0:31
+32,0:31
+33,0:33
+35,0:35
+36,0:36
+38,0:38
+39,0:38
+40,0:38
+41,0:38
+43,0:43
+52,0:52
+53,0:52
+54,0:52
+55,0:52
+56,0:56
+57,0:56
+58,0:56
+60,0:60
+61,0:61
+62,0:62
+63,0:63
+64,0:64
+66,0:169
+69,0:69
+70,0:70
+71,0:71
+77,0:77
+78,0:77
+79,0:77
+85,0:85
+90,0:90
+91,0:90
+96,0:96
+97,0:97
+98,0:98
+99,0:99
+100,0:100
+101,0:101
+102,0:102
+103,0:103
+104,0:104
+105,0:105
+106,0:106
+107,0:107
+108,0:108
+110,0:110
+111,0:110
+114,0:114
+115,0:115
+116,0:115
+117,0:117
+118,0:118
+119,0:119
+165,0:165
+166,0:166
+167,0:167
+169,0:169
+171,0:171
+172,0:172
+176,0:176
+177,0:177
+178,0:178
+179,0:179
+180,0:180
+181,0:181
+182,0:182
+183,0:183
+184,0:184
+185,0:185
+186,0:186
+187,0:187
+188,0:188
+%%
+.1
+Menu Bar 
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The menu bar provides the means for all EZ-ICE windows to be chosen and 
+subsequently displayed.  At the top of the screen are a list of categories.
+Upon selecting one of the categories at the top of screen, a drop down sub-menu 
+containing choices relevant to the selected category will appear.  These choices
+typically specify windows to open or actions to occur.  Selecting one of these
+options will either open the chosen window or cause the EZ-ICE to take the 
+given action. 
+
+Note: The <ESC> key will cancel a menu selection.  Press <ESC> twice if a
+sub-menu is displayed, but just press <ESC> once if only the menu bar itself is
+selected.  
+
+These are the categories of the menu bar:
+
+ @180[File]  @181[Register]  @182[Memory]  @183[Stacks]  @184[Commands]  @185[Execution]  @186[Display]  @187[Misc]  @179[Help]  @188[Quit]
+ 
+.2
+Exit
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Exit function provides a means to leave the EZ-ICE and return to the
+operating system.  The current display configuration, this includes window
+sizes, positions, colors and floating point display attributes are written out
+to the last window file that was loaded.  If no window file was loaded, the
+configuration is saved to a file which the EZ-ICE will read in by default.
+
+A pop-up window appears prompting the user for confirmation before the EZ-ICE
+exits. 
+
+Exit can also be called from the @77[Command Window] by typing "exit".
+No confirmation is required when exiting from the Command Window.
+
+See also @3[Quit].
+
+.3
+Quit
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Quit function provides a means to leave the EZ-ICE and return to the
+operating system.  No display configuration data is saved.
+
+A pop-up window appears prompting the user for confirmation before the EZ-ICE
+exits. 
+
+Quit can also be called from the @77[Command Window] by typing "quit".
+No confirmation is required when quitting from the Command Window.
+
+See also @2[Exit].
+
+.4
+Abort 
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Abort function actually provides several functions depending upon the
+current context.  It is usually invoked by pressing the <ESC> key.
+
+   - When invoked from the @176[help system], this function will return the user to 
+the EZ-ICE.
+
+   - When invoked from the active window, this function will close the active
+window.
+
+   - When invoked from the @1[menu bar], this function will cancel any selections
+made from the menu.
+
+   - When invoked from a pop-up, this function will close the pop-up and cancel
+any actions incurred by the pop-up.
+
+.5
+Next Window
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function allows the user to move between windows.  This function is invoked
+by the @178[<F2>] key.  
+
+.6
+Redraw Display
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function simply redraws the entire screen.  This function is invoked from
+the @1[menu bar].   
+
+.7
+Center Windows
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will center all open windows to the middle of the screen.  It is 
+typically used when some window(s) has been moved off the screen.  This function
+is invoked from the @1[menu bar]. 
+
+.8
+List Windows
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will produce a pop-up window containing a list of all open
+windows.  The user can select from the list a window to transfer control 
+into or simply remain in the current window.
+
+This function can be invoked from the @1[menu bar] or by pressing @178[<Ctrl-L>].
+
+.9
+Move Window Up
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will move the current window, if that window is a movable window,
+toward the top of the screen.  This function can be invoked by pressing the
+@178[<F5>] key.  
+
+The mouse can also be used to move windows by clicking and dragging the window
+border to the new location.
+
+.10
+Move Window Down
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will move the current window, if that window is a movable window,
+toward the bottom of the screen.  This function can be invoked by pressing
+the @178[<F6>] key.  
+
+The mouse can also be used to move windows by clicking and dragging the window
+border to the new location.
+
+.11
+Move Window Left
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will move the current window, if that window is a movable window,
+toward the left side of the screen.  This function can be invoked by pressing
+the @178[<F7>] key.  
+
+The mouse can also be used to move windows by clicking and dragging the window
+border to the new location.
+
+.12
+Move Window Right
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will move the current window, if that window is a movable window,
+toward the right side of the screen.  This function can be invoked by pressing
+the @178[<F8>] key.  
+
+The mouse can also be used to move windows by clicking and dragging the window
+border to the new location.
+
+.14
+Make Window Taller
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will vertically increase the size of the current window, if that
+window is a sizeable window.  This function can be invoked by pressing the
+@178[<Shift-F5>] key.  
+
+The mouse can also be used to size windows by clicking and dragging a corner
+of the window border.
+
+.15
+Make Window Shorter
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will vertically decrease the size of the current window, if that
+window is a sizeable window.  This function can be invoked by pressing the
+@178[<Shift-F6>] key.  
+
+The mouse can also be used to size windows by clicking and dragging a corner
+of the window border.
+
+.16
+Make Window Wider
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will horizontally increase the size of the current window, if that
+window is a sizeable window.  This function can be invoked by pressing the
+@178[<Shift-F7>] key.  
+
+The mouse can also be used to size windows by clicking and dragging a corner
+of the window border.
+
+.17
+Make Window Narrower
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will horizontally decrease the size of the current window, if that
+window is a sizeable window.  This function can be invoked by pressing the
+@178[<Shift-F8>] key.  
+
+The mouse can also be used to size windows by clicking and dragging a corner
+of the window border.
+
+.18
+Toggle Window Format
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will toggle the current display format of the current window, 
+assuming the window is capable of supporting multiple formats.  For example,
+when the current window is a Program Memory window, this function will
+change the display format from it's current format to either hexadecimal, 
+decimal, or disassembled.  
+
+This function is normally invoked from the @1[menu bar] or via the @178[<Ctrl-T>] key.
+
+.19
+Video Mode
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function allows the user to change the video mode of the display.  The
+EZ-ICE supports 3 video modes, all of which are text modes:
+
+                 - 80 Columns x 25 Rows (default)
+                 - 80 Columns x 43 Rows (EGA and VGA only)
+                 - 80 Columns x 50 Rows (VGA only)
+
+The EZ-ICE first determines which modes are supported on the hardware 
+platform and then pops up a selection menu containing a list of choices based
+upon the hardware configuration.  The video mode is saved in and loaded from
+the the window file.  This function is invoked from the the @1[menu bar]. 
+
+See also @99[Save Window File] and @98[Load Window File].
+
+(NOTE: This feature is supported on PC platforms only.)
+
+.20
+About EZ-ICE...
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function displays information about the EZ-ICE.  This function is
+invoked from the the @1[menu bar]. 
+
+
+.21
+DAG Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+These are the Data Address Generator  (DAG) registers.  The DAGs are used to
+generate memory addresses.  There are 4 sets of 14 bit registers in each DAG.
+
+                    Index Registers:   I0 thru I3 DAG1  I4 thru I7 DAG2
+                    Modify Registers:  M0 thru M3 DAG1  M4 thru M7 DAG2
+                    Length Registers:  L0 thru L3 DAG1  L4 thru L7 DAG2
+
+The DAG registers can be displayed in hexadecimal and decimal formats. 
+Note that in the decimal display format the I and L registers are
+displayed as 14 bit unsigned values whereas the M registers are displayed in 14
+bit signed two's complement format.  The current format can be changed by 
+pressing @18[<Ctrl-T>].
+
+.23
+Computational Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of the computational registers.  These registers are the
+foreground or background ALU and MAC registers. The selection of primary and
+secondary sets is made via the @33[MSTAT] register.
+
+The registers can be displayed in hexadecimal, decimal 
+and 1.15 fixed point formats.
+The current format can be changed by pressing @18[<Ctrl-T>].
+
+.29
+Memory Mapped Control Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The control registers consist of the wait state registers, (PWAIT and DWAIT0
+thru DWAIT4), the timer control registers ,(timer scale, timer period, and
+timer count), the sport 0 and sport 1 enables, and the boot control 
+registers (boot force, boot page, boot wait, and boot mode for 2111).
+
+These registers use a total of 5 16-bit data words in the memory-mapped
+registers.
+
+Sport enable/configure, boot registers, and PWAIT are at dm[0x3fff].
+
+DWAIT0-4 are at dm[0x3fe].
+
+TPERIOD is at dm[0x3ffd], TCOUNT is at dm[0x3ffc], and TSCALE is at dm[0x3ffb].
+
+.31
+Program Control Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The program control registers display the current values of the program
+counter (PC), and the counter register (CNTR).  Both values can be set
+from the window or from the @77[Command Window].
+
+.33
+Status Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The arithmetic status register (ASTAT), stack status register (SSTAT),
+and the mode status register (MSTAT) are broken down into their bit
+fields in this window.  All three registers bit fields are arranged in
+ascending order, with the LSB at the top, and the MSB at the bottom.
+ASTAT and MSTAT are read/write.  SSTAT is read-only.  These values can
+also be read/set from the @77[Command Window].
+
+The ASTAT information is generated by the computational units.  The bits
+in ASTAT are defined as follows:
+
+   Bit   Name	 Definition
+    0     AZ      ALU result zero or floating point underflow
+    1     AV      ALU overflow
+    2     AN      ALU result negative
+    3     AC      ALU fixed point carry
+    4     AS      ALU X input sign 
+    5     AQ      ALU quotient sign
+    6     MV      MAC overflow
+    7     SS      Shifter input sign
+
+@33[more]
+
+The bits in the SSTAT register are defined as follows:
+
+   Bit    Name    Definition
+    0     PC_E    PC stack empty        see also @106[PC stack]
+    1     PC_O    PC stack overflow     see also @106[PC stack]
+    2     CS_E    Count stack empty     see also @108[Loop stack]
+    3     CS_O    Count stack overflow  see also @108[Loop Stack]
+    4     SS_E    Status stack empty    see also @107[Status stack]
+    5     SS_O    Status stack overflow see also @107[Status stack]
+    6     LS_E    Loop stack empty      see also @108[Loop stack]
+    7     LS_O    Loop stack overflow   see also @108[Loop stack]
+
+The bits in the MSTAT register are defined as follows:
+
+   Bit    Name    Definition
+    0     RBANK   0 primary, 1 secondary registers
+    1     BIT_R   1 = bit reverse operation
+    2     ALUOV   ALU overflow latch mode
+    3     ARSAT   AR saturation mode
+    4     MACRP   MAC result placement mode 
+    5     T_ENA   Timer enable 
+    6     G_ENA   Go Mode enabled
+
+.35
+Interrupt Control Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Interrupt Control Registers consist of the interrupt mask register
+(IMASK), and the interrupt control register (ICNTL). Both these
+registers are read/write.  Also present is the IFC register which is
+a write-only register.  Its display will always read 000.
+
+The bits in the IMASK register are defined for the 2101 as follows:
+   Bit      Definition
+    0       Timer interrupt enable
+    1       SPORT 1 receive or IRQ0 interrupt enable
+    2       SPORT 1 transmit or IRQ1 interrupt enable
+    3       SPORT 0 receive interrupt enable (Must be set to 0 for 2105)
+    4       SPORT 0 transmit interrupt enable (Must be set to 0 for 2105)
+    5       IRQ2 interrupt enable
+
+The bits in the ICNTL register are defined as follows:
+   Bit      Definition
+    0       IRQ0 sensitivity 0 = level , 1 = edge
+    1       IRQ1 sensitivity 0 = level , 1 = edge
+    2       IRQ2 sensitivity 0 = level , 1 = edge
+    3       IRQ3 sensitivity (always 0 for 2101)
+    4       Interrupt Nesting mode
+
+The bits in the IFC register are defined as follows:
+   Bit      Definition
+    0       Timer clear
+    1       SPORT 1 receive or IRQ0 clear
+    2       SPORT 1 transmit or IRQ1 clear
+    3       SPORT 0 receive clear (must be set to 0 for 2105)
+    4       SPORT 0 transmit clear (must be set to 0 for 2105)
+    5       IRQ2 clear
+    6       Timer force
+    7       SPORT 1 receive or IRQ0 force
+    8       SPORT 1 transmit or IRQ1 force
+    9       SPORT 0 receive force (must be set to 0 for 2105)
+   10       SPORT 0 transmit force (must be set to 0 for 2105)
+   11       IRQ2 force
+
+.36
+PX Register
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The PX register is used for 24 bit data transfers. Essentially, the
+LSB of data from a read of PM data is loaded into PX. The LSB of data
+when writing to PM data memory is written from the PX register.
+
+.38
+Sport Control Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The SPORT control registers are broken out by SPORT in these windows.
+(0,1) refers to SPORT 0 or SPORT 1.
+The following chart describes these registers:
+
+Name                  Description
+SLEN(0,1)             serial length of data
+DTYPE(0,1)            data type (format of the serial data)
+ISCLK(0,1)            sclk required flag
+IRFS(0,1)             internal receive frame synch 
+ITFS(0,1)             internal transmit frame synch 
+RFSR(0,1)             receive frame synch required flag
+TFSR(0,1)             transmit frame synch required flag
+RFSW(0,1)             receive frame synch width
+TFSW(0,1)             transmit frame synch width
+SCLKDIV(0,1)          sclk divisor (use to set up frequency)
+RFSDIV(0,1)           receive frame synch divisor 
+@38[more]
+RBUF(0,1)             receive auto-buffering enable
+TBUF(0,1)             transmit auto-buffering enable
+RIREG(0,1)            receive auto-buffering I register
+TIREG(0,1)            transmit auto-buffering I register
+RMREG(0,1)            receive auto-buffering M register
+TMREG(0,1)            transmit auto-buffering M register
+MCRE0                 multichannel receive word zero enables
+MCRE1                 multichannel receive word one enables
+MCTE0                 multichannel transmit word zero enables
+MCTE1                 multichannel transmit word one enables
+MCE0                  multichannel enable
+MCEFD                 multichannel frame delay
+RX(0,1)               receive register          
+TX(0,1)               transmit register          
+@38[first page]
+
+.43
+Hip Registers
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The hip register window shows the values currently stored in the hip data
+registers HDR0-5.  The registers are memory mapped to DM 0x3fe0 - 0x3fe5 
+and are read/writable.  Also shown are the current values of HSR6 & HSR7.
+These registers indicate reads & writes of the HDR registers by the dsp 
+and an external host.  Bits 0-5 of HSR6 are set when an external host writes
+to HDR 0-5 respectively.  Bits 8-13 are set when the dsp writes to the HDRs.
+When the dsp reads an HDR, its corresponding bit is cleared.  Bits 0-5 of
+HSR7 mirror the upper half of HSR6 (dsp writes) so that they can be read by 
+an 8 bit host.  Bit 6 is the software reset bit.  If written by the dsp, 
+reset occurs immediately, otherwise the reset happens when the write is
+synchronized to the dsp's system clock.  _RESET_ is held for 5 cycles then
+released.  Bit 7 of HSR7 is the overwrite bit, and is the only part of the
+HSRs that can be written to from the interface.  There is a separate field
+in the hip register window dedicated to the overwrite bit.  The overwrite 
+bit determines how the dsp responds to an external host trying to write to
+an HDR before it has been read by the dsp.  Consult the ADSP-2100 Family
+Users Manual for more information on overwrite mode.
+
+
+.52
+Program Memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+Program memory (PM) is 24 bits wide and spans from address 0 through 0x3fff.
+The display contains the memory map access for the location, address, data (in
+whatever format), and symbol name, if any. PM can be displayed in hexadecimal,
+decimal, and disassembled formats. 
+
+In the disassembled format window, highlighted address fields indicate
+the presence of a @169[Breakpoint].  Also note
+that the instruction pointed to by the @31[Program Counter] 
+(PC) is highlighted, as well as the line currently selected for 
+input (if window is active).
+
+The following @178[special keys] are active for PM windows:
+        @60[<Ctrl-D>] Dump Memory
+        @61[<Ctrl-M>] Load Memory
+        @62[<Ctrl-F>] Fill Memory
+        @63[<Ctrl-G>] Go To Memory
+        @18[<Ctrl-T>] Toggles Window Display Format
+
+.56
+Data Memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+Data memory (DM) is 16 bits wide and spans from address 0 through
+0x3fff.  The display contains the memory map access for the location,
+address, data (in whatever format), and symbol name, if any.  DM can
+be displayed in hexadecimal, and decimal formats.  The memory-mapped
+control registers occupy DM locations 0x3c00 - 0x3fff, and these
+locations are not accessible from the DM memory window.
+
+The following @178[special keys] are active for DM windows:
+
+        @60[<Ctrl-D>] Dump Memory
+        @61[<Ctrl-M>] Load Memory
+        @62[<Ctrl-F>] Fill Memory
+        @63[<Ctrl-G>] Go To Memory
+        @18[<Ctrl-T>] Toggles Window Display Format
+
+.60
+Dump Memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to dump memory data to a file.  You are prompted
+for an address range and file name.  The data is dumped in a format
+consistent with the format of the window from which it is invoked, i.e.:
+hexadecimal, decimal etc..
+
+This function is valid only when applied from a memory, @52[PM] or @56[DM] window.  
+It is normally invoked from the @1[menu bar] or via the @178[<Ctrl-D>] key.
+
+See also @61[Load Memory].
+.61
+Load Memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to load memory data from a file.  You are prompted for
+an address range and file name.  The data is loaded, in a format consistent
+with the format of the window from which it is invoked, i.e.: hexadecimal,
+or decimal, starting at the address supplied.  
+
+This function is valid only when applied from a memory, @52[PM] or @56[DM] window. 
+It is normally invoked from the @1[menu bar] or via the @178[<Ctrl-M>] key.
+
+See also @60[Dump Memory].
+.62
+Fill Memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to fill memory with a given pattern.  You are prompted 
+for an address range and pattern which will be replicated in memory.  The
+pattern is entered in hexadecimal format.  
+
+This function is valid only when applied from a memory, @52[PM] or @56[DM] window.
+It is normally invoked from the @1[menu bar] or via the @178[<Ctrl-F>] key.
+.63
+Go To Address
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to go to a particular memory address.  You are prompted 
+for an address.  After entering the address, the window is moved to the given
+address.  
+
+This function is valid only when applied from a memory, @52[PM] or @56[DM] window. 
+It is normally invoked from the @1[menu bar] or via the @178[<Ctrl-G>] key.
+
+.64
+Plot memory
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to plot a section of memory.  A pop-up asks for the
+range of memory to be plotted.  A second pop-up asks for the 'stride' or
+spacing of locations in the range specified.  The plot's scale is auto-sizing.
+When finished viewing, hit 'enter' to return to the EZ-ICE.
+
+It is normally invoked from the @1[menu bar] or via the @178[<Ctrl-P>] key.
+
+.69
+Chip Reset 
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+A full chip reset (with boot if MMAP == 0) is invoked here. Breakpoints
+are not affected by this action.
+
+N.B.  The EZ-ICE will immediately reset the chip, without confirmation
+from the user.
+
+This function is invoked from the @1[menu bar], or by typing "cr"
+in the @77[Command Window].
+
+.70
+Emulator Reset
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function causes a reset of the EZ-ICE host.  A chip reset
+(with boot if MMAP == 0) is performed.  Breakpoints are all cleared,
+all host memory caches are invalidated, and communications with
+the EZ-ICE are re-established, with a communications check performed.
+
+A pop-up window will confirm before any action is taken.
+
+This function is invoked from the @1[menu bar].
+
+See also @69[Chip Reset].
+
+.71
+Color Display Attributes
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to alter the color attributes of the windowing
+system of the EZ-ICE.  A pop-up window is displayed with a list of
+window types and areas within those windows on the left hand side and
+the corresponding color attributes currently in effect.  Upon choosing
+the item for which a change in color is desired, another pop-up window
+is displayed which presents a palette of colors.  The current color
+attributes for the item which was selected is enclosed by brackets
+([]).  Upon choosing a new color selection, the original pop-up is
+redisplayed, showing the new color selections.
+
+Selecting the "Accept" option will redisplay the screen with the new
+color selections.  The "Cancel" option cancels any new color
+selections made.  The "Reset" option resets all colors to the EZ-ICE
+defaults.
+
+This function is invoked from the @1[menu bar].  
+
+Note that color attributes are saved in window files, either upon @2[exiting] the
+EZ-ICE or manually saving the @99[window file].  
+
+.77
+Command Window
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Command Window is used to enter EZ-ICE commands. A command history of 20
+commands is kept and may be recalled and edited using the arrow keys or the 
+mouse. The format for the commands is as follows:
+
+Register Commands
+
+   Function                          Command Syntax
+
+   Set a register to a value         register = expression (ex. ax0=1)
+			             R register value (ex. r ax0 1)
+
+   Examine contents of register      ?register (ex. ?ax0)
+   (displayed in command output
+   window)
+
+
+
+@77[more]
+Memory Commands
+
+    Set memory to value              FILL addr or range value 
+                                     SETUP addr or range value 
+                                     (ex. FILL pm(1) 1234)
+                                     (ex. FILL pm(1),pm(10) 1234)
+                                     (ex. FILL pm(1)/10 1234)
+                                     (ex. FILL pm(1)< 'file')
+                                     (ex. SETUP pm(1) 1234)
+                                     (ex. SETUP pm(1),pm(10) 1234)
+                                     (ex. SETUP pm(1)/10 1234)
+                                     (ex. SETUP pm(1)< 'file')
+
+    Assemble value                   ASSEMBLE addr instruction 
+                                     A addr instruction
+                                     (ex. assemble pm(0) jump 10)
+                                     (ex. A pm(10) ax0=ar)
+
+   Examine contents of               ?addr (ex. ?dm(3) )
+   memory
+
+   Dump contents of                  DUMP addr or range [>'file']
+   memory                            D addr or range [>'file']
+                                     (ex. D dm[0]/0x100 >'d.dat')
+
+   Load executable file              LOAD 'file'
+                                     L 'file'
+
+   Plot memory                       PLOT range increment
+                                     PL range increment
+                                     (ex. PL pm[0]/0x100 1)
+@77[more]
+Break/Watch Commands
+
+    Set a breakpoint                 BREAK addr (ex. BREAK pm(10))
+                                     B addr (ex. B pm(10))
+
+    Delete a breakpoint              BD addr or number or all
+                                     (ex. BD pm(10)))
+                                     (ex. BD 1)
+                                     (ex. BD all)
+
+    List breakpoints                 B
+    to command output window
+
+
+@77[more]
+Execution Commands
+
+    Run                              GO
+                                     G
+                                     RUN
+
+    Run to an address                GO addr
+                                     G addr
+
+    Step                             STEP
+                                     S
+
+    Step 'N' times                   STEP number
+                                     S number
+
+    Chip reset (boot if MMAP 0)      CR
+
+    Execute a single instruction     EXECUTE instruction
+                                     EXE instruction
+                                     (ex. EXE ar = ay0 + 1)
+@77[more]
+
+
+Symbols and Alias Commands
+
+    Load a symbol file               LS 'file'
+                                     (ex. LS 'test')
+
+    Add a user defined symbol        ADDSYMBOL + 'symbol' addr
+                                     ASYM + 'symbol' addr
+                                     (ex. ADDSYMBOL + 'ggg' pm[3])
+
+    Set an alias                     ALIAS 'new name' 'command'
+                                     (ex. ALIAS 'my_reset' 'cr')
+
+    Delete an alias                  DELETE 'new name'
+                                     (ex. DELETE 'my_reset')
+
+    List alias to command            ALIAS
+    output window
+
+
+
+@77[more]
+File Related Commands
+
+    Write a window file              WIN > 'filename'
+
+    Start writing to keystroke       KEYON 'filename'
+    file                             KO 'filename'
+
+    Stop writing to keystroke        KEYOFF
+    file                             KF
+
+    Read in a keystroke file         < 'filename'
+
+Miscellaneous Commands            
+
+    Quit the EZ-ICE without       QUIT 
+    saving a window file             Q 
+
+    Exit the EZ-ICE saving        EXIT
+    a window file                    E 
+
+    Shell out to DOS                 SHELL
+                                     SH
+
+    Shell a command to DOS           SHELL 'command'
+                                     SH 'command'
+                                     (ex. SH 'dir/w')
+
+    Get EZ-ICE version            VERSION
+				     VS
+
+
+
+@77[first page]
+
+.85
+Command Output Window
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Command Output Window displays information requested from the 
+@77[Command Window].
+Data is displayed in the same format as selected in the Command Window.
+The following data is displayed in the Command Output Window:
+
+   Command                          Output
+
+   ALIAS                            List of current aliases
+
+   BREAK,B                          List of current breakpoints
+
+   CHIPRESET,CR                     Boot Cycles, Boot Page
+
+   D range                          Contents of memory 
+
+   ? expression                     The value of the expression.
+
+.90
+Expression Evaluation
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The Expressions Window can display and evaluate expressions while you
+perform other debugging actions. The EZ-ICE updates an expression's
+value as it changes. The ?+ command (See the @77[Command Window]) adds an expression and
+the ?- command deletes an expression. You can also type an expression
+directly into the command window. CTRL_D (control D) will delete an
+expression.
+
+Values displayed in the Expressions Window are always displayed as 32 bit sign-
+extended numbers.
+
+.96
+Load Executable File
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to load executable files into the EZ-ICE.  The 
+executable file typically defines @52[Program Memory] (PM), or
+@56[Data Memory] (DM) and symbolic information.
+
+When prompted for a filename to load, if an extension is given, only
+the executable is loaded.  If no extension is given, then the EZ-ICE
+looks for a symbol table under the same filename with the extension .sym, 
+and loads it if found.
+
+Note that executable files are loaded independently of any memory map
+attributes.  
+
+This function is invoked from the @1[menu bar], or from the
+@77[Command Window] by typing "l 'filename'".
+
+See also @97[Load Symbol File].
+
+.97
+Load Symbol Table
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function loads in a symbol table only.  It does not load any code
+or perform data memory initialization.  When prompted for a filename,
+the .sym extension is optional, it will be automagically appended if
+you don't supply it.
+
+This function is invoked from the @1[menu bar], or from the
+@77[Command Window] by typing "ls 'filename'".
+
+See also @96[Load Executable File].
+
+.98
+Load Window File
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to load window files into the EZ-ICE.  The
+window file defines video mode, color attributes, window types, window
+sizes and screen positions.
+
+When a window file is loaded, the current window attributes are replaced with 
+those from the file.
+
+This function is invoked from the @1[menu bar].  
+
+See also @99[Save Window File].
+
+.99
+Save Window File
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to create a window file for the EZ-ICE.  The
+window file defines video mode, color attributes, window types, window
+sizes and screen positions.
+
+When a window file is created, the current window attributes are
+stored in the filename supplied by the user.  Creating a window file
+does not affect the current window attributes in any manner.
+
+This function is invoked from the @1[menu bar].  
+
+See also @98[load window file].
+
+.100
+Start Keystroke Recording
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to create a keystroke file for the EZ-ICE.  A
+keystroke file is essentially a log of both keystrokes and mouse
+actions that can be created and then "played back".  It is typically
+used when a set of actions is, or will be, done repeatedly.  When a
+keystroke file is created, all subsequent keystrokes and mouse actions
+are recorded to the given file, until the @101[Stop Keystroke Recording] command is
+issued.  Later, the file can be "played back" with the @102[Playback Keystroke File] command.
+
+There is something to watch out for when using keystroke files.
+Because of the mechanism used to replay keystroke files, the use of
+commands that wait for any keystroke, the run command for example,
+should be avoided.  What will happen in this case is that immediately
+after the run command is issued from the file, the next keystroke from
+the file would be read; the EZ-ICE will interpret this as signal to
+stop running and would halt the simulation.
+
+This function is invoked from the @1[menu bar].  
+
+See also @101[Stop Keystroke Recording] and @102[Playback Keystroke File].
+.101
+Stop Keystroke Recording
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to stop recording keystrokes to a keystroke
+file.  The keystroke file is closed and no further keystrokes or mouse
+actions are logged to the file.
+
+There is something to watch out for when using keystroke files.
+Because of the mechanism used to replay keystroke files, the use of
+commands that wait for any keystroke, the run command for example,
+should be avoided.  What will happen in this case is that immediately
+after the run command is issued from the file, the next keystroke from
+the file would be read; the EZ-ICE will interpret this as signal to
+stop running and would halt the simulation.
+
+This function is invoked from the @1[menu bar].  
+
+See also @100[Start Keystroke Recording] and @102[Playback Keystroke File].
+.102
+Playback Keystroke File
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to "playback" a keystroke file.  All keystrokes
+and mouse actions are repeated in exactly the same order in which the
+keystroke file was created.
+
+There is something to watch out for when using keystroke files.
+Because of the mechanism used to replay keystroke files, the use of
+commands that wait for any keystroke, the run command for example,
+should be avoided.  What will happen in this case is that immediately
+after the run command is issued from the file, the next keystroke from
+the file would be read; the EZ-ICE will interpret this as signal to
+stop running and would halt the simulation.
+
+This function is invoked from the @1[menu bar], or from the 
+@77[Command Window] by typing "< 'filename'".
+
+See also @100[Start Keystroke Recording] and @101[Stop Keystroke Recording].
+
+.103
+Display File
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to display a text file.  When invoked, the user is 
+prompted for a filename.  The file is then loaded into the EZ-ICE and
+displayed.  
+
+This function is invoked from the @1[menu bar].  
+
+.104
+Operating System Shell
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to create an operating system shell.  
+
+For DOS platforms, the EZ-ICE is suspended and the user is transferred to
+an operating system shell.  Typing 'exit' from the shell will return the
+user to the EZ-ICE.
+
+This function is invoked from the @1[menu bar], or from the
+@77[Command Window] by typing "sh"
+
+***NOTE: This feature is not available in release 1.0 of the EZ-ICE***
+
+.105
+Operating System Shell Command
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to create an operating system shell and execute an
+OS command.  
+
+For DOS platforms, the EZ-ICE is suspended and the command is executed 
+in  the operating system shell.  When the command is complete, control
+transfers back to the EZ-ICE.
+
+This function is invoked from the @1[menu bar] or
+by using the SH 'command' command from the @77[Command Window].
+
+***NOTE: This feature is not available in release 1.0 of the EZ-ICE***
+
+.106
+PC Stack
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of the Program Counter (PC) stack.  The PC stack
+is 14 bits wide and 16 locations deep.  Also shown is the number of
+valid stack entries.  The stack entries are numbered in the window for
+easy reference.  Entry 1 is the top of the stack.  Unused locations
+are shown as 3fff.  Valid stack locations are writable, as is the
+stack count.
+
+The stack generates an overflow signal (PC_O) when the stack is
+overflowed and an empty signal (PC_E) when no locations in the stack
+are occupied.  PC_O and PC_E are stored in the @33[SSTAT] register.
+
+The PC stack is monitored by a stack watchdog, which will pop up a
+message if the stack is overflowed.
+
+N.B.  Editing stack counts and stack values can dramatically change
+execution of user code.  Use with caution.  Also note that the EZ-ICE
+takes up one stack location when in emulator space, so entering a
+stack count of 0x10 will cause a stack overflow.  All locations are
+available when the part is in user space (running).
+
+.107
+Status Stack
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of the Status Stack.  The Status Stack is 7
+locations deep for the 2101 and 2105. It is 9 locations deep for the
+2111.  It contains the pushed contents of the astat, mstat, and imask
+registers.
+
+The display shows the individual values of astat, mstat and imask, as
+well as their combined value which is actually pushed onto the stack.
+Also shown is the current count of valid stack entries.  Valid stack
+entries are writable (except combined field) as is the stack count.
+
+N.B.  Editing stack counts and stack values can dramatically change
+execution of user code.  Use with caution.  Also note that the EZ-ICE
+takes up one stack location when in emulator space, so entering a
+stack count of 7 will cause a stack overflow.  All locations are
+available when the part is in user space (running).
+
+See @33[Status registers] and @35[Interrupt Registers]
+
+.108
+Counter Stack
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of the Counter Stack.  The Counter Stack
+is 4 locations deep and 14 bits wide.  Also displayed is the number of
+valid stack locations.  Valid stack entries are writable as is the
+stack count.
+
+The stack generates an overflow signal (LS_O) when the stack is
+overflowed and an empty signal (LS_E) when no locations in the stack
+are occupied.  LS_O and LS_E are stored in the @33[SSTAT] register.
+
+N.B.  Editing stack counts and stack values can dramatically change
+execution of user code.  Use with caution.  The EZ-ICE does not use
+any locations of this stack so all four are always available.
+
+.110
+PM Symbol Display
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of all @52[Program Memory] (PM) symbols.  
+The symbols can be displayed in either alphabetical or
+numeric order, according to the selection from the
+@1[menu bar].  The display shows the symbolic name
+and the address of the symbol.  Symbols are loaded into the EZ-ICE via
+the @96[Load Executable File] and  @97[Load Symbol File] function.
+
+At present, only global and static symbols are recognized.
+
+See also @114[Delete Symbols], and @115[Data Memory (DM) Symbol Display]. 
+
+.114
+Delete Symbols
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function will delete all symbols from the EZ-ICE.
+
+See also @115[Data Memory (DM) Symbol Display],and @110[Program Memory (PM) Symbol Display].
+
+.115
+DM Symbol Display
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This is the display of all @56[Data Memory] (DM) symbols.  
+The symbols can be displayed in either alphabetical or
+numeric order, according to the selection from the
+@1[menu bar].  The display shows the symbolic name
+and the address of the symbol.  Symbols are loaded into the EZ-ICE via
+the @96[Load Executable File] and @97[Load Symbol File] function.
+
+At present, only global and static symbols are recognized.
+
+See also @114[Delete Symbols], and @110[Program Memory (PM) Symbol Display].
+
+.117
+Step
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to single step the EZ-ICE.  A single step will
+take from 1 to 16 clock cycles, due to memory wait states etc..  The
+display is automatically updated after each step.
+
+This function is invoked from the @1[menu bar], via the @178[<F10>] key, or
+from the @77[Command Window] by typing "s".
+
+N.B. There are a number of restrictions concerning the step function.
+Please see the EZ-ICE users manual, and your release note for more
+information.
+
+See also the @118[Step 'n' Times] and @119[Run] commands.
+
+.118
+Step 'n' Times
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to execute 'n' single steps of the EZ-ICE.  A
+single step will take from 1 to 16 clock cycles, due to memory wait
+states etc..  This function will halt upon reaching a breakpoint, or
+pressing any key.  The display is automatically updated after each
+step.
+
+This function is invoked from the @1[menu bar], via the @178[<F10>] key, or
+from the @77[Command Window] by typing "s N" (Where N is the number of steps).
+
+When this function is activated a pop-up will appear requesting the
+number of steps to execute, except when called from the Command
+Window.
+
+See also the @117[Step] and @119[Run] commands.
+
+.119
+Run
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to begin continuous execution of the EZ-ICE.  The 
+EZ-ICE will continue executing until one of the following occur:
+
+             - An instruction at which a breakpoint is set was about to be
+                 executed (i.e..e.: PC = <breakpoint address>).
+
+             - A keystroke has been detected.  
+
+             - An error has been detected.
+
+This function is normally invoked from the @1[menu bar], via the @178[<F4>] key, or from
+the @77[Command Window] by typing "run".
+
+When the DSP is running, the user can stop execution by pressing the
+space bar, or exit to DOS by pressing 'X' (shift x).  See the EZ-ICE
+users manual or your release note for more information.
+
+See also the @118[Step 'n' Times] and @117[Step] commands.
+
+.165
+Overlay Memory Enable
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+Overlay memory consists of 8K of 24 bit words on your EZ-ICE board.  It can be 
+configured as @52[Program Memory (PM)], @56[Data Memory (DM)], or both,
+depending on the position of jumper JP1.  This function will enable the use of 
+overlay memory if the jumper is set.  For more information about overlay memory, 
+consult the ADSP-2101 EZ-ICE manual.
+
+Notes: This function will have no effect if overlay memory has been disabled 
+       via hardware (no jumper on JP1).
+
+       The EZ-ICE cannot detect the position of jumper JP1.  It is the users 
+       responsibility to ensure the jumper is properly set if they wish to 
+       utilize overlay memory.
+
+See also @166[Overlay memory disable], and @167[Overlay memory status].
+
+.166
+Overlay Memory Disable
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+This function will disable use of the EZ-ICE's overlay memory.
+
+Note:  This function will have no effect if overlay memory has been disabled 
+       via hardware (no jumper on JP1).
+
+See also @165[Overlay memory enable], and @167[Overlay memory status].
+
+.167
+Overlay Memory Status
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+This function will return the status of the EZ-ICE's overlay memory.
+
+Note:  This function's output is meaningless if overlay memory has been disabled 
+       via hardware (no jumper on JP1).
+
+See also @165[Overlay memory enable], and @166[Overlay memory disable].
+
+.169
+Set/Clear Breakpoint
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to set or clear a breakpoint.  A breakpoint is an address
+at which the EZ-ICE will stop executing immediately prior to the execution 
+of the specified address.  
+
+This function is only available from the @52[Program Memory] (PM) window in the
+disassembled format.  Breakpoints are displayed in the disassembled PM
+window.  They are indicated by the highlighting of the access field at
+the breakpoint address.  Use of this function will toggle the state of
+a breakpoint at the address at which the cursor is present; if a
+breakpoint is not set at that address, one will be established; if a
+breakpoint is set at that address, it will be cleared.
+
+Note that once a breakpoint is "hit", it remains active. 
+
+This function is normally invoked from the @1[menu bar], the @178[<F9>] key,
+or by double clicking with the mouse on the instruction field in the PM window.
+
+See also @171[Display Bkpt] and @172[Clear All Breakpoints].  
+
+.171
+Display Breakpoints
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to display breakpoints.  When invoked, this function 
+produces a pop-up window on the display.  The display contains the symbol name
+(if any) or address of each breakpoint set in memory.
+
+This function is invoked from the @1[menu bar].  Breaks can also be viewed
+in the @85[Command Output Window], by typing "break" in the @77[Command Window].
+
+See also @169[Set/Clear Breakpoint] and @172[Clear All Breakpoints].  
+.172
+Clear All Breakpoints
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This function is used to clear all breakpoints in the EZ-ICE.  A
+pop-up window will ask you to confirm before any action is taken.
+
+This function is invoked from the @1[menu bar].  Breakpoints can also 
+be cleared by typing "bd all" in the @77[Command Window].  No confirmation is required when 
+deleting from the Command Window.
+
+See also @169[Set/Clear Breakpoint] and @171[Display Breakpoints].  
+
+.176
+Help on Help
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The on-line help system of the ADSP-2100 Family EZ-ICEs is designed to be 
+easy to understand and simple to use.  The help system is also context 
+sensitive.  This means that the help system is sensitive to what you are doing,
+or trying to do. 
+
+You can get help at any time by pressing the <F1> key.  The screen will then
+display a help message pertinent to whatever window you were working in.  Once
+the help system is entered, you can choose to remain in the help system or
+return to the EZ-ICE.  
+
+At the top of the screen, and in the ASCII of many help screens, are words that 
+are, typically, in a different color.  These are called keywords and provide an
+easy and efficient means of moving throughout the help system.  Selecting these
+keywords, either by clicking on them with the mouse or using the arrow keys to 
+choose one and pressing <ENTER>, will switch from the current help screen to 
+a help screen containing help on your chosen keyword.  Pressing the <ESC> key 
+anywhere in the help system will always return you to the EZ-ICE.  
+
+Note: The arrow keys will scroll the help screens where appropriate.
+
+.177
+Index
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+@4[Abort] 
+@20[About EZ-ICE...] 
+@7[Center Windows] 
+@69[Chip Reset] 
+@172[Clear All Breakpoints] 
+@71[Color Display Attributes] 
+@184[Command Menu Option] 
+@85[Command Output Window] 
+@77[Command Window] 
+@23[Computational Registers] 
+@21[DAG Registers] 
+@115[DM Symbol Display] 
+@56[Data Memory] 
+@114[Delete Symbols] 
+@171[Display Breakpoints] 
+@103[Display File] 
+@186[Display Menu Option] 
+@60[Dump Memory] 
+@70[Emulator Reset] 
+@185[Execution Menu Option] 
+@2[Exit] 
+@90[Expression Evaluation] 
+@180[File Menu Option] 
+@62[Fill Memory] 
+@179[General Info] 
+@63[Go To Address] 
+@176[Help on Help] 
+@43[Hip registers]
+@35[Interrupt Control Registers] 
+@8[List Windows] 
+@96[Load Executable File] 
+@61[Load Memory] 
+@97[Load Symbol Table] 
+@98[Load Window File] 
+@108[Counter Stack] 
+@17[Make Window Narrower] 
+@15[Make Window Shorter] 
+@14[Make Window Taller] 
+@16[Make Window Wider] 
+@29[Memory Mapped Control Registers] 
+@182[Memory Menu Option] 
+@1[Menu Bar] 
+@187[Misc Menu Option] 
+@10[Move Window Down] 
+@11[Move Window Left] 
+@12[Move Window Right] 
+@9[Move Window Up] 
+@5[Next Window] 
+@105[Operating System Shell Command] 
+@104[Operating System Shell] 
+@166[Overlay Memory Disable] 
+@165[Overlay Memory Enable] 
+@167[Overlay Memory Status] 
+@106[PC Stack] 
+@110[PM Symbol Display] 
+@36[PX Register] 
+@102[Playback Keystroke File] 
+@64[Plot meory] 
+@31[Program Control Registers] 
+@52[Program Memory] 
+@188[Quit Menu Option] 
+@3[Quit] 
+@6[Redraw Display] 
+@181[Register Menu Option] 
+@119[Run] 
+@99[Save Window File] 
+@169[Set/Clear Breakpoint] 
+@178[Special Keys] 
+@38[Sport Control Registers] 
+@183[Stacks Menu Option] 
+@100[Start Keystroke Recording] 
+@33[Status Registers] 
+@107[Status Stack] 
+@118[Step 'n' Times] 
+@117[Step] 
+@101[Stop Keystroke Recording] 
+@18[Toggle Window Format] 
+@19[Video Mode] 
+
+
+.178
+Special Keys
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+The following are a list of special keys and their associated functions:
+
+   Execution Functions
+        @119[<F4>]        Run
+        @117[<F10>]       Step
+        @118[<Shift F10>] Step 'n' Times
+        @169[<F9>]        Set/Clear Breakpoint
+
+   Memory Functions
+        @60[<Ctrl-D>] Dump Memory
+        @62[<Ctrl-F>] Fill Memory
+        @63[<Ctrl-G>] Go To Memory
+        @61[<Ctrl-M>] Load Memory
+ 
+   Window Sizing Functions
+         @14[<Shift-F5>] Grow Window Vertically
+         @15[<Shift-F6>] Shrink Window Vertically
+         @16[<Shift-F7>] Grow Window Horizontally
+         @17[<Shift-F8>] Shrink Window Horizontally
+
+   Window Movement Functions
+         @9[<F5>] Move Window Up
+         @10[<F6>] Move Window Down
+         @11[<F7>] Move Window Left
+         @12[<F8>] Move Window Right
+
+   Window Selection Functions
+        @4[<ESC>]    Close Current Window
+        @5[<F2>]     Go To Next Window
+        @1[<F3>]     Go To Menu Bar
+        @8[<Ctrl-L>] List/Go To Specific Window
+
+   Window Display Functions
+        @176[<F1>]     Help
+        @18[<Ctrl-T>] Toggles Window Display Format
+
+.179
+General Info
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This program performs a software front end for the Analog Devices ADSP-2100 
+family fixed point Digital Signal Processor EZ-ICE.
+
+This program is controlled by a menu driven, graphical user interface.  Items
+are selected and controlled from the keyboard and/or mouse.  A menu bar at the
+top of the screen provides access to windows and functions.  In addition, some
+functions can be invoked directly from the keyboard whenever a special key is
+pressed.  
+
+An online help system provides help at any time simply by pressing the <F1> key
+or by selecting the Help option from the menu bar.  
+
+Further information available:
+
+                        - @176[Help on Help System]
+                        - @1[Menu Bar]
+                        - @178[Special Keys]
+                        - @177[Index]
+               
+.180
+File Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls file related functions of the EZ-ICE.  Choices within
+this sub-menu are:
+
+   @96[Load Executable File]      - Loads an executable file into the EZ-ICE
+   @97[Load Symbol File]          - Loads a symbol file into the EZ-ICE
+   @98[Load Window File]          - Loads a window file into the EZ-ICE
+   @99[Save Window File]          - Saves current configuration into a file
+   @103[Display File]          - Displays a text file
+   @102[Playback Keystroke File]   - Replays a keystroke file
+   @100[Start Keystroke Recording] - Records keystrokes to a file
+   @101[Stop Keystroke Recording]  - Stops recording keystrokes to a file
+   @104[Operating System Shell]    - Shells to the Operating System
+   @105[Operating System Shell Command]    - Shells to the OS with a command
+
+.181
+Register Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls register related functions of the EZ-ICE.  Choices 
+within this sub-menu are:
+
+   @23[Computational]           - Displays computational registers
+   @23[Alternate Computational] - Displays Alternate computational registers
+   @21[DAG Registers]           - Displays DAG registers 
+   @31[Program Control]         - Displays program control registers
+   @35[Interrupt]               - Displays interrupt control registers
+   @33[Status]                  - Displays Status registers
+   @29[Control]                 - Displays Control registers
+   @36[PX Register]             - Displays PX Register 
+   @38[Sport 0  Register]       - Displays Sport 0  Register 
+   @38[Sport 1  Register]       - Displays Sport 1  Register 
+
+.182
+Memory Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls register related functions of the EZ-ICE.  Choices
+within this sub-menu are:
+
+      @56[Data Memory Display]       - Displays Data Memory (DM)
+         @115[Symbol Display (Alpha)] - Displays DM symbols alphabetically
+         @115[Symbol Display (Num)]   - Displays DM symbols in numerical order
+      @52[Program Memory Display]    - Displays Program Memory (PM)
+         @110[Symbol Display (Alpha)] - Displays PM symbols alphabetically
+         @110[Symbol Display (Num)]   - Displays PM symbols in numerical order
+      @114[Delete Symbols]            - Deletes all symbols
+      @60[Dump Memory]               - Dumps memory to a file
+      @61[Load Memory]               - Loads memory from a file
+      @62[Fill Memory]               - Fills memory with a pattern
+      @63[Go To Address]             - Changes window to a particular address
+      @64[Plot Memory]               - Plot a region of memory
+      @165[Overlay memory enable]     - Enable overlay memory on EZICE board
+      @166[Overlay memory disable]    - Disable overlay memory on EZICE board
+      @167[Overlay memory status]     - Display current status of overlay memory
+
+.183
+Stacks Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls stack related functions of the EZ-ICE.  Choices within
+this sub-menu are:
+
+               @108[Count]        - Displays Counter stack
+               @106[PC]           - Displays the PC stack
+               @107[Status]       - Displays the status stack
+
+.184
+Command Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls the command line related functions of the EZ-ICE.  Choices 
+within this sub-menu are:
+
+                  @77[Command  Line]   - Command line editor 
+                  @85[Command  Output] - Command Output
+
+.185
+Execution Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls execution related functions of the EZ-ICE.  Choices
+within this sub-menu are:
+
+   @119[Run]                        - Executes code on target
+   @117[Step]                       - Executes a single step
+   @118[Step 'n' Times]             - Executes 'n' single steps
+   @171[Display Breakpoints]        - Displays all breakpoints
+   @169[Set/Clear Breakpoint]       - Sets/Clears a breakpoint
+   @172[Clear All Breakpoints]      - Clears all breakpoints
+
+.186
+Display Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls display related functions of the EZ-ICE.  Choices
+within this sub-menu are:
+
+ @71[Color Attributes]     - Display/Modify the color attributes of the display
+ @19[Video Mode]           - Display/Modify the video mode of the display
+ @18[Toggle Window Format] - Toggles window display format
+ @8[List Windows]         - List all open windows
+ @7[Center Windows]       - Centers all open windows
+ @6[Redraw Display]       - Redraws the display
+
+.187
+Misc Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls miscellaneous functions of the EZ-ICE.  Choices within
+this sub-menu are:
+
+              @69[Chip Reset]         - Simulates a chip reset signal
+              @70[Emulator Reset]     - Reset emulator host program
+              @90[Expressions ]       - Display expressions
+              @20[About EZ-ICE...]    - EZ-ICE Information
+
+.188
+Quit Menu Option
+     @0[Return to EZ-ICE]         @-1[Previous Screen]         @179[General Info]
+
+This sub-menu controls functions related to exiting EZ-ICE.  Choices within
+this sub-menu are:
+
+                @2[Exit] - Exit EZ-ICE and update window file
+                @3[Quit] - Exit EZ-ICE without updating window file
+
+.End

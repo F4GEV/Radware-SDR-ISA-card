@@ -1,0 +1,7 @@
+! rel4.0
+! ADSP2100 - Virtual Memory 
+!
+minmem = 256                    Requires at least .25Mb for user
+maxmem = 635                    Takes no more than 640K for user
+retryio = 4                     Retry VMM disk operations 4 times.
+swapname = c:\tmp\rel40.swp

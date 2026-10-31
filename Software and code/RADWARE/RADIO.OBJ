@@ -1,0 +1,346 @@
+$m.i,d,rA_alg_ 
+$d.eMorse_ 
+$d.v,d,rAMorse_ ,s0064 
+$d.eNewIFGain_ 
+$d.v,d,rANewIFGain_ 
+$d.eNewSampleRate_ 
+$d.v,d,rANewSampleRate_ 
+$d.eUSB_ 
+$d.v,d,rAUSB_ 
+$d.eLSB_ 
+$d.v,d,rALSB_ 
+$d.eInputDevice_ 
+$d.v,d,rAInputDevice_ 
+$d.eOutputDevice_ 
+$d.v,d,rAOutputDevice_ 
+$d.ealgIoOverrun_ 
+$d.v,d,rAalgIoOverrun_ 
+$d.eAnalogAGC_ 
+$d.v,d,rAAnalogAGC_ 
+$d.ePlotOn_ 
+$d.v,d,rAPlotOn_ 
+$d.ePlotLSBS_ 
+$d.v,d,rAPlotLSBS_ 
+$d.ePlotUSBS_ 
+$d.v,d,rAPlotUSBS_ 
+$d.ePlotLSBT_ 
+$d.v,d,rAPlotLSBT_ 
+$d.ePlotUSBT_ 
+$d.v,d,rAPlotUSBT_ 
+$d.eFreqOn_ 
+$d.v,d,rAFreqOn_ 
+$d.eTalkOn_ 
+$d.v,d,rATalkOn_ 
+$d.eTalk_ 
+$d.v,d,rATalk_ 
+$d.eLogOn_ 
+$d.v,d,rALogOn_ 
+$d.eAGC_On_ 
+$d.v,d,rAAGC_On_ 
+$d.eHannOn_ 
+$d.v,d,rAHannOn_ 
+$d.eSendingMorse_ 
+$d.v,d,rASendingMorse_ 
+$d.eDitLength_ 
+$d.v,d,rADitLength_ 
+$d.eMorsePosition_ 
+$d.v,d,rAMorsePosition_ 
+$d.erecord_voice_ 
+$d.v,d,rArecord_voice_ 
+$d.eplay_voice_ 
+$d.v,d,rAplay_voice_ 
+$d.efft_time_ 
+$d.v,d,rAfft_time_ 
+$d.eGetErrCount_ 
+$d.v,d,rAGetErrCount_ 
+$d.eGetLastErr_ 
+$d.v,d,rAGetLastErr_ 
+$d.eSendErrCount_ 
+$d.v,d,rASendErrCount_ 
+$d.eSendLastErr_ 
+$d.v,d,rASendLastErr_ 
+$d.eSampleRate_ 
+$d.v,d,rASampleRate_ ,s0002 
+$d.esmeter_on_ 
+$d.v,d,rAsmeter_on_ 
+$d.esmeter_time_ 
+$d.v,d,rAsmeter_time_ 
+$d.eSB_DATA_ 
+$d.v,d,rASB_DATA_ 
+$d.elastInputBuffer_ 
+$d.v,d,rAlastInputBuffer_ 
+$d.eParseMsg_ 
+$d.lParseMsg_ ,o0000 
+$d.lParseMsgL63_ ,o0039 
+$d.lParseMsgL62_ ,o0041 
+$d.lParseMsgL64_ ,o0053 
+$d.lParseMsgL61_ ,o005B 
+$d.lParseMsgL66_ ,o006F 
+$d.lParseMsgL65_ ,o0077 
+$d.lParseMsgL67_ ,o0085 
+$d.lParseMsgL3_ ,o0091 
+$d.lParseMsgL4_ ,o0099 
+$d.lParseMsgL70_ ,o00A0 
+$d.lParseMsgL5_ ,o00CF 
+$d.lParseMsgL8_ ,o00DF 
+$d.lParseMsgL7_ ,o00FC 
+$d.lParseMsgL9_ ,o00FF 
+$d.lParseMsgL10_ ,o0105 
+$d.lParseMsgL11_ ,o0143 
+$d.lParseMsgL12_ ,o0147 
+$d.lParseMsgL14_ ,o0156 
+$d.lParseMsgL17_ ,o015C 
+$d.lParseMsgL18_ ,o0162 
+$d.lParseMsgL19_ ,o0176 
+$d.lParseMsgL20_ ,o017E 
+$d.lParseMsgL21_ ,o0181 
+$d.lParseMsgL23_ ,o018E 
+$d.lParseMsgL24_ ,o0194 
+$d.lParseMsgL25_ ,o019A 
+$d.lParseMsgL26_ ,o01A0 
+$d.lParseMsgL27_ ,o01A6 
+$d.lParseMsgL28_ ,o01AC 
+$d.lParseMsgL29_ ,o01B2 
+$d.lParseMsgL71_ ,o01BA 
+$d.v,d,rAParseMsgL37_ ,s0005 
+$d.lParseMsgL31_ ,o01C2 
+$d.lParseMsgL32_ ,o01E0 
+$d.lParseMsgL33_ ,o01FE 
+$d.lParseMsgL38_ ,o021C 
+$d.lParseMsgL39_ ,o0222 
+$d.lParseMsgL40_ ,o0229 
+$d.lParseMsgL41_ ,o022A 
+$d.lParseMsgL45_ ,o022D 
+$d.lParseMsgL69_ ,o023D 
+$d.lParseMsgL46_ ,o0245 
+$d.lParseMsgL47_ ,o024B 
+$d.lParseMsgL48_ ,o0251 
+$d.lParseMsgL49_ ,o0257 
+$d.lParseMsgL50_ ,o025D 
+$d.lParseMsgL51_ ,o0260 
+$d.lParseMsgL52_ ,o0263 
+$d.lParseMsgL53_ ,o0266 
+$d.lParseMsgL54_ ,o0269 
+$d.lParseMsgL58_ ,o026F 
+$d.lParseMsgL68_ ,o027C 
+$d.lParseMsgL2_ ,o027C 
+$d.eoffset_agc_toggle_ 
+$d.v,d,rAoffset_agc_toggle_ 
+$d.v,d,rAdspAlgMainLC0_ ,s0007 
+$d.v,d,rAdspAlgMainLC1_ ,s000C 
+$d.v,d,rAdspAlgMainLC2_ ,s0011 
+$d.edspAlgMain_ 
+$d.ldspAlgMain_ ,o0295 
+$d.ldspAlgMainL237_ ,o02BC 
+$d.v,d,rAdspAlgMainL221_ ,s0008 
+$d.ldspAlgMainL74_ ,o02C3 
+$d.ldspAlgMainL83_ ,o02E1 
+$d.ldspAlgMainL80_ ,o02F6 
+$d.ldspAlgMainL77_ ,o02FA 
+$d.ldspAlgMainL76_ ,o0300 
+$d.ldspAlgMainL87_ ,o0315 
+$d.ldspAlgMainL230_ ,o0328 
+$d.ldspAlgMainL88_ ,o0383 
+$d.ldspAlgMainL90_ ,o038A 
+$d.ldspAlgMainL97_ ,o039C 
+$d.ldspAlgMainL238_ ,o03A4 
+$d.ldspAlgMainL217_ ,o03A7 
+$d.ldspAlgMainL99_ ,o03AC 
+$d.ldspAlgMainL104_ ,o03B5 
+$d.ldspAlgMainL229_ ,o03D2 
+$d.ldspAlgMainL100_ ,o03DB 
+$d.ldspAlgMainL239_ ,o03E0 
+$d.ldspAlgMainL105_ ,o03F0 
+$d.ldspAlgMainL107_ ,o0401 
+$d.ldspAlgMainL232_ ,o0404 
+$d.ldspAlgMainL106_ ,o040A 
+$d.ldspAlgMainL119_ ,o0410 
+$d.ldspAlgMainL113_ ,o041D 
+$d.ldspAlgMainL115_ ,o0439 
+$d.ldspAlgMainL233_ ,o0441 
+$d.ldspAlgMainL116_ ,o0442 
+$d.ldspAlgMainL112_ ,o0447 
+$d.ldspAlgMainL109_ ,o044D 
+$d.ldspAlgMainL124_ ,o0454 
+$d.ldspAlgMainL120_ ,o046A 
+$d.ldspAlgMainL126_ ,o0475 
+$d.ldspAlgMainL154_ ,o0480 
+$d.ldspAlgMainL128_ ,o0489 
+$d.ldspAlgMainL132_ ,o048C 
+$d.ldspAlgMainL134_ ,o04A7 
+$d.ldspAlgMainL138_ ,o04A9 
+$d.ldspAlgMainL140_ ,o04CC 
+$d.ldspAlgMainL144_ ,o04CE 
+$d.ldspAlgMainL146_ ,o04F2 
+$d.ldspAlgMainL150_ ,o04F5 
+$d.ldspAlgMainL236_ ,o050F 
+$d.ldspAlgMainL151_ ,o0516 
+$d.ldspAlgMainL127_ ,o0518 
+$d.ldspAlgMainL159_ ,o051F 
+$d.ldspAlgMainL228_ ,o0531 
+$d.ldspAlgMainL125_ ,o0532 
+$d.ldspAlgMainL166_ ,o0543 
+$d.ldspAlgMainL227_ ,o0553 
+$d.ldspAlgMainL161_ ,o055C 
+$d.ldspAlgMainL240_ ,o0566 
+$d.v,d,rAdspAlgMainL178_ ,s000B 
+$d.ldspAlgMainL168_ ,o056D 
+$d.ldspAlgMainL169_ ,o0589 
+$d.ldspAlgMainL234_ ,o05A4 
+$d.ldspAlgMainL170_ ,o05D6 
+$d.ldspAlgMainL171_ ,o05F8 
+$d.ldspAlgMainL172_ ,o061A 
+$d.ldspAlgMainL235_ ,o0639 
+$d.ldspAlgMainL173_ ,o063C 
+$d.ldspAlgMainL177_ ,o0640 
+$d.ldspAlgMainL167_ ,o0675 
+$d.ldspAlgMainL184_ ,o067C 
+$d.ldspAlgMainL226_ ,o068E 
+$d.ldspAlgMainL180_ ,o0698 
+$d.ldspAlgMainL191_ ,o06A7 
+$d.ldspAlgMainL225_ ,o06B7 
+$d.ldspAlgMainL187_ ,o06C0 
+$d.ldspAlgMainL196_ ,o06CD 
+$d.ldspAlgMainL224_ ,o06DD 
+$d.ldspAlgMainL192_ ,o06E6 
+$d.ldspAlgMainL202_ ,o06F7 
+$d.ldspAlgMainL223_ ,o0707 
+$d.ldspAlgMainL186_ ,o0710 
+$d.ldspAlgMainL160_ ,o0714 
+$d.ldspAlgMainL205_ ,o0736 
+$d.ldspAlgMainL204_ ,o0739 
+$d.ldspAlgMainL208_ ,o0744 
+$d.ldspAlgMainL203_ ,o0746 
+$d.ldspAlgMainL211_ ,o074C 
+$d.ldspAlgMainL210_ ,o075F 
+$d.ldspAlgMainL214_ ,o0767 
+$d.ldspAlgMainL218_ ,o076C 
+$d.ldspAlgMainL231_ ,o0783 
+$d.ldspAlgMainL73_ ,o0787 
+$d.edit_ 
+$d.v,d,rAdit_ 
+$d.eWhich_AGC_ 
+$d.lWhich_AGC_ ,o07A5 
+$d.lWhich_AGCL243_ ,o07C3 
+$d.lWhich_AGCL242_ ,o07CA 
+$d.lWhich_AGCL247_ ,o07D6 
+$d.lWhich_AGCL249_ ,o07E0 
+$d.lWhich_AGCL254_ ,o07E5 
+$d.lWhich_AGCL250_ ,o07E6 
+$d.lWhich_AGCL246_ ,o07E7 
+$d.lWhich_AGCL252_ ,o07FE 
+$d.v,d,rADeleteMorseLC3_ ,s000A 
+$d.v,d,rADeleteMorseLC4_ ,s000A 
+$d.eDeleteMorse_ 
+$d.lDeleteMorse_ ,o0808 
+$d.lDeleteMorseL259_ ,o0817 
+$d.lDeleteMorseL260_ ,o082E 
+$d.lDeleteMorseL261_ ,o0838 
+$d.gmsg1_ 
+$d.v,d,rAmsg1_ ,s0036 
+$d.gmsg2_ 
+$d.v,d,rAmsg2_ ,s0036 
+$d.gplotMsgData_ 
+$d.v,d,rAplotMsgData_ ,s0080 
+$d.gdevConf_ 
+$d.v,d,rAdevConf_ ,s0005 
+$d.gdevCaps_ 
+$d.v,d,rAdevCaps_ ,s004E 
+$d.gRegisters_1848_ 
+$d.v,d,rARegisters_1848_ ,s0010 
+$d.gpSpregs_ 
+$d.v,d,rApSpregs_ 
+$d.gUSB_BUFFER_ 
+$d.v,d,rAUSB_BUFFER_ ,s0100 
+$d.gLSB_BUFFER_ 
+$d.v,d,rALSB_BUFFER_ ,s0100 
+$d.gRTTY_BUFFER_ 
+$d.v,d,rARTTY_BUFFER_ ,s0100 
+$d.gUSB_SPARE_BUFFER_ 
+$d.v,d,rAUSB_SPARE_BUFFER_ ,s0080 
+$d.gLSB_SPARE_BUFFER_ 
+$d.v,d,rALSB_SPARE_BUFFER_ ,s0080 
+$d.gbuffer1_ 
+$d.v,d,rAbuffer1_ ,s0100 
+$d.gbuffer2_ 
+$d.v,d,rAbuffer2_ ,s0100 
+$d.gbuffer3_ 
+$d.v,d,rAbuffer3_ ,s0100 
+$d.gbuffer4_ 
+$d.v,d,rAbuffer4_ ,s0100 
+$d.gplay_buffer_ 
+$d.v,d,rAplay_buffer_ ,s0080 
+$d.ghAlg_ 
+$d.v,d,rAhAlg_ 
+$d.ghApp_ 
+$d.v,d,rAhApp_ 
+$d.gCurrentIFGain_ 
+$d.v,d,rACurrentIFGain_ 
+$d.ghilbert_ 
+$d.v,d,rAhilbert_ 
+$d.gdelay_ 
+$d.v,d,rAdelay_ 
+$d.gmode_ 
+$d.v,d,rAmode_ 
+$d.gMonitor_ 
+$d.v,d,rAMonitor_ 
+$d.xdspStopIo_ 
+$d.xMultiplyAllByVolume_ 
+$d.xRemove_LSB_ 
+$d.xRemove_USB_ 
+$d.x__fixsfsi_ 
+$d.xChangeVolume_ 
+$d.xSetTone_ 
+$d.x___lib_restore_frame 
+$d.xdspGetIoDevConf_ 
+$d.xMake_SSB_ 
+$d.xdspGetIoDevCaps_ 
+$d.xSelectFilter_ 
+$d.xAGC_ 
+$d.xFilter_60_Hz_ 
+$d.xClearOffset_ 
+$d.xdspSetIoDevConf_ 
+$d.xgain1_ 
+$d.xgain2_ 
+$d.xFilter_Both_ 
+$d.xgain3_ 
+$d.xdolsbfft_ 
+$d.xsFilter_ 
+$d.xdspUtilGet1848_ 
+$d.xRestoreVolume_ 
+$d.xdousbfft_ 
+$d.xfreq1_ 
+$d.xInitAGC_ 
+$d.xfreq2_ 
+$d.xCenter_ 
+$d.xdspGetNumIoDevs_ 
+$d.xfreq3_ 
+$d.x___lib_save_frame 
+$d.xChange_I_ 
+$d.xSlowAGC_ 
+$d.xClearError_ 
+$d.xdspSendMsg_ 
+$d.x__floatdisf_ 
+$d.x__divdi3_ 
+$d.xChangeIFGain2_ 
+$d.xdspSendIo_ 
+$d.xHilbert_And_Delay_ 
+$d.xdspStartIo_ 
+$d.x__divsf3_ 
+$d.xdspGetMsg_ 
+$d.xinitSignal_ 
+$d.xdspUtilProgram1848_ 
+$d.xMultiplyByVolume_ 
+$d.xFM_ 
+$d.xAdjust_I_ 
+$d.xdofft_ 
+$d.xdelayLine_ 
+$d.xGetVolume_ 
+$d.xgenSignal_ 
+$d.x__mulsf3_ 
+$d.xstrlen_ 
+$d.xstrcmp_ 
+$d.xinitFilter_ 
+$d.xdspGetIo_ 
+$m.o,l0846 
+$ 

@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+
+			     Analog Devices, Inc.
+			     Three Technology Way
+			    Norwood, MA 02062-9106
+		       DSP Development Tools Engineering
+
+		   ADSP-2101 and ADSP-2111 EZ-ICE Emulators
+
+       Details on EPROM Programming for EZ-ICE Emulator Firmware Upgrade
+
+-------------------------------------------------------------------------------
+
+   The EZ-ICE Emulator System Software consists of two components; one PC host
+based and one 80C31 microcontroller firmware based. Both halves of the system
+need to match in order to be compatible.
+
+   In order to use the new host program shipped with this release, it is
+necessary to upgrade the firmware in your EZ-ICE. Contained in this directory
+are two .HEX files which can be used to program 27512 (200 ns access or better)
+EPROMs if you have the equipment. You will need to install the new EPROM in
+your EZ-ICE.
+
+   The .HEX files are Intel format MCS-86 which is recognized by most
+commercial EPROM programmers and ROMulators. Please refer to the specific
+documentation shipped with your programmer for instructions on programming
+EPROMs.
+
+   Please refer to the ADSP-21xx EZ-ICE Release Note for instructions on
+upgrading the firmware in your EZ-ICE once you have programmed the EPROM.
+
+   If you do not have the equipment to program an EPROM for your EZ-ICE,
+please call DSP Applications and a pre-programmed device will be shipped to
+you free of charge.
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

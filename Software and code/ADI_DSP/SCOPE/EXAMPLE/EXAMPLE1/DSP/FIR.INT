@@ -1,0 +1,4 @@
+$m.i,d,rAFIR_LPF 
+$ifir_coeff ,ffircoeff.dat 
+$m.o,l001E 
+$ 

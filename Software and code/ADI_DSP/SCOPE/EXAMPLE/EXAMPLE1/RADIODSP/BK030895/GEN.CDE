@@ -1,0 +1,22 @@
+$m.i,d,rASignal_Gen 
+$c40000A 
+$c90000A .ugain1_ ,f04 
+$c90000A .ugain2_ ,f04 
+$c90000A .ugain3_ ,f04 
+$c90000A .uphi1_ ,f04 
+$c90000A .uphi2_ ,f04 
+$c90000A .uphi3_ ,f04 
+$c90000A .udelta_count_ ,f04 
+$c40000A .usin_data ,f04 
+$c90000A .usin_place ,f04 
+$c0A000F 
+$c1C000F .uRegSave ,f04 
+$c840000 .usin_place ,f04 
+$c340014 
+$c340088 
+$c6000A0 
+$c940000 .usin_place ,f04 
+$c1C000F .uRegRestore ,f04 
+$c0A000F 
+$m.o,l0013 
+$ 

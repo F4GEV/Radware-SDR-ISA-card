@@ -1,0 +1,49 @@
+.SUFFIXES:      .obj .c 
+.SUFFIXES:      .obj .dsp 
+.SUFFIXES:      .bnm .exe 
+.SUFFIXES:      .ld .bnm 
+LIB = lib21
+CC = g21
+CFLAGS =  -c -I..\..\include -msmall-code -save-temps -mlistm
+ASM = asm21
+AFLAGS = -c
+LINK = ld21
+SPL = spl21
+SPLFLAGS = -i -loader -bs 1024 -bb 1024 -bp
+BNM = bnm2ld
+
+.c.obj:
+	$(CC) $(CFLAGS) $<
+
+.exe.bnm:
+	$(SPL) $* $* $(SPLFLAGS)
+
+.bnm.ld:
+	$(BNM) $* 
+
+.dsp.obj:
+	$(ASM) $(AFLAGS) $<
+
+all:    fcreate.ld fcopy.ld
+
+fcreate.ld:    fcreate.bnm
+    bnm2ld fcreate
+
+fcreate.bnm:   fcreate.exe
+    spl21 fcreate fcreate -i -loader -bs 1024 -bb 1024 -bp
+
+fcreate.exe :  fcreate.obj  ..\..\bin\psa\libdebug.a
+    $(LINK) fcreate -g -a ..\..\bin\psa\psa.ach -e fcreate -user ..\..\bin\psa\libdebug.a -x -lib
+
+fcreate.obj:   fcreate.c
+
+fcopy.ld:    fcopy.bnm
+    bnm2ld fcopy
+
+fcopy.bnm:   fcopy.exe
+    spl21 fcopy fcopy -i -loader -bs 1024 -bb 1024 -bp
+
+fcopy.exe :  fcopy.obj  ..\..\bin\psa\libdebug.a
+    $(LINK) fcopy -g -a ..\..\bin\psa\psa.ach -e fcopy -user ..\..\bin\psa\libdebug.a -x -lib
+
+fcopy.obj:   fcopy.c

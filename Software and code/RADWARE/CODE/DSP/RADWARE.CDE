@@ -1,0 +1,632 @@
+$m.i,d,rAmain_routine 
+$c1C000F .uget_word ,f04 
+$c800000 .uPSS_data_reg ,f04 
+$c3C0004 
+$c340008 
+$c340009 
+$c34000A 
+$c34000B 
+$c380008 
+$c380009 
+$c38000A 
+$c38000B 
+$c340004 
+$c340015 
+$c340006 
+$c37FFF7 
+$c380015 
+$c380006 
+$c3BFFF7 
+$c430120 
+$c93FFE0 
+$c404180 
+$c93FFF0 
+$c400010 
+$c1C000F .uput_word ,f04 
+$c450000 
+$c900000 .uSample_Rate ,f04 
+$c900000 .uNew_Sample_Rate ,f04 
+$c1C000F .uSP_init ,f04 
+$c1C000F .uinit_sp_data ,f04 
+$c400000 .uinput_data ,f04 
+$c900000 .usp_input_place ,f04 
+$c400000 .uoutput_data ,f04 
+$c900000 .usp_output_place ,f04 
+$c400000 
+$c900000 .udata_ready ,f04 
+$c900000 .uinput_mute ,f04 
+$c900000 .umute ,f04 
+$c900000 .uAGC_On_ ,f04 
+$c900000 .uTalkOn_ ,f04 
+$c900000 .uplay_voice ,f04 
+$c900000 .uPlotLSBT ,f04 
+$c900000 .uPlotUSBT ,f04 
+$c900000 .uPlotLSBS ,f04 
+$c900000 .uPlotUSBS ,f04 
+$c900000 .uout_message_overflow ,f04 
+$c900000 .uSendingMorse ,f04 
+$c900000 .uMorsePosition ,f04 
+$c900000 .umode ,f04 
+$c900000 .uHannOn_ ,f04 
+$c900000 .uBuffer_Position ,f04 
+$c900000 .uNewSetTone ,f04 
+$c900000 .uRTTY_Data_Count ,f04 
+$c400010 
+$c900000 .usmeter_on ,f04 
+$c900000 .uLogOn_ ,f04 
+$c900000 .uAGC_Up ,f04 
+$c900000 .uAGC_Down ,f04 
+$c400000 .uRTTY_Data ,f04 
+$c900000 .uRTTY_Data_Pnt ,f04 
+$c402000 
+$c900000 .uMute_Length ,f04 
+$c4000F0 
+$c900000 .uNewIFGain ,f04 
+$c900000 .ufft_time ,f04 
+$c400040 
+$c900000 .usmeter_time ,f04 
+$c340000 .uMorse ,f04 
+$c340014 
+$c340008 
+$c3C0645 
+$c40000A 
+$c14000E .uclear_morse ,f04 
+$c6800A0 
+$c484F4A 
+$c90000A .usquelch ,f04 
+$c403E8A 
+$c90000A .uDitLength ,f04 
+$c40400A 
+$c1C000F .uChangeVolume_ ,f04 
+$c407D0A 
+$c90000A .ugain1_ ,f04 
+$c41F40A 
+$c90000A .ufreq1_ ,f04 
+$c1C000F .uinitFilter_ ,f04 
+$c40003A 
+$c1C000F .uSelectFilter_ ,f04 
+$c1C000F .uclear_message ,f04 
+$c1C000F .uclear_out_message ,f04 
+$c1C000F .uclear_important_message ,f04 
+$c1C000F .uSP_dma_start ,f04 
+$c3C0203 
+$c420000 
+$c900000 .uIRQ_enable_reg ,f04 
+$c400001 
+$c900001 .uSP_dmal_reg ,f04 
+$c900001 .uSP_dmar_reg ,f04 
+$c1C000F .ucheck_for_message ,f04 
+$c80000A .udata_ready ,f04 
+$c227A0F 
+$c180000 .umain_loop ,f04 
+$c1C000F .ucalculate_modes ,f04 
+$c18000F .umain_loop ,f04 
+$c800000 .uibm_data_ready ,f04 
+$c22780F 
+$c180000 .uno_data_pending ,f04 
+$c800000 .udata_from_ibm ,f04 
+$c40000A 
+$c90000A .uibm_data_ready ,f04 
+$c800004 .umessage_number ,f04 
+$c22000F 
+$c180000 .uchange_number ,f04 
+$c800004 .umessage_length ,f04 
+$c22000F 
+$c180000 .uchange_length ,f04 
+$c840000 .umessage_pointer ,f04 
+$c340014 
+$c340008 
+$c680000 
+$c400000 .umessage ,f04 
+$c22600F 
+$c0D0150 
+$c22EA0F 
+$c180000 .uend_of_message ,f04 
+$c940000 .umessage_pointer ,f04 
+$c0A000F 
+$c900000 .umessage_number ,f04 
+$c0A000F 
+$c400FA4 
+$c22E00F 
+$c180005 .uclear_message ,f04 
+$c900000 .umessage_length ,f04 
+$c22780F 
+$c180000 .uend_of_message ,f04 
+$c0A000F 
+$c1C000F .uhandle_message ,f04 
+$c400000 
+$c900000 .umessage_number ,f04 
+$c900000 .umessage_length ,f04 
+$c400000 .umessage ,f04 
+$c900000 .umessage_pointer ,f04 
+$c0A000F 
+$c800000 .umessage_number ,f04 
+$c800001 .umessage ,f04 
+$c405E55 
+$c22E80F 
+$c180000 .uagc_message ,f04 
+$c405F55 
+$c22E80F 
+$c180000 .uagc_10_db_msg ,f04 
+$c405F05 
+$c22E80F 
+$c180000 .uchange_i_message ,f04 
+$c405F65 
+$c22E80F 
+$c180000 .ucustom_filter_message ,f04 
+$c405E35 
+$c22E80F 
+$c180000 .ufilter_message ,f04 
+$c405F45 
+$c22E80F 
+$c180000 .uget_1848_message ,f04 
+$c405E45 
+$c22E80F 
+$c180000 .uif_gain_message ,f04 
+$c405E25 
+$c22E80F 
+$c180000 .umode_message ,f04 
+$c405DD5 
+$c22E80F 
+$c180000 .umorse_char_msg ,f04 
+$c405F25 
+$c22E80F 
+$c180000 .umorse_key_message ,f04 
+$c405EC5 
+$c22E80F 
+$c180000 .umorse_speed_msg ,f04 
+$c405EB5 
+$c22E80F 
+$c180000 .umute_message ,f04 
+$c405E95 
+$c22E80F 
+$c180000 .uplot_lsb_t_msg ,f04 
+$c405EA5 
+$c22E80F 
+$c180000 .uplot_usb_t_msg ,f04 
+$c405E75 
+$c22E80F 
+$c180000 .uplot_lsb_s_msg ,f04 
+$c405E85 
+$c22E80F 
+$c180000 .uplot_usb_s_msg ,f04 
+$c405E05 
+$c22E80F 
+$c180000 .urecieve_msg ,f04 
+$c405F75 
+$c22E80F 
+$c180000 .usend_winwave_message ,f04 
+$c405ED5 
+$c22E80F 
+$c180000 .usmeter_message ,f04 
+$c405F35 
+$c22E80F 
+$c180000 .usquelch_message ,f04 
+$c405DE5 
+$c22E80F 
+$c180000 .ustart_morse_msg ,f04 
+$c405DF5 
+$c22E80F 
+$c180000 .ustop_morse_msg ,f04 
+$c405E15 
+$c22E80F 
+$c180000 .utransmit_msg ,f04 
+$c405E65 
+$c22E80F 
+$c180000 .uvolume_message ,f04 
+$c0A000F 
+$c1C000F .uInitAGC_ ,f04 
+$c80000A .umessage ,f04 ,o0001 
+$c1C000F .uChangeVolume_ ,f04 
+$c80000A .umessage ,f04 
+$c90000A .uAGC_On_ ,f04 
+$c80000A .umessage ,f04 ,o0002 
+$c90000A .uMonitor ,f04 
+$c90000A .uNewSetTone ,f04 
+$c0A000F 
+$c800000 .umessage ,f04 
+$c900000 .uAGC_Up ,f04 
+$c800000 .umessage ,f04 ,o0001 
+$c900000 .uAGC_Down ,f04 
+$c0A000F 
+$c0D00A1 
+$c1C000F .uChange_I_ ,f04 
+$c0A000F 
+$c0D00A1 
+$c1C000F .uSelectFilter_ ,f04 
+$c0A000F 
+$c400000 
+$c900000 .uout_message_number ,f04 
+$c900000 .uout_message_length ,f04 
+$c400000 .uout_message ,f04 
+$c900000 .uout_message_pointer ,f04 
+$c0A000F 
+$c400000 
+$c900000 .uimportant_message_number ,f04 
+$c900000 .uimportant_message_length ,f04 
+$c0A000F 
+$c3C0515 
+$c340000 .umessage ,f04 
+$c340014 
+$c340008 
+$c380000 .ucoeff_custom ,f04 
+$c380014 
+$c380008 
+$c14000E .ucustom_filter_loop ,f04 
+$c600000 
+$c580000 
+$c0A000F 
+$c400000 
+$c401004 
+$c4FF005 
+$c340000 .ureg_1848 ,f04 
+$c340014 
+$c340008 
+$c3C0105 
+$c14000E .uget_loop ,f04 
+$c900000 .uSP_address_reg ,f04 
+$c800001 .uSP_data_reg ,f04 
+$c23890F 
+$c6800A0 
+$c22600F 
+$c0D000A 
+$c1C000F .uGetVolume_ ,f04 
+$c90000A .ureg_1848 ,f04 ,o0010 
+$c80000A .uAGC_On_ ,f04 
+$c90000A .ureg_1848 ,f04 ,o0011 
+$c80000A .uNoise_Level ,f04 
+$c90000A .ureg_1848 ,f04 ,o0012 
+$c80000A .usquelch ,f04 
+$c90000A .ureg_1848 ,f04 ,o0013 
+$c80000A .uI_Volume ,f04 
+$c90000A .ureg_1848 ,f04 ,o0014 
+$c80000A .uTalkOn_ ,f04 
+$c90000A .ureg_1848 ,f04 ,o0015 
+$c400781 
+$c400165 
+$c340000 .ureg_1848 ,f04 
+$c1C000F .usend_msg ,f04 
+$c448000 
+$c934400 
+$c800000 .uSample_Rate ,f04 
+$c934480 
+$c400000 
+$c934400 
+$c0A000F 
+$c402000 
+$c900000 .uMute_Length ,f04 
+$c900001 .uNewIFGain ,f04 
+$c0A000F 
+$c900001 .umode ,f04 
+$c400044 
+$c22E10F 
+$c400064 
+$c22E10F 
+$c450000 
+$c800004 .uSample_Rate ,f04 
+$c22E00F 
+$c180000 .uno_new_sample ,f04 
+$c900000 .uSample_Rate ,f04 
+$c3C0003 
+$c1C000F .uSP_dma_stop ,f04 
+$c1C000F .uSP_init ,f04 
+$c1C000F .uSP_dma_start ,f04 
+$c3C0203 
+$c420000 
+$c900000 .uIRQ_enable_reg ,f04 
+$c400001 
+$c900001 .uSP_dmal_reg ,f04 
+$c900001 .uSP_dmar_reg ,f04 
+$c0A000F 
+$c452000 
+$c800004 .uSample_Rate ,f04 
+$c22E00F 
+$c180001 .unew_sample ,f04 
+$c0A000F 
+$c340000 .uMorse ,f04 
+$c340014 
+$c340008 
+$c140001 .ufind_end_of_morse ,f04 
+$c6000A0 
+$c227A0F 
+$c000000 
+$c0D0100 
+$c400015 
+$c22E80F 
+$c0D040A 
+$c340001 .umessage ,f04 
+$c340014 
+$c340008 
+$c340009 
+$c140001 .umorse_char_loop ,f04 
+$c6000A4 
+$c6800A0 
+$c227A0F 
+$c000000 
+$c400010 
+$c900000 .uSendingMorse ,f04 
+$c0A000F 
+$c400020 
+$c900000 .uSendingMorse ,f04 
+$c0A000F 
+$c900001 .uDitLength ,f04 
+$c0A000F 
+$c800000 .uMonitor ,f04 
+$c22780F 
+$c180004 .uend_mute_msg ,f04 
+$c23620F 
+$c90000A .uMonitor ,f04 
+$c400000 
+$c900000 .uNewSetTone ,f04 
+$c0A000F 
+$c900001 .uPlotLSBT ,f04 
+$c0A000F 
+$c900001 .uPlotUSBT ,f04 
+$c0A000F 
+$c900001 .uPlotLSBS ,f04 
+$c0A000F 
+$c900001 .uPlotUSBS ,f04 
+$c0A000F 
+$c40000A 
+$c3C0003 
+$c80000A .umessage ,f04 
+$c90000A .uTalkOn_ ,f04 
+$c1C000F .uInitAGC_ ,f04 
+$c80000A .umessage ,f04 ,o0001 
+$c1C000F .uChangeVolume_ ,f04 
+$c80000A .umessage ,f04 ,o0002 
+$c90000A .uAGC_On_ ,f04 
+$c80000A .umessage ,f04 ,o0004 
+$c90000A .uMonitor ,f04 
+$c90000A .uNewSetTone ,f04 
+$c80000A .umessage ,f04 ,o0005 
+$c1C000F .uChange_I_ ,f04 
+$c400000 
+$c900000 .uAnalogAGC ,f04 
+$c1C000F .uclear_1848_data ,f04 
+$c80000A .umessage ,f04 ,o0003 
+$c407D00 
+$c900000 .uMute_Length ,f04 
+$c90000A .uNewIFGain ,f04 
+$c3C0203 
+$c0A000F 
+$c900001 .uwinwave ,f04 
+$c80000A .uCurrentIFGain ,f04 
+$c90000A .uNewIFGain ,f04 
+$c0A000F 
+$c900001 .usmeter_on ,f04 
+$c0A000F 
+$c900001 .usquelch ,f04 
+$c0A000F 
+$c400010 
+$c900000 .uSendingMorse ,f04 
+$c400000 
+$c900000 .uMorsePosition ,f04 
+$c900000 .uMorse ,f04 
+$c18000F .uset_morse_tones ,f04 
+$c400000 
+$c900000 .uSendingMorse ,f04 
+$c900000 .uMorsePosition ,f04 
+$c0A000F 
+$c40001A 
+$c3C0003 
+$c90000A .uTalkOn_ ,f04 
+$c1C000F .uInitAGC_ ,f04 
+$c80000A .umessage ,f04 ,o0001 
+$c1C000F .uChangeVolume_ ,f04 
+$c80000A .umessage ,f04 ,o0002 
+$c90000A .uAGC_On_ ,f04 
+$c80000A .umessage ,f04 ,o0004 
+$c90000A .uMonitor ,f04 
+$c90000A .uNewSetTone ,f04 
+$c80000A .umessage ,f04 ,o0005 
+$c1C000F .uChange_I_ ,f04 
+$c400000 
+$c900000 .uAnalogAGC ,f04 
+$c1C000F .uclear_1848_data ,f04 
+$c80000A .umessage ,f04 ,o0003 
+$c407D00 
+$c900000 .uMute_Length ,f04 
+$c90000A .uNewIFGain ,f04 
+$c3C0203 
+$c0A000F 
+$c1C000F .uInitAGC_ ,f04 
+$c0D00A1 
+$c1C000F .uChangeVolume_ ,f04 
+$c400000 
+$c900000 .uplay_voice ,f04 
+$c800000 .uMonitor ,f04 
+$c22780F 
+$c180005 .uend_volume_msg ,f04 
+$c23620F 
+$c90000A .uMonitor ,f04 
+$c90000A .uNewSetTone ,f04 
+$c0A000F 
+$c800000 .uout_message_number ,f04 
+$c22780F 
+$c180000 .udo_send_msg ,f04 
+$c800000 .uimportant_message_number ,f04 
+$c22780F 
+$c180001 .uimportant_overflow ,f04 
+$c900005 .uimportant_message_length ,f04 
+$c22080F 
+$c180000 .uend_send_imp ,f04 
+$c0D0C5A 
+$c340001 .uimportant_message ,f04 
+$c340014 
+$c340008 
+$c340009 
+$c14000E .usend_imp_loop ,f04 
+$c6000A0 
+$c6800A4 
+$c900001 .uimportant_message_number ,f04 
+$c0A000F 
+$c800004 .uimportant_message_overflow ,f04 
+$c22200F 
+$c900004 .uimportant_message_overflow ,f04 
+$c0A000F 
+$c800000 .uout_message_number ,f04 
+$c22780F 
+$c180001 .umessage_overflow ,f04 
+$c900005 .uout_message_length ,f04 
+$c22080F 
+$c180000 .uend_send_msg ,f04 
+$c0D0C5A 
+$c340001 .uout_message ,f04 
+$c340014 
+$c340008 
+$c340009 
+$c14000E .usend_msg_loop ,f04 
+$c6000A0 
+$c6800A4 
+$c900001 .uout_message_number ,f04 
+$c0A000F 
+$c800004 .uout_message_overflow ,f04 
+$c22200F 
+$c900004 .uout_message_overflow ,f04 
+$c0A000F 
+$c800001 .uPSS_status_reg ,f04 
+$c480004 
+$c23810F 
+$c180000 .uput_word ,f04 
+$c900000 .uPSS_data_reg ,f04 
+$c0A000F 
+$c3C2005 
+$c340000 .uinput_data ,f04 
+$c340001 .uoutput_data ,f04 
+$c340014 
+$c340008 
+$c340009 
+$c40000A 
+$c14000E .uclear_1848_loop ,f04 
+$c6800A0 
+$c6800A4 
+$c0A000F 
+$c400010 
+$c900000 .uSP_enable_reg ,f04 
+$c3C0003 
+$c420004 
+$c900004 .uIRQ_enable_reg ,f04 
+$c430D40 
+$c26780F 
+$c800000 .uIRQ_status_reg ,f04 
+$c420004 
+$c23800F 
+$c180000 .udec_counter ,f04 
+$c449000 
+$c900000 .uSP_address_reg ,f04 
+$c400000 
+$c900000 .uSP_data_reg ,f04 
+$c900000 .uSP_dmal_reg ,f04 
+$c900000 .uSP_dmar_reg ,f04 
+$c18000F .umute_1848 ,f04 
+$c27100F 
+$c180002 .udma_detect_loop ,f04 
+$c400000 
+$c900000 .uIRQ_enable_reg ,f04 
+$c340000 .uSP_address_reg ,f04 
+$c340001 .uSP_data_reg ,f04 
+$c340004 
+$c1C000F .uSP_ini_wait ,f04 
+$cA40000 
+$cA00004 
+$cA41000 
+$cA00004 
+$cA42000 
+$cA81004 
+$cA43000 
+$cA81004 
+$cA44000 
+$cA00004 
+$cA45000 
+$cA00004 
+$cA46000 
+$cA80004 
+$cA47000 
+$cA80004 
+$cA4D000 
+$cA00004 
+$cA4E000 
+$cA00004 
+$cA4F000 
+$cA00004 
+$cA49000 
+$c600004 
+$c408004 
+$c23800F 
+$c180001 .uautocal_already_set ,f04 
+$cA49000 
+$cA08004 
+$cA48000 
+$c800000 .uSample_Rate ,f04 
+$c680004 
+$c1C000F .uSP_autocalibrate ,f04 
+$cA49000 
+$cA00004 
+$c1C000F .uSP_autocalibrate ,f04 
+$cA0A000 
+$cA00004 
+$cA02000 
+$cA01004 
+$cA03000 
+$cA01004 
+$cA04000 
+$cA80004 
+$cA05000 
+$cA80004 
+$cA06000 
+$cA00004 
+$cA07000 
+$cA00004 
+$cA00000 
+$cA8F004 
+$cA01000 
+$cA8F004 
+$c406000 
+$c900000 .uSP_address_reg ,f04 
+$c800000 .uSP_data_reg ,f04 
+$c900000 .uSB_data_reg ,f04 
+$c0A000F 
+$c1C000F .uSP_ini_wait ,f04 
+$cA0B000 
+$c420004 
+$c600004 
+$c23800F 
+$c180000 .uautocal_w1 ,f04 
+$c600004 
+$c23800F 
+$c180001 .uautocal_w2 ,f04 
+$c0A000F 
+$c480004 
+$c800000 .uSP_address_reg ,f04 
+$c23800F 
+$c180001 .uiwxx ,f04 
+$c0A000F 
+$c409000 
+$c900000 .uSP_address_reg ,f04 
+$c403000 
+$c900000 .uSP_data_reg ,f04 
+$c0A000F 
+$c409000 
+$c900000 .uSP_address_reg ,f04 
+$c400000 
+$c900000 .uSP_data_reg ,f04 
+$c0A000F 
+$c800000 .uPSS_status_reg ,f04 
+$c440004 
+$c23800F 
+$c180000 .uend_get_word ,f04 
+$c800000 .uPSS_data_reg ,f04 
+$c0A000F 
+$c340000 .uinput_data ,f04 
+$c340001 .uoutput_data ,f04 
+$c340014 
+$c340008 
+$c3C2005 
+$c400000 
+$c14000E .uinit_data_loop ,f04 
+$c680000 
+$c680004 
+$c0A000F 
+$m.o,l0275 
+$ 

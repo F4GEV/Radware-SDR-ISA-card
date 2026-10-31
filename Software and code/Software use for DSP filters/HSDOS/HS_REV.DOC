@@ -1,0 +1,508 @@
+Workstation V1.93a, Plus V2.90: never released
+
+
+Workstation V1.94x, Plus V2.91 include following major changes (19 FEB 89):
+
+1) Completed Motorola DSP5600x FFT acceleration for Loughborough Sound Images
+   (LSI) board (WORKSTATION SOFTWARE ONLY)
+
+2) MINIMAL A/D and D/A for Motorola DSP5600x LSI board (either channel 1 OR
+   channel 2 operation, no triggering, no two-channel operation, sampling rates
+   limited to between 20 KHz and 30 KHz, depending on host machine speed)
+   (WORKSTATION SOFTWARE ONLY)
+
+3) Crosshair cursor and amplitude read-out of individual points in time wave-
+   form display, magnitude frame display, and phase display.  Point-read out
+   is controllable from a "fine", point-by-point mode, to a more "coarse"
+   point-skip mode.
+
+4) Addition of "point" display as a selection of the "Units" command ('U' key).
+   All time, magnitude frame, and phase units display can now be displayed as
+   "xxxx Pt", in addition to msec, KHz, etc.  The fourth selection of 'U' in-
+   vokes point display.
+
+5) Any scaling required in forward and inverse FFT operations is now main-
+   tained automatically in the waveform header, allowing all non-dB frequency
+   domain waveforms to be compared easily.  Also, pre-FFT divide-by-FFT
+   order scaling has been eliminated (see Users Manual).
+
+6) Motorola DSP56001 filter source code generations no longer store variables
+   at X:FFFE or X:FFFF, and no longer include "X:" or "Y:" in equate state-
+   ments, since Motorola decided to cease supporting this feature in versions
+   of their assembler after 2.01.
+
+7) Maximum FIR filter coefficients for all DSP chip FIR source code generation
+   has been extended to 2048, unless restricted by the memory capacity of an
+   individual chip.
+
+
+Workstation V1.94a, Plus V2.91a (27 FEB 89):
+
+1) Bug-fix to increased length FIR filter lengths in machine-generated source
+   code and simulated DSP-chip impulse response.
+
+
+Workstation V1.94b, Plus V2.91b include following major changes (2 MAR 89):
+
+1) Magnitude and 3-D Spectrogram non-log displays now show amplitude (y-axis)
+   units that have automatically been divided by the time domain analysis
+   framesize and multiplied by two for real-valued (non-complex) input time
+   waveforms.  No multiplication by two is performed for complex input time
+   wvaeforms.  Thus, a pure sinusoidal input time waveform of amplitude A
+   will also show amplitude A at its fundamental frequency for magnitude
+   (squareroot of sum-of-squares) display.
+
+2) Magnitude and 3-D Spectrogram displays also have been changed to allow
+   entry of a y-axis scaling factor and label, as in time domain display.
+   A field has been added to the data entry menus of these functions to
+   accommodate this change.
+
+3) Forward FFT generation, Magnitude, Phase, 3-D Spectrogram and 2-D Spectro-
+   graph display have been modified to process and show BOTH sides of the
+   spectrum in the case of complex input time waveforms to the FFT function.
+   Sorry for the oversight.
+
+
+Hypersignal-Plus V2.91c includes following major changes (6 MAR 89):
+
+1) 2-D Spectrograph drawing speed is up to twice as fast, depending on drawing
+   complexity (contour, time shown, etc.) and machine configuration (80x87,
+   instruction cache memory, etc.).
+
+2) File Acquisition is much faster, owing to new write-to-disk scheme that
+   dynamically switches from disk-writing individual samples to 1000-pt
+   frames, if the input format allows it (this has already been in Hyper-
+   signal-Workstation for some time).
+
+
+Hypersignal-Workstation V1.94c includes following major changes (8 MAR 89):
+
+1) 2-D Spectrograph drawing speed is up to twice as fast, depending on drawing
+   complexity (contour, time shown, etc.) and machine configuration (80x87,
+   instruction cache memory, etc.).
+
+2) Digital Oscilloscope functions have revamped scaling on both the time
+   and amplitude axes that attempt to use, depending on the current value
+   of sampling frequency chosen, more readable values.  For example, scaling
+   now progresses as 10 msec/Div, 5 msec/Div, 2 msec/Div, etc.
+
+   Initial trigger values can now be entered in the data entry menu, allowing
+   easier one-shot operation.
+
+   Triggering inside the scope function, using the '+' and '-' keys, has
+   increased resolution, allowing finer control.
+
+   Also, a "freeze" function (use the 'F' key) that enables print-out and
+   waveform capture to disk file has been installed.  Finally, a few bugs
+   have been fixed and more efficient DSP board memory utilization has been
+   achieved.
+
+
+Workstation V1.94d, Plus V2.91d (22 MAR 89):
+
+1) Bug fix in integer-precision inverse FFT functions (including fixed-point
+   DSP chip board acceleration versions).
+
+2) More LSI board DSP5600x stuff:
+
+   - D/A had some bugs fixed, and is now also active from time and 2-D spec-
+     trographic displays.
+
+   - Inverse FFT is complete and fully operational.
+
+   - Digital Scope is complete and fully operational.
+
+   - All transfer rates between host PC and LSI DSP56001 board have been
+     DRAMATICALLY improved (owing to some novel transfer techniques to
+     compensate for the unusual and awkward "host interface" and larger
+     buffer sizes).  A/D rates have been measured at above 100 KHz for
+     a 20 MHz 386 machine with a vanilla hard disk and controller (avg.
+     access time 25msec).  That means over 45 KHz continuous to hard
+     disk for two-channel (stereo) applications!
+
+   - A/D "Analog Conversion" function is our most flexible yet for a 
+     DSP chip-based board, allowing such scenarios as one channel used
+     solely for triggering (no data collected), collecting data on both
+     the trigger channel and data channel, etc.
+
+3) Crosshair cursor amplitude read-out (righthand side of display) in time
+   and phase displays now shows all 5 digits for negative numbers larger
+   than 9999.
+
+4) Bug fix in both DSP32 and all TMS320C25 real-time power spectra analyzer
+   display (was accidentally introduced with enhancement 3) from 2 MAR, above).
+
+
+Workstation V1.94e, Plus V2.91e (30 MAR 89):
+
+1) Another bug-fix in inverse FFT (only affected very long files).
+
+2) File Acquisition hex format function has been modified to NOT consider the
+   'x' character in hex formats of the type '0xABCD' as a separator character.
+   In effect, '0x' in hex formats is now ignored.
+
+3) Hypersignal-Workstation and Hypersignal-Plus now have an optional "exten-
+   ded-length" waveform header of 64 integers in addition to the standard
+   10 integers.  If bit 2 in the waveform header 'data type' attribute is
+   set, then the program assumes a header 64 integers long.
+
+4) NOTE! NOTE! NOTE!  Workstation 1.94e has known bug where sampling fre-
+   quencies below about 100 Hz cause normal time-domain and frequency-
+   domain functions to experience a run-time error when loading waveforms
+   for processing/display.  This problem has already been fixed, but version
+   1.94f was not final-tested soon enough for the quarterly update.  If you
+   encounter this problem, just call to receive version 1.94f.
+
+
+Workstation V1.94f (3 APR 89):
+
+1) Low sampling-frequency error (above) fixed.
+
+2) Problem in scope and analyzer where dual-display horizontal axes lines
+   do not always display correctly fixed.
+
+Workstation V1.94g, Plus V2.91f (28 APR 89):
+
+1) Problem in digital scope "input range" field corrected where only values
+   up to 5 Volts were being accepted.  Maximum value for most hardware is
+   now 20 (Workstation only).
+
+2) TMS320C25 and TMS32020 FIR filter source code corrections:
+
+   1) Equate statement for XN variable corrected to so as to be placed
+      at beginning of delay taps in block B0 memory (instead of at location
+      zero).
+
+   2) Missing instructions for saving of status added to FILT routine.
+
+   3) Resetting of current page instruction inserted in commented-out test
+      example AFTER call to INIT.
+
+   4) NOTE: Not really a change, but keep in mind that "Base Address.."
+      field on Code Generation menu still controls location of YN and
+      ONE variables, independently of location of XN variable.
+
+3) CAC32 spectrum analyzer function now includes complete, dual-channel
+   scaling along vertical axis.
+
+
+Workstation V1.94h, Plus V2.91g (8 MAY 89):
+
+1) "Pop" at end of D/A playback for DSP56001 hardware fixed (Workstation only).
+
+2) 2-D spectrograph D/A playback-followed-by-zoom bug fixed for DSP56001 hard-
+   ware (Workstation only).
+
+3) Binary-ASCII-Binary conversion now produces and accepts ASCII hexadecimal
+   and floating-point formats in addition to ASCII decimal format.
+
+4) File Acquisition function now allows up to 16-bit masking for incoming
+   samples in all formats except for ASCII hexadecimal, in which case up to
+   32-bit masking (shifting) is allowed.
+
+5) Difference Equations now has min & max operators.  For example, to use
+   the minimum of elements A and B in an equation, type "A<B".  To find
+   the maximum, type "A>B".  Order of the two elements is unimportant. The
+   precedence level of this operation is high, immediately after exponentia-
+   tion (raising something to a power).  Thus, max's and min's are evaluated
+   BEFORE multiplication, division, addition, and subtraction.
+
+   For example, to generate a third waveform that is the max of two input
+   waveforms, an equation like the following would work:
+
+      y[n]=x1[n]>x2[n]
+
+
+Workstation V1.94i, Plus V2.91h (21 MAY 89):
+
+1) "ADDK" instruction in TMS32020 IIR filter generated code for "INIT" routine
+   replaced by "ADLK", which is legitimate 32020 instruction.
+
+2) File Acquisition problem with Motorola DSP56001 software simulator hex
+   file output fixed.
+
+3) Some spectrum analyzer functions that were not adjusting sampling frequency
+   by factor of 2 for two-channel operation corrected (Workstation only).
+
+4) Spectrum analyzer function for LSI DSP56001 board added (Workstation only).
+
+5) Failure of graphical filter design functions to properly re-initialize from
+   file once in display mode corrected (this problem may not exist before
+   Workstation V1.94f and Plus V2.91e).
+
+6) Failure of 2-D spectrograph to automatically flip trace 2 when one of the
+   displayed waveforms is LPC autocorrelated data corrected.
+
+
+Workstation V1.94j, Plus V2.91i (6 JUN 89):
+
+1) On-line HELP updated.  Hypersignal-Plus Utilities Column menu structure
+   re-arranged to be more compatible with Hypersignal-Workstation for pur-
+   poses of HELP file maintenance.  Because of this, it is STRONGLY SUGGESTED
+   THAT YOU DELETE YOUR PREVIOUS HSPLUS.CNF FILE BEFORE USING HYPERSIGNAL-
+   PLUS V2.91j.
+
+2) Waveform editing speed increased by a factor of 14.  A million-sample file
+   that used to take 20 minutes to edit on a 12 MHz AT clone now takes less
+   than a minute and a half.
+
+3) Memory-usage error corrected in Parks-McClellan FIR design where filters
+   longer than 208-210 taps were not converging.
+
+
+Workstation V1.95a, Plus V2.92a (30 JUN 89):
+
+1) Log frequency-axis added to graphical filter design dispays.  Use 'L' key
+   to produce all four combinations of log-linear for the amplitude and
+   frequency axes.  Also, use the 'G' key to extend the x and y grid tic
+   marks fully across the display.
+
+2) Problem where LSI DSP56000 spectrum analyzer would occasionally glitch and
+   hang-up corrected.
+
+3) First level of Motorola ADS DSP56000 board support is installed (DSP Acc-
+   elerator function active).  Use 'ADS56-A' for System Configuration selec-
+   tion ('-A' is for Ariel ADC56000 card, '-B' is for Motorola ADC16 card).
+
+   PLEASE NOTE THAT YOU MUST HAVE A "HYPER-ADM" CARD INSTALLED INSIDE YOUR
+   PC IN ADDITION TO THE MOTOROLA ADM CARD.  BOTH ARE THEN CONNECTED DIRECTLY
+   TO THE ADS BOARD.  YOU MAY EITHER PURCHASE THE "HYPER-ADM" CARD FROM
+   HYPERCEPTION OR BUILD YOUR OWN (WE WILL PROVIDE THE SCHEMATIC AND PARTS
+   LIST).
+
+4) Previous-release (6 JUN 89, above) waveform editor enhancement had problem
+   where waveform files were sometimes not "sewn" back together properly. This
+   has been corrected.
+
+   HYPERSIGNAL-WORKSTATION NOTE:
+
+   INTEGRATION OF MOTOROLA ADS HARDWARE CAUSED CHANGE TO SYSTEM CONFIGURATION
+   MENU LAY-OUT. IT IS SUGGESTED THAT YOU DELETE YOUR CURRENT HSWORK.CNF FILE
+   BEFORE RUNNING 1.95A.  ALTERNATIVELY, YOU MAY SWITCH THE DATA IN THE "I/O
+   BASEADDRESS" AND "MEMORY BASEADDRESS" FIELDS.
+
+
+Workstation V1.95b, Plus V2.92b (5 JUL 89):
+
+1) Extra minus sign for program-generated TMS320C25 IIR filter (structure 3)
+   source code fixed.  Because IIR coefficient B2 needed to be stored as neg-
+   ative, B2 coefficients that actually were negative had two minus signs--
+   unfortunately, the TI assembler does not evaluate "minus * minus" as plus.
+
+
+Workstation V1.95c, Plus V2.92c (7 JUL 89):
+
+1) Criterion for truncation of IIR Filter Construction impulse response wave-
+   form output changed from decay of 1/100 of maximum amplitude to decay of
+   1/1000 of maximum amplitude.  Frequency responses after FFT processing may
+   show up to 20 dB improvement, depending on type of filter and specifica-
+   tions.  Other effects of truncation also greatly mitigated, including
+   flatness of passband in "maximally flat" designs (e.g. Butterworth), and
+   shape of low-amplitude ripples in Chebychev II and elliptic designs.
+
+2) Problem in IIR Filter Construction corrected where bandstop filters with
+   transition bandwidths much larger than the stopband region caused run-
+   time error.
+
+
+Workstation V1.95d, Plus V2.92d (12 JUL 89):
+
+1) Labeling problem for 3-D spectrogram where negative log value for y-axis
+   was not displayed in the proper location corrected.
+
+2) Correction to IIR Filter Construction bandpass and bandstop filters where
+   gain factor ("constant multiplier C") was not being calculated correctly.
+   All Hypersignal-Plus and -Workstation filters now correctly produce unity
+   gain in passband regions.
+
+3) Correlation option added to Convolution function. Use CONVOLVE/CORRELATE
+   menu field to specify which.
+
+4) Dual-waveform display autoscaling (scaling the smaller waveform to match
+   the larger) may be disabled/enabled in the User Setup function.  Default
+   setting is enabled ('ON').
+
+5) Analog Conversion, Digital Oscilloscope, and Spectrum Analyzer support
+   added for Motorola ADS board/Ariel ADC56000 combination.  Use "ADS56-A"
+   designator inside System Configuration function (Workstation only).
+
+6) Support added for Ariel DSPC25 board.  Use "ARI320-C" designator inside
+   System Configuration function (Workstation only).  Although the maximum
+   sampling rate for the Texas Instruments TLC32041 codec on this board is
+   spec'ed at 19.2 KHz, some higher sampling rate values may work acceptably.
+
+7) Onboard 8253 timer disabled between functions for Ariel DSP-16 operations
+   to eliminate sampling frequency noise (Workstation only).
+
+
+Workstation V1.95e, Plus V2.92e (22 JUL 89):
+
+1) File capture option added to Time Display/Edit function.  Use by striking
+   'w' key ('write') at anytime.  This option allows more convenient writing
+   of waveform sections to separate output files than using combinations of
+   the waveform editor Delete and Insert functions.
+
+2) Previous beta version support of Loughborough Sound Images (Spectrum
+   Signal Processing) Analog Devices ADSP-2100 card now included in standard
+   distribution software.  Use "LSI21" as designator in System Configuration
+   hardware selections (Workstation only).
+
+3) Trace 2 scaling problem corrected with Ariel DSP-16 digital oscilloscope
+   function (Workstation only).
+
+
+Workstation V1.95f (10 AUG 89):
+
+1) Support added for Ariel PC-56 DSP56001 board.  Default 56001 source code
+   set for single-channel operation.  Use 'ARI56' as System Configuration
+   designator.
+
+2) Improvement made in DSP56001 code accelerated FFT processing magnitude
+   approximation.  More exact magnitude results are returned from DSP56001
+   processing (applies to all DSP56001-based boards).
+
+3) Correction made to Acrosystems AT6400 INPUT GAIN LIST field for multiple
+   channel gain entries.
+
+4) Enhancements made to LSI Analog Devices ADSP-2100 board digital oscilloscope
+   and spectrum analyzer functions.
+
+
+Workstation V1.95g, Plus V2.92f (14 AUG 89):
+
+1) Fix to File Acquisition function to correctly acquire files whose length
+   are an exact multiple of 16384.
+
+2) Spectrum Analyzer function added for Data Translation 282x hardware by
+   using CAC WE DSP32 board (Workstation only).
+
+
+Workstation V1.95h, Plus V2.92g (17 AUG 89):
+
+1) Magnitude and 3-D Spectrogram display modified to correctly display
+   "amplitude-squared" values on vertical axis.
+
+2) Difference Equations modified to correctly evaluate output index in
+   cases where lefthand side of equation contains frame-multiplier expressions
+   such as y[0,n] or y[m\6,n].  Also, an "integer divide" function has been
+   added--use the reverse slash character ('\').
+
+3) Digital scope and spectrum analyzer functions have been modified to
+   correctly display previously stored waveform files with the same amplitude
+   scale as being used by the currently selected hardware (Workstation only).
+
+
+Workstation V1.95i, Plus V2.92h (21 AUG 89):
+
+1) File Acquisition modified to accept optional 'U' after format selection,
+   allowing import of unsigned data.  Also, File Acquisition speed when
+   writing output to disk increased.
+
+2) Editor "undo" operation (when up or down cursor struck before carriage
+   return on current field) made optional choice inside User Setup menu
+   selection.
+
+3) Undeclared rounding variable in Motorola DSP56001 IIR filter assembly code
+   generation (for case of Q22 scaling only) corrected.  Also, rounding scheme
+   changed to avoid use of long memory location (all non-Q23 scaling).
+
+4) Difference Equations modified to allow "# of SAMPLES" field to be longer
+   than the x1 and/or x2 input waveforms, as desired.  Useful for appending
+   one waveform to another, frequency doubling, etc.
+
+
+Workstation V1.95j, Plus V2.92i (30 AUG 89):
+
+1) Further correction to unity gain calculation for IIR bandpass and bandstop
+   filters, but only for elliptic and Chebyshev II designs (see Workstation
+   V1.95d, Plus V2.92d, 12 JUL 89, above).
+
+2) Correction to waveform editor "Write" function maximum amplitude calculation
+   for output waveform when target window extends past end of input (displayed)
+   waveform.
+
+3) Addition of "MAX SCALE" parameter to time display, magnitude display, and
+   3-D spectrogram display functions.  A non-zero entry defines the scale used
+   along the y-axis, and along with the "scale factor" part of the Y LABELS
+   field in these functions, allows wide flexibility for vertical axis
+   scaling and units-per-division.  A zero entry (default) causes autoscaling
+   to be in effect, where each waveform is shown to maximize display area
+   usage.
+
+
+Workstation V1.96a (8 SEP 89):
+
+1) Fine-tuning of DSP56001 host-interface to avoid problems with some mask
+   set DSP56001 chips (mask sets B77G and 2B3E) which could cause the Spectrum
+   Analyzer and Digital Oscilloscope to hang-up.
+
+2) Correction to playback from Waveform Display/Edit function for LSI DSP56001
+   board.
+
+
+Workstation V1.96b, Plus V2.92j (11 SEP 89):
+
+1) Sign of denominator coefficients in IIR filter machine-generated source code
+   header transfer function corrected to positive (comment only; not actual
+   code).
+
+2) '# of SAMPLES' field correction in Difference Equations--field is now
+   completely independent of the length of the x1 and/or x2 waveforms, unless
+   entered as zero.
+
+3) Change to IIR filter structure #3 machine-generated "C" source code, where
+   denominator ("B" array) coefficients were not being addressed correctly.
+
+4) Correction to DSP56001 board digital oscilloscope displays, where display
+   from waveform file only (no analog input) might have caused a run-time
+   error (Workstation only).
+
+
+Workstation V1.96c, Plus V2.93a (16 SEP 89):
+
+1) Correction to Difference Equations output waveform file indexing problem
+   at 4096 pt. boundaries when using x1 or x2 in equation.
+
+2) Addition to Data Translation DT282x digital oscilloscope and spectrum
+   analyzer functions to allow use of external trigger.  Use '+' and '-' keys
+   inside these functions to control; "EXT" is displayed after current trigger
+   trace when external trigger is active (Workstation only).
+
+3) Addition to spectrum analyzer help explaining determination of maximum
+   possible input value for log displays (Workstation only).
+
+4) Increase in Ariel DSP-16 maximum acquisition rate, both for single-channel
+   and dual-channel operation (Workstation only).
+
+
+Workstation V1.96d (26 SEP 89):
+
+1) Addition of LSI DSP32C board support.  Enter 'LSI32' in System Configuration
+   function to enable functions that can use this board.  NOTE:  in tests with
+   a pre-production DSP32C board, we found that on SOME systems enabling the
+   80286 instruction set field in System Configuration (which directs the
+   Hypersignal-Workstation real-time device drivers to use REP OUTSW and
+   REP INSW 80286 instructions) can cause "scratches" or "spikes" in the
+   incoming and outgoing data.  Also, we have found that these anomalies are
+   sensitive to data amplitude levels; for example, nothing extraneous is
+   present when outputting a waveform file of zeros, which indicates there
+   may be a hardware problem.  We have found no such problems when the
+   80286 instruction set is disabled, and, although maximum achievable
+   real-time rates are less, we currently recommend this setting until the
+   problem is solved.
+
+
+Workstation V1.96e (31 OCT 89):
+
+1) Correction to LSI DSP5600 board and Motorola ADS board (w/ Ariel ADC56000
+   external analog I/O board option) two-channel operation.
+
+2) Correction to automatic memory detection algorithm for DSP5600 boards with
+   32K or greater 24-bit word memory (X: or Y:).
+
+3) Improved robustness for CAC32 boards running in non-IBM clones.
+
+
+*********** V2.00 released 1 MAR 90, see "addendum.doc" file ***********
+
+Workstation V2.01, Plus V3.01 (20 APR 90):  SEE HS_REV2.DOC FILE

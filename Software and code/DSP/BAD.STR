@@ -1,0 +1,39 @@
+
+ILLG_ENDMACRO		:.ENDMACRO must be preceded by macro definition
+ILLG_LOCAL		:.LOCAL valid only in macro definitions
+DOT_MACRO		:MACRO must be preceded by '.'
+DOT_INCLUDE		:INCLUDE must be preceded by '.'
+EXPCT_ID		:expecting an identifer at symbol '%s'
+EXPCT_RP		:expecting ')' at symbol '%s'
+EXPCT_PH		:expecting a place holder at symbol '%s'
+EXPCT_ENDMACRO		:expecting .ENDMACRO at symbol '%s'
+EXPCT_EQ		:expecting '=' at symbol '%s'
+EXPCT_INT		:expecting an integer at symbol '%s'
+EXPCT_FILENAME		:expecting a filename at symbol '%s'
+EXPCT_SEMICOLON		:expecting an ';' at symbol '%s'
+REDEF			:trying to redefine %s
+PH_OUTRANGE		:place holder out of range at symbol '%s'
+TOOFEW_ARGS		:not enough arguments to macro
+TOOMANY_ARGS		:too many arguments to macro
+EXPCT_MACROARG		:expecting a macro argument at symbol '%s'
+MSG1			:Analog Devices Inc. : Assembler Pre-Preprocessor
+MSG2			:Usage: %s [-cilmps] filename
+MSG3			:	-c		case sensitive
+MSG4			:	-l		generate listing file
+MSG5			: 	-i [#]		expand include files in listing file
+MSG6			: 			  where # is level of macros expanded
+MSG7			: 	-m [#]		expand macros in listing file
+MSG8			: 			  where # is level of include files expanded");
+MSG9			: 	-p		preprocessor only
+MSG10			: 	-s		no semantic checking
+MSG11			:FATAL ERROR: unable to open %s for reading
+MSG12			:this is the error in app
+MSG13			:FATAL ERROR: unable to open %s for writing
+MSG14			:FATAL: unable to execute 'asm2'
+MSG15			:unable to execute system command
+MSG16			:ADI_DSP environment variable not set up
+MSG17			:unable to open mail box file
+MSG18			:FATAL: unable to execute 'asm2'
+MSG19			:FATAL ERROR:ran out of memory
+MSG20			:Problem mallocing enough memory
+MSG21			:	-o filename     name output file    

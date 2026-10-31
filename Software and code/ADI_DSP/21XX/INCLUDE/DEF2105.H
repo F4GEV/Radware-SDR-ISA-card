@@ -1,0 +1,10 @@
+#define  Sys_Ctrl_Reg 		    0x3fff
+#define  Sys_Crtl_Reg 		    0x3fff
+#define  Dm_Wait_Reg 	            0x3ffe
+#define  Tperiod_Reg                0x3ffd
+#define  Tcount_Reg                 0x3ffc
+#define  Tscale_Reg                 0x3ffb
+#define  Sport1_Ctrl_Reg            0x3ff2
+#define  Sport1_Sclkdiv             0x3ff1
+#define  Sport1_Rfsdiv              0x3ff0
+#define  Sport1_Autobuf_Ctrl        0x3fef

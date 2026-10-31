@@ -1,0 +1,13 @@
+NAME            APP
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+CODE            FIXED PRELOAD
+DATA            FIXED PRELOAD
+HEAPSIZE        4096
+STACKSIZE       5120
+EXPORTS         WNDPROC
+	        SINEMSGPROC
+	        CHIRPMSGPROC
+	        CCITTMSGPROC
+	        CONFIGMSGPROC
+                CALLBACKPROC

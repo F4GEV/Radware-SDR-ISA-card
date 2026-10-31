@@ -1,0 +1,2165 @@
+Release 5.01
+Analog Devices Inc. : ADSP-21XX Linker
+Version 2.18 3/30/94
+
+alg (alg.exe) mapped according to echopss (d:\adi_dsp\scope\bin\psa\psa.ach)
+
+     xref for module: _alg_     
+
+     _alg_                           pm  09D1 [07B5]   module(global)
+     Morse_                          dm  12D1 [0064]   variable(global)
+     NewIFGain_                      dm  1051 [0001]   variable(global)
+     NewSampleRate_                  dm  1052 [0001]   variable(global)
+     USB_                            dm  1053 [0001]   variable(global)
+     LSB_                            dm  1054 [0001]   variable(global)
+     InputDevice_                    dm  1055 [0001]   variable(global)
+     OutputDevice_                   dm  1056 [0001]   variable(global)
+     algIoOverrun_                   dm  1057 [0001]   variable(global)
+     AnalogAGC_                      dm  1075 [0001]   variable(global)
+     PlotOn_                         dm  1076 [0001]   variable(global)
+     PlotLSBS_                       dm  1077 [0001]   variable(global)
+     PlotUSBS_                       dm  107D [0001]   variable(global)
+     PlotLSBT_                       dm  107E [0001]   variable(global)
+     PlotUSBT_                       dm  107F [0001]   variable(global)
+     FreqOn_                         dm  10D1 [0001]   variable(global)
+     TalkOn_                         dm  10D2 [0001]   variable(global)
+     Talk_                           dm  10D3 [0001]   variable(global)
+     LogOn_                          dm  10D4 [0001]   variable(global)
+     AGC_On_                         dm  10D5 [0001]   variable(global)
+     HannOn_                         dm  10D6 [0001]   variable(global)
+     SendingMorse_                   dm  10D7 [0001]   variable(global)
+     DitLength_                      dm  10E0 [0001]   variable(global)
+     MorsePosition_                  dm  10E1 [0001]   variable(global)
+     record_voice_                   dm  10E2 [0001]   variable(global)
+     fft_time_                       dm  10E3 [0001]   variable(global)
+     GetErrCount_                    dm  10E4 [0001]   variable(global)
+     GetLastErr_                     dm  10E5 [0001]   variable(global)
+     SendErrCount_                   dm  10E6 [0001]   variable(global)
+     SendLastErr_                    dm  10E7 [0001]   variable(global)
+     SampleRate_                     dm  10E8 [0002]   variable(global)
+     smeter_on_                      dm  10EA [0001]   variable(global)
+     smeter_time_                    dm  10EB [0001]   variable(global)
+     SB_DATA_                        dm  10EC [0001]   variable(global)
+     lastInputBuffer_                dm  10ED [0001]   variable(global)
+     ParseMsg_                       pm  09D1          label(global)
+     ParseMsgL55_                    pm  0A0A          label        
+     ParseMsgL54_                    pm  0A13          label        
+     ParseMsgL56_                    pm  0A23          label        
+     ParseMsgL53_                    pm  0A2B          label        
+     ParseMsgL58_                    pm  0A41          label        
+     ParseMsgL57_                    pm  0A49          label        
+     ParseMsgL59_                    pm  0A59          label        
+     ParseMsgL3_                     pm  0A65          label        
+     ParseMsgL4_                     pm  0A6D          label        
+     ParseMsgL61_                    pm  0A74          label        
+     ParseMsgL5_                     pm  0AA3          label        
+     ParseMsgL8_                     pm  0AB3          label        
+     ParseMsgL7_                     pm  0AD0          label        
+     ParseMsgL9_                     pm  0AD3          label        
+     ParseMsgL10_                    pm  0AD9          label        
+     ParseMsgL11_                    pm  0B17          label        
+     ParseMsgL12_                    pm  0B1B          label        
+     ParseMsgL14_                    pm  0B2A          label        
+     ParseMsgL17_                    pm  0B30          label        
+     ParseMsgL18_                    pm  0B36          label        
+     ParseMsgL19_                    pm  0B4A          label        
+     ParseMsgL20_                    pm  0B52          label        
+     ParseMsgL21_                    pm  0B55          label        
+     ParseMsgL23_                    pm  0B62          label        
+     ParseMsgL24_                    pm  0B68          label        
+     ParseMsgL25_                    pm  0B6E          label        
+     ParseMsgL26_                    pm  0B74          label        
+     ParseMsgL27_                    pm  0B7A          label        
+     ParseMsgL28_                    pm  0B80          label        
+     ParseMsgL62_                    pm  0B88          label        
+     ParseMsgL36_                    dm  10EE [0005]   variable        
+     ParseMsgL30_                    pm  0B90          label        
+     ParseMsgL31_                    pm  0BAE          label        
+     ParseMsgL32_                    pm  0BCC          label        
+     ParseMsgL37_                    pm  0BEA          label        
+     ParseMsgL38_                    pm  0BF0          label        
+     ParseMsgL39_                    pm  0BF7          label        
+     ParseMsgL40_                    pm  0BF8          label        
+     ParseMsgL44_                    pm  0BFB          label        
+     ParseMsgL60_                    pm  0C0B          label        
+     ParseMsgL45_                    pm  0C13          label        
+     ParseMsgL46_                    pm  0C19          label        
+     ParseMsgL47_                    pm  0C1F          label        
+     ParseMsgL48_                    pm  0C25          label        
+     ParseMsgL49_                    pm  0C2B          label        
+     ParseMsgL50_                    pm  0C2E          label        
+     ParseMsgL2_                     pm  0C30          label        
+     dspAlgMainLC0_                  dm  10F3 [0007]   variable        
+     dspAlgMainLC1_                  dm  1151 [000C]   variable        
+     dspAlgMainLC2_                  dm  115D [0011]   variable        
+     dspAlgMain_                     pm  0C49          label(global)
+     dspAlgMainL211_                 pm  0C70          label        
+     dspAlgMainL198_                 dm  116E [0008]   variable        
+     dspAlgMainL65_                  pm  0C77          label        
+     dspAlgMainL74_                  pm  0C95          label        
+     dspAlgMainL71_                  pm  0CAA          label        
+     dspAlgMainL68_                  pm  0CAE          label        
+     dspAlgMainL67_                  pm  0CB4          label        
+     dspAlgMainL78_                  pm  0CC9          label        
+     dspAlgMainL205_                 pm  0CDC          label        
+     dspAlgMainL79_                  pm  0D37          label        
+     dspAlgMainL81_                  pm  0D3E          label        
+     dspAlgMainL88_                  pm  0D50          label        
+     dspAlgMainL212_                 pm  0D58          label        
+     dspAlgMainL194_                 pm  0D5B          label        
+     dspAlgMainL90_                  pm  0D60          label        
+     dspAlgMainL213_                 pm  0D66          label        
+     dspAlgMainL91_                  pm  0D76          label        
+     dspAlgMainL93_                  pm  0D87          label        
+     dspAlgMainL207_                 pm  0D8A          label        
+     dspAlgMainL92_                  pm  0D90          label        
+     dspAlgMainL105_                 pm  0D96          label        
+     dspAlgMainL99_                  pm  0DA3          label        
+     dspAlgMainL101_                 pm  0DBF          label        
+     dspAlgMainL208_                 pm  0DC7          label        
+     dspAlgMainL102_                 pm  0DC8          label        
+     dspAlgMainL98_                  pm  0DCD          label        
+     dspAlgMainL95_                  pm  0DD3          label        
+     dspAlgMainL110_                 pm  0DDA          label        
+     dspAlgMainL106_                 pm  0DF0          label        
+     dspAlgMainL112_                 pm  0DFA          label        
+     dspAlgMainL136_                 pm  0E05          label        
+     dspAlgMainL114_                 pm  0E0E          label        
+     dspAlgMainL118_                 pm  0E10          label        
+     dspAlgMainL119_                 pm  0E33          label        
+     dspAlgMainL123_                 pm  0E35          label        
+     dspAlgMainL124_                 pm  0E5C          label        
+     dspAlgMainL128_                 pm  0E5E          label        
+     dspAlgMainL129_                 pm  0E86          label        
+     dspAlgMainL133_                 pm  0E88          label        
+     dspAlgMainL111_                 pm  0EAB          label        
+     dspAlgMainL143_                 pm  0EB9          label        
+     dspAlgMainL204_                 pm  0EC9          label        
+     dspAlgMainL138_                 pm  0ED2          label        
+     dspAlgMainL214_                 pm  0ED9          label        
+     dspAlgMainL155_                 dm  11A8 [000B]   variable        
+     dspAlgMainL145_                 pm  0EE0          label        
+     dspAlgMainL146_                 pm  0EFC          label        
+     dspAlgMainL209_                 pm  0F17          label        
+     dspAlgMainL147_                 pm  0F41          label        
+     dspAlgMainL148_                 pm  0F5B          label        
+     dspAlgMainL210_                 pm  0F72          label        
+     dspAlgMainL149_                 pm  0F77          label        
+     dspAlgMainL150_                 pm  0F91          label        
+     dspAlgMainL154_                 pm  0F95          label        
+     dspAlgMainL144_                 pm  0FC6          label        
+     dspAlgMainL161_                 pm  0FCC          label        
+     dspAlgMainL203_                 pm  0FDD          label        
+     dspAlgMainL157_                 pm  0FE7          label        
+     dspAlgMainL168_                 pm  0FF6          label        
+     dspAlgMainL202_                 pm  1006          label        
+     dspAlgMainL164_                 pm  100F          label        
+     dspAlgMainL173_                 pm  101C          label        
+     dspAlgMainL201_                 pm  102C          label        
+     dspAlgMainL169_                 pm  1035          label        
+     dspAlgMainL179_                 pm  1046          label        
+     dspAlgMainL200_                 pm  1056          label        
+     dspAlgMainL163_                 pm  105F          label        
+     dspAlgMainL137_                 pm  1063          label        
+     dspAlgMainL182_                 pm  107F          label        
+     dspAlgMainL181_                 pm  1082          label        
+     dspAlgMainL185_                 pm  108D          label        
+     dspAlgMainL180_                 pm  108F          label        
+     dspAlgMainL188_                 pm  1095          label        
+     dspAlgMainL187_                 pm  10A2          label        
+     dspAlgMainL191_                 pm  10AA          label        
+     dspAlgMainL195_                 pm  10AF          label        
+     dspAlgMainL206_                 pm  10C6          label        
+     dspAlgMainL64_                  pm  10CA          label        
+     dit_                            dm  10FA [0001]   variable(global)
+     Which_AGC_                      pm  10E8          label(global)
+     Which_AGCL217_                  pm  1106          label        
+     Which_AGCL216_                  pm  110D          label        
+     Which_AGCL221_                  pm  1119          label        
+     Which_AGCL223_                  pm  1123          label        
+     Which_AGCL228_                  pm  1128          label        
+     Which_AGCL224_                  pm  1129          label        
+     Which_AGCL220_                  pm  112A          label        
+     Which_AGCL226_                  pm  113E          label        
+     DeleteMorseLC3_                 dm  1176 [000A]   variable        
+     DeleteMorseLC4_                 dm  11B3 [000A]   variable        
+     DeleteMorse_                    pm  1148          label(global)
+     DeleteMorseL233_                pm  1157          label        
+     DeleteMorseL234_                pm  116E          label        
+     DeleteMorseL235_                pm  1178          label        
+     msg1_                           dm  1335 [0036]   variable(global)
+     msg2_                           dm  136B [0036]   variable(global)
+     plotMsgData_                    dm  13A1 [0080]   variable(global)
+     devConf_                        dm  10FB [0005]   variable(global)
+     devCaps_                        dm  1421 [004E]   variable(global)
+     Registers_1848_                 dm  1251 [0010]   variable(global)
+     pSpregs_                        dm  11BD [0001]   variable(global)
+     USB_BUFFER_                     dm  146F [0100]   variable(global)
+     LSB_BUFFER_                     dm  156F [0100]   variable(global)
+     RTTY_BUFFER_                    dm  166F [0100]   variable(global)
+     USB_SPARE_BUFFER_               dm  176F [0080]   variable(global)
+     LSB_SPARE_BUFFER_               dm  17EF [0080]   variable(global)
+     buffer1_                        dm  186F [0100]   variable(global)
+     buffer2_                        dm  196F [0100]   variable(global)
+     buffer3_                        dm  1A6F [0100]   variable(global)
+     buffer4_                        dm  1B6F [0100]   variable(global)
+     hAlg_                           dm  11BE [0001]   variable(global)
+     hApp_                           dm  11BF [0001]   variable(global)
+     CurrentIFGain_                  dm  1261 [0001]   variable(global)
+     hilbert_                        dm  1262 [0001]   variable(global)
+     delay_                          dm  1263 [0001]   variable(global)
+     mode_                           dm  1264 [0001]   variable(global)
+     Monitor_                        dm  1265 [0001]   variable(global)
+     dspStopIo_                          1A96 [0000]   extern(_shellio_)        
+     MultiplyAllByVolume_                14C3 [0000]   extern(VOLUMEMOD)        
+     Remove_LSB_                         13BA [0000]   extern(FIR_LPF)        
+     Remove_USB_                         13AB [0000]   extern(FIR_LPF)        
+     __fixsfsi_                          096C [0000]   extern(__fixsfsi__)        
+     ChangeVolume_                       14AD [0000]   extern(VOLUMEMOD)        
+     SetTone_                            15E6 [0000]   extern(VOLUMEMOD)        
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     dspGetIoDevConf_                    19CE [0000]   extern(_shellio_)        
+     Make_SSB_                           13C5 [0000]   extern(FIR_LPF)        
+     dspGetIoDevCaps_                    19AB [0000]   extern(_shellio_)        
+     SelectFilter_                       1341 [0000]   extern(FIR_LPF)        
+     AGC_                                1521 [0000]   extern(VOLUMEMOD)        
+     Filter_60_Hz_                       130A [0000]   extern(FIR_LPF)        
+     ClearOffset_                        14BB [0000]   extern(VOLUMEMOD)        
+     dspSetIoDevConf_                    19F1 [0000]   extern(_shellio_)        
+     gain1_                              1EEF [0001]   extern(Signal_Gen)        
+     gain2_                              1EF0 [0001]   extern(Signal_Gen)        
+     Filter_Both_                        139B [0000]   extern(FIR_LPF)        
+     gain3_                              1EF1 [0001]   extern(Signal_Gen)        
+     dolsbfft_                           1199 [0000]   extern(FFT)        
+     sFilter_                            1330 [0000]   extern(FIR_LPF)        
+     dspUtilGet1848_                     1C92 [0000]   extern(_sndport_)        
+     RestoreVolume_                      14B3 [0000]   extern(VOLUMEMOD)        
+     dousbfft_                           118F [0000]   extern(FFT)        
+     freq1_                              127A [0001]   extern(Signal_Gen)        
+     InitAGC_                            1493 [0000]   extern(VOLUMEMOD)        
+     freq2_                              127B [0001]   extern(Signal_Gen)        
+     Center_                             16A9 [0000]   extern(VOLUMEMOD)        
+     dspGetNumIoDevs_                    19A5 [0000]   extern(_shellio_)        
+     freq3_                              127C [0001]   extern(Signal_Gen)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+     SlowAGC_                            14F6 [0000]   extern(VOLUMEMOD)        
+     ClearError_                         14BE [0000]   extern(VOLUMEMOD)        
+     dspSendMsg_                         187E [0000]   extern(_dspcalls_)        
+     __floatdisf_                        267E [0000]   extern(__floatdisf__)        
+     __divdi3_                           26BE [0000]   extern(__divdi3__)        
+     ChangeIFGain2_                      1468 [0000]   extern(VOLUMEMOD)        
+     dspSendIo_                          1B33 [0000]   extern(_shellio_)        
+     Hilbert_And_Delay_                  1386 [0000]   extern(FIR_LPF)        
+     dspStartIo_                         1A3C [0000]   extern(_shellio_)        
+     __divsf3_                           26A7 [0000]   extern(__divsf3__)        
+     dspGetMsg_                          1865 [0000]   extern(_dspcalls_)        
+     initSignal_                         00D1 [0000]   extern(Signal_Gen)        
+     dspUtilProgram1848_                 1C1C [0000]   extern(_sndport_)        
+     FM_                                 16D0 [0000]   extern(VOLUMEMOD)        
+     MultiplyByVolume_                   14E0 [0000]   extern(VOLUMEMOD)        
+     dofft_                              1186 [0000]   extern(FFT)        
+     delayLine_                          12EB [0000]   extern(FIR_LPF)        
+     GetVolume_                          14B9 [0000]   extern(VOLUMEMOD)        
+     genSignal_                          00DC [0000]   extern(Signal_Gen)        
+     __mulsf3_                           269F [0000]   extern(__mulsf3__)        
+     strlen_                             26DD [0000]   extern(__String_Length_Routine)        
+     strcmp_                             26E5 [0000]   extern(__String_Comp_Routine)        
+     initFilter_                         12AA [0000]   extern(FIR_LPF)        
+     dspGetIo_                           1B1B [0000]   extern(_shellio_)        
+
+     xref for module: FFT     
+
+     FFT                             pm  1186 [0124]   module(global)
+     cos_table                       pm  0100 [0100]   variable        
+     window                          pm  0200 [0100]   variable        
+     M3_SPACE                        dm  1266 [0001]   variable        
+     BFY_COUNT                       dm  1267 [0001]   variable        
+     output                          dm  3800 [0200]   variable        
+     inplace                         dm  1C6F [0200]   variable        
+     dofft_                          pm  1186          label(global)
+     dousbfft_                       pm  118F          label(global)
+     dolsbfft_                       pm  1199          label(global)
+     get_data                        pm  11A3          label        
+     get_data2                       pm  11A4          label        
+     wfloop                          pm  11B7          label        
+     no_window                       pm  11B9          label        
+     floop                           pm  11BF          label        
+     results                         dm  1E6F [0080]   variable        
+     magnitude_squared               pm  11C1          label        
+     square                          pm  11C6          label        
+     no_log                          pm  11D1          label        
+     log_coeffs                      pm  0063 [0005]   variable        
+     log                             pm  11D4          label        
+     compute                         pm  11D8          label        
+     approx                          pm  11EB          label        
+     error                           pm  11F5          label        
+     fft                             pm  11F7          label        
+     stage1                          pm  1200          label        
+     stg1bfy                         pm  1213          label        
+     stage2                          pm  1232          label        
+     stage3                          pm  1242          label        
+     laststage                       pm  1252          label        
+     laststgbfy                      pm  1264          label        
+     mid_stg                         pm  127B          label        
+     midbfy                          pm  1284          label        
+     RegRestore                          174D [0000]   extern(RegUtil)        
+     HannOn_                             10D6 [0001]   extern(_alg_)        
+     RegSave                             1725 [0000]   extern(RegUtil)        
+     LogOn_                              10D4 [0001]   extern(_alg_)        
+     LSB_                                1054 [0001]   extern(_alg_)        
+     USB_                                1053 [0001]   extern(_alg_)        
+     lastInputBuffer_                    10ED [0001]   extern(_alg_)        
+
+     xref for module: FIR_LPF     
+
+     FIR_LPF                         pm  12AA [01BE]   module(global)
+     data                            dm  1000 [0051]   variable        
+     usb_data                        dm  1080 [0051]   variable        
+     lsb_data                        dm  1100 [0051]   variable        
+     delay_data                      dm  1180 [0028]   variable        
+     fm_data                         dm  1058 [0008]   variable        
+     hz_60_data_usb                  dm  1200 [0051]   variable        
+     hz_60_data_lsb                  dm  1280 [0051]   variable        
+     rtty_data                       dm  1060 [0015]   variable        
+     cw_data                         dm  1078 [0005]   variable        
+     reg_l0                          dm  1268 [0001]   variable        
+     reg_l4                          dm  1269 [0001]   variable        
+     reg_i4                          dm  126A [0001]   variable        
+     reg_m4                          dm  126B [0001]   variable        
+     i0_pnt                          dm  126C [0001]   variable        
+     usb_pnt                         dm  126D [0001]   variable        
+     lsb_pnt                         dm  126E [0001]   variable        
+     delay_pnt                       dm  126F [0001]   variable        
+     fm_pnt                          dm  1270 [0001]   variable        
+     hz_60_pnt_usb                   dm  1271 [0001]   variable        
+     hz_60_pnt_lsb                   dm  1272 [0001]   variable        
+     rtty_pnt                        dm  1273 [0001]   variable        
+     cw_pnt                          dm  1274 [0001]   variable        
+     which_filter                    dm  1275 [0001]   variable        
+     rtty_usb                        dm  1276 [0001]   variable        
+     rtty_lsb                        dm  1277 [0001]   variable        
+     cw_time                         dm  1278 [0001]   variable        
+     cw_detected                     dm  1279 [0001]   variable        
+     fir_coeff                       pm  0080 [0051]   variable        
+     coeff_3to30                     pm  0300 [0051]   variable        
+     coeff_9to11                     pm  0380 [0051]   variable        
+     coeff_4to22                     pm  0800 [0051]   variable        
+     coeff_8to12                     pm  0880 [0051]   variable        
+     coeff_9to10                     pm  0900 [0051]   variable        
+     coeff_fm                        pm  0068 [0008]   variable        
+     coeff_60_hz                     pm  0980 [0051]   variable        
+     initFilter_                     pm  12AA          label(global)
+     sFilter_                        pm  1330          label(global)
+     UFilter_                        pm  1343          label(global)
+     LFilter_                        pm  1352          label(global)
+     delayLine_                      pm  12EB          label(global)
+     SelectFilter_                   pm  1341          label(global)
+     FM_Filter_                      pm  12FB          label(global)
+     Filter_60_Hz_                   pm  130A          label(global)
+     RTTY_                           pm  143F          label(global)
+     RTTY_Block_                     pm  1417          label(global)
+     Hilbert_And_Delay_              pm  1386          label(global)
+     Make_SSB_                       pm  13C5          label(global)
+     Filter_Both_                    pm  139B          label(global)
+     Remove_USB_                     pm  13AB          label(global)
+     Remove_LSB_                     pm  13BA          label(global)
+     CW_Block_                       pm  13D3          label(global)
+     zero                            pm  12BC          label        
+     zero_usb                        pm  12C6          label        
+     zero_delay                      pm  12CD          label        
+     zero_fm                         pm  12D4          label        
+     zero_rtty                       pm  12DB          label        
+     zero_cw                         pm  12E2          label        
+     delayLine                       pm  12EF          label        
+     loop_60_hz                      pm  1317          label        
+     Filter_60_Hz_USB                pm  131A          label        
+     Filter_60_Hz_LSB                pm  1325          label        
+     sFilter                         pm  1334          label        
+     no_filter                       pm  1350          label        
+     ChooseFilter                    pm  1361          label        
+     filt8to12                       pm  136D          label        
+     filt4to22                       pm  1371          label        
+     filt9to11                       pm  1375          label        
+     filt9to10                       pm  1379          label        
+     Filter                          pm  137D          label        
+     fir_df                          pm  137F          label        
+     conv                            pm  1381          label        
+     T_and_D_loop                    pm  1398          label        
+     Both_Loop                       pm  13A8          label        
+     Remove_USB_Loop                 pm  13B7          label        
+     Remove_LSB_Loop                 pm  13C2          label        
+     Make_SSB_Loop                   pm  13D0          label        
+     CW_Block_USB                    pm  13E0          label        
+     CW_no_tone                      pm  13F2          label        
+     CW_Block_loop                   pm  13FA          label        
+     cw_fir                          pm  1408          label        
+     cw_fir_loop                     pm  1412          label        
+     end_cw_fir                      pm  1416          label        
+     Block_USB                       pm  1420          label        
+     Block_LSB                       pm  1426          label        
+     Block_UL                        pm  1439          label        
+     Block_none                      pm  143A          label        
+     Block_loop                      pm  143C          label        
+     rtty_cfir                       pm  144C          label        
+     lsb_rtty                        pm  144F          label        
+     no_rtty                         pm  1451          label        
+     rtty_fir                        pm  1453          label        
+     rtty_loop                       pm  145C          label        
+     rtty_end                        pm  1463          label        
+     max_hi                          pm  1464          label        
+     max_low                         pm  1466          label        
+     RegRestore                          174D [0000]   extern(RegUtil)        
+     RegSave                             1725 [0000]   extern(RegUtil)        
+     RegRestore2                         179D [0000]   extern(RegUtil)        
+     RegSave2                            1775 [0000]   extern(RegUtil)        
+
+     xref for module: Signal_Gen     
+
+     Signal_Gen                      pm  00D1 [0013]   module(global)
+     freq1_                          dm  127A [0001]   variable(global)
+     freq2_                          dm  127B [0001]   variable(global)
+     freq3_                          dm  127C [0001]   variable(global)
+     phi1_                           dm  127D [0001]   variable(global)
+     phi2_                           dm  127E [0001]   variable(global)
+     phi3_                           dm  127F [0001]   variable(global)
+     gain1_                          dm  1EEF [0001]   variable(global)
+     gain2_                          dm  1EF0 [0001]   variable(global)
+     gain3_                          dm  1EF1 [0001]   variable(global)
+     delta_count_                    dm  1EF2 [0001]   variable        
+     sin_place                       dm  1EF3 [0001]   variable        
+     sin_data                        dm  10D8 [0008]   variable        
+     I0_HOLD                         dm  1EF4 [0001]   variable        
+     L0_HOLD                         dm  1EF5 [0001]   variable        
+     genSignal_                      pm  00DC          label(global)
+     initSignal_                     pm  00D1          label(global)
+     RegRestore                          174D [0000]   extern(RegUtil)        
+     RegSave                             1725 [0000]   extern(RegUtil)        
+     sin                                 0351 [0000]   extern(Sin_Approximation)        
+
+     xref for module: VOLUMEMOD     
+
+     VOLUMEMOD                       pm  1468 [02BD]   module(global)
+     true_volume                     dm  1EF6 [0001]   variable        
+     volume                          dm  1EF7 [0001]   variable        
+     reg_l0                          dm  1EF8 [0001]   variable        
+     largest                         dm  1EF9 [0001]   variable        
+     error                           dm  1EFA [0001]   variable        
+     PIO_reg_data                    dm  1EFB [0001]   variable        
+     OFFSET                          dm  1EFC [0001]   variable        
+     wanted_volume                   dm  1EFD [0001]   variable        
+     slow_agc_values                 dm  11C0 [0040]   variable        
+     slow_agc_pnt                    dm  1EFE [0001]   variable        
+     PIO_                            dm  31C8 [0001]   variable        
+     ChangeVolume_                   pm  14AD          label(global)
+     RestoreVolume_                  pm  14B3          label(global)
+     GetVolume_                      pm  14B9          label(global)
+     GetError_                       pm  14C1          label(global)
+     ClearError_                     pm  14BE          label(global)
+     ClearOffset_                    pm  14BB          label(global)
+     MultiplyByVolume_               pm  14E0          label(global)
+     MultiplyAllByVolume_            pm  14C3          label(global)
+     AGC_                            pm  1521          label(global)
+     SetTone_                        pm  15E6          label(global)
+     SlowAGC_                        pm  14F6          label(global)
+     InitAGC_                        pm  1493          label(global)
+     SSBAGC_                         pm  1508          label(global)
+     FreqCal_                        pm  15A4          label(global)
+     ChangeIFGain_                   pm  1478          label(global)
+     ChangeIFGain2_                  pm  1468          label(global)
+     Multiply_                       pm  159B          label(global)
+     FreqCal2_                       pm  15DB          label(global)
+     FreqCal3_                       pm  15C5          label(global)
+     FreqCal4_                       pm  15B1          label(global)
+     Pythagoras_                     pm  158C          label(global)
+     Center_                         pm  16A9          label(global)
+     FM_                             pm  16D0          label(global)
+     CheckAnalog_                    pm  149E          label(global)
+     Write_1848                      pm  1489          label        
+     initialize                      pm  149A          label        
+     check_end                       pm  14A7          label        
+     check_down                      pm  14A9          label        
+     check_up                        pm  14AB          label        
+     ModVolumeAll                    pm  14D6          label        
+     MultiplyAllLoop                 pm  14D7          label        
+     MinSineAll                      pm  14DA          label        
+     MaxSineAll                      pm  14DD          label        
+     mod_volume                      pm  14EC          label        
+     end_volume                      pm  14ED          label        
+     MinSine                         pm  14F0          label        
+     MaxSine                         pm  14F3          label        
+     slow_agc                        pm  1503          label        
+     ssb_not_hi                      pm  1517          label        
+     ssb_loop                        pm  151B          label        
+     not_high                        pm  1532          label        
+     AGC_loop                        pm  1536          label        
+     not_high2                       pm  153C          label        
+     AGC_loop2                       pm  1540          label        
+     AR_BIG                          pm  154C          label        
+     AF_BIG                          pm  154F          label        
+     not_hi                          pm  1559          label        
+     no_squelch                      pm  155D          label        
+     restore                         pm  1567          label        
+     divide                          pm  1569          label        
+     sdivide                         pm  157B          label        
+     Pythagoras2                     pm  1597          label        
+     FreqLoop                        pm  15AD          label        
+     FreqLoop4                       pm  15C0          label        
+     dontmodify4                     pm  15C3          label        
+     FreqLoop3                       pm  15D0          label        
+     dontmodify                      pm  15D9          label        
+     set_MASTER                      pm  15F2          label        
+     start_I2C                       pm  1620          label        
+     send_I2C_bit                    pm  162B          label        
+     send_I2C_one                    pm  162E          label        
+     send_I2C_zero                   pm  1635          label        
+     stop_I2C                        pm  163C          label        
+     clock_high_I2C                  pm  1643          label        
+     clock_low_I2C                   pm  1649          label        
+     data_high_I2C                   pm  164F          label        
+     data_low_I2C                    pm  1655          label        
+     delay_I2C                       pm  165B          label        
+     I2C_delay                       pm  165E          label        
+     delay_I2C2                      pm  1660          label        
+     I2C_delay2                      pm  1666          label        
+     delay_us_                       pm  1668          label        
+     dwait                           pm  166C          label        
+     dw2                             pm  166D          label        
+     sqrt_coeff                      dm  1EFF [0005]   variable        
+     sqrt                            pm  166F          label(global)
+     approx                          pm  167D          label        
+     scale                           pm  1683          label        
+     compute                         pm  168B          label        
+     pwr_ok                          pm  168C          label        
+     frac                            pm  16A6          label        
+     center2_not_hi                  pm  16B9          label        
+     center2_loop                    pm  16BC          label        
+     center2_2                       pm  16CB          label        
+     xtosmall                        pm  16E7          label        
+     plus90                          pm  16EC          label        
+     atn_coeff                       dm  1F04 [0005]   variable        
+     arctan                          pm  16EF          label(global)
+     posi                            pm  16F8          label        
+     noinv                           pm  1716          label        
+     approximate                     pm  171C          label        
+     RegRestore                          174D [0000]   extern(RegUtil)        
+     LFilter_                            1352 [0000]   extern(FIR_LPF)        
+     UFilter_                            1343 [0000]   extern(FIR_LPF)        
+     RegSave                             1725 [0000]   extern(RegUtil)        
+     FM_Filter_                          12FB [0000]   extern(FIR_LPF)        
+
+     xref for module: RegUtil     
+
+     RegUtil                         pm  1725 [00A0]   module(global)
+     RegArea                         dm  1F09 [0038]   variable        
+     RegArea2                        dm  1F41 [0038]   variable        
+     RegSave                         pm  1725          label(global)
+     RegRestore                      pm  174D          label(global)
+     RegSave2                        pm  1775          label(global)
+     RegRestore2                     pm  179D          label(global)
+
+     xref for module: Sin_Approximation     
+
+     Sin_Approximation               pm  0351 [0029]   module(global)
+     sin_coeff                       dm  1F79 [0005]   variable        
+     mr_hold                         dm  1F7E [0003]   variable        
+     sr1_hold                        dm  1F81 [0001]   variable        
+     ireg_hold                       dm  1F82 [0001]   variable        
+     ax0_hold                        dm  1F83 [0001]   variable        
+     mx1_hold                        dm  1F84 [0001]   variable        
+     sin                             pm  0351          label(global)
+     approx                          pm  036B          label        
+
+     xref for module: _dspcalls_     
+
+     _dspcalls_                      pm  17C5 [0117]   module(global)
+     _dspEventMsgHead_               dm  1F85 [0001]   variable(global)
+     _dspEventMsgTail_               dm  1F86 [0001]   variable(global)
+     dspGetSysCaps_                  pm  17C5          label(global)
+     dspGetSysCapsL2_                pm  17D4          label        
+     dspGetSysCapsL4_                pm  17D5          label        
+     _dspEventTest_                  pm  17D7          label(global)
+     _dspEventTestL6_                pm  17E0          label        
+     _dspEventTestL8_                pm  17E1          label        
+     _dspGetEvent_                   pm  17E3          label(global)
+     _dspGetEventL10_                pm  1834          label        
+     _dspQueueEvent_                 pm  1837          label(global)
+     _dspQueueEventL12_              pm  1844          label        
+     _dspQueueEventL13_              pm  1849          label        
+     _dspQueueEventL15_              pm  1862          label        
+     _dspQueueEventL16_              pm  1863          label        
+     dspGetMsg_                      pm  1865          label(global)
+     dspGetMsgL18_                   pm  187B          label        
+     dspGetMsgL20_                   pm  187C          label        
+     dspSendMsg_                     pm  187E          label(global)
+     dspSendMsgL22_                  pm  1898          label        
+     dspSendMsgL24_                  pm  1899          label        
+     _dspShellInit_                  pm  189B          label(global)
+     dspReleaseCheck_                pm  18CA          label(global)
+     dspReleaseToShell_              pm  18D1          label(global)
+     dspReleaseToShellL28_           pm  18D4          label        
+     dspReleaseToShellL29_           pm  18DA          label        
+     _SystemInputMsgs_               dm  1F87 [0090]   variable        
+     _dspEventMsgs_                  dm  2017 [00C8]   variable(global)
+     _dspClearPssIrqEnable_              00EF [0000]   extern(_util_)        
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspGlobalDisableInt_               0045 [0000]   extern(_io_)        
+     _Caps_                              232D [0012]   extern(_main_)        
+     _AddMsgBuffer_                      219A [0000]   extern(_newmsg_)        
+     _dspGlobalEnableInt_                0042 [0000]   extern(_io_)        
+     _StartWriter_                       2190 [0000]   extern(_newmsg_)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+     _dspIoInit_                         1B54 [0000]   extern(_shellio_)        
+     _dspSetPssIrqEnable_                00E4 [0000]   extern(_util_)        
+     _dspProcessEvent_                   1FD8 [0000]   extern(_main_)        
+     memset_                             08F1 [0000]   extern(__memset__)        
+     memcpy_                             0870 [0000]   extern(Memory_Copy_Routine)        
+     _InitMsgQueues_                     221F [0000]   extern(_newmsg_)        
+     _dspEnableInt_                      0048 [0000]   extern(_io_)        
+
+     xref for module: _shellio_     
+
+     _shellio_                       pm  18DC [02B3]   module(global)
+     _dspDevCaps_                    dm  20DF [00EA]   variable(global)
+     _dspSPInputConf_                dm  21C9 [0001]   variable(global)
+     _dspSPOutputConf_               dm  21CA [0001]   variable(global)
+     _dspDacConf_                    dm  21CB [0001]   variable(global)
+     _dspSPInputQueue_               dm  21CC [0001]   variable(global)
+     _dspSPOutputQueue_              dm  21CD [0001]   variable(global)
+     _dspDacQueue_                   dm  21CE [0001]   variable(global)
+     _dspSoundPortOn_                dm  21CF [0001]   variable(global)
+     _dspSoundPortIn_                dm  21D0 [0001]   variable(global)
+     _dspSoundPortOut_               dm  21D1 [0001]   variable(global)
+     _GetRate_                       pm  18DC          label        
+     _GetRateL41_                    pm  18EC          label        
+     _GetRateL3_                     pm  18EC          label        
+     _GetRateL2_                     pm  18EE          label        
+     _GetRateL42_                    pm  18F2          label        
+     _GetRateL5_                     pm  18F4          label        
+     _GetRateL43_                    pm  18F8          label        
+     _GetRateL8_                     pm  18FA          label        
+     _GetRateL44_                    pm  18FE          label        
+     _GetRateL11_                    pm  1900          label        
+     _GetRateL45_                    pm  1904          label        
+     _GetRateL14_                    pm  1906          label        
+     _GetRateL46_                    pm  190A          label        
+     _GetRateL17_                    pm  190C          label        
+     _GetRateL47_                    pm  1910          label        
+     _GetRateL20_                    pm  1912          label        
+     _GetRateL48_                    pm  1916          label        
+     _GetRateL23_                    pm  1918          label        
+     _GetRateL49_                    pm  191C          label        
+     _GetRateL26_                    pm  191E          label        
+     _GetRateL50_                    pm  1922          label        
+     _GetRateL29_                    pm  1924          label        
+     _GetRateL51_                    pm  1928          label        
+     _GetRateL32_                    pm  192A          label        
+     _GetRateL52_                    pm  192E          label        
+     _GetRateL35_                    pm  1930          label        
+     _GetRateL53_                    pm  1934          label        
+     _GetRateL38_                    pm  1936          label        
+     _GetRateL4_                     pm  1937          label        
+     _GetDacRate_                    pm  193A          label        
+     _GetDacRateL63_                 pm  194E          label        
+     _GetDacRateL64_                 pm  1963          label        
+     _GetDacRateL59_                 pm  1963          label        
+     _GetDacRateL58_                 pm  1971          label        
+     _GetDacRateL60_                 pm  1987          label        
+     _GetDacRateL62_                 pm  1992          label        
+     _GetDacRateL57_                 pm  1998          label        
+     dspGetNumIoDevs_                pm  19A5          label(global)
+     dspGetIoDevCaps_                pm  19AB          label(global)
+     dspGetIoDevCapsL67_             pm  19B9          label        
+     dspGetIoDevCapsL68_             pm  19CB          label        
+     dspGetIoDevCapsL70_             pm  19CC          label        
+     dspGetIoDevConf_                pm  19CE          label(global)
+     dspGetIoDevConfL72_             pm  19DC          label        
+     dspGetIoDevConfL73_             pm  19EE          label        
+     dspGetIoDevConfL75_             pm  19EF          label        
+     dspSetIoDevConf_                pm  19F1          label(global)
+     dspSetIoDevConfL77_             pm  19FF          label        
+     dspSetIoDevConfL86_             pm  1A05          label        
+     dspSetIoDevConfL78_             pm  1A06          label        
+     dspSetIoDevConfL80_             pm  1A26          label        
+     dspSetIoDevConfL81_             pm  1A33          label        
+     dspSetIoDevConfL83_             pm  1A39          label        
+     dspSetIoDevConfL85_             pm  1A3A          label        
+     dspStartIo_                     pm  1A3C          label(global)
+     dspStartIoL90_                  pm  1A48          label        
+     dspStartIoL91_                  pm  1A4D          label        
+     dspStartIoL92_                  pm  1A4F          label        
+     dspStartIoL94_                  pm  1A82          label        
+     dspStartIoL95_                  pm  1A91          label        
+     dspStartIoL88_                  pm  1A93          label        
+     dspStartIoL97_                  pm  1A94          label        
+     dspStopIo_                      pm  1A96          label(global)
+     dspStopIoL101_                  pm  1AA3          label        
+     dspStopIoL102_                  pm  1AA9          label        
+     dspStopIoL103_                  pm  1AAB          label        
+     dspStopIoL104_                  pm  1AB6          label        
+     dspStopIoL106_                  pm  1AB9          label        
+     dspStopIoL107_                  pm  1ABC          label        
+     dspStopIoL99_                   pm  1ABE          label        
+     dspStopIoL113_                  pm  1AF0          label        
+     dspStopIoL110_                  pm  1B14          label        
+     dspStopIoL109_                  pm  1B18          label        
+     dspStopIoL114_                  pm  1B19          label        
+     dspGetIo_                       pm  1B1B          label(global)
+     dspGetIoL118_                   pm  1B27          label        
+     dspGetIoL120_                   pm  1B30          label        
+     dspGetIoL122_                   pm  1B31          label        
+     dspSendIo_                      pm  1B33          label(global)
+     dspSendIoL125_                  pm  1B41          label        
+     dspSendIoL126_                  pm  1B43          label        
+     dspSendIoL127_                  pm  1B45          label        
+     dspSendIoL124_                  pm  1B47          label        
+     dspSendIoL129_                  pm  1B51          label        
+     dspSendIoL131_                  pm  1B52          label        
+     _dspIoInit_                     pm  1B54          label(global)
+     _dspDevConfs_                   dm  21D2 [000F]   variable(global)
+     _dspDevQueues_                  dm  21E1 [0054]   variable(global)
+     _dspQueueEvent_                     1837 [0000]   extern(_dspcalls_)        
+     _dspClearPssIrqEnable_              00EF [0000]   extern(_util_)        
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspSysConnectTo1848_               1B8F [0000]   extern(_sndport_)        
+     _dspAddBuf_                         214D [0000]   extern(GenericDriver)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+     _dspSetPssIrqEnable_                00E4 [0000]   extern(_util_)        
+     __subdi3_                           26D3 [0000]   extern(__subdi3__)        
+     memcpy_                             0870 [0000]   extern(Memory_Copy_Routine)        
+     _dspSysProgram1848_                 1CA4 [0000]   extern(_sndport_)        
+
+     xref for module: _sndport_     
+
+     _sndport_                       pm  1B8F [0195]   module(global)
+     _SPRegs_                        dm  2235 [0010]   variable(global)
+     _dspSysConnectTo1848_           pm  1B8F          label(global)
+     _dspSysDisconnect1848_          pm  1B97          label(global)
+     _SetSPReg_                      pm  1B9F          label        
+     _GetSPReg_                      pm  1BAC          label        
+     _PollInit_                      pm  1BB8          label        
+     _PollInitL6_                    pm  1BC0          label        
+     _PollInitL7_                    pm  1BD9          label        
+     _PollAutoCal_                   pm  1BDB          label        
+     _PollAutoCalL11_                pm  1BE3          label        
+     _PollAutoCalL12_                pm  1BFC          label        
+     _PollAutoCalL15_                pm  1C01          label        
+     _PollAutoCalL16_                pm  1C1A          label        
+     dspUtilProgram1848_             pm  1C1C          label(global)
+     dspUtilProgram1848L32_          pm  1C57          label        
+     dspUtilProgram1848L31_          dm  2245 [0008]   variable        
+     dspUtilProgram1848L24_          pm  1C64          label        
+     dspUtilProgram1848L25_          pm  1C6D          label        
+     dspUtilProgram1848L26_          pm  1C71          label        
+     dspUtilProgram1848L30_          pm  1C75          label        
+     dspUtilProgram1848L22_          pm  1C81          label        
+     dspUtilGet1848_                 pm  1C92          label(global)
+     dspUtilGet1848L37_              pm  1C98          label        
+     dspUtilGet1848L38_              pm  1CA2          label        
+     _dspSysProgram1848_             pm  1CA4          label(global)
+     _dspSysProgram1848L40_          pm  1CB5          label        
+     _dspSysProgram1848L41_          pm  1CB6          label        
+     _dspSysProgram1848L42_          pm  1CC4          label        
+     _dspSysProgram1848L50_          pm  1CCD          label        
+     _dspSysProgram1848L44_          pm  1CD2          label        
+     _dspSysProgram1848L46_          pm  1CD8          label        
+     _dspSysProgram1848L47_          pm  1CDA          label        
+     _dspSysProgram1848L51_          pm  1CDB          label        
+     _dspSysProgram1848L43_          pm  1CDE          label        
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     __adddi3_                           26C6 [0000]   extern(__adddi3__)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+
+     xref for module: _main_     
+
+     _main_                          pm  1D24 [03CB]   module(global)
+     _ErrorCount_                    dm  224D [0001]   variable(global)
+     _ErrorValue_                    dm  224E [0001]   variable(global)
+     _StartFlag_                     dm  224F [0001]   variable(global)
+     _MsgDropCount_                  dm  2250 [0001]   variable(global)
+     _MsgInCount_                    dm  2251 [0001]   variable(global)
+     _MsgOutCount_                   dm  2252 [0001]   variable(global)
+     _OutputMsg_                     dm  2253 [0001]   variable        
+     _IgnoreBreak_                   dm  2254 [0001]   variable(global)
+     _dspErrorNo___                  dm  2255 [0001]   variable(global)
+     _dspShellMsg_                   pm  1D24          label(global)
+     _dspShellMsgL63_                pm  1D4F          label        
+     _dspShellMsgL62_                pm  1D54          label        
+     _dspShellMsgL61_                pm  1D5C          label        
+     _dspShellMsgL65_                pm  1D6E          label        
+     _dspShellMsgL64_                pm  1D73          label        
+     _dspShellMsgL66_                pm  1D7F          label        
+     _dspShellMsgL4_                 pm  1D84          label        
+     _dspShellMsgL69_                pm  1DA1          label        
+     _dspShellMsgL7_                 pm  1DA8          label        
+     _dspShellMsgL8_                 pm  1DAC          label        
+     _dspShellMsgL11_                pm  1DE1          label        
+     _dspShellMsgL12_                pm  1DEA          label        
+     _dspShellMsgL13_                pm  1DF2          label        
+     _dspShellMsgL17_                pm  1E00          label        
+     _dspShellMsgL18_                pm  1E10          label        
+     _dspShellMsgL22_                pm  1E1E          label        
+     _dspShellMsgL23_                pm  1E2E          label        
+     _dspShellMsgL28_                pm  1E47          label        
+     _dspShellMsgL30_                pm  1E5A          label        
+     _dspShellMsgL34_                pm  1E6B          label        
+     _dspShellMsgL35_                pm  1E82          label        
+     _dspShellMsgL39_                pm  1E93          label        
+     _dspShellMsgL40_                pm  1EB0          label        
+     _dspShellMsgL41_                pm  1EB9          label        
+     _dspShellMsgL45_                pm  1ECF          label        
+     _dspShellMsgL43_                pm  1EF6          label        
+     _dspShellMsgL48_                pm  1F11          label        
+     _dspShellMsgL49_                pm  1F1E          label        
+     _dspShellMsgL53_                pm  1F36          label        
+     _dspShellMsgL51_                pm  1F78          label        
+     _dspShellMsgL68_                pm  1F9B          label        
+     _dspShellMsgL54_                pm  1F9E          label        
+     _dspShellMsgL56_                pm  1FA1          label        
+     _dspShellMsgL57_                pm  1FAC          label        
+     _dspShellMsgL58_                pm  1FC1          label        
+     _dspShellMsgL3_                 pm  1FCC          label        
+     _dspShellMsgL2_                 pm  1FD2          label        
+     _dspShellMsgL67_                pm  1FD6          label        
+     _dspProcessEvent_               pm  1FD8          label(global)
+     _dspProcessEventL100_           pm  1FF9          label        
+     _dspProcessEventL98_            dm  2256 [000A]   variable        
+     _dspProcessEventL72_            pm  2000          label        
+     _dspProcessEventL74_            pm  2016          label        
+     _dspProcessEventL76_            pm  202C          label        
+     _dspProcessEventL77_            pm  204F          label        
+     _dspProcessEventL82_            pm  2067          label        
+     _dspProcessEventL84_            pm  2076          label        
+     _dspProcessEventL99_            pm  2086          label        
+     _dspProcessEventL86_            pm  208B          label        
+     _dspProcessEventL87_            pm  20A1          label        
+     _dspProcessEventL93_            pm  20A1          label        
+     _dspProcessEventL95_            pm  20BF          label        
+     _dspProcessEventL96_            pm  20C0          label        
+     _dspProcessEventL71_            pm  20C7          label        
+     _dspShellEventLoop_             pm  20CD          label(global)
+     _dspShellEventLoopL102_         pm  20D4          label        
+     _dspShellEventLoopL104_         pm  20DA          label        
+     _LastMsg_                       dm  2260 [0001]   variable(global)
+     _SystemOutputMsg_               dm  2261 [00CC]   variable        
+     _Caps_                          dm  232D [0012]   variable(global)
+     _dspDead_                       dm  233F [0001]   variable(global)
+     _dspSysMsg_                     dm  2340 [0001]   variable(global)
+     _dspSysArg1_                    dm  2341 [0001]   variable(global)
+     _dspSysArg2_                    dm  2342 [0001]   variable(global)
+     _dspSysArg3_                    dm  2343 [0001]   variable(global)
+     _dspShellInit_                      189B [0000]   extern(_dspcalls_)        
+     _dspGetStack_                       247D [0000]   extern(Low_Level_Debug)        
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspSetAllBreaks_                   239B [0000]   extern(_debug_)        
+     _dspSysDisconnect1848_              1B97 [0000]   extern(_sndport_)        
+     _dspDbgSetBreak_                    23EA [0000]   extern(_debug_)        
+     _dspEventTest_                      17D7 [0000]   extern(_dspcalls_)        
+     _dspGetEvent_                       17E3 [0000]   extern(_dspcalls_)        
+     _dspSetFlag_                        0054 [0000]   extern(_io_)        
+     _dspGlobalDisableInt_               0045 [0000]   extern(_io_)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     dspAlgMain_                         0C49 [0000]   extern(_alg_)        
+     _dspGlobalEnableInt_                0042 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     __ashrdi3_                          0962 [0000]   extern(__ashrdi3__)        
+     _dspDbgPmRead_                      001C [0000]   extern(_io_)        
+     _hDebugger_                         250B [0001]   extern(_debug_)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+     dspSendMsg_                         187E [0000]   extern(_dspcalls_)        
+     _dspDbgPmWrite_                     0024 [0000]   extern(_io_)        
+     _InBreak_                           250C [0001]   extern(Low_Level_Debug)        
+     _dspDbgClearBreak_                  2412 [0000]   extern(_debug_)        
+     _dspBreakCode_                      24C5 [0000]   extern(Low_Level_Debug)        
+     _dspClearFlag_                      005B [0000]   extern(_io_)        
+     memcpy_                             0870 [0000]   extern(Memory_Copy_Routine)        
+     memset_                             08F1 [0000]   extern(__memset__)        
+     dspGetMsg_                          1865 [0000]   extern(_dspcalls_)        
+     _dspReboot_                         0000 [0000]   extern(CompressionShell)        
+
+     xref for module: GenericDriver     
+
+     GenericDriver                   pm  20EF [0092]   module(global)
+     _dspEventMsg                    pm  211D          label(global)
+     _dspDriverIn                    pm  20EF          label(global)
+     _dspDriverOut                   pm  20F1          label(global)
+     _dspAddBuf_                     pm  214D          label(global)
+     _DriverCode                     pm  20F2          label        
+     _ReadIt                         pm  20FB          label        
+     _Continue                       pm  20FC          label        
+     _GetNextBuffer                  pm  2109          label        
+     _CheckRoom                      pm  2121          label        
+     _SendMsg                        pm  2124          label        
+     _EmptyQueue                     pm  2135          label        
+     _SendMsgErr                     pm  2146          label        
+     _CheckFull                      pm  2166          label        
+     _TestIt                         pm  216D          label        
+     _AddIt                          pm  2174          label        
+     _dspErrorNo___                      2255 [0001]   extern(_main_)        
+     ___lib_restore_large_frame          265D [0000]   extern(___Large_Frame_Save)        
+     _dspEventMsgHead_                   1F85 [0001]   extern(_dspcalls_)        
+     _dspEventMsgs_                      2017 [00C8]   extern(_dspcalls_)        
+     _dspGlobalDisableInt_               0045 [0000]   extern(_io_)        
+     ___lib_save_large_frame             263E [0000]   extern(___Large_Frame_Save)        
+     _dspEventMsgTail_                   1F86 [0001]   extern(_dspcalls_)        
+     _dspGlobalEnableInt_                0042 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+
+     xref for module: _newmsg_     
+
+     _newmsg_                        pm  2181 [021A]   module(global)
+     _MsgError                       dm  2344 [0001]   variable(global)
+     _OutMsgError                    dm  2345 [0001]   variable(global)
+     _MsgWordCount                   dm  2346 [0001]   variable(global)
+     _MsgDropCount                   dm  2347 [0001]   variable(global)
+     _MsgLength                      dm  2348 [0001]   variable(global)
+     _Word                           dm  2349 [0001]   variable(global)
+     _MsgState                       dm  234A [0001]   variable(global)
+     _OutMsgState                    dm  234B [0001]   variable(global)
+     _OutMsgWordCount                dm  234C [0001]   variable(global)
+     _MsgHold                        dm  234D [0001]   variable        
+     _FakeDma                        dm  234E [0001]   variable        
+     _ReadWord                       pm  2181          label(global)
+     _WriteWord                      pm  2184          label(global)
+     _KillInterrupt_                 pm  2188          label(global)
+     _StartWriter_                   pm  2190          label(global)
+     _AddMsgBuffer_                  pm  219A          label(global)
+     _AddMsgBufferL18_               pm  21B0          label        
+     _AddMsgBufferL5_                pm  21C6          label        
+     _AddMsgBufferL6_                pm  21C8          label        
+     _AddMsgBufferL16_               pm  21CE          label        
+     _AddMsgBufferL15_               pm  21FC          label        
+     _AddMsgBufferL9_                pm  2212          label        
+     _AddMsgBufferL17_               pm  221C          label        
+     _InitMsgQueues_                 pm  221F          label(global)
+     _InitMsgQueuesL23_              pm  2229          label        
+     _InitMsgQueuesL24_              pm  2249          label        
+     _FindMsgStruct_                 pm  224B          label(global)
+     _FindOut                        pm  2250          label        
+     _FindOn                         pm  2252          label        
+     _FindTop1                       pm  2253          label        
+     _FindLoop2                      pm  2261          label        
+     _FindTop2                       pm  2272          label        
+     _FindEnd2                       pm  2274          label        
+     _FindEnd1                       pm  227C          label        
+     _TellSystem_                    pm  2285          label(global)
+     _TellSystemL42_                 pm  2289          label        
+     _TellSystemL45_                 pm  2295          label        
+     _TellSystemL46_                 pm  2297          label        
+     _dspReadMsg                     pm  22A2          label(global)
+     _ReadWaiting_                   pm  22AA          label        
+     _ReadMsgL51_                    pm  22BC          label        
+     _ReadNext                       pm  22C0          label        
+     _ReadMsgL52_                    pm  22CC          label        
+     _ReadDropping_                  pm  22D1          label        
+     _ReadMsgL99_                    pm  22DC          label        
+     _ReadMsgL54_                    pm  22DE          label        
+     _ReadDropDown                   pm  22E1          label        
+     _ReadRunning_                   pm  22ED          label        
+     _ReadMsgL59_                    pm  2305          label        
+     _ReadMsgL58_                    pm  2308          label        
+     _ReadMsgL62_                    pm  2313          label        
+     _ReadMsgL63_                    pm  2316          label        
+     _ReadMsgL49_                    pm  2318          label        
+     _FakeRunning                    pm  2319          label        
+     _FakeTestLen                    pm  232D          label        
+     _FakeReadMsgL59_                pm  2337          label        
+     _FakeReadMsgL58_                pm  233A          label        
+     _FakeReadMsgL62_                pm  2348          label        
+     _FakeReadMsgL63_                pm  234B          label        
+     _FakeReadMsgL49_                pm  234D          label        
+     _dspWriteMsg                    pm  234E          label(global)
+     _WriteWaiting_                  pm  2352          label        
+     _WriteMsgL69_                   pm  235C          label        
+     _WriteNext                      pm  2360          label        
+     _WriteRunning_                  pm  2371          label        
+     _WriteLen                       pm  237B          label        
+     _WriteFrom                      pm  237D          label        
+     _WriteId                        pm  2381          label        
+     _WriteData                      pm  2383          label        
+     _WriteIt                        pm  2389          label        
+     _WriteIncCount                  pm  238C          label        
+     _WriteExit_                     pm  239A          label        
+     _Msg                            dm  234F [0001]   variable(global)
+     _InMsg                          dm  2350 [0006]   variable(global)
+     _OutMsg                         dm  2356 [0006]   variable(global)
+     _InputMsgs                      dm  235C [0078]   variable(global)
+     _InputMsgQueue                  dm  23D4 [0028]   variable(global)
+     _OutMsgs                        dm  23FC [0078]   variable(global)
+     _OutMsgQueue                    dm  2474 [0028]   variable(global)
+     ___lib_restore_large_frame          265D [0000]   extern(___Large_Frame_Save)        
+     _dspEventMsgHead_                   1F85 [0001]   extern(_dspcalls_)        
+     _dspEventMsgs_                      2017 [00C8]   extern(_dspcalls_)        
+     _dspSetFlag_                        0054 [0000]   extern(_io_)        
+     _dspGlobalDisableInt_               0045 [0000]   extern(_io_)        
+     ___lib_save_large_frame             263E [0000]   extern(___Large_Frame_Save)        
+     _dspEventMsgTail_                   1F86 [0001]   extern(_dspcalls_)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     _dspGlobalEnableInt_                0042 [0000]   extern(_io_)        
+     _dspGoHome                          03F0 [0000]   extern(DispatchCodeModule)        
+     _dspClearFlag_                      005B [0000]   extern(_io_)        
+     _PssIrqEnable_                      249E [0001]   extern(_util_)        
+
+     xref for module: _io_     
+
+     _io_                            pm  001C [0047]   module(global)
+     _dspIoRead_                     pm  0034          label(global)
+     _dspIoWrite_                    pm  003B          label(global)
+     _dspEnableInt_                  pm  0048          label(global)
+     _dspDisableInt_                 pm  004E          label(global)
+     _dspGlobalEnableInt_            pm  0042          label(global)
+     _dspGlobalDisableInt_           pm  0045          label(global)
+     _dspSetFlag_                    pm  0054          label(global)
+     _dspClearFlag_                  pm  005B          label(global)
+     _dspDbgPmRead_                  pm  001C          label(global)
+     _dspDbgPmWrite_                 pm  0024          label(global)
+     _dspImaskValue                  dm  249C [0001]   variable(global)
+     _dspFlagValue                   dm  249D [0001]   variable(global)
+
+     xref for module: _util_     
+
+     _util_                          pm  00E4 [0017]   module(global)
+     _PssIrqEnable_                  dm  249E [0001]   variable(global)
+     _dspSetPssIrqEnable_            pm  00E4          label(global)
+     _dspClearPssIrqEnable_          pm  00EF          label(global)
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+
+     xref for module: CompressionShell     
+
+     CompressionShell                pm  0000 [001C]   module(global)
+     _dspReboot_                     pm  0000          label(global)
+     _dspTimerVector                     08D1 [0000]   extern(TimerDriver)        
+     _dspShellResetCode                  0070 [0000]   extern(InitCodeModule)        
+     _dspIrq2Vector                      03D1 [0000]   extern(DispatchCodeModule)        
+
+     xref for module: DispatchCodeModule     
+
+     DispatchCodeModule              pm  03D1 [0029]   module(global)
+     _dspIrqBits                     dm  249F [0005]   variable        
+     _dspIrqRegs                     dm  24A4 [0006]   variable(global)
+     _dspIrq2Vector                  pm  03D1          label(global)
+     _dspGoHome                      pm  03F0          label(global)
+     _dspSetFlag_                        0054 [0000]   extern(_io_)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     _dspDacWrite                        0851 [0000]   extern(DacDriver)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     _dspReadMsg                         22A2 [0000]   extern(_newmsg_)        
+     _dspSoundPortData                   25A7 [0000]   extern(SoundPortDriver)        
+     _dspWriteMsg                        234E [0000]   extern(_newmsg_)        
+     _dspClearFlag_                      005B [0000]   extern(_io_)        
+     _PssIrqEnable_                      249E [0001]   extern(_util_)        
+
+     xref for module: _debug_     
+
+     _debug_                         pm  239B [00CD]   module(global)
+     _dspSetAllBreaks_               pm  239B          label(global)
+     _dspSetAllBreaksL6_             pm  23A2          label        
+     _dspSetAllBreaksL4_             pm  23B1          label        
+     _dspGetBreakNumber_             pm  23B9          label(global)
+     _dspGetBreakNumberL13_          pm  23C3          label        
+     _dspGetBreakNumberL10_          pm  23D5          label        
+     _dspGetBreakNumberL14_          pm  23DC          label        
+     _dspDbgSendDumpMsg_             pm  23DE          label(global)
+     _dspDbgSetBreak_                pm  23EA          label(global)
+     _dspDbgSetBreakL21_             pm  23F2          label        
+     _dspDbgSetBreakL18_             pm  23FF          label        
+     _dspDbgSetBreakL22_             pm  2404          label        
+     _dspDbgSetBreakL24_             pm  2410          label        
+     _dspDbgClearBreak_              pm  2412          label(global)
+     _dspDbgClearBreakL32_           pm  241A          label        
+     _dspDbgClearBreakL29_           pm  2428          label        
+     _dspDbgClearBreakL28_           pm  242C          label        
+     _dspDbgClearBreakL33_           pm  2431          label        
+     _dspDbgClearBreakL35_           pm  243E          label        
+     _dspDbgClearAllBreaks_          pm  2440          label(global)
+     _dspDbgClearAllBreaksL42_       pm  2446          label        
+     _dspDbgClearAllBreaksL40_       pm  2454          label        
+     _dspDbgClearAllBreaksL43_       pm  2457          label        
+     _dspDbgSetReg_                  pm  2459          label(global)
+     _dspDbgForceInt_                pm  245E          label(global)
+     _dspDbgSetReturn_               pm  2463          label(global)
+     _Regs_                          dm  24AA [0039]   variable(global)
+     _Breaks_                        dm  24E3 [0028]   variable(global)
+     _hDebugger_                     dm  250B [0001]   variable(global)
+     ___lib_restore_frame                265D [0000]   extern(___Large_Frame_Save)        
+     _dspLLSetBreak_                     2487 [0000]   extern(Low_Level_Debug)        
+     ___lib_save_frame                   263E [0000]   extern(___Large_Frame_Save)        
+     dspSendMsg_                         187E [0000]   extern(_dspcalls_)        
+
+     xref for module: Low_Level_Debug     
+
+     Low_Level_Debug                 pm  2468 [013F]   module(global)
+     _InBreak_                       dm  250C [0001]   variable(global)
+     _DebugTopofStack                dm  250D [0001]   variable        
+     _DebugStack                     dm  250E [0064]   variable        
+     _DebugTopOfStack                dm  2572 [0001]   variable        
+     _DebugEndofStack                dm  2573 [0001]   variable        
+     _HoldIrqEnable                  dm  2574 [0001]   variable        
+     _HoldPos                        dm  2575 [0001]   variable        
+     _PCStack                        dm  2576 [0012]   variable        
+     _dspGetStack_                   pm  247D          label(global)
+     _dspBreakCode_                  pm  24C5          label(global)
+     _dspLLSetBreak_                 pm  2487          label(global)
+     _dspLLClearBreak_               pm  24A8          label(global)
+     _dspLLSetAllBreaks_             pm  2494          label(global)
+     _dspLLClearAllBreaks_           pm  24B1          label(global)
+     _Breaks                         pm  2468          label        
+     _CallBreakCode                  pm  247C          label        
+     _dspGetStackLoop                pm  2481          label        
+     _dspGetStackDone                pm  2486          label        
+     _SetForLoop                     pm  2499          label        
+     _NextSetPlease                  pm  24A1          label        
+     _ForLoop                        pm  24B6          label        
+     _NextPlease                     pm  24BE          label        
+     _ClearTest                      pm  2507          label        
+     _StackLoop                      pm  250E          label        
+     _StackRebuild                   pm  2514          label        
+     _StackPush                      pm  2515          label        
+     _SetupC                         pm  251C          label        
+     _Poll                           pm  253C          label        
+     _PollIt                         pm  2547          label        
+     _DoIt                           pm  2549          label        
+     _StartRunning                   pm  255B          label        
+     _GotNumber                      pm  256F          label        
+     _BreakRestore                   pm  2574          label        
+     _IgnoreBreak_                       2254 [0001]   extern(_main_)        
+     _Breaks_                            24E3 [0028]   extern(_debug_)        
+     _dspImaskValue                      249C [0001]   extern(_io_)        
+     _dspEventMsgHead_                   1F85 [0001]   extern(_dspcalls_)        
+     _dspEventMsgs_                      2017 [00C8]   extern(_dspcalls_)        
+     _dspShellMsg_                       1D24 [0000]   extern(_main_)        
+     _MsgInCount_                        2251 [0001]   extern(_main_)        
+     _MsgOutCount_                       2252 [0001]   extern(_main_)        
+     _dspEventMsgTail_                   1F86 [0001]   extern(_dspcalls_)        
+     _dspGlobalEnableInt_                0042 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     _Regs_                              24AA [0039]   extern(_debug_)        
+     _RemoveMsg_                         25EC [0000]   extern(_dbgque_)        
+     _dspDbgSendDumpMsg_                 23DE [0000]   extern(_debug_)        
+     _dspSetPssIrqEnable_                00E4 [0000]   extern(_util_)        
+     _PssIrqEnable_                      249E [0001]   extern(_util_)        
+     _dspGetBreakNumber_                 23B9 [0000]   extern(_debug_)        
+     _GetShellMsg_                       2615 [0000]   extern(_dbgque_)        
+
+     xref for module: InitCodeModule     
+
+     InitCodeModule                  pm  0070 [000F]   module(global)
+     _dspShellResetCode              pm  0070          label(global)
+     _cleanup                        pm  0075          label        
+     _kill_loop                      pm  007E          label        
+     _dspShellEventLoop_                 20CD [0000]   extern(_main_)        
+     ___lib_setup_processor              00FB [0000]   extern(Library_Setup_Processor)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     ___lib_setup_environment            0951 [0000]   extern(Library_Setup_Environment)        
+
+     xref for module: DacDriver     
+
+     DacDriver                       pm  0851 [001F]   module(global)
+     _dspDacWrite                    pm  0851          label(global)
+     _monoOut                        pm  0867          label        
+     _dspDacQueue_                       21CE [0001]   extern(_shellio_)        
+     _dspDacConf_                        21CB [0001]   extern(_shellio_)        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     _dspDriverOut                       20F1 [0000]   extern(GenericDriver)        
+     _dspGoHome                          03F0 [0000]   extern(DispatchCodeModule)        
+
+     xref for module: SoundPortDriver     
+
+     SoundPortDriver                 pm  25A7 [0045]   module(global)
+     _dspSoundPortData               pm  25A7          label(global)
+     _monoIn                         pm  25BE          label        
+     _OutputData                     pm  25C6          label        
+     _OutOnDude                      pm  25CD          label        
+     _monoOut                        pm  25E3          label        
+     _dspIoRead_                         0034 [0000]   extern(_io_)        
+     _dspSPInputQueue_                   21CC [0001]   extern(_shellio_)        
+     _dspSPInputConf_                    21C9 [0001]   extern(_shellio_)        
+     _dspSPOutputQueue_                  21CD [0001]   extern(_shellio_)        
+     _dspSPOutputConf_                   21CA [0001]   extern(_shellio_)        
+     _dspIoWrite_                        003B [0000]   extern(_io_)        
+     _dspDriverIn                        20EF [0000]   extern(GenericDriver)        
+     _dspDriverOut                       20F1 [0000]   extern(GenericDriver)        
+     _dspGoHome                          03F0 [0000]   extern(DispatchCodeModule)        
+     _dspSoundPortIn_                    21D0 [0001]   extern(_shellio_)        
+     _dspSoundPortOut_                   21D1 [0001]   extern(_shellio_)        
+
+     xref for module: TimerDriver     
+
+     TimerDriver                     pm  08D1 [0020]   module(global)
+     _FakeQueue                      dm  2588 [0004]   variable        
+     _dspTimerVector                 pm  08D1          label(global)
+     dspStartTimer_                  pm  08E1          label(global)
+     dspStopTimer_                   pm  08ED          label(global)
+     ___lib_restore_large_frame          265D [0000]   extern(___Large_Frame_Save)        
+     _dspSetFlag_                        0054 [0000]   extern(_io_)        
+     ___lib_save_large_frame             263E [0000]   extern(___Large_Frame_Save)        
+     _dspEventMsg                        211D [0000]   extern(GenericDriver)        
+     _dspIrqRegs                         24A4 [0006]   extern(DispatchCodeModule)        
+     _dspDisableInt_                     004E [0000]   extern(_io_)        
+     _dspGoHome                          03F0 [0000]   extern(DispatchCodeModule)        
+     _dspEnableInt_                      0048 [0000]   extern(_io_)        
+
+     xref for module: _dbgque_     
+
+     _dbgque_                        pm  25EC [0052]   module(global)
+     _RemoveMsg_                     pm  25EC          label(global)
+     _RemoveWhile_                   pm  25F2          label        
+     _RemoveLoop                     pm  25FE          label        
+     _RemoveMsgL6_                   pm  2600          label        
+     _RemoveEndTest_                 pm  260B          label        
+     _RemoveEnd_                     pm  260E          label        
+     _RemoveSaveTail                 pm  2612          label        
+     _GetShellMsg_                   pm  2615          label(global)
+     _GetWhile                       pm  261C          label        
+     _GetTestSend                    pm  262C          label        
+     _GetIncPos                      pm  2636          label        
+     _GetShellMsgEnd                 pm  263C          label        
+     _dspEventMsgHead_                   1F85 [0001]   extern(_dspcalls_)        
+     _dspEventMsgs_                      2017 [00C8]   extern(_dspcalls_)        
+     _dspEventMsgTail_                   1F86 [0001]   extern(_dspcalls_)        
+
+     xref for module: ___Large_Frame_Save     
+
+     ___Large_Frame_Save             pm  263E [0040]   module(global)
+     ___lib_save_frame               pm  263E          label(global)
+     ___lib_save_large_frame         pm  263E          label(global)
+     ___lib_restore_frame            pm  265D          label(global)
+     ___lib_restore_large_frame      pm  265D          label(global)
+     ___lib_cbug_finish              pm  267D          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: Library_Setup_Processor     
+
+     Library_Setup_Processor         pm  00FB [0003]   module(global)
+     ___lib_setup_processor          pm  00FB          label(global)
+
+     xref for module: Library_Setup_Environment     
+
+     Library_Setup_Environment       pm  0951 [0011]   module(global)
+     ___lib_setup_environment        pm  0951          label(global)
+     ___setup_heap_called            dm  258C [0001]   variable(global)
+     ____top_of_stack                    298D [0001]   extern(Stack_Declaration)        
+
+     xref for module: Memory_Copy_Routine     
+
+     Memory_Copy_Routine             pm  0870 [000A]   module(global)
+     memcpy_                         pm  0870          label(global)
+     __copy_dm_dm                    pm  0878          label        
+     __restore_state                 pm  0879          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __memset__     
+
+     __memset__                      pm  08F1 [0008]   module(global)
+     memset_                         pm  08F1          label(global)
+     __set_memory                    pm  08F7          label        
+     __restore_state                 pm  08F8          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __floatdisf__     
+
+     __floatdisf__                   pm  267E [0021]   module(global)
+     __floatdisf_                    pm  267E          label(global)
+     __restore_state                 pm  269C          label        
+     __zero_input                    pm  269D          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __ashrdi3__     
+
+     __ashrdi3__                     pm  0962 [000A]   module(global)
+     __ashrdi3_                      pm  0962          label(global)
+     __restore_state                 pm  096B          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __fixsfsi__     
+
+     __fixsfsi__                     pm  096C [0014]   module(global)
+     __fixsfsi_                      pm  096C          label(global)
+     __restore_state                 pm  097F          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __mulsf3__     
+
+     __mulsf3__                      pm  269F [0008]   module(global)
+     __mulsf3_                       pm  269F          label(global)
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __divsf3__     
+
+     __divsf3__                      pm  26A7 [0017]   module(global)
+     __divsf3_                       pm  26A7          label(global)
+     __restore_state                 pm  26BD          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __divdi3__     
+
+     __divdi3__                      pm  26BE [0008]   module(global)
+     __divdi3_                       pm  26BE          label(global)
+     __restore_state                 pm  26C5          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_uldiv                        28E6 [0000]   extern(__Unsigned_Long_Division)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_ldiv                         2912 [0000]   extern(ls_divide)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __adddi3__     
+
+     __adddi3__                      pm  26C6 [000D]   module(global)
+     __adddi3_                       pm  26C6          label(global)
+     __restore_state                 pm  26D2          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __subdi3__     
+
+     __subdi3__                      pm  26D3 [000A]   module(global)
+     __subdi3_                       pm  26D3          label(global)
+     __restore_state                 pm  26DC          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __String_Length_Routine     
+
+     __String_Length_Routine         pm  26DD [0008]   module(global)
+     strlen_                         pm  26DD          label(global)
+     __check_length                  pm  26E2          label        
+     __restore_state                 pm  26E4          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __String_Comp_Routine     
+
+     __String_Comp_Routine           pm  26E5 [000E]   module(global)
+     strcmp_                         pm  26E5          label(global)
+     __comp_dm_dm                    pm  26EE          label        
+     __restore_state                 pm  26EF          label        
+     __eos                           pm  26F0          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __Swap_Frame_Only     
+
+     __Swap_Frame_Only               pm  26F3 [0011]   module(global)
+     ___lib_frame_swap               pm  26F3          label(global)
+     ___lib_frame_restore            pm  26FC          label(global)
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: Small_Frame_Save     
+
+     Small_Frame_Save                pm  2704 [001D]   module(global)
+     ___lib_save_small_frame         pm  2704          label(global)
+     ___lib_restore_small_frame      pm  2713          label(global)
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __Setup_to_Read_Paramters     
+
+     __Setup_to_Read_Paramters       pm  037A [0004]   module(global)
+     ___lib_setup_stack_read         pm  037A          label(global)
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: Library_divide_support     
+
+     Library_divide_support          pm  2721 [0011]   module(global)
+     ___lib_div_core                 pm  2721          label(global)
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+
+     xref for module: __Internal_FP_multiply     
+
+     __Internal_FP_multiply          pm  2732 [000B]   module(global)
+     ___lib_libfpmult                pm  2732          label(global)
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_sub     
+
+     __Internal_FP_sub               pm  273D [0024]   module(global)
+     ___lib_libfpsub                 pm  273D          label(global)
+     __shift_x                       pm  273F          label        
+     __shift_y                       pm  2749          label        
+     __finish_sub                    pm  2753          label        
+     __overflow                      pm  2756          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_add     
+
+     __Internal_FP_add               pm  2761 [001D]   module(global)
+     ___lib_libfpadd                 pm  2761          label(global)
+     __shift_x                       pm  2763          label        
+     __shift_y                       pm  276A          label        
+     __add_core                      pm  2770          label        
+     __overflow                      pm  2776          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_normalize     
+
+     __Internal_FP_normalize         pm  277E [0014]   module(global)
+     ___lib_libfpnorm                pm  277E          label(global)
+     __downshift                     pm  278C          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __Internal_FP_divide     
+
+     __Internal_FP_divide            pm  2792 [0045]   module(global)
+     ___lib_libfpdiv                 pm  2792          label(global)
+     __compute_sign                  pm  279A          label        
+     __abs_ops                       pm  279E          label        
+     __abs_x                         pm  27A3          label        
+     __compute_q                     pm  27A8          label        
+     __ddivu_pos                     pm  27BB          label        
+     __negate_result                 pm  27C5          label        
+     __restore_state                 pm  27C8          label        
+     __divide_err                    pm  27D4          label        
+     __return_zero                   pm  27D4          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_to_sf     
+
+     __Internal_FP_to_sf             pm  27D7 [001D]   module(global)
+     ___lib_libfp_sf                 pm  27D7          label(global)
+     __zero_input                    pm  27F2          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_from_sf     
+
+     __Internal_FP_from_sf           pm  27F4 [0017]   module(global)
+     ___lib_sf_libfp                 pm  27F4          label(global)
+     __return_zero                   pm  2808          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_FP_comp     
+
+     __Internal_FP_comp              pm  280B [000C]   module(global)
+     ___lib_libfpcp                  pm  280B          label(global)
+     __chk_msw                       pm  2813          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_ito3wd                       282B [0000]   extern(__Internal_WD_to_int)        
+     ___lib_3wdtoi                       2819 [0000]   extern(__Internal_WD_to_int)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+     ___libr_3wdtoi                      2817 [0000]   extern(__Internal_WD_to_int)        
+
+     xref for module: __Internal_WD_to_int     
+
+     __Internal_WD_to_int            pm  2817 [001E]   module(global)
+     ___lib_3wdtoi                   pm  2819          label(global)
+     ___libr_3wdtoi                  pm  2817          label(global)
+     ___lib_ito3wd                   pm  282B          label(global)
+     __3wd_conv                      pm  281A          label        
+     __end                           pm  2828          label        
+     __zero_input                    pm  2829          label        
+     __return_zero3                  pm  2832          label        
+     ___lib_libfpmult                    2732 [0000]   extern(__Internal_FP_multiply)        
+     ___lib_libfpdiv                     2792 [0000]   extern(__Internal_FP_divide)        
+     ___lib_libfpsub                     273D [0000]   extern(__Internal_FP_sub)        
+     ___lib_libfpcp                      280B [0000]   extern(__Internal_FP_comp)        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_3wd_abs                      283D [0000]   extern(__Negate_Module)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_3wd_neg                      2835 [0000]   extern(__Negate_Module)        
+     ___lib_libfpadd                     2761 [0000]   extern(__Internal_FP_add)        
+     ___lib_sf_libfp                     27F4 [0000]   extern(__Internal_FP_from_sf)        
+     ___lib_libfp_sf                     27D7 [0000]   extern(__Internal_FP_to_sf)        
+     ___lib_libfpnorm                    277E [0000]   extern(__Internal_FP_normalize)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __Negate_Module     
+
+     __Negate_Module                 pm  2835 [0015]   module(global)
+     ___lib_3wd_neg                  pm  2835          label(global)
+     ___lib_3wd_abs                  pm  283D          label(global)
+     __n_overflow_ck                 pm  283A          label        
+     __compute_abs                   pm  2840          label        
+     __a_overflow                    pm  2845          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: Stack_Declaration     
+
+     Stack_Declaration               pm XXXXXX [0000]   module(global)
+     stack                           dm  258D [0400]   variable        
+     ____top_of_stack                dm  298D [0001]   variable(global)
+
+     xref for module: __fp_comp_     
+
+     __fp_comp_                      pm  284A [001A]   module(global)
+     ___lib_fpcomp                   pm  284A          label(global)
+     __return_x                      pm  285F          label        
+     __return_y                      pm  2861          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: IEEE_Single_Multiply     
+
+     IEEE_Single_Multiply            pm  2864 [0027]   module(global)
+     ___lib_fpmult                   pm  2864          label(global)
+     __compute_prod                  pm  287A          label        
+     __return_zero                   pm  2889          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: IEEE_Single_Normalize     
+
+     IEEE_Single_Normalize           pm  288B [001B]   module(global)
+     ___lib_fpnorm                   pm  288B          label(global)
+     __norm_pos                      pm  288F          label        
+     __return_zero                   pm  28A4          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpadd                        28A6 [0000]   extern(__IEEE_Single_Add)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __IEEE_Single_Add     
+
+     __IEEE_Single_Add               pm  28A6 [0040]   module(global)
+     ___lib_fpadd                    pm  28A6          label(global)
+     __swap_ops                      pm  28B8          label        
+     __shift_y                       pm  28C0          label        
+     __negate_y                      pm  28C9          label        
+     __place_x                       pm  28CC          label        
+     __negate_x                      pm  28D7          label        
+     __add_core                      pm  28DC          label        
+     __return_y                      pm  28E0          label        
+     __return_x                      pm  28E3          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_fpcomp                       284A [0000]   extern(__fp_comp_)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_fpnorm                       288B [0000]   extern(IEEE_Single_Normalize)        
+     ___lib_fpmult                       2864 [0000]   extern(IEEE_Single_Multiply)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: __Unsigned_Long_Division     
+
+     __Unsigned_Long_Division        pm  28E6 [002C]   module(global)
+     ___lib_uldiv                    pm  28E6          label(global)
+     do_ludiv                        pm  28EB          label        
+     div_dividend                    pm  28F3          label        
+     do_divide                       pm  28F8          label        
+     aqo_pos                         pm  2900          label        
+     aqz_pos                         pm  2903          label        
+     ddivi_pos                       pm  2905          label        
+     ddivu_pos                       pm  290E          label        
+     __restore_state                 pm  2911          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_ldiv                         2912 [0000]   extern(ls_divide)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+     xref for module: ls_divide     
+
+     ls_divide                       pm  2912 [005B]   module(global)
+     ___lib_ldiv                     pm  2912          label        
+     do_lsdiv                        pm  2917          label        
+     sy_pos                          pm  2926          label        
+     ddivq_pos                       pm  292D          label        
+     aqo_pos                         pm  2939          label        
+     aqz_pos                         pm  293C          label        
+     ddivi_pos                       pm  293E          label        
+     ddivu_pos                       pm  2947          label        
+     ddivq_neg                       pm  294B          label        
+     aqo_neg                         pm  2957          label        
+     aqz_neg                         pm  295A          label        
+     ddivi_neg                       pm  295C          label        
+     ddivu_neg                       pm  2965          label        
+     __restore_state                 pm  296C          label        
+     ___lib_restore_small_frame          2713 [0000]   extern(Small_Frame_Save)        
+     ___lib_frame_restore                26FC [0000]   extern(__Swap_Frame_Only)        
+     ___lib_save_small_frame             2704 [0000]   extern(Small_Frame_Save)        
+     ___lib_setup_stack_read             037A [0000]   extern(__Setup_to_Read_Paramters)        
+     ___lib_uldiv                        28E6 [0000]   extern(__Unsigned_Long_Division)        
+     ___lib_frame_swap                   26F3 [0000]   extern(__Swap_Frame_Only)        
+     ___lib_div_core                     2721 [0000]   extern(Library_divide_support)        
+
+
+     210x memory per echopss (d:\adi_dsp\scope\bin\psa\psa.ach)
+
+     0000 - 03FF [  1024.] bm rom code boot_mem                        
+     0000 - 03FF [  1024.] pm ram data/code int_pm                          
+     0800 - 3FFF [ 14336.] pm ram data/code ext_pm                          
+     1000 - 2FFF [  8192.] dm ram data ext_dm                          
+     3800 - 39FF [   512.] dm ram data int_dm                          
+     3000 - 3000 [     1.] dm ram port PSS_DATA_                       
+     3008 - 3008 [     1.] dm ram port PSS_CONTROL_                    
+     3009 - 3009 [     1.] dm ram port PSS_STATUS_                     
+     3010 - 3010 [     1.] dm ram port PSS_DMA_                        
+     3018 - 3018 [     1.] dm ram port RAM_BANK_                       
+     3020 - 3020 [     1.] dm ram port EXT_MEM_LATCH_                  
+     3440 - 3440 [     1.] dm ram port SP_ADDRESS_                     
+     3448 - 3448 [     1.] dm ram port SP_DATA_                        
+     3450 - 3450 [     1.] dm ram port SP_STATUS_                      
+     3458 - 3458 [     1.] dm ram port SP_PIO_                         
+     3060 - 3060 [     1.] dm ram port SP_DMAL_                        
+     3068 - 3068 [     1.] dm ram port SP_DMAR_                        
+     3070 - 3070 [     1.] dm ram port SP_ENABLE_                      
+     3080 - 3080 [     1.] dm ram port MUSIC0_                         
+     3081 - 3081 [     1.] dm ram port MUSIC_DACL_                     
+     3088 - 3088 [     1.] dm ram port MUSIC1_                         
+     3089 - 3089 [     1.] dm ram port MUSIC_DACR_                     
+     3090 - 3090 [     1.] dm ram port MUSIC_STATUS_                   
+     3091 - 3091 [     1.] dm ram port MUSIC_PC_STATUS_                
+     3098 - 3098 [     1.] dm ram port MUSIC_DIVISOR_                  
+     30C0 - 30C0 [     1.] dm ram port SB_DATA_                        
+     30C8 - 30C8 [     1.] dm ram port SB_STATUS_                      
+     30C9 - 30C9 [     1.] dm ram port SB_CONTROL_                     
+     30D0 - 30D0 [     1.] dm ram port SM_DIVISOR_                     
+     3100 - 3100 [     1.] dm ram port MIDI_DATA_                      
+     3108 - 3108 [     1.] dm ram port MIDI_COMMAND_                   
+     3110 - 3110 [     1.] dm ram port MIDI_STATUS_                    
+     3111 - 3111 [     1.] dm ram port MIDI_CONTROL_                   
+     3118 - 3118 [     1.] dm ram port MIDI_UART_                      
+     3140 - 3140 [     1.] dm ram port UART_DATA_                      
+     3148 - 3148 [     1.] dm ram port UART_STATUS_                    
+     3149 - 3149 [     1.] dm ram port UART_CONTROL_                   
+     31C0 - 31C0 [     1.] dm ram port IRQ_STATUS_                     
+     31C1 - 31C1 [     1.] dm ram port IRQ_ENABLE_                     
+     31C8 - 31C8 [     1.] dm ram port PIO_                            
+     31D0 - 31D0 [     1.] dm ram port PSS_CONFIG_                     
+     31D8 - 31D8 [     1.] dm ram port WSS_CONFIG_                     
+     31E0 - 31E0 [     1.] dm ram port SB_CONFIG_                      
+     31E8 - 31E8 [     1.] dm ram port MIDI_CONFIG_                    
+     31F0 - 31F0 [     1.] dm ram port CD_CONFIG_                      
+     31F8 - 31F8 [     1.] dm ram port UART_CONFIG_                    
+
+
+
+     boot memory and bootable run time program memory map:
+
+     fixed program memory map:
+
+     0000 - 001B [    28.] pm ram      module   CompressionShell
+     001C - 0062 [    71.] pm ram      module   _io_
+     0063 - 0067 [     5.] pm ram      variable log_coeffs of FFT 
+     0068 - 006F [     8.] pm ram circ variable coeff_fm of FIR_LPF 
+     0070 - 007E [    15.] pm ram      module   InitCodeModule
+     0080 - 00D0 [    81.] pm ram circ variable fir_coeff of FIR_LPF 
+     00D1 - 00E3 [    19.] pm ram      module   Signal_Gen
+     00E4 - 00FA [    23.] pm ram      module   _util_
+     00FB - 00FD [     3.] pm ram      module   Library_Setup_Processor
+     0100 - 01FF [   256.] pm ram circ variable cos_table of FFT 
+     0200 - 02FF [   256.] pm ram circ variable window of FFT 
+     0300 - 0350 [    81.] pm ram circ variable coeff_3to30 of FIR_LPF 
+     0351 - 0379 [    41.] pm ram      module   Sin_Approximation
+     037A - 037D [     4.] pm ram      module   __Setup_to_Read_Paramters
+     0380 - 03D0 [    81.] pm ram circ variable coeff_9to11 of FIR_LPF 
+     03D1 - 03F9 [    41.] pm ram      module   DispatchCodeModule
+     0800 - 0850 [    81.] pm ram circ variable coeff_4to22 of FIR_LPF 
+     0851 - 086F [    31.] pm ram      module   DacDriver
+     0870 - 0879 [    10.] pm ram      module   Memory_Copy_Routine
+     0880 - 08D0 [    81.] pm ram circ variable coeff_8to12 of FIR_LPF 
+     08D1 - 08F0 [    32.] pm ram      module   TimerDriver
+     08F1 - 08F8 [     8.] pm ram      module   __memset__
+     0900 - 0950 [    81.] pm ram circ variable coeff_9to10 of FIR_LPF 
+     0951 - 0961 [    17.] pm ram      module   Library_Setup_Environment
+     0962 - 096B [    10.] pm ram      module   __ashrdi3__
+     096C - 097F [    20.] pm ram      module   __fixsfsi__
+     0980 - 09D0 [    81.] pm ram circ variable coeff_60_hz of FIR_LPF 
+     09D1 - 1185 [  1973.] pm ram      module   _alg_
+     1186 - 12A9 [   292.] pm ram      module   FFT
+     12AA - 1467 [   446.] pm ram      module   FIR_LPF
+     1468 - 1724 [   701.] pm ram      module   VOLUMEMOD
+     1725 - 17C4 [   160.] pm ram      module   RegUtil
+     17C5 - 18DB [   279.] pm ram      module   _dspcalls_
+     18DC - 1B8E [   691.] pm ram      module   _shellio_
+     1B8F - 1D23 [   405.] pm ram      module   _sndport_
+     1D24 - 20EE [   971.] pm ram      module   _main_
+     20EF - 2180 [   146.] pm ram      module   GenericDriver
+     2181 - 239A [   538.] pm ram      module   _newmsg_
+     239B - 2467 [   205.] pm ram      module   _debug_
+     2468 - 25A6 [   319.] pm ram      module   Low_Level_Debug
+     25A7 - 25EB [    69.] pm ram      module   SoundPortDriver
+     25EC - 263D [    82.] pm ram      module   _dbgque_
+     263E - 267D [    64.] pm ram      module   ___Large_Frame_Save
+     267E - 269E [    33.] pm ram      module   __floatdisf__
+     269F - 26A6 [     8.] pm ram      module   __mulsf3__
+     26A7 - 26BD [    23.] pm ram      module   __divsf3__
+     26BE - 26C5 [     8.] pm ram      module   __divdi3__
+     26C6 - 26D2 [    13.] pm ram      module   __adddi3__
+     26D3 - 26DC [    10.] pm ram      module   __subdi3__
+     26DD - 26E4 [     8.] pm ram      module   __String_Length_Routine
+     26E5 - 26F2 [    14.] pm ram      module   __String_Comp_Routine
+     26F3 - 2703 [    17.] pm ram      module   __Swap_Frame_Only
+     2704 - 2720 [    29.] pm ram      module   Small_Frame_Save
+     2721 - 2731 [    17.] pm ram      module   Library_divide_support
+     2732 - 273C [    11.] pm ram      module   __Internal_FP_multiply
+     273D - 2760 [    36.] pm ram      module   __Internal_FP_sub
+     2761 - 277D [    29.] pm ram      module   __Internal_FP_add
+     277E - 2791 [    20.] pm ram      module   __Internal_FP_normalize
+     2792 - 27D6 [    69.] pm ram      module   __Internal_FP_divide
+     27D7 - 27F3 [    29.] pm ram      module   __Internal_FP_to_sf
+     27F4 - 280A [    23.] pm ram      module   __Internal_FP_from_sf
+     280B - 2816 [    12.] pm ram      module   __Internal_FP_comp
+     2817 - 2834 [    30.] pm ram      module   __Internal_WD_to_int
+     2835 - 2849 [    21.] pm ram      module   __Negate_Module
+     284A - 2863 [    26.] pm ram      module   __fp_comp_
+     2864 - 288A [    39.] pm ram      module   IEEE_Single_Multiply
+     288B - 28A5 [    27.] pm ram      module   IEEE_Single_Normalize
+     28A6 - 28E5 [    64.] pm ram      module   __IEEE_Single_Add
+     28E6 - 2911 [    44.] pm ram      module   __Unsigned_Long_Division
+     2912 - 296C [    91.] pm ram      module   ls_divide
+
+
+
+     fixed program memory rom:      0.
+     fixed program memory ram:   9557.
+
+
+     dynamic data memory map:
+
+     fixed data memory map:
+
+     1000 - 1050 [    81.] dm ram circ variable data of FIR_LPF 
+     1051 - 1051 [     1.] dm ram      variable NewIFGain_ of _alg_ 
+     1052 - 1052 [     1.] dm ram      variable NewSampleRate_ of _alg_ 
+     1053 - 1053 [     1.] dm ram      variable USB_ of _alg_ 
+     1054 - 1054 [     1.] dm ram      variable LSB_ of _alg_ 
+     1055 - 1055 [     1.] dm ram      variable InputDevice_ of _alg_ 
+     1056 - 1056 [     1.] dm ram      variable OutputDevice_ of _alg_ 
+     1057 - 1057 [     1.] dm ram      variable algIoOverrun_ of _alg_ 
+     1058 - 105F [     8.] dm ram circ variable fm_data of FIR_LPF 
+     1060 - 1074 [    21.] dm ram circ variable rtty_data of FIR_LPF 
+     1075 - 1075 [     1.] dm ram      variable AnalogAGC_ of _alg_ 
+     1076 - 1076 [     1.] dm ram      variable PlotOn_ of _alg_ 
+     1077 - 1077 [     1.] dm ram      variable PlotLSBS_ of _alg_ 
+     1078 - 107C [     5.] dm ram circ variable cw_data of FIR_LPF 
+     107D - 107D [     1.] dm ram      variable PlotUSBS_ of _alg_ 
+     107E - 107E [     1.] dm ram      variable PlotLSBT_ of _alg_ 
+     107F - 107F [     1.] dm ram      variable PlotUSBT_ of _alg_ 
+     1080 - 10D0 [    81.] dm ram circ variable usb_data of FIR_LPF 
+     10D1 - 10D1 [     1.] dm ram      variable FreqOn_ of _alg_ 
+     10D2 - 10D2 [     1.] dm ram      variable TalkOn_ of _alg_ 
+     10D3 - 10D3 [     1.] dm ram      variable Talk_ of _alg_ 
+     10D4 - 10D4 [     1.] dm ram      variable LogOn_ of _alg_ 
+     10D5 - 10D5 [     1.] dm ram      variable AGC_On_ of _alg_ 
+     10D6 - 10D6 [     1.] dm ram      variable HannOn_ of _alg_ 
+     10D7 - 10D7 [     1.] dm ram      variable SendingMorse_ of _alg_ 
+     10D8 - 10DF [     8.] dm ram circ variable sin_data of Signal_Gen 
+     10E0 - 10E0 [     1.] dm ram      variable DitLength_ of _alg_ 
+     10E1 - 10E1 [     1.] dm ram      variable MorsePosition_ of _alg_ 
+     10E2 - 10E2 [     1.] dm ram      variable record_voice_ of _alg_ 
+     10E3 - 10E3 [     1.] dm ram      variable fft_time_ of _alg_ 
+     10E4 - 10E4 [     1.] dm ram      variable GetErrCount_ of _alg_ 
+     10E5 - 10E5 [     1.] dm ram      variable GetLastErr_ of _alg_ 
+     10E6 - 10E6 [     1.] dm ram      variable SendErrCount_ of _alg_ 
+     10E7 - 10E7 [     1.] dm ram      variable SendLastErr_ of _alg_ 
+     10E8 - 10E9 [     2.] dm ram      variable SampleRate_ of _alg_ 
+     10EA - 10EA [     1.] dm ram      variable smeter_on_ of _alg_ 
+     10EB - 10EB [     1.] dm ram      variable smeter_time_ of _alg_ 
+     10EC - 10EC [     1.] dm ram      variable SB_DATA_ of _alg_ 
+     10ED - 10ED [     1.] dm ram      variable lastInputBuffer_ of _alg_ 
+     10EE - 10F2 [     5.] dm ram      variable ParseMsgL36_ of _alg_ 
+     10F3 - 10F9 [     7.] dm ram      variable dspAlgMainLC0_ of _alg_ 
+     10FA - 10FA [     1.] dm ram      variable dit_ of _alg_ 
+     10FB - 10FF [     5.] dm ram      variable devConf_ of _alg_ 
+     1100 - 1150 [    81.] dm ram circ variable lsb_data of FIR_LPF 
+     1151 - 115C [    12.] dm ram      variable dspAlgMainLC1_ of _alg_ 
+     115D - 116D [    17.] dm ram      variable dspAlgMainLC2_ of _alg_ 
+     116E - 1175 [     8.] dm ram      variable dspAlgMainL198_ of _alg_ 
+     1176 - 117F [    10.] dm ram      variable DeleteMorseLC3_ of _alg_ 
+     1180 - 11A7 [    40.] dm ram circ variable delay_data of FIR_LPF 
+     11A8 - 11B2 [    11.] dm ram      variable dspAlgMainL155_ of _alg_ 
+     11B3 - 11BC [    10.] dm ram      variable DeleteMorseLC4_ of _alg_ 
+     11BD - 11BD [     1.] dm ram      variable pSpregs_ of _alg_ 
+     11BE - 11BE [     1.] dm ram      variable hAlg_ of _alg_ 
+     11BF - 11BF [     1.] dm ram      variable hApp_ of _alg_ 
+     11C0 - 11FF [    64.] dm ram circ variable slow_agc_values of VOLUMEMOD 
+     1200 - 1250 [    81.] dm ram circ variable hz_60_data_usb of FIR_LPF 
+     1251 - 1260 [    16.] dm ram      variable Registers_1848_ of _alg_ 
+     1261 - 1261 [     1.] dm ram      variable CurrentIFGain_ of _alg_ 
+     1262 - 1262 [     1.] dm ram      variable hilbert_ of _alg_ 
+     1263 - 1263 [     1.] dm ram      variable delay_ of _alg_ 
+     1264 - 1264 [     1.] dm ram      variable mode_ of _alg_ 
+     1265 - 1265 [     1.] dm ram      variable Monitor_ of _alg_ 
+     1266 - 1266 [     1.] dm ram      variable M3_SPACE of FFT 
+     1267 - 1267 [     1.] dm ram      variable BFY_COUNT of FFT 
+     1268 - 126F [     8.] dm ram      variable reg_l0 of FIR_LPF 
+     1270 - 1274 [     5.] dm ram      variable fm_pnt of FIR_LPF 
+     1275 - 1275 [     1.] dm ram      variable which_filter of FIR_LPF 
+     1276 - 1279 [     4.] dm ram      variable rtty_usb of FIR_LPF 
+     127A - 127C [     3.] dm ram      variable freq1_ of Signal_Gen 
+     127D - 127F [     3.] dm ram      variable phi1_ of Signal_Gen 
+     1280 - 12D0 [    81.] dm ram circ variable hz_60_data_lsb of FIR_LPF 
+     12D1 - 1334 [   100.] dm ram      variable Morse_ of _alg_ 
+     1335 - 136A [    54.] dm ram      variable msg1_ of _alg_ 
+     136B - 13A0 [    54.] dm ram      variable msg2_ of _alg_ 
+     13A1 - 1420 [   128.] dm ram      variable plotMsgData_ of _alg_ 
+     1421 - 146E [    78.] dm ram      variable devCaps_ of _alg_ 
+     146F - 156E [   256.] dm ram      variable USB_BUFFER_ of _alg_ 
+     156F - 166E [   256.] dm ram      variable LSB_BUFFER_ of _alg_ 
+     166F - 176E [   256.] dm ram      variable RTTY_BUFFER_ of _alg_ 
+     176F - 17EE [   128.] dm ram      variable USB_SPARE_BUFFER_ of _alg_ 
+     17EF - 186E [   128.] dm ram      variable LSB_SPARE_BUFFER_ of _alg_ 
+     186F - 196E [   256.] dm ram      variable buffer1_ of _alg_ 
+     196F - 1A6E [   256.] dm ram      variable buffer2_ of _alg_ 
+     1A6F - 1B6E [   256.] dm ram      variable buffer3_ of _alg_ 
+     1B6F - 1C6E [   256.] dm ram      variable buffer4_ of _alg_ 
+     1C6F - 1E6E [   512.] dm ram      variable inplace of FFT 
+     1E6F - 1EEE [   128.] dm ram      variable results of FFT 
+     1EEF - 1EF1 [     3.] dm ram      variable gain1_ of Signal_Gen 
+     1EF2 - 1EF2 [     1.] dm ram      variable delta_count_ of Signal_Gen 
+     1EF3 - 1EF3 [     1.] dm ram      variable sin_place of Signal_Gen 
+     1EF4 - 1EF5 [     2.] dm ram      variable I0_HOLD of Signal_Gen 
+     1EF6 - 1EF6 [     1.] dm ram      variable true_volume of VOLUMEMOD 
+     1EF7 - 1EF7 [     1.] dm ram      variable volume of VOLUMEMOD 
+     1EF8 - 1EF8 [     1.] dm ram      variable reg_l0 of VOLUMEMOD 
+     1EF9 - 1EF9 [     1.] dm ram      variable largest of VOLUMEMOD 
+     1EFA - 1EFA [     1.] dm ram      variable error of VOLUMEMOD 
+     1EFB - 1EFB [     1.] dm ram      variable PIO_reg_data of VOLUMEMOD 
+     1EFC - 1EFC [     1.] dm ram      variable OFFSET of VOLUMEMOD 
+     1EFD - 1EFD [     1.] dm ram      variable wanted_volume of VOLUMEMOD 
+     1EFE - 1EFE [     1.] dm ram      variable slow_agc_pnt of VOLUMEMOD 
+     1EFF - 1F03 [     5.] dm ram      variable sqrt_coeff of VOLUMEMOD 
+     1F04 - 1F08 [     5.] dm ram      variable atn_coeff of VOLUMEMOD 
+     1F09 - 1F40 [    56.] dm ram      variable RegArea of RegUtil 
+     1F41 - 1F78 [    56.] dm ram      variable RegArea2 of RegUtil 
+     1F79 - 1F7D [     5.] dm ram      variable sin_coeff of Sin_Approximation 
+     1F7E - 1F80 [     3.] dm ram      variable mr_hold of Sin_Approximation 
+     1F81 - 1F81 [     1.] dm ram      variable sr1_hold of Sin_Approximation 
+     1F82 - 1F82 [     1.] dm ram      variable ireg_hold of Sin_Approximation 
+     1F83 - 1F83 [     1.] dm ram      variable ax0_hold of Sin_Approximation 
+     1F84 - 1F84 [     1.] dm ram      variable mx1_hold of Sin_Approximation 
+     1F85 - 1F85 [     1.] dm ram      variable _dspEventMsgHead_ of _dspcalls_ 
+     1F86 - 1F86 [     1.] dm ram      variable _dspEventMsgTail_ of _dspcalls_ 
+     1F87 - 2016 [   144.] dm ram      variable _SystemInputMsgs_ of _dspcalls_ 
+     2017 - 20DE [   200.] dm ram      variable _dspEventMsgs_ of _dspcalls_ 
+     20DF - 21C8 [   234.] dm ram      variable _dspDevCaps_ of _shellio_ 
+     21C9 - 21C9 [     1.] dm ram      variable _dspSPInputConf_ of _shellio_ 
+     21CA - 21CA [     1.] dm ram      variable _dspSPOutputConf_ of _shellio_ 
+     21CB - 21CB [     1.] dm ram      variable _dspDacConf_ of _shellio_ 
+     21CC - 21CC [     1.] dm ram      variable _dspSPInputQueue_ of _shellio_ 
+     21CD - 21CD [     1.] dm ram      variable _dspSPOutputQueue_ of _shellio_ 
+     21CE - 21CE [     1.] dm ram      variable _dspDacQueue_ of _shellio_ 
+     21CF - 21CF [     1.] dm ram      variable _dspSoundPortOn_ of _shellio_ 
+     21D0 - 21D0 [     1.] dm ram      variable _dspSoundPortIn_ of _shellio_ 
+     21D1 - 21D1 [     1.] dm ram      variable _dspSoundPortOut_ of _shellio_ 
+     21D2 - 21E0 [    15.] dm ram      variable _dspDevConfs_ of _shellio_ 
+     21E1 - 2234 [    84.] dm ram      variable _dspDevQueues_ of _shellio_ 
+     2235 - 2244 [    16.] dm ram      variable _SPRegs_ of _sndport_ 
+     2245 - 224C [     8.] dm ram      variable dspUtilProgram1848L31_ of _sndport_ 
+     224D - 224D [     1.] dm ram      variable _ErrorCount_ of _main_ 
+     224E - 224E [     1.] dm ram      variable _ErrorValue_ of _main_ 
+     224F - 224F [     1.] dm ram      variable _StartFlag_ of _main_ 
+     2250 - 2250 [     1.] dm ram      variable _MsgDropCount_ of _main_ 
+     2251 - 2251 [     1.] dm ram      variable _MsgInCount_ of _main_ 
+     2252 - 2252 [     1.] dm ram      variable _MsgOutCount_ of _main_ 
+     2253 - 2253 [     1.] dm ram      variable _OutputMsg_ of _main_ 
+     2254 - 2254 [     1.] dm ram      variable _IgnoreBreak_ of _main_ 
+     2255 - 2255 [     1.] dm ram      variable _dspErrorNo___ of _main_ 
+     2256 - 225F [    10.] dm ram      variable _dspProcessEventL98_ of _main_ 
+     2260 - 2260 [     1.] dm ram      variable _LastMsg_ of _main_ 
+     2261 - 232C [   204.] dm ram      variable _SystemOutputMsg_ of _main_ 
+     232D - 233E [    18.] dm ram      variable _Caps_ of _main_ 
+     233F - 233F [     1.] dm ram      variable _dspDead_ of _main_ 
+     2340 - 2340 [     1.] dm ram      variable _dspSysMsg_ of _main_ 
+     2341 - 2341 [     1.] dm ram      variable _dspSysArg1_ of _main_ 
+     2342 - 2342 [     1.] dm ram      variable _dspSysArg2_ of _main_ 
+     2343 - 2343 [     1.] dm ram      variable _dspSysArg3_ of _main_ 
+     2344 - 2344 [     1.] dm ram      variable _MsgError of _newmsg_ 
+     2345 - 2345 [     1.] dm ram      variable _OutMsgError of _newmsg_ 
+     2346 - 2346 [     1.] dm ram      variable _MsgWordCount of _newmsg_ 
+     2347 - 2347 [     1.] dm ram      variable _MsgDropCount of _newmsg_ 
+     2348 - 2348 [     1.] dm ram      variable _MsgLength of _newmsg_ 
+     2349 - 2349 [     1.] dm ram      variable _Word of _newmsg_ 
+     234A - 234A [     1.] dm ram      variable _MsgState of _newmsg_ 
+     234B - 234B [     1.] dm ram      variable _OutMsgState of _newmsg_ 
+     234C - 234C [     1.] dm ram      variable _OutMsgWordCount of _newmsg_ 
+     234D - 234D [     1.] dm ram      variable _MsgHold of _newmsg_ 
+     234E - 234E [     1.] dm ram      variable _FakeDma of _newmsg_ 
+     234F - 234F [     1.] dm ram      variable _Msg of _newmsg_ 
+     2350 - 2355 [     6.] dm ram      variable _InMsg of _newmsg_ 
+     2356 - 235B [     6.] dm ram      variable _OutMsg of _newmsg_ 
+     235C - 23D3 [   120.] dm ram      variable _InputMsgs of _newmsg_ 
+     23D4 - 23FB [    40.] dm ram      variable _InputMsgQueue of _newmsg_ 
+     23FC - 2473 [   120.] dm ram      variable _OutMsgs of _newmsg_ 
+     2474 - 249B [    40.] dm ram      variable _OutMsgQueue of _newmsg_ 
+     249C - 249C [     1.] dm ram      variable _dspImaskValue of _io_ 
+     249D - 249D [     1.] dm ram      variable _dspFlagValue of _io_ 
+     249E - 249E [     1.] dm ram      variable _PssIrqEnable_ of _util_ 
+     249F - 24A3 [     5.] dm ram      variable _dspIrqBits of DispatchCodeModule 
+     24A4 - 24A9 [     6.] dm ram      variable _dspIrqRegs of DispatchCodeModule 
+     24AA - 24E2 [    57.] dm ram      variable _Regs_ of _debug_ 
+     24E3 - 250A [    40.] dm ram      variable _Breaks_ of _debug_ 
+     250B - 250B [     1.] dm ram      variable _hDebugger_ of _debug_ 
+     250C - 250C [     1.] dm ram      variable _InBreak_ of Low_Level_Debug 
+     250D - 2573 [   103.] dm ram      variable _DebugTopofStack of Low_Level_Debug 
+     2574 - 2574 [     1.] dm ram      variable _HoldIrqEnable of Low_Level_Debug 
+     2575 - 2575 [     1.] dm ram      variable _HoldPos of Low_Level_Debug 
+     2576 - 2587 [    18.] dm ram      variable _PCStack of Low_Level_Debug 
+     2588 - 258B [     4.] dm ram      variable _FakeQueue of TimerDriver 
+     258C - 258C [     1.] dm ram      variable ___setup_heap_called of Library_Setup_Environment 
+     258D - 298D [  1025.] dm ram      variable stack of Stack_Declaration 
+     31C8 - 31C8 [     1.] dm ram      variable PIO_ of VOLUMEMOD 
+     3800 - 39FF [   512.] dm ram      variable output of FFT 
+
+
+
+     fixed data memory rom:      0.
+     fixed data memory ram:   7055.
+
+
+

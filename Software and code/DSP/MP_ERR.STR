@@ -1,0 +1,76 @@
+
+ERROR_1		:"%s" Illegal directive
+ERROR_2		:Unterminated #if
+ERROR_3		:Unmatched #pragma
+ERROR_4		:Maximum #if depth exceeded
+ERROR_5		:elif without #if
+ERROR_6		:else without #if
+ERROR_7		:Extraneous argument
+ERROR_8		:endif without #if
+ERROR_9		:Unknown PRAGMA operand "%s"
+ERROR_10	:String literal expected
+ERROR_11	:Digit expected
+ERROR_12	:Symbol not defined
+ERROR_13	:No symbol given
+ERROR_14	:Illegal argument list
+ERROR_15	:Maximum #include depth exceeded
+ERROR_16	:Illegal file specification delimiter
+ERROR_17	:Illegal file specification
+ERROR_18        :Spare
+ERROR_19	:Next line too long, truncated.
+ERROR_20	:Required argument(s) missing
+ERROR_21	:Unterminated argument list
+ERROR_22	:Actual parameter length exceeds maximum
+ERROR_23	:Argument count error
+ERROR_24	:the ## operator requires left operand
+ERROR_25	:The #/## operators must be followed by a parameter
+ERROR_26	:The # operator must be followed by a parameter
+ERROR_27	:Expansion limit execeeded due to "#" or "##"
+ERROR_28	:not allowed to undefine %s
+ERROR_29	:No dynamic memory available
+ERROR_30	:endif expected
+ERROR_31	:Unterminated quoted string
+ERROR_32	:Spare
+ERROR_33	:expected a ")"
+ERROR_34	:include_path %s already specified
+ERROR_35	:file already specified
+ERROR_36	:Cannot redefine %s macro
+ERROR_37	:%s redefined
+ERROR_38	:macro %s not currently defined - 0 assumed
+ERROR_39	:nested /* ... */ comments
+ERROR_40	:nested { ... } comments
+ERROR_41	:Too many arguments "%s" ignored. 
+ERROR_42	:Filename %s is too long
+ERROR_43	:Preprocessor failed to open "%s"
+ERROR_44	:Preprocessor errors - can not continue
+ERROR_45	:%s could not activate "%s". Execution terminated
+ERROR_46	:FATAL: unable to execute 'asmpp'
+ERROR_47	:unable to execute system command
+ERROR_48	:ADI_DSP environment variable not set up
+ERROR_49	:unable to open mail box file
+ERROR_50	:asmppp could not activate "asmpp". Execution terminated
+ERROR_51	:Failed to open '#include' file %s
+ERROR_52	:malloc failed
+ERROR_53	:%%PPERROR [%d] line %d %s
+ERROR_54	:%%PPWARN line %d %s
+ERROR_55	:%s   Preprocessor cannot continue due to previous error(s)
+ERROR_56	:Analog Devices Inc. : ADSP-21XX Assembler
+ERROR_57	:Version %s
+ERROR_58	:Usage: %s [-cDimps] filename
+ERROR_59	:	-Dvar[=exp]	define variable for C pre-processor
+ERROR_60	:	-c		case sensitive
+ERROR_61	:	-cp		invoke the 'C' preprocessor
+ERROR_62	:	-l		generate listing file
+ERROR_63	:	-i [#]		expand include files in listing file
+ERROR_64	:			  where # is level of include files expanded
+ERROR_65	:	-m [#]		expand macros in listing file
+ERROR_66	:			  where # is level of macros expanded
+ERROR_67	:	-p		preprocessor only
+ERROR_68	:spare
+ERROR_69	:	-s		no semantic checking
+ERROR_70	:dspp0 
+ERROR_71	:Usage: infile outfile [options]
+ERROR_72        :Exceeded def nest
+ERROR_73        :expansion length exceeded
+ERROR_74        :Maximum call nesting depth exceeded
+ERROR_75	:	-o filename     name output file    

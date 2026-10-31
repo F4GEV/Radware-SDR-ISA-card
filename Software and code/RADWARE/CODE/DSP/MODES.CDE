@@ -1,0 +1,646 @@
+$m.i,d,rAmodes 
+$c1C000F .uCheck_Tone_Control ,f04 
+$c1C000F .uCalculate_Input_Position ,f04 
+$c1C000F .ucheck_for_lsbt ,f04 
+$c1C000F .ucheck_for_morse ,f04 
+$c1C000F .ufind_mode ,f04 
+$c400005 .uCalc_Buffer ,f04 
+$c80000A .uOutput_Position ,f04 
+$c1C000F .uCopy_Data_256_ ,f04 
+$c1C000F .ucheck_for_Analog_AGC ,f04 
+$c1C000F .ucheck_for_plots ,f04 
+$c1C000F .uupdate_buffer_pos ,f04 
+$c0A000F 
+$c800000 .uNewSetTone ,f04 
+$c22780F 
+$c180004 .uno_new_tone ,f04 
+$c1C000F .uMySetTone_ ,f04 
+$c800000 .uNewSetTone ,f04 
+$c23600F 
+$c90000A .uNewSetTone ,f04 
+$c0A000F 
+$c800000 .uAGC_On_ ,f04 
+$c22780F 
+$c180000 .uno_analog_agc ,f04 
+$c800000 .uTalkOn_ ,f04 
+$c22780F 
+$c180001 .uno_analog_agc ,f04 
+$c800000 .uAnalogAGC ,f04 
+$c400014 
+$c22600F 
+$c180004 .uTurn_Down_AGC ,f04 
+$c400404 
+$c22E00F 
+$c180002 .uTurn_Up_AGC ,f04 
+$c0A000F 
+$c800004 .uCurrentIFGain ,f04 
+$c4FFFF1 
+$c22000F 
+$c180000 .uTurn_Down_10_DB ,f04 
+$c400001 
+$c23000F 
+$c0D004A 
+$c900004 .uAnalogMessage ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c90000A .uAnalogMessage ,f04 ,o0001 
+$c900001 .uAnalogMessage ,f04 ,o0002 
+$c340000 .uAnalogMessage ,f04 
+$c400711 
+$c400035 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c800000 .uAGC_Down ,f04 
+$c227A0F 
+$c180001 .usend_new_gain ,f04 
+$c0A000F 
+$c800000 .uAGC_Up ,f04 
+$c227A0F 
+$c180001 .usend_new_gain ,f04 
+$c0A000F 
+$c800004 .uCurrentIFGain ,f04 
+$c400011 
+$c4000F0 
+$c23200F 
+$c180000 .usend_new_gain ,f04 
+$c400001 
+$c22200F 
+$c0D004A 
+$c18000F .usend_new_gain ,f04 
+$c800000 .uplay_voice ,f04 
+$c22780F 
+$c180001 .uno_lsbt ,f04 
+$c800000 .umode ,f04 
+$c400044 
+$c400805 
+$c22E00F 
+$c180001 .ucheck_128_lsb ,f04 
+$c400805 
+$c800000 .uBuffer_Position ,f04 
+$c22E80F 
+$c180001 .ubuffer_not_ready ,f04 
+$c800000 .ufft_time ,f04 
+$c400034 
+$c22E00F 
+$c22E20F 
+$c180000 .uplot_LSB_time ,f04 
+$c0A000F 
+$c800000 .uplay_voice ,f04 
+$c22780F 
+$c180001 .ucheck_play_voice ,f04 
+$c800000 .umode ,f04 
+$c400044 
+$c400805 
+$c22E00F 
+$c180001 .ucheck_128 ,f04 
+$c400805 
+$c800000 .uBuffer_Position ,f04 
+$c22E80F 
+$c180001 .ubuffer_not_ready ,f04 
+$c800004 .ufft_time ,f04 
+$c23000F 
+$c90000A .ufft_time ,f04 
+$c180000 .uplot_LSB_spectrum ,f04 
+$c400034 
+$c22E20F 
+$c180000 .uplot_USB_spectrum ,f04 
+$c22E20F 
+$c180000 .uplot_USB_time ,f04 
+$c0A000F 
+$c0A000F 
+$c4001AA 
+$c90000A .ufft_time ,f04 
+$c80000A .uPlotLSBS ,f04 
+$c227A0F 
+$c180000 .uno_plot ,f04 
+$c1C000F .udolsbfft_ ,f04 
+$c0D040A 
+$c400661 
+$c401005 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c80000A .uPlotUSBS ,f04 
+$c227A0F 
+$c180000 .uno_plot ,f04 
+$c1C000F .udousbfft_ ,f04 
+$c0D040A 
+$c400651 
+$c401005 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c80000A .uPlotUSBT ,f04 
+$c227A0F 
+$c180000 .uno_plot ,f04 
+$c340000 .uUSB_BUFFER_ ,f04 
+$c400681 
+$c401005 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c80000A .uPlotLSBT ,f04 
+$c227A0F 
+$c180000 .uno_plot ,f04 
+$c340000 .uLSB_BUFFER_ ,f04 
+$c400671 
+$c401005 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c800004 .uSendingMorse ,f04 
+$c23000F 
+$c180002 .umorse_all ,f04 
+$c180004 .uno_morse ,f04 
+$c80000A .uInput_Position ,f04 
+$c1C000F .uFillSin_ ,f04 
+$c840000 .uInput_Position ,f04 
+$c340004 
+$c340015 
+$c340008 
+$c3C0805 
+$c4000A4 
+$c400000 
+$c800001 .uDitLength ,f04 
+$c800005 .uMorsePosition ,f04 
+$c80000A .uMorse ,f04 
+$c14000E .umorse_loop ,f04 
+$c22E20F 
+$c180002 .ukeep_sine ,f04 
+$c680000 
+$c6000A1 
+$c6800A1 
+$c22280F 
+$c0D005A 
+$c23290F 
+$c180004 .umorse_loop ,f04 
+$c900005 .uMorsePosition ,f04 
+$c800005 .uMorse ,f04 
+$c4000A0 
+$c23280F 
+$c180004 .uinc_morse ,f04 
+$c23080F 
+$c0D005A 
+$c18000F .udec_morse ,f04 
+$c22080F 
+$c180000 .udec_morse ,f04 
+$c22280F 
+$c0D005A 
+$c900005 .uMorse ,f04 
+$c23280F 
+$c180001 .udont_delete ,f04 
+$c1C000F .uDelete_Morse ,f04 
+$c400005 
+$c4000A4 
+$c400000 
+$c80000A .uMorse ,f04 
+$c900005 .uMorsePosition ,f04 
+$c0A000F 
+$c340000 .uMorse ,f04 
+$c340001 .uMorse ,f04 ,o0001 
+$c340014 
+$c340008 
+$c340009 
+$c3C0635 
+$c14000E .udelete_loop ,f04 
+$c6000A5 
+$c6800A1 
+$c400005 
+$c680051 
+$c800005 .uMorse ,f04 
+$c22080F 
+$c180000 .usend_end_morse ,f04 
+$c800005 .uMorse ,f04 ,o0001 
+$c22080F 
+$c180000 .usend_next_char ,f04 
+$c0A000F 
+$c4006F1 
+$c400005 
+$c900005 .uSendingMorse ,f04 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c4006E1 
+$c400005 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c80000A .uInput_Position ,f04 
+$c1C000F .uFillSin_ ,f04 
+$c0A000F 
+$c80000A .uTalkOn_ ,f04 
+$c227A0F 
+$c180001 .ufind_xmit_mode ,f04 
+$c800000 .umode ,f04 
+$c22780F 
+$c180000 .uAM_Recieve ,f04 
+$c4000A4 
+$c22E00F 
+$c180000 .uAM_Recieve ,f04 
+$c400044 
+$c22E00F 
+$c180000 .uFM_Recieve ,f04 
+$c400064 
+$c22E00F 
+$c180000 .uData_Recieve ,f04 
+$c400074 
+$c22E00F 
+$c180000 .uData_Recieve ,f04 
+$c400084 
+$c22E00F 
+$c180000 .uSSB_Recieve ,f04 
+$c80000A .uInput_Position ,f04 
+$c1C000F .uAdjust_I_ ,f04 
+$c80000A .uInput_Position ,f04 
+$c400005 .uCalc_Buffer ,f04 
+$c1C000F .uHilbert_And_Delay_ ,f04 
+$c800000 .umode ,f04 
+$c400084 
+$c22E00F 
+$c180001 .uNo_SSB_Squelch ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uNoise_AGC_ ,f04 
+$c90000A .uNoise_Level ,f04 
+$c800005 .usquelch ,f04 
+$c22EA0F 
+$c180005 .uMute_FM ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uDeemphisize ,f04 
+$c1C000F .uRestoreVolume_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_Both_ ,f04 
+$c400005 .uLSB_BUFFER_ ,f04 
+$c800001 .uBuffer_Position ,f04 
+$c22690F 
+$c0D005A 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMake_SSB_ ,f04 
+$c400005 .uUSB_BUFFER_ ,f04 
+$c800001 .uBuffer_Position ,f04 
+$c22690F 
+$c0D005A 
+$c400004 .uCalc_Buffer ,f04 
+$c22200F 
+$c1C000F .uMake_SSB_ ,f04 
+$c800004 .umode ,f04 
+$c23000F 
+$c180000 .uLSB_Recieve ,f04 
+$c0D004A 
+$c23000F 
+$c180000 .uUSB_Recieve ,f04 
+$c400024 
+$c22E20F 
+$c180000 .uUSB_Recieve ,f04 
+$c18000F .uISB_Recieve ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uRemove_USB_ ,f04 
+$c18000F .uISB_Recieve ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uRemove_LSB_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_60_Hz_ ,f04 
+$c1C000F .uwhich_agc ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c0A000F 
+$c80000A .uInput_Position ,f04 
+$c400005 .uCalc_Buffer ,f04 
+$c1C000F .uHilbert_And_Delay_ ,f04 
+$c40000A .uCalc_Buffer3 ,f04 
+$c800005 .uInput_Position ,f04 
+$c1C000F .uCopy_Data_256_ ,f04 
+$c40000A .uCalc_Buffer3 ,f04 
+$c1C000F .uHighpass_Both_ ,f04 
+$c40000A .uCalc_Buffer3 ,f04 
+$c400005 .uCalc_Buffer2 ,f04 
+$c1C000F .uFM2_ ,f04 
+$c400005 .uLSB_BUFFER_ ,f04 
+$c800001 .uBuffer_Position ,f04 
+$c22690F 
+$c0D005A 
+$c80000A .uInput_Position ,f04 
+$c1C000F .uMake_SSB_ ,f04 
+$c400005 .uUSB_BUFFER_ ,f04 
+$c800001 .uBuffer_Position ,f04 
+$c22690F 
+$c0D005A 
+$c800004 .uInput_Position ,f04 
+$c22200F 
+$c1C000F .uMake_SSB_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_Both_ ,f04 
+$c80000A .umode ,f04 
+$c180000 .uAM_LSB ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uRemove_USB_ ,f04 
+$c18000F .uAM_USB ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uRemove_LSB_ ,f04 
+$c1C000F .uwhich_agc ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c80000A .uplay_voice ,f04 
+$c227A0F 
+$c180001 .udont_tune ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_60_Hz_ ,f04 
+$c90000C .uAM_Tune ,f04 
+$c40000A .uCalc_Buffer2 ,f04 ,o0001 
+$c400005 .uUSB_BUFFER_ ,f04 
+$c1C000F .uMake_SSB_FM_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 ,o0001 
+$c400005 .uUSB_BUFFER_ ,f04 ,o0080 
+$c1C000F .uMake_SSB_FM_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 ,o0001 
+$c1C000F .uAverage ,f04 
+$c233A0F 
+$c90000A .uAM_Tune ,f04 
+$c400701 
+$c400015 
+$c340000 .uAM_Tune ,f04 
+$c1C000F .usend_important_msg ,f04 
+$c0A000F 
+$c40000A .uCalc_Buffer2 ,f04 
+$c800005 .uInput_Position ,f04 
+$c1C000F .uCopy_Data_256_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c1C000F .uAGC_ ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c90000A .usmeter ,f04 
+$c1C000F .usend_smeter ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c480004 
+$c22620F 
+$c800005 .usquelch ,f04 
+$c22EA0F 
+$c180004 .uMute_FM ,f04 
+$c1C000F .uRestoreVolume_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c1C000F .uHighpass_Both_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c400005 .uCalc_Buffer ,f04 
+$c1C000F .uFM2_ ,f04 
+$c40000A .uCalc_Buffer ,f04 ,o0001 
+$c400005 .uUSB_BUFFER_ ,f04 
+$c1C000F .uMake_SSB_FM_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uDecimate_And_Filter_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c40000A .uCalc_Buffer ,f04 ,o0001 
+$c400005 .uLSB_BUFFER_ ,f04 
+$c1C000F .uMake_SSB_FM_ ,f04 
+$c0A000F 
+$c1C000F .uRestoreVolume_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMute_Samples_ ,f04 
+$c0A000F 
+$c40000A .uCalc_Buffer2 ,f04 
+$c800005 .uInput_Position ,f04 
+$c1C000F .uCopy_Data_256_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c1C000F .uAGC_ ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c90000A .usmeter ,f04 
+$c1C000F .usend_smeter ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c800005 .usquelch ,f04 
+$c22EA0F 
+$c180004 .uMute_FM ,f04 
+$c1C000F .uRestoreVolume_ ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c40000A .uCalc_Buffer2 ,f04 
+$c400005 .uCalc_Buffer ,f04 
+$c800000 .umode ,f04 
+$c400064 
+$c26E00F 
+$c180002 .uPSK_Recieve ,f04 
+$c1C000F .uFM2_ ,f04 
+$c18000F .uFSK_Recieve ,f04 
+$c1C000F .uPSK_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFM_RTTY_ ,f04 
+$c800000 .uRTTY_Data_Count ,f04 
+$c400964 
+$c22E00F 
+$c180005 .uexcess_data ,f04 
+$c40000A .uCalc_Buffer ,f04 ,o0001 
+$c400000 .uRTTY_Data ,f04 ,o0001 
+$c800004 .uRTTY_Data_Count ,f04 
+$c22600F 
+$c0D005A 
+$c400005 .uRTTY_Data ,f04 ,o0001 
+$c40000A .uCalc_Buffer ,f04 ,o0001 
+$c1C000F .uConvert_RTTY_To_Bits_2 ,f04 
+$c800005 .uRTTY_Data_Count ,f04 
+$c90000A .uRTTY_Data_Count ,f04 
+$c80000A .uout_message_number ,f04 
+$c227A0F 
+$c180001 .udont_send_rtty ,f04 
+$c800005 .uRTTY_Data_Count ,f04 
+$c22280F 
+$c0D005A 
+$c22280F 
+$c0D005A 
+$c23080F 
+$c90000A .uRTTY_Data ,f04 
+$c400004 .uRTTY_Data ,f04 
+$c22620F 
+$c0D040A 
+$c400000 
+$c680000 
+$c900000 .uRTTY_Data ,f04 ,o0096 
+$c400741 
+$c340000 .uRTTY_Data ,f04 
+$c1C000F .usend_msg ,f04 
+$c40000A 
+$c90000A .uRTTY_Data_Count ,f04 
+$c40000A .uRTTY_Data ,f04 ,o0001 
+$c90000A .uRTTY_Data_Pnt ,f04 
+$c40000A .uLSB_BUFFER_ ,f04 
+$c800004 .uBuffer_Position ,f04 
+$c22620F 
+$c0D005A 
+$c40000A .uCalc_Buffer ,f04 ,o0001 
+$c1C000F .uMake_SSB_FM_ ,f04 
+$c0A000F 
+$c80000A .umode ,f04 
+$c227A0F 
+$c180000 .uXmit_AM ,f04 
+$c400024 
+$c22E20F 
+$c180004 .uXmit_LSB ,f04 
+$c180000 .uXmit_USB ,f04 
+$c22E20F 
+$c180004 .uXmit_ISB ,f04 
+$c18000F .uXmit_USB ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c800005 .uInput_Position ,f04 
+$c1C000F .uCopy_Data_256_ ,f04 
+$c840000 .uInput_Position ,f04 
+$c6000A0 
+$c90000A .uCalc_Buffer ,f04 
+$c80000A .uSendingMorse ,f04 
+$c227A0F 
+$c180001 .uAM_Yes_Morse ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_60_Hz_ ,f04 
+$c80000A .uAGC_On_ ,f04 
+$c227A0F 
+$c180001 .uXmit_AM2 ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uAGC_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c0A000F 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_Both_ ,f04 
+$c18000F .uXmit_AM3 ,f04 
+$c0C2000 
+$c840002 .uInput_Position ,f04 
+$c340001 .uCalc_Buffer ,f04 
+$c340007 
+$c340015 
+$c340026 
+$c34000A 
+$c340009 
+$c3C0805 
+$c14000E .uX_LSB_Loop ,f04 
+$c6000AB 
+$c1C000F .usFilter ,f04 
+$c6800A5 
+$c6000AA 
+$c1C000F .udelayLine ,f04 
+$c6800A5 
+$c80000A .uSendingMorse ,f04 
+$c227A0F 
+$c180001 .uYes_Morse ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_60_Hz_ ,f04 
+$c80000A .uAGC_On_ ,f04 
+$c227A0F 
+$c180000 .uXmit_SSB2 ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uAGC_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uFilter_Both_ ,f04 
+$c800000 .umode ,f04 
+$c400084 
+$c22E00F 
+$c180001 .uNot_FM_Xmit ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uEmphisize ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uMultiplyAllByVolume_ ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uAdjust_I_ ,f04 
+$c0C3000 
+$c0A000F 
+$c0C2000 
+$c840002 .uInput_Position ,f04 
+$c340001 .uCalc_Buffer ,f04 
+$c340007 
+$c340015 
+$c340026 
+$c34000A 
+$c340009 
+$c3C0805 
+$c14000E .uX_USB_Loop ,f04 
+$c6000AB 
+$c1C000F .udelayLine ,f04 
+$c6800A5 
+$c6000AA 
+$c1C000F .usFilter ,f04 
+$c6800A5 
+$c18000F .uXmit_SSB ,f04 
+$c0C2000 
+$c840002 .uInput_Position ,f04 
+$c340001 .uCalc_Buffer ,f04 
+$c340007 
+$c340015 
+$c340026 
+$c34000A 
+$c340009 
+$c3C0805 
+$c14000E .uX_ISB_Loop ,f04 
+$c6000AA 
+$c6800A5 
+$c6800A5 
+$c18000F .uXmit_SSB ,f04 
+$c40000A .uCalc_Buffer ,f04 
+$c1C000F .uAGC_ ,f04 
+$c800004 .uAGC_On_ ,f04 
+$c23000F 
+$c180003 .unot_slow_agc ,f04 
+$c1C000F .uSlowAGC_ ,f04 
+$c1C000F .uGetVolume_ ,f04 
+$c90000A .usmeter ,f04 
+$c800004 .uAGC_On_ ,f04 
+$c23000F 
+$c180005 .unot_agc_off ,f04 
+$c1C000F .uRestoreVolume_ ,f04 
+$c1C000F .usend_smeter ,f04 
+$c0A000F 
+$c1C000F .uGetVolume_ ,f04 
+$c404E24 
+$c0D000A 
+$c22E00F 
+$c180004 .uincrease_front ,f04 
+$c4A6044 
+$c22E00F 
+$c180002 .udecrease_front ,f04 
+$c800004 .uAGC_On_ ,f04 
+$c23000F 
+$c180001 .uagc_smeter ,f04 
+$c1C000F .uClearOffset_ ,f04 
+$c0A000F 
+$c800004 .uAnalogAGC ,f04 
+$c22200F 
+$c90000A .uAnalogAGC ,f04 
+$c18000F .ucheck_clear ,f04 
+$c800004 .uAnalogAGC ,f04 
+$c23000F 
+$c90000A .uAnalogAGC ,f04 
+$c18000F .ucheck_clear ,f04 
+$c800004 .usmeter_time ,f04 
+$c23000F 
+$c90000A .usmeter_time ,f04 
+$c180001 .uend_send_smeter ,f04 
+$c40004A 
+$c90000A .usmeter_time ,f04 
+$c400691 
+$c400015 
+$c340000 .usmeter ,f04 
+$c1C000F .usend_msg ,f04 
+$c0A000F 
+$c80000A .udata_ready ,f04 
+$c400015 
+$c22EA0F 
+$c180000 .ufirst_block ,f04 
+$c400000 .uinput_data ,f04 ,o0100 
+$c400001 .uoutput_data ,f04 ,o0100 
+$c18000F .usecond_block ,f04 
+$c400000 .uinput_data ,f04 
+$c400001 .uoutput_data ,f04 
+$c900000 .uInput_Position ,f04 
+$c900001 .uOutput_Position ,f04 
+$c400000 
+$c900000 .udata_ready ,f04 
+$c0A000F 
+$c800000 .uBuffer_Position ,f04 
+$c800001 .umode ,f04 
+$c400044 
+$c400805 
+$c22E10F 
+$c180000 .uinc_by_64 ,f04 
+$c400064 
+$c22E10F 
+$c180000 .uinc_by_64 ,f04 
+$c400074 
+$c22E10F 
+$c180000 .uinc_by_64 ,f04 
+$c400805 
+$c22680F 
+$c401004 
+$c26E20F 
+$c180001 .udont_reset_buf_pos ,f04 
+$c40000A 
+$c90000A .uBuffer_Position ,f04 
+$c0A000F 
+$m.o,l0283 
+$ 
